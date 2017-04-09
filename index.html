@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dave's Resume</title>
+  <!--<link rel='stylesheet' href='lib/bootstrap/css/bootstrap-theme.css'/>-->
+  <link rel='stylesheet' href='lib/bootstrap/css/bootstrap.css'/>
+  <link rel='stylesheet' href='lib/Hover-master/css/hover.css'/>
+  <link rel='stylesheet' href='css/style.css'/>
+  <link rel='stylesheet' href='css/me.css'/>
+  <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Open+Sans|Roboto|Baloo+Bhaina" rel="stylesheet">
+  <link rel="shortcut icon" type="image/png" href="./favicon.ico"/>
+  <script type="text/javascript" src="./lib/loader.js"></script>
+  <script src="./lib/jquery-3.1.1.js"></script>
+  <script src="./lib/bootstrap/js/bootstrap.js"></script>
+  <script src="./lib/angular-1.6.2/angular.js"></script>
+  <script src="./js/canvas_draw.js"></script>
+  <script src="./js/main.js"></script>
+  <script src="./js/myApp.js"></script>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body data-spy="scroll" data-target="#myScrollspy" data-offset="20" ng-app="myApp">
+<!--<div id="debug" style="background-color: red; width: 100%;height: 1px; position: absolute;"></div>-->
+<!--<div id="debug2" style="background-color: red; width: 100%;height: 1px; position: absolute;"></div>-->
+<div class="return_to_top">
+
+</div>
+<header>
+  <div class="canvas_background"></div>
+  <h2 id="top_screen"></h2>
+  <canvas id="front_page_canvas" class="hidden-xs"></canvas>
+  <div class="text-center icons_container">
+    <a target="_blank" href="https://www.linkedin.com/in/dave-li-122252a0/">
+      <img class="header_icon" src="./imgs/linked_in.png"></a>
+    <a target="_blank" href="https://github.com/dave322942780?tab=repositories">
+      <img class="header_icon" src="./imgs/github.png"></a>
+    <a target="_blank" href="mailto:weihang.li@mail.utoronto.ca">
+      <img class="header_icon" src="./imgs/email.png"></a>
+    <div><a href="./daves_resume.pdf" download>
+      <div class="download_resume_btn">Download Resume</div>
+    </a></div>
+    <div>
+      <div class="next_pg_container">
+        <a class="glyphicon glyphicon-hand-down next_pg bounce hvr-wobble-vertical" href="#about"></a>
+
+      </div>
+    </div>
+
+  </div>
+</header>
+<div class="header_body_padding"></div>
+
+<div ng-controller="app">
+  <div class="container">
+    <div class="row">
+      <div id="nav_container" class="hidden-xs col-md-2 col-sm-3 pull-right">
+        <nav id="myScrollspy">
+          <ul id="nav" class="nav nav-stacked">
+            <li><a href="#top_screen"><span class="glyphicon glyphicon-chevron-up"></span></a></li>
+            <li><a href="#about">About Me</a></li>
+            <li><a href="#highlights">Highlights</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="" class="prev_category"><span class="glyphicon glyphicon-menu-up"></span></a></li>
+            <li><a href="" class="next_category"><span class="glyphicon glyphicon-menu-down"></span></a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="col-md-10 col-sm-9">
+        <div class="category_container">
+          <div class="me_path">
+            <div class="me_container">
+              <div class="me">J</div>
+            </div>
+          </div>
+          <div class="header_title"><h1 class="text-center" id="about">About Me</h1></div>
+          <div class="row about">
+            <div class="col-md-6 center">
+              <span class="visible-md"><br><br></span>
+              <div id="donut_chart"></div>
+            </div>
+            <div class="col-md-6">
+              <p><span ng-bind="peronality_breif"></span></p>
+              <div ng-repeat="desc in personality_descrition">
+                <p>
+                <div class="desc" ng-bind="desc"></div>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="category_container">
+          <div class="me_path">
+            <div class="me_container">
+              <div class="me wink_right wink_left">)</div>
+            </div>
+          </div>
+          <div class="header_title"><h1 class="text-center" id="highlights">Highlights</h1></div>
+          <div class="row highlights">
+            <div class="text-center other_skills_container">
+              <div class="other_skill" ng-repeat="skill in other_skills">
+                <span ng-bind="skill"></span>
+              </div>
+            </div>
+            <div ng-repeat="(category, skill_lst) in skills">
+              <div class="col-xs-6 col-md-3">
+                <div class="text-center category"><b><span ng-bind="category"></span></b></div>
+                <div class="skill_container" ng-repeat="skill in skill_lst">
+                  <a target="_blank" ng-href="{{ to_link[skill.toLowerCase()] }}">
+                    <div ng-bind="skill" class="skill text-center hvr-sweep-to-right"></div>
+                  </a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <div ng-init="is_expand=true" class="category_container">
+
+          <div class="me_path">
+            <div class="me_container">
+              <div class="me">3</div>
+            </div>
+          </div>
+          <div class="header_title"><h1 class="text-center dib" id="experience">Experience</h1>
+                        <span ng-click="is_expand=!is_expand">
+                        <a class="dib expand_btn" title="Expand/Collapse Icons" data-toggle="tooltip">
+                          <div ng-class="{'glyphicon-resize-full': !is_expand, 'glyphicon-resize-small': is_expand}"
+                               class="glyphicon dib"></div>
+                        </a>
+                    </span>
+          </div>
+
+          <div class="experience row">
+            <div class="col-xs-12">
+              <div ng-repeat="exp in experience">
+                <div class="exp_img">
+                  <div class="col-lg-5 col-md-4 col-sm-6 col-xs-12 pull-right text-center">
+                    <img class="logo" ng-src="{{ exp.logo }}" alt="{{ exp.name }}">
+                    <div class="date_info_container">
+                      <div class="col-sm-12 date_info hidden-xs">
+                        <span class="pull-right" ng-bind="get_interval(exp.interval)"></span>
+                      </div>
+                      <div class="col-sm-12 date_info hidden-xs">
+                        <span class="pull-right" ng-bind="get_duration(exp.interval)"></span>
+                      </div>
+                      <div class="col-sm-12 date_info visible-xs text-center">
+                        <div class="dib" ng-bind="get_interval_n_duration(exp.interval)"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div ng-repeat="pos in exp.positions">
+                  <h2><span ng-bind="pos.title"></span></h2>
+                  <div class="date_info" ng-bind="get_interval_n_duration(pos.interval)"></div>
+                  <div class="task" ng-repeat="task in pos.tasks">
+                    <span ng-hide="is_expand">
+                      <div class="dib" ng-repeat="tag in task.tags">
+                        <a class="tag" target="_blank" title="{{ tag }}"
+                           data-toggle="tooltip" ng-href="{{ get_tag_link(tag) }}">
+                          <img class="tag_icon" ng-src="{{ get_tag_icon(tag) }}">
+                        </a>
+                      </div>
+                    </span>
+                    <span class="task_details" ng-bind="task.detail"></span>
+                    <div class="task_details_append" ng-class="{scale_zero: !is_expand}">
+                      (<a class="dib val_tag" target="_blank" ng-repeat="tag in task.tags"
+                          ng-class="{'remove_first_before': $first}"
+                          ng-href="{{ get_tag_link(tag) }}" ng-bind="tag">
+                    </a>)
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="category_container">
+          <div class="me_path">
+            <div class="me_container">
+              <div class="me">)</div>
+            </div>
+          </div>
+          <div class="header_title"><h1 class="text-center" id="education">Education</h1></div>
+          <div class="education row">
+            <div ng-repeat="edu in education">
+              <div class="col-md-4 col-sm-6 text-center">
+                <img class="logo" ng-src="{{ edu.logo }}" alt="{{ edu.name }}">
+                <div class="date_info_container">
+                  <div class="col-sm-12 date_info hidden-xs">
+                    <span class="pull-right" ng-bind="get_interval(edu.interval)"></span></div>
+                  <div class="col-sm-12 date_info visible-xs text-center">
+                    <span ng-bind="get_interval(edu.interval)"></span></div>
+                  <!--<div class="col-sm-12 date_info">-->
+                  <!--<span class="pull-right" ng-bind="get_duration(edu.interval)"></span></div>-->
+                </div>
+              </div>
+
+              <div class="col-md-8 col-sm-6">
+                <h2><span ng-bind="edu.title"></span></h2>
+                <div class="info"><span ng-bind="edu.Specialist"></span>
+                  <span class="pull-right">CGPA: <span ng-bind="edu.CGPA"></span></span></div>
+              </div>
+              <div class="text-center">
+                <div class="course_tag hvr-rectangle-in"
+                     ng-repeat="(code, course_name) in edu.courses_taken">
+                  <a target="_blank" data-toggle="tooltip" ng-href="{{ code_to_link[code] }}"
+                     title="{{ code }}"> <span ng-bind="course_name"></span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div ng-init="is_expand=true" class="category_container">
+
+          <div class="me_path">
+            <div class="me_container">
+              <div class="me">P</div>
+            </div>
+          </div>
+          <div class="header_title"><h1 class="text-center dib" id="projects">Projects</h1>
+            <span ng-click="is_expand=!is_expand">
+              <a class="dib expand_btn" title="Expand/Collapse Icons" data-toggle="tooltip">
+                <div ng-class="{'glyphicon-resize-full': !is_expand, 'glyphicon-resize-small': is_expand}"
+                     class="glyphicon dib"></div>
+              </a>
+            </span>
+          </div>
+          <div class="projects row">
+            <div class="project col-xs-12" ng-repeat="proj in projects">
+              <span ng-hide="is_expand">
+                <div class="dib" ng-repeat="tag in proj.tags">
+                  <a class="tag" target="_blank" title="{{ tag }}"
+                     data-toggle="tooltip" ng-href="{{ get_tag_link(tag) }}">
+                    <img class="tag_icon" ng-src="{{ get_tag_icon(tag) }}">
+                  </a>
+                </div>
+              </span>
+              <span ng-bind="proj.details" class="proj_details"></span>
+              <div class="task_details_append" ng-class="{scale_zero: !is_expand}">
+                (<a class="dib val_tag" target="_blank" ng-repeat="tag in proj.tags"
+                    ng-class="{'remove_first_before': $first}"
+                    ng-href="{{ get_tag_link(tag) }}" ng-bind="tag">
+              </a>)
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+<footer>
+  <div class="text-center">
+    Copyright, Dave Li© <span ng-bind="cur_year"></span>. All rights reserved.
+  </div>
+</footer>
+</body>
+</html>

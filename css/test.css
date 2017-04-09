@@ -1,0 +1,122 @@
+
+.me:after{margin-top: -13px;}
+.me:before{margin-bottom: -14px;}
+.me{
+
+    border-radius: 5px;
+    background-color: aliceblue;
+    display: inline-block;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    width: 25px;
+    height: 30px;
+    /*margin-left: 50px;*/
+    /*margin-top: 50px;*/
+    line-height: 20px;
+    text-align: right;
+    padding-right: 5px;
+    position: absolute;
+}
+.me{
+    border: 2px solid #6c6c6c;
+    color: #6c6c6c;
+    transform: rotate(90deg);
+}
+
+.me:before, .me:after{
+    display: block;
+    font-size: x-large;
+    margin-left: 5px;
+    text-align: left;
+}
+.me:before{
+    content: "•";
+}
+.me:after{
+    content: "•";
+}
+
+.me.wink_left:before{
+    content: "<";
+}
+
+.me.wink_right:after{
+    content: "<";
+}
+.me.x_left:before{
+    content: "x";
+}
+
+.me.x_right:after{
+    content: "x";
+}
+.me.wink_left:before, .me.wink_right:after{
+    font-size: large;
+}
+
+.me{
+    font-family: 'Baloo Bhaina', cursive;
+}
+.left_hand, .right_hand, .left_foot, .right_foot{
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: aliceblue;
+    border-radius: 10px;
+    border: 2px solid #6c6c6c;
+    animation-iteration-count: infinite;
+}
+.right_hand{
+top: -10px;
+    animation-delay: 1s;
+}
+.left_hand{
+top: 25px;
+    animation-delay: 2s;
+}
+
+.right_foot{
+top: 0;
+    animation-delay: 3s;
+}
+.left_foot{
+top: 15px;
+    animation-delay: 4s;
+}
+.left_hand, .right_hand{
+left: 15px;
+    animation-duration: 3s;
+}
+.left_foot, .right_foot{
+    left: 30px;
+    animation-duration: 2s;
+}
+.left_hand, .left_foot{
+    animation-name: counter_clock_wise;
+}
+.right_hand, .right_foot{
+    animation-name: clock_wise;
+}
+
+@keyframes clock_wise {
+    0%   {transform: translate(0px, 0px);}
+    33%  {transform: translate(3px, 0px);}
+    66%  {transform: translate(3px, -3px);}
+    100% {transform: translate(0px, 0px);}
+}
+@keyframes counter_clock_wise {
+    0%   {transform: translate(0px, 0px);}
+    33%  {transform: translate(3px, 0px);}
+    66%  {transform: translate(3px, 3px);}
+    100% {transform: translate(0px, 0px);}
+}
+.me .hair{
+    height: 3px;
+    width: 10px;
+    background-color: #6c6c6c;
+    left: -7px;
+    position: absolute;
+    top: 12px;
+    border-radius: 100px;
+}
