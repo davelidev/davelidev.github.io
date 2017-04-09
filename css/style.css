@@ -386,9 +386,11 @@ header .icons_container .download_resume_btn:hover {
     opacity: 0;
     transition-timing-function: ease-out;
     transition-duration: 1s;
+    transform: scale(0.7, 1);
     /*border: 1px solid red;*/
 }
 .category_container.category_visible {
+    transform: scale(1, 1);
     opacity: 1;
 }
 
