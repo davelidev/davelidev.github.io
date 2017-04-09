@@ -129,7 +129,8 @@ angular.module('myApp', [])
                     interval: [new Date(2015, 8), new Date(2016, 4)],
                     tasks: [
                         {
-                            detail: "Reverse engineer large UI components to add accessibility support for the front-end web application.",
+                            detail: "Reverse engineer large UI components to add accessibility support for the \
+                            front-end of the web application.",
                             tags: ["HTML", "CSS", "JS", "Dojo", "RTC"]
                         },
                         {
