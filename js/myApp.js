@@ -144,7 +144,7 @@ angular.module('myApp', [])
                     ],
                 },
                 {
-                    title: "BPM Java/Web Software Engineer",
+                    title: "BPM Java/Web Software Engineer(4mth Part Time + 5mth Full Time)",
                     interval: [new Date(2015, 8), new Date(2016, 4)],
                     tasks: [
                         {
@@ -256,7 +256,7 @@ angular.module('myApp', [])
                     CSCD95H3: "Computer Science Project II",
                     CSCD27H3: "Computer & Network Security",
                     CSCD03H3: "Social Impact of Information Technology",
-                    CSC401H1: "Natural Language Comptation",
+                    CSC401H1: "Natural Language Computation",
                     CSCD01H3: "Engineering Large Software Systems",
                     CSCC69H3: "Operating Systems",
                     CSCC24H3: "Principles of Programming Languages",
