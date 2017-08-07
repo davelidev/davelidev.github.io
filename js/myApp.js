@@ -23,7 +23,7 @@ angular.module('myApp', [])
             if (year_diff = (to_date.getFullYear() - from_date.getFullYear() + (is_carry_over_year ? -1 : 0 )))
                 date_display = (year_diff == 1 ? year_diff + " year " : year_diff + " years ") +
                   (date_display ? " & " + date_display : "");
-            return date_display.trim() + note;
+            return date_display.trim() + (note ? note : "");
         };
 
         scp.get_date_pretty = function (date_inp) {
@@ -37,12 +37,12 @@ angular.module('myApp', [])
 
         scp.get_interval = function (from_date, to_date, note) {
             [from_date, to_date] = scp.get_from_to(from_date, to_date);
-            return scp.get_date_pretty(from_date) + " - " + scp.get_date_pretty(to_date) + (note ? note : "")
+            return scp.get_date_pretty(from_date) + " - " + scp.get_date_pretty(to_date)
         };
 
         scp.get_interval_n_duration = function (from_date, to_date, note) {
             [from_date, to_date] = scp.get_from_to(from_date, to_date);
-            return scp.get_interval(from_date, to_date, note) + ", " + scp.get_duration(from_date, to_date)
+            return scp.get_interval(from_date, to_date) + ", " + scp.get_duration(from_date, to_date, note)
 
         };
 
