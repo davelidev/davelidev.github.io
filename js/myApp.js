@@ -9,7 +9,7 @@ angular.module('myApp', [])
             return to_date ? [from_date, to_date] : from_date
         };
 
-        scp.get_duration = function (from_date, to_date) {
+        scp.get_duration = function (from_date, to_date, note) {
             [from_date, to_date] = scp.get_from_to(from_date, to_date);
             var date_display = "";
             var is_carry_over_year = false;
@@ -23,7 +23,7 @@ angular.module('myApp', [])
             if (year_diff = (to_date.getFullYear() - from_date.getFullYear() + (is_carry_over_year ? -1 : 0 )))
                 date_display = (year_diff == 1 ? year_diff + " year " : year_diff + " years ") +
                   (date_display ? " & " + date_display : "");
-            return date_display.trim();
+            return date_display.trim() + note;
         };
 
         scp.get_date_pretty = function (date_inp) {
@@ -35,9 +35,9 @@ angular.module('myApp', [])
             return is_date_same ? "Present" : disp[1] + " " + disp[3]
         };
 
-        scp.get_interval = function (from_date, to_date) {
+        scp.get_interval = function (from_date, to_date, note) {
             [from_date, to_date] = scp.get_from_to(from_date, to_date);
-            return scp.get_date_pretty(from_date) + " - " + scp.get_date_pretty(to_date)
+            return scp.get_date_pretty(from_date) + " - " + scp.get_date_pretty(to_date) + note
         };
 
         scp.get_interval_n_duration = function (from_date, to_date) {
@@ -145,7 +145,7 @@ angular.module('myApp', [])
                 },
                 {
                     title: "BPM Java/Web Software Engineer",
-                    interval: [new Date(2015, 8), new Date(2016, 4), "(4 mths part time)"],
+                    interval: [new Date(2015, 8), new Date(2016, 4), "(4 months part time)"],
                     tasks: [
                         {
                             detail: "Reverse engineer large UI components to add accessibility support for the \
