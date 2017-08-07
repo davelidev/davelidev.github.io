@@ -14,11 +14,6 @@ $(function () {
     }
   });
 
-
-  $("#myScrollspy li").on('activate', function () {
-    console.log("ADsf")
-  });
-
   $("#myScrollspy a[href^='#'], .next_pg").on('click', function (e) {
     this.blur();
     e.preventDefault();
