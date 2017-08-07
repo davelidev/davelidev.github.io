@@ -106,15 +106,34 @@ angular.module('myApp', [])
                     title: "BPM on Cloud Devops",
                     interval: [new Date(2016, 5), new Date()],
                     tasks: [
+
                         {
-                            detail: "Identify and automate operational processes with a self invented workflow engine to cut \
-                                    down on execution time and manual effort by over 70% for a smoother product transition to the cloud.",
+                            detail: "Created a thread-safe mechanism and integrated it with applicable automation scripts to \
+                                    improve time efficiency by 1500% for better scalability(e.g. reducing production downtime \
+                                    for scheduled global product maintenance by leveraging multi-threading).",
+                            tags: ["Python", "Bash", "RTC"]
+                        },
+                        {
+                            detail: "Identify and automate operational processes with a self invented workflow engine to cut down \
+                                    on execution time and manual effort. Integrated this mechanism with operational processes to \
+                                    yield an overall 400% increase in productivity for provisioning, 1000% increase in productivity \
+                                    for performing upgrades, 1100% increase in productivity for taking backups and much more.",
+                            tags: ["Python", "Bash", "RTC"]
+                        },
+                        {
+                            detail: "Mentor for a new hire; guided and encouraged him to expand on skill set of his interest \
+                                    and to build on existing automation.",
+                            tags: []
+                        },
+                        {
+                            detail: "Create automation scripts for performing different operational procedures to effectively \
+                                    reduce time and manual effort.",
                             tags: ["Python", "Bash", "RTC"]
                         },
                         {
                             detail: "Perform system scans and system maintenance to ensure all cloud based customer \
                                     environments have up-to-date dependencies, the latest product version and are compliant \
-                                    with the IBM security regulations.",
+                                    with the security regulations set by IBM.",
                             tags: ["Terminal", "Bash"]
                         },
                         {
@@ -134,8 +153,7 @@ angular.module('myApp', [])
                             tags: ["HTML", "CSS", "JS", "Dojo", "RTC"]
                         },
                         {
-                            detail: "Investigate and provide fixes for product defects and memory leaks; backport \
-                                    fix packs to all product versions and ensure no regression is caused.",
+                            detail: "Investigate and provide fixes for product defects and memory leaks.",
                             tags: ["HTML", "CSS", "JS", "Dojo", "Java", "DB2", "RTC"]
                         },
                         {
