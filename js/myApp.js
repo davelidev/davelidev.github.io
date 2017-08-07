@@ -5,8 +5,8 @@ angular.module('myApp', [])
 
         scp.cur_year = new Date().getFullYear();
 
-        scp.get_from_to = function (from_date, to_date) {
-            return to_date ? [from_date, to_date] : from_date
+        scp.get_from_to = function (from_date, to_date, note) {
+            return to_date ? [from_date, to_date, note] : from_date
         };
 
         scp.get_duration = function (from_date, to_date, note) {
