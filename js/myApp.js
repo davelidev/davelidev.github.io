@@ -5,12 +5,12 @@ angular.module('myApp', [])
 
         scp.cur_year = new Date().getFullYear();
 
-        scp.get_from_to = function (from_date, to_date, note) {
-            return to_date ? [from_date, to_date, note] : from_date
+        scp.get_from_to = function (from_date, to_date) {
+            return to_date ? [from_date, to_date] : from_date
         };
 
         scp.get_duration = function (from_date, to_date, note) {
-            [from_date, to_date] = scp.get_from_to(from_date, to_date);
+            [from_date, to_date, note] = scp.get_from_to(from_date, to_date, note);
             var date_display = "";
             var is_carry_over_year = false;
             if (month_diff = (to_date.getMonth() - from_date.getMonth() + 1)) {
@@ -35,13 +35,13 @@ angular.module('myApp', [])
             return is_date_same ? "Present" : disp[1] + " " + disp[3]
         };
 
-        scp.get_interval = function (from_date, to_date, note) {
+        scp.get_interval = function (from_date, to_date) {
             [from_date, to_date] = scp.get_from_to(from_date, to_date);
             return scp.get_date_pretty(from_date) + " - " + scp.get_date_pretty(to_date)
         };
 
         scp.get_interval_n_duration = function (from_date, to_date, note) {
-            [from_date, to_date] = scp.get_from_to(from_date, to_date);
+            [from_date, to_date, note] = scp.get_from_to(from_date, to_date, note);
             return scp.get_interval(from_date, to_date) + ", " + scp.get_duration(from_date, to_date, note)
 
         };
