@@ -37,12 +37,12 @@ angular.module('myApp', [])
 
         scp.get_interval = function (from_date, to_date, note) {
             [from_date, to_date] = scp.get_from_to(from_date, to_date);
-            return scp.get_date_pretty(from_date) + " - " + scp.get_date_pretty(to_date) + note
+            return scp.get_date_pretty(from_date) + " - " + scp.get_date_pretty(to_date) + (note ? note : "")
         };
 
-        scp.get_interval_n_duration = function (from_date, to_date) {
+        scp.get_interval_n_duration = function (from_date, to_date, note) {
             [from_date, to_date] = scp.get_from_to(from_date, to_date);
-            return scp.get_interval(from_date, to_date) + ", " + scp.get_duration(from_date, to_date)
+            return scp.get_interval(from_date, to_date, note) + ", " + scp.get_duration(from_date, to_date)
 
         };
 
