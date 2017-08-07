@@ -123,7 +123,7 @@ angular.module('myApp', [])
                         {
                             detail: "Mentor for a new hire; guided and encouraged him to expand on skill set of his interest \
                                     and to build on existing automation.",
-                            tags: []
+                            tags: ["Terminal", "Bash", "RTC"]
                         },
                         {
                             detail: "Create automation scripts for performing different operational procedures to effectively \
