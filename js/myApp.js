@@ -145,7 +145,7 @@ angular.module('myApp', [])
                 },
                 {
                     title: "BPM Java/Web Software Engineer",
-                    interval: [new Date(2015, 8), new Date(2016, 4), "(4mth Part Time + 5mth Full Time)"],
+                    interval: [new Date(2015, 8), new Date(2016, 4), "(4 mths part time)"],
                     tasks: [
                         {
                             detail: "Reverse engineer large UI components to add accessibility support for the \
