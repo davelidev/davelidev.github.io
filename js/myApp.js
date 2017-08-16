@@ -92,7 +92,7 @@ angular.module('myApp', [])
              inspires new ways of handling complicated and repetitive tasks with minimal amount of effort.",
             "What if? This is the question asked by many scientists. I consider myself as an inventor, a mad computer\
             scientist. There're many approaches to tackle one problem, so sometimes I tend to get a little wild on the experimentation.",
-            "From experience, I learnt good things take time. I used to get frustrated doing stuff that are not mentally challenging,\
+            "From experience, I learnt good things take time. I used to get frustrated doing things that are not technically challenging,\
             but eventually most of them turn out to be fun by adding a touch of automation and personalization."
 
         ];
