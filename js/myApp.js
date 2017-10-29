@@ -18,10 +18,10 @@ angular.module('myApp', [])
                     month_diff = 12 + month_diff;
                     is_carry_over_year = true;
                 }
-                date_display += month_diff == 1 ? month_diff + " month " : month_diff + " months "
+                date_display += month_diff == 1 ? month_diff + " mth " : month_diff + " mths "
             }
             if (year_diff = (to_date.getFullYear() - from_date.getFullYear() + (is_carry_over_year ? -1 : 0 )))
-                date_display = (year_diff == 1 ? year_diff + " year " : year_diff + " years ") +
+                date_display = (year_diff == 1 ? year_diff + " yr " : year_diff + " yrs ") +
                   (date_display ? " & " + date_display : "");
             return date_display.trim() + (note ? note : "");
         };
@@ -86,7 +86,7 @@ angular.module('myApp', [])
 
 
         scp.peronality_breif = "A donut is worth a thousand words, what more to know about a person than by looking\
-     at his delicious personality donut? ! !";
+        at his delicious personality donut? ! !";
         scp.personality_descrition = [
             "I am a lazy programmer, I believe every true programmer should be lazy. This is a good trait to possess as it\
              inspires new ways of handling complicated and repetitive tasks with minimal amount of effort.",
@@ -106,74 +106,77 @@ angular.module('myApp', [])
                     title: "BPM on Cloud Devops",
                     interval: [new Date(2016, 5), new Date()],
                     tasks: [
-
                         {
-                            detail: "Created a thread-safe mechanism and integrated it with applicable automation scripts to \
-                                    improve time efficiency by 1500% for better scalability(e.g. reducing production downtime \
-                                    for scheduled global product maintenance by leveraging multi-threading).",
-                            tags: ["Python", "Bash", "RTC"]
+                            detail: "Create migration scripts, and provisioning scripts in a tight deadline when new " +
+                            "product versions come out to ensure new tenants have the latest product and old tenants " +
+                            "can be migrated to the newest as well.",
+                            tags: ["Bash"]
                         },
                         {
-                            detail: "Identify and automate operational processes with a self invented workflow engine to cut down \
-                                    on execution time and manual effort. Integrated this mechanism with operational processes to \
-                                    yield an overall 400% increase in productivity for provisioning, 1000% increase in productivity \
-                                    for performing upgrades, 1100% increase in productivity for taking backups and much more.",
-                            tags: ["Python", "Bash", "RTC"]
+                            detail: "Script and perform global monthly maintenance to ensure all tenants keep " +
+                            "up-to-date with security measures and product fixes.",
+                            tags: ["Bash", "Terminal"]
                         },
                         {
-                            detail: "Mentor for a new hire; guided and encouraged him to expand on skill set of his interest \
-                                    and to build on existing automation.",
-                            tags: ["Terminal", "Bash", "RTC"]
+                            detail: "Introduced thread-safe multi-threading strategy to improve time efficiency by " +
+                            "1500% for better scalability. Integrated this mechanism with global monthly maintenance to " +
+                            "minimize downtime, as well as improve on other report generation tools.",
+                            tags: ["Bash"]
                         },
                         {
-                            detail: "Create automation scripts for performing different operational procedures to effectively \
-                                    reduce time and manual effort.",
-                            tags: ["Python", "Bash", "RTC"]
+                            detail: "Created a workflow mechanism to enable automation of operational procedures." +
+                            " Leveraging this mechanism to automate and yield a 400% increase in productivity for" +
+                            " provisioning, 1000% increase in productivity for performing upgrades, 1100% increase in" +
+                            " productivity for taking backups and much more.",
+                            tags: ["Python", "Bash"]
                         },
                         {
-                            detail: "Perform system scans and system maintenance to ensure all cloud based customer \
-                                    environments have up-to-date dependencies, the latest product version and are compliant \
-                                    with the security regulations set by IBM.",
+                            detail: "Mentor for a new employee. Guided and encouraged him to expand on skill sets of" +
+                            " interest and to build on existing automation.\n",
+                            tags: []
+                        },
+                        {
+                            detail: "Generate reports and run analysis to support various high level decision makings.",
+                            tags: ["Python", "Bash", "DB2"]
+                        },
+                        {
+                            detail: "Perform various operational tasks such as provisioning, product migration," +
+                            " os upgrades, de-provisioning and etc...\n",
                             tags: ["Terminal", "Bash"]
-                        },
-                        {
-                            detail: "Perform analysis on large amount of data gathered from system scans to support various \
-                                    operational decision makings.",
-                            tags: ["Python", "Bash", "DB2", "RTC"]
-                        },
+                        }
                     ],
                 },
                 {
                     title: "BPM Java/Web Software Engineer",
-                    interval: [new Date(2015, 8), new Date(2016, 4), "(4 months part time)"],
+                    interval: [new Date(2016, 0), new Date(2016, 4)],
                     tasks: [
                         {
                             detail: "Reverse engineer large UI components to add accessibility support for the \
                             front-end of the web application.",
-                            tags: ["HTML", "CSS", "JS", "Dojo", "RTC"]
+                            tags: ["HTML", "CSS", "JS", "Dojo"]
                         },
                         {
                             detail: "Investigate and provide fixes for product defects and memory leaks.",
-                            tags: ["HTML", "CSS", "JS", "Dojo", "Java", "DB2", "RTC"]
+                            tags: ["HTML", "CSS", "JS", "Dojo", "Java", "DB2"]
                         },
                         {
                             detail: "Prototype and experiment with new pre-patented inventions for the web application.",
-                            tags: ["HTML", "CSS", "JS", "Dojo", "RTC"]
+                            tags: ["HTML", "CSS", "JS", "Dojo"]
                         },
                     ],
 
                 },
                 {
                     title: "BPM Java/Web Developer(Intern)",
-                    interval: [new Date(2014, 4), new Date(2015, 7)],
+                    interval: [new Date(2014, 4), new Date(2015, 11), "(4 mths of part time)"],
                     tasks: [
                         {
                             detail: "Designed and implemented a test framework with test cases for a software component.",
-                            tags: ["Java", "Junit", "Selenium", "DB2", "Rest", "RTC"]
+                            tags: ["Java", "Junit", "Selenium", "DB2", "Rest"]
                         },
                         {
                             detail: "Developed rest services to extend the existing rest functionalities.",
-                            tags: ["Java", "DB2", "Rest", "RTC"]
+                            tags: ["Java", "DB2", "Rest"]
                         },
                     ],
 
@@ -183,10 +186,12 @@ angular.module('myApp', [])
 
 
         scp.skills = {
-            "Frontend Web": ["HTML/CSS/JS", "Bootstrap", "Foundation", "jQuery", "Angularjs", "Libgdx"],
-            "Server-side": ["Nodejs", "Expressjs", "Django", "PHP", "Ajax", "RESTful"],
-            "Scripting/OOP": ["Java", "Python", "Bash", "Matlab"],
-            "Database": ["MySQL", "PostgreSQL", "DB2", "Mongodb"],
+            "Scripting/OOP": ["Python", "Bash", "Java", "Javascript"],
+            "Web Tech": ["Websocket", "Ajax", "ORM", "Restful Services"],
+            "Frontend": ["HTML/CSS/JS", "Bootstrap", "Foundation", "jQuery", "Angularjs"],
+            "Backend": ["Django", "Nodejs", "Expressjs", "SocketIO", "PHP"],
+            // "Database": ["Relational-DB2/MySQL", "NoSql-MongoDB", "Django/Hibernate ORM"],
+            // "Version Control" : ["IBM RTC", "Git", "Subversion"]
         };
 
         scp.to_link = {
@@ -230,15 +235,7 @@ angular.module('myApp', [])
         };
 
         scp.other_skills = [
-            "Algorithms",
-            "Data Structures",
-            "Design Patterns",
-            "UML Diagrams",
-            "Regex",
-            "Computer Security",
-            "Multi-Threading & Sync. Principles",
-            "Natural Language Processing",
-            "Basic Data Mining & Machine Learning",
+            "Algorithms", "Data Structures", "OOP", "Data Processing", "ReGex", "Design Patterns", "Multi-Threading", "System Design(UML)", "Database Design", "2D Game Development(libGdx)"
         ];
 
         scp.education = [
@@ -284,7 +281,7 @@ angular.module('myApp', [])
         scp.code_to_link = {};
         for (code in scp.education[0].courses_taken) {
             if (/^[a-zA-Z]{4}/.test(code))
-                scp.code_to_link[code] = "http://www.utsc.utoronto.ca/~registrar/calendars/calendar/Computer_Science.html#" + code;
+                scp.code_to_link[code] = "https://utsc.calendar.utoronto.ca/course/" + code;
             else
                 scp.code_to_link[code] = "http://calendar.artsci.utoronto.ca/crs_csc.htm#" + code
         }
@@ -305,28 +302,28 @@ angular.module('myApp', [])
             },
             {
                 details: "Altered PostgreSQL's replacement strategy on top of the database engine. Convert from Least Recently \
-         Used to Clock, Least Frequently Used, and Most Recently Used Policy. Integrated Bloom Filter into the Join \
-         operation for performance improvement. Performance analysis is performed on the implementations.",
+                Used to Clock, Least Frequently Used, and Most Recently Used Policy. Integrated Bloom Filter into the Join \
+                operation for performance improvement. Performance analysis is performed on the implementations.",
                 tags: ["C", "PostgreSql"],
                 info_tags: [],
             },
             {
                 details: "Tackled many interesting algorithm and data structure related problems on CareerCup. \
-         Solutions and test cases are hosted on Github.",
+            Solutions and test cases are hosted on Github.",
                 tags: ["Python", "Git", "Github"],
                 info_tags: [],
             },
             {
                 details: "Created a program to emulate the functionalities of a database engine using csv files. \
-         This program supports various file manipulation operations as well as database operations such as Select, \
-         Outer Join, Natural Join, and Order-by.",
+                This program supports various file manipulation operations as well as database operations such as Select, \
+                Outer Join, Natural Join, and Order-by.",
                 tags: ["Java", "Subversion"],
                 info_tags: [],
             },
             {
                 details: "Created Natural Language Processing programs using the Hansard Corpus as training data.\
-         Implementations include the word prediction engine, autocompletion engine,\
-         language translator(IBM Model 1 algorithm), and tweet author predictor.",
+                Implementations include the word prediction engine, auto-completion engine,\
+                language translator(IBM Model 1 algorithm), and tweet author predictor.",
                 tags: ["Python", "Matlab"],
                 info_tags: [],
             },
