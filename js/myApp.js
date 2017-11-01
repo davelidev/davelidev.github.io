@@ -133,7 +133,7 @@ angular.module('myApp', [])
                         {
                             detail: "Mentor for a new employee. Guided and encouraged him to expand on skill sets of" +
                             " interest and to build on existing automation.\n",
-                            tags: []
+                            tags: ["Terminal", "Bash"]
                         },
                         {
                             detail: "Generate reports and run analysis to support various high level decision makings.",
