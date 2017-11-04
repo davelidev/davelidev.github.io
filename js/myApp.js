@@ -132,16 +132,18 @@ angular.module('myApp', [])
                         },
                         {
                             detail: "Mentor for a new employee. Guided and encouraged him to expand on skill sets of" +
-                            " interest and to build on existing automation.\n",
+                            " interest and to build on existing automation.",
                             tags: ["Terminal", "Bash"]
                         },
                         {
-                            detail: "Generate reports and run analysis to support various high level decision makings.",
+                            detail: "Generate reports and perform analysis to support various high level decision" +
+                            " makings(e.g. Proposed technical resolution to cut back tens of thousands in spending" +
+                            " per month while maintaining same capability).",
                             tags: ["Python", "Bash", "DB2"]
                         },
                         {
-                            detail: "Perform various operational tasks such as provisioning, product migration," +
-                            " os upgrades, de-provisioning and etc...\n",
+                            detail: "Script and perform operational tasks such as provisioning, product migration, " +
+                            "os upgrades, and deprovisioning.",
                             tags: ["Terminal", "Bash"]
                         }
                     ],
@@ -151,12 +153,11 @@ angular.module('myApp', [])
                     interval: [new Date(2016, 0), new Date(2016, 4)],
                     tasks: [
                         {
-                            detail: "Reverse engineer large UI components to add accessibility support for the \
-                            front-end of the web application.",
+                            detail: "Reverse engineer large UI components to add accessibility support for the web application.",
                             tags: ["HTML", "CSS", "JS", "Dojo"]
                         },
                         {
-                            detail: "Investigate and provide fixes for product defects and memory leaks.",
+                            detail: "Investigate and provide fixes for defects and memory leaks.",
                             tags: ["HTML", "CSS", "JS", "Dojo", "Java", "DB2"]
                         },
                         {
@@ -171,11 +172,11 @@ angular.module('myApp', [])
                     interval: [new Date(2014, 4), new Date(2015, 11), "(4 mths of part time)"],
                     tasks: [
                         {
-                            detail: "Designed and implemented a test framework with test cases for a software component.",
+                            detail: "Developed REST services to extend the existing REST functionalities of the product.",
                             tags: ["Java", "Junit", "Selenium", "DB2", "Rest"]
                         },
                         {
-                            detail: "Developed rest services to extend the existing rest functionalities.",
+                            detail: "Designed and implemented a test framework with test cases for a software component.\n",
                             tags: ["Java", "DB2", "Rest"]
                         },
                     ],
