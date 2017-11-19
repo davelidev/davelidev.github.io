@@ -14,14 +14,14 @@ $(function () {
     }
   });
 
-  $("#myScrollspy a[href^='#'], .next_pg").on('click', function (e) {
+  $("#myScrollspy a[href^='#'], .page_down_icon").on('click', function (e) {
     this.blur();
     e.preventDefault();
 
     var hash = this.hash;
     var displacement;
     var self = $(this);
-    if (self.hasClass("next_pg"))
+    if (self.hasClass("page_down_icon"))
       displacement = 1;
     else {
 

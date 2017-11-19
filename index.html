@@ -20,8 +20,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body data-spy="scroll" data-target="#myScrollspy" data-offset="20" ng-app="myApp">
-<!--<div id="debug" style="background-color: red; width: 100%;height: 1px; position: absolute;"></div>-->
-<!--<div id="debug2" style="background-color: red; width: 100%;height: 1px; position: absolute;"></div>-->
 <div class="return_to_top">
 
 </div>
@@ -29,6 +27,7 @@
   <div class="canvas_background"></div>
   <h2 id="top_screen"></h2>
   <canvas id="front_page_canvas" class="hidden-xs"></canvas>
+  </div>
   <div class="text-center icons_container">
     <a target="_blank" href="https://www.linkedin.com/in/dave-li-122252a0/">
       <img class="header_icon" src="./imgs/linked_in.png"></a>
@@ -39,16 +38,20 @@
     <div><a href="./daves_resume.pdf" download>
       <div class="download_resume_btn">Download Resume</div>
     </a></div>
-    <div>
-      <div class="next_pg_container">
-        <a class="glyphicon glyphicon-hand-down next_pg bounce hvr-wobble-vertical" href="#about"></a>
-
-      </div>
-    </div>
+    <!--<div>-->
+      <!--&lt;!&ndash;<div class="next_pg_container">&ndash;&gt;-->
+        <!--&lt;!&ndash;<a class="glyphicon glyphicon-hand-down next_pg bounce hvr-wobble-vertical" href="#about"></a>&ndash;&gt;-->
+      <!--&lt;!&ndash;</div>&ndash;&gt;-->
+    <!--</div>-->
 
   </div>
 </header>
-<div class="header_body_padding"></div>
+
+
+<div class="header_body_padding text-center">
+  <a class="page_down_icon glyphicon glyphicon-menu-down"  href="#about"></a>
+  <div id="canvas_transition" class="text-center"></div>
+</div>
 
 <div ng-controller="app">
   <div class="container">
@@ -117,7 +120,6 @@
 
 
         <div ng-init="is_expand=true" class="category_container">
-
           <div class="me_path">
             <div class="me_container">
               <div class="me">3</div>

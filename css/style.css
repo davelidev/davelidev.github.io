@@ -195,7 +195,8 @@ header .icons_container .download_resume_btn {
     cursor: pointer;
     font-weight: bold;
     transition-duration: 0.5s;
-    margin: 5px 5px 50px;
+    margin: 5px 5px 150px;
+    z-index: 20000;
 }
 
 header .icons_container .download_resume_btn:hover {
@@ -277,11 +278,12 @@ header .icons_container .download_resume_btn:hover {
     box-shadow: 0 0 5px #828282;
     max-width: 350px;
 }
+
 .education a {
     color: white !important;
 }
 
-.education a:hover{
+.education a:hover {
     color: white !important;
 }
 
@@ -389,6 +391,7 @@ header .icons_container .download_resume_btn:hover {
     transform: scale(0.7, 1);
     /*border: 1px solid red;*/
 }
+
 .category_container.category_visible {
     transform: scale(1, 1);
     opacity: 1;
@@ -459,7 +462,7 @@ footer {
 }
 
 #donut_chart {
-    overflow:hidden !important;
+    overflow: hidden !important;
     max-width: 100%;
     min-height: 400px;
 }
@@ -512,16 +515,42 @@ footer {
     /*color: #f62349;*/
     background-color: #3c6985;
 }
-.up_down_btn{
+
+.up_down_btn {
     margin-top: 30px;
     padding: 10px;
     font-size: larger;
     display: inline-block;
-    border:2px solid #3c6985;
+    border: 2px solid #3c6985;
     color: #3c6985;
     transition-duration: 1s;
 }
-.up_down_btn:hover{
+
+.up_down_btn:hover {
     background-color: #3c6985;
     color: whitesmoke;
+}
+
+#canvas_transition {
+    width: 100%;
+    height: 300px;
+    position: relative;
+    top: -300px;
+    background: linear-gradient(rgba(0, 0, 0, 0) 30%, white 70%);
+    z-index: -1;
+}
+
+.page_down_icon{
+    font-size: xx-large;
+    transform: scale(3,1);
+    color: grey;
+    top: -80px;
+    height: 0;
+    transition-duration: 0.5s;
+}
+
+.page_down_icon:hover{
+    transform: scale(4,1.4);
+    color: black;
+    cursor: pointer;
 }
