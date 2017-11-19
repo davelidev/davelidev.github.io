@@ -53,8 +53,8 @@ a:hover, a:focus {
 }
 
 #nav li a:before {
-    font-family: 'Indie Flower', cursive;
-    content: "|>";
+    font-family: 'Glyphicons Halflings', cursive;
+    content: "\e239";
     font-size: large;
     display: inline-block;
     padding-right: 10px;
@@ -75,7 +75,7 @@ a:hover, a:focus {
 }
 
 #nav li.active a:before {
-    color: red !important;
+    color: #0F9E5E !important;
 }
 
 .nav > li > a:hover:before, .nav > li > a:focus:before {
@@ -307,11 +307,20 @@ header .icons_container .download_resume_btn:hover {
     padding-bottom: 12px;
 }
 
+
+@font-face {
+    font-family: 'Glyphicons Halflings';
+
+    src: url('../lib/bootstrap/fonts/glyphicons-halflings-regular.eot');
+    src: url('../lib/bootstrap/fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('../lib/bootstrap/fonts/glyphicons-halflings-regular.woff2') format('woff2'), url('../lib/bootstrap/fonts/glyphicons-halflings-regular.woff') format('woff'), url('../lib/bootstrap/fonts/glyphicons-halflings-regular.ttf') format('truetype'), url('../lib/bootstrap/fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
+}
+
+
+
 .experience .task_details:before, .projects .proj_details:before, .about .desc:before {
-    font-family: 'Indie Flower', cursive;
-    content: ">>";
+    font-family: 'Glyphicons Halflings', cursive;
+    content: "\e127";
     color: #34434a;
-    font-size: larger;
     padding-right: 8px;
     transition-duration: 0.4s;
 }
@@ -550,7 +559,29 @@ footer {
 }
 
 .page_down_icon:hover{
-    transform: scale(4,1.4);
+    transform: scale(4,1.4) !important;
     color: black;
     cursor: pointer;
+    animation: 0;
+}
+
+
+@keyframes size_change {
+    0% {
+        transform: scale(3,1);
+    }
+    50% {
+        transform: scale(3.4,1.2);
+
+    }
+    100% {
+        transform: scale(3,1);
+    }
+}
+
+.page_down_icon{
+    animation-name: size_change;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease;
 }
