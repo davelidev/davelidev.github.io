@@ -143,7 +143,7 @@ angular.module('myApp', [])
                         },
                         {
                             detail: "Script and perform operational tasks such as provisioning, product migration, " +
-                            "os upgrades, and deprovisioning.",
+                            "system upgrades, and deprovisioning.",
                             tags: ["Terminal", "Bash"]
                         }
                     ],
@@ -292,41 +292,38 @@ angular.module('myApp', [])
                 details: "Created an end-to-end food ordering system; a responsive web application implemented using \
                 the restful approach. This course is a single person project under the supervision of professor Alan Rosselet.",
                 tags: ["HTML", "CSS", "JS", "Angular JS", "Angular UI", "Bootstrap", "Django", "Django Rest Framework", "Mysql", "Git", "Bluemix"],
-                info_tags: {},
             },
             {
                 details: "Created a CRUD Rest Framework for Nodejs with admin interface similar to Django’s; \
                 rest endpoints are generated from database schema definitions. This is a single person project under \
                 the supervision of professor Alan Rosselet.",
                 tags: ["HTML", "CSS", "JS", "Angular JS", "Angular UI", "Foundation", "NodeJS", "Expressjs", "Mongodb", "Git", "Heroku"],
-                info_tags: {},
+            },
+            {
+                details: "Created a software to scrape resources of a specific web domain for offline use. See Github.",
+                tags: ["Python", "Git", "Github"],
             },
             {
                 details: "Altered PostgreSQL's replacement strategy on top of the database engine. Convert from Least Recently \
                 Used to Clock, Least Frequently Used, and Most Recently Used Policy. Integrated Bloom Filter into the Join \
                 operation for performance improvement. Performance analysis is performed on the implementations.",
                 tags: ["C", "PostgreSql"],
-                info_tags: [],
             },
             {
-                details: "Tackled many interesting algorithm and data structure related problems on CareerCup. \
-            Solutions and test cases are hosted on Github.",
+                details: "Tackled many interesting algorithm and data structure related problems. See Github.",
                 tags: ["Python", "Git", "Github"],
-                info_tags: [],
             },
             {
                 details: "Created a program to emulate the functionalities of a database engine using csv files. \
                 This program supports various file manipulation operations as well as database operations such as Select, \
                 Outer Join, Natural Join, and Order-by.",
                 tags: ["Java", "Subversion"],
-                info_tags: [],
             },
             {
                 details: "Created Natural Language Processing programs using the Hansard Corpus as training data.\
                 Implementations include the word prediction engine, auto-completion engine,\
                 language translator(IBM Model 1 algorithm), and tweet author predictor.",
                 tags: ["Python", "Matlab"],
-                info_tags: [],
             },
 
 
