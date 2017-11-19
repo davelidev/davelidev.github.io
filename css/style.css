@@ -545,7 +545,7 @@ footer {
     height: 300px;
     position: relative;
     top: -300px;
-    background: linear-gradient(rgba(0, 0, 0, 0) 30%, white 70%);
+    background: linear-gradient(rgba(255, 255, 255, 0) 30%, white);
     z-index: -1;
 }
 
