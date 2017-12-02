@@ -176,7 +176,7 @@ angular.module('myApp', [])
                             tags: ["Java", "Junit", "Selenium", "DB2", "Rest"]
                         },
                         {
-                            detail: "Designed and implemented a test framework with test cases for a software component.\n",
+                            detail: "Designed and implemented a test framework with complete test suits for a software component.\n",
                             tags: ["Java", "DB2", "Rest"]
                         },
                         {
