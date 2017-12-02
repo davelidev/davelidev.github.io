@@ -168,7 +168,7 @@ angular.module('myApp', [])
 
                 },
                 {
-                    title: "BPM Java/Web Developer(Intern)",
+                    title: "BWL/BPM Java/Web Developer(Intern)",
                     interval: [new Date(2014, 4), new Date(2015, 11), "(4 mths of part time)"],
                     tasks: [
                         {
