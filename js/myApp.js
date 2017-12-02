@@ -179,6 +179,10 @@ angular.module('myApp', [])
                             detail: "Designed and implemented a test framework with test cases for a software component.\n",
                             tags: ["Java", "DB2", "Rest"]
                         },
+                        {
+                            detail: "Automated build deployment process from Jenkins to ensure the test server is always on the latest build.\n",
+                            tags: ["Python", "Bash"]
+                        },
                     ],
 
                 },
