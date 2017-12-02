@@ -89,7 +89,7 @@ angular.module('myApp', [])
         at his delicious personality donut? ! !";
         scp.personality_descrition = [
             "I am a lazy programmer, I believe every true programmer should be lazy. This is a good trait to possess as it\
-             inspires new ways of handling complicated and repetitive tasks with minimal amount of effort.",
+             inspires new ways of handling complicated or repetitive tasks with minimal amount of effort.",
             "What if? This is the question asked by many scientists. I consider myself as an inventor, a mad computer\
             scientist. There're many approaches to tackle one problem, so sometimes I tend to get a little wild on the experimentation.",
             "From experience, I learnt good things take time. I used to get frustrated doing things that are not technically challenging,\
