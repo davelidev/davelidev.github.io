@@ -104,7 +104,7 @@ angular.module('myApp', [])
             positions: [
                 {
                     title: "BPM on Cloud Devops",
-                    interval: [new Date(2016, 5), new Date(2018,5)],
+                    interval: [new Date(2016, 5), new Date(2018,4)],
                     tasks: [
                         {
                             detail: "Create migration scripts, and provisioning scripts in a tight deadline when new " +
@@ -293,7 +293,7 @@ angular.module('myApp', [])
 
         scp.projects = [
             {
-                details: "Tackled many algorithm and data structure related problems from leetcode. 400+ problems as of today. See Github.",
+                details: "Tackled many algorithm and data structure related problems from leetcode. 400+ problems as of today, on my Github.",
                 tags: ["Python", "Git", "Github"],
             },
             {
