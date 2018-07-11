@@ -104,7 +104,7 @@ angular.module('myApp', [])
             positions: [
                 {
                     title: "BPM on Cloud Devops",
-                    interval: [new Date(2016, 5), new Date()],
+                    interval: [new Date(2016, 5), new Date(2017,5)],
                     tasks: [
                         {
                             detail: "Create migration scripts, and provisioning scripts in a tight deadline when new " +
