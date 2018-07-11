@@ -187,7 +187,7 @@ angular.module('myApp', [])
 
 
         scp.skills = {
-            "Scripting/OOP": ["Python", "Bash", "Java", "Javascript"],
+            "Scripting/OOP": ["Python", "Bash", "Java", "Javascript", "C#", "C++"],
             "Web Tech": ["Websocket", "Ajax", "ORM", "Restful Services"],
             "Frontend": ["HTML/CSS/JS", "Bootstrap", "Foundation", "jQuery", "Angularjs"],
             "Backend": ["Django", "Nodejs", "Expressjs", "SocketIO", "PHP"],
@@ -196,6 +196,8 @@ angular.module('myApp', [])
         };
 
         scp.to_link = {
+            "C#": "https://en.wikipedia.org/wiki/C_Sharp_(programming_language)",
+            "C++": "http://www.cplusplus.com/",
             java: "https://www.java.com/en/",
             python: "https://www.python.org/",
             bash: "https://www.gnu.org/software/bash/",
