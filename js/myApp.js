@@ -104,7 +104,7 @@ angular.module('myApp', [])
             positions: [
                 {
                     title: "BPM on Cloud Devops",
-                    interval: [new Date(2016, 5), new Date(2017,5)],
+                    interval: [new Date(2016, 5), new Date(2018,5)],
                     tasks: [
                         {
                             detail: "Create migration scripts, and provisioning scripts in a tight deadline when new " +
@@ -169,7 +169,7 @@ angular.module('myApp', [])
                 },
                 {
                     title: "BWL/BPM Java/Web Developer(Intern)",
-                    interval: [new Date(2014, 4), new Date(2015, 11), "(4 mths of part time)"],
+                    interval: [new Date(2014, 4), new Date(2015, 11)],
                     tasks: [
                         {
                             detail: "Developed REST services to extend the existing REST functionalities of the product.",
