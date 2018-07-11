@@ -113,7 +113,7 @@ angular.module('myApp', [])
                             tags: ["Bash"]
                         },
                         {
-                            detail: "Script and perform global monthly maintenance to ensure all tenants keep " +
+                            detail: "Script and perform global monthly maintenance to ensure all tenants are " +
                             "up-to-date with security measures and product fixes.",
                             tags: ["Bash", "Terminal"]
                         },
@@ -293,6 +293,10 @@ angular.module('myApp', [])
 
         scp.projects = [
             {
+                details: "Tackled many algorithm and data structure related problems from leetcode. 400+ problems as of today. See Github.",
+                tags: ["Python", "Git", "Github"],
+            },
+            {
                 details: "Created an end-to-end food ordering system; a responsive web application implemented using \
                 the restful approach. This course is a single person project under the supervision of professor Alan Rosselet.",
                 tags: ["HTML", "CSS", "JS", "Angular JS", "Angular UI", "Bootstrap", "Django", "Django Rest Framework", "Mysql", "Git", "Bluemix"],
@@ -312,16 +316,6 @@ angular.module('myApp', [])
                 Used to Clock, Least Frequently Used, and Most Recently Used Policy. Integrated Bloom Filter into the Join \
                 operation for performance improvement. Performance analysis is performed on the implementations.",
                 tags: ["C", "PostgreSql"],
-            },
-            {
-                details: "Tackled many interesting algorithm and data structure related problems. See Github.",
-                tags: ["Python", "Git", "Github"],
-            },
-            {
-                details: "Created a program to emulate the functionalities of a database engine using csv files. \
-                This program supports various file manipulation operations as well as database operations such as Select, \
-                Outer Join, Natural Join, and Order-by.",
-                tags: ["Java", "Subversion"],
             },
             {
                 details: "Created Natural Language Processing programs using the Hansard Corpus as training data.\
