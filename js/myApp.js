@@ -160,10 +160,6 @@ angular.module('myApp', [])
                             detail: "Investigate and provide fixes for defects and memory leaks.",
                             tags: ["HTML", "CSS", "JS", "Dojo", "Java", "DB2"]
                         },
-                        {
-                            detail: "Prototype and experiment with new pre-patented inventions for the web application.",
-                            tags: ["HTML", "CSS", "JS", "Dojo"]
-                        },
                     ],
 
                 },
