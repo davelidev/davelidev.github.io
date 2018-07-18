@@ -97,14 +97,26 @@ angular.module('myApp', [])
 
         ];
 
-        scp.experience = [{
+        scp.experience = [
+            {
+                
+            name: "Microsoft",
+            logo: "./imgs/experience/microsoft.png",
+            interval: [new Date(2018, 5), new Date()],
+            positions: [
+                {
+                    title: "Microsoft Azure - Analysis Services",
+                    interval: [new Date(2016, 5), new Date(2018, 4)],
+                    tasks: []
+            },
+            {
             name: "IBM BPM",
             logo: "./imgs/experience/ibm.png",
-            interval: [new Date(2014, 4), new Date()],
+            interval: [new Date(2014, 4), new Date(2018, 4)],
             positions: [
                 {
                     title: "BPM on Cloud Devops",
-                    interval: [new Date(2016, 5), new Date(2018,4)],
+                    interval: [new Date(2016, 5), new Date(2018, 4)],
                     tasks: [
                         {
                             detail: "Create migration scripts, and provisioning scripts in a tight deadline when new " +
