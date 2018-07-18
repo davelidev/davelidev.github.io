@@ -107,7 +107,12 @@ angular.module('myApp', [])
                 {
                     title: "Microsoft Azure - Analysis Services",
                     interval: [new Date(2016, 5), new Date(2018, 4)],
-                    tasks: []
+                    tasks: [
+                        {
+                            detail: "Fix product defects and create test cases to better improve on the quality of the product, " +
+                            "and to ensure that no regression is caused.",
+                            tags: ["c++", "c#"]
+                        },]
                 }]
             },
             {
