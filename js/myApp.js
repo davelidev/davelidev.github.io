@@ -108,6 +108,7 @@ angular.module('myApp', [])
                     title: "Microsoft Azure - Analysis Services",
                     interval: [new Date(2016, 5), new Date(2018, 4)],
                     tasks: []
+                }]
             },
             {
             name: "IBM BPM",
