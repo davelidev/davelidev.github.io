@@ -112,7 +112,13 @@ angular.module('myApp', [])
                             detail: "Fix product defects and create test cases to better improve on the quality of the product, " +
                             "and to ensure that no regression is caused.",
                             tags: ["c++", "c#"]
-                        },]
+                        },
+                        {
+                            detail: "Working with product managers to improve on existing features as well as implementing new features " +
+                            "for enhancing the product.",
+                            tags: ["c++", "c#"]
+                        },
+                    ]
                 }]
             },
             {
