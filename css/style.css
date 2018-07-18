@@ -380,6 +380,7 @@ header .icons_container .download_resume_btn:hover {
 .experience .exp_img {
     margin-right: -15px;
     margin-left: -15px;
+    clear: both;
 }
 
 .date_info_container {
