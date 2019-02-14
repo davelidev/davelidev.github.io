@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=500"/>
+    <meta name="keywords" content="ScrollMagic, example, scrolling, attaching, scrollbar, tween, tweenmax"/>
+    <meta name="author" content="Jan Paepke (www.janpaepke.de)"/>
+    <title>梦幻之旅</title>
+
+    <link rel='stylesheet' href='../lib/bootstrap/css/bootstrap.css'/>
+    <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,400italic|Josefin+Slab:400,700italic'
+          rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="../lib/ScrollMagic/assets/css/normalize.css" type="text/css">
+    <link rel="stylesheet" href="../lib/ScrollMagic/assets/css/style.css" type="text/css">
+    <link rel="stylesheet" href="../lib/ScrollMagic/assets/css/examples.css" type="text/css">
+    <link rel="shortcut icon" href="../lib/ScrollMagic/assets/img/favicon.ico" type="image/x-icon">
+
+    <script type="text/javascript" src="../lib/ScrollMagic/assets/js/lib/jquery.min.js"></script>
+    <script type="text/javascript" src="../lib/ScrollMagic/assets/js/lib/highlight.pack.js"></script>
+    <script type="text/javascript" src="../lib/ScrollMagic/assets/js/lib/modernizr.custom.min.js"></script>
+
+    <script type="text/javascript" src="../lib/ScrollMagic/assets/js/lib/greensock/TweenMax.min.js"></script>
+    <script type="text/javascript" src="../lib/ScrollMagic/scrollmagic/uncompressed/ScrollMagic.js"></script>
+    <script type="text/javascript" src="../lib/ScrollMagic/scrollmagic/uncompressed/plugins/animation.gsap.js"></script>
+    <script type="text/javascript"
+            src="../lib/ScrollMagic/scrollmagic/uncompressed/plugins/debug.addIndicators.js"></script>
+</head>
+<body>
+<div class="scrollContent">
+
+    <div class="frontPg">
+        <div class="letter">
+
+            <img src="../imgs/love/letter.png" style="width: 100%">
+        </div>
+    </div>
+
+    <div class="s0 trigger"></div>
+
+
+    <div id="target">
+        <img id="plane" src="../lib/ScrollMagic/assets/img/example_bezier.png"/>
+        <div class="pg2container">
+            <div class="cntower-container">
+            <img src="../imgs/love/cntower.jpg"/>
+            CN Tower(Toronto)</div>
+            <div class="spaceneedle-container" >
+            <img src="../imgs/love/spaceneedle.png"/>
+            Space Needle(Seattle)</div>
+        </div>
+
+    </div>
+
+    <div class="pg3container">
+    <div class="s0 trigger1"></div>
+    <div id="pin1" class="">
+        <h3>从多伦多到西雅图 谢谢有你的陪伴～</h3>
+    </div>
+    </div>
+
+    <div style="height:1000px"></div>
+</div>
+
+<script src="../js/plane.js"></script>
+<style>
+    .frontPg{
+        min-width: 100%; height: 100vh; margin-bottom: -50px;
+    }
+    .letter{
+        padding: 40px;
+        width:50%;
+        height: 100vh;
+        /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#feffff+0,ddf1f9+35,a0d8ef+100;Blue+3D+%2318 */
+        background: rgb(254,255,255); /* Old browsers */
+        background: -moz-linear-gradient(45deg, rgba(254,255,255,1) 0%, rgba(221,241,249,1) 35%, rgba(160,216,239,1) 100%); /* FF3.6-15 */
+        background: -webkit-linear-gradient(45deg, rgba(254,255,255,1) 0%,rgba(221,241,249,1) 35%,rgba(160,216,239,1) 100%); /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(45deg, rgba(254,255,255,1) 0%,rgba(221,241,249,1) 35%,rgba(160,216,239,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#feffff', endColorstr='#a0d8ef',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+    }
+    body{
+        background-color: white;
+    }
+    .cntower-container,.spaceneedle-container{
+        position: absolute;
+        z-index: -30;
+        margin: 50px
+
+    }
+    .cntower-container img,.spaceneedle-container img{
+        width: 150px;
+        height: 150px;
+    }
+    .spaceneedle-container{
+        right: 0;
+    }
+    .pg2container{
+        width: 100%;
+    }
+    .pg3container{
+        text-align: center;
+    }
+</style>
+</body>
+</html>
