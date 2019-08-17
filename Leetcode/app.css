@@ -1,0 +1,63 @@
+
+pre code .highlight.buildin-function {
+    color:#60ffff;
+}
+pre code .highlight.object{
+    color:#a6e22e;
+}
+pre code .highlight.bracket{
+    color:#fff;
+}
+pre code .highlight.keyword{
+    color:#f92672;
+}
+pre code .highlight.buildin-type{
+    color:#04d1ff;
+}
+pre code .highlight.comment,
+pre code .highlight.comment *
+{
+    color:#2dca51;
+}
+pre code .highlight.string,
+pre code .highlight.string *
+{
+    color:#e6db74 !important;
+}
+pre code .highlight.doc,
+pre code .highlight.doc *
+{
+    color:#dc3545 !important;
+}
+pre.highlight
+{
+    background-color: #23241f;
+    color: white;
+    padding: 20px;
+}
+.tt-suggestion.tt-selectable
+{
+    background-color: white !important;
+    padding: 5px;
+    border: 1px solid #ccc!important;
+    border-top: 0px solid white!important;
+}
+.category
+{
+    padding: 8px 15px !important;
+    margin: 0 10px 10px 0 !important;
+}
+
+body a{
+    color: blue !important;
+}
+
+.filter-container{
+    margin-right: 20px !important;
+    margin-bottom: 15px;
+    /*float: left;*/
+    display: inline-block;
+}
+.hasCode{
+    margin: 8px 20px !important;
+}

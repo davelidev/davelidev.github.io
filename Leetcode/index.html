@@ -1,0 +1,56 @@
+<!doctype html>
+<html ng-app="myApp">
+<head>
+    <script src="lib/jquery-3.4.0.js"></script>
+    <script src="lib/typeahead.bundle.js"></script>
+    <script src="lib/angular.js"></script>
+    <script src="lib/angular-sanitize.js"></script>
+    <script src="leetcode_json.js"></script>
+    <script src="app.js"></script>
+    <link rel="stylesheet" href="app.css">
+    <link rel="stylesheet" href="lib/tagsinput/bootstrap-tagsinput.css">
+    <link rel="stylesheet" href="lib/bootstrap-4.3.1-dist/css/bootstrap.css">
+    <script src="lib/tagsinput/bootstrap-tagsinput.js"></script>
+</head>
+<body>
+<div ng-controller="main" class='container-fluid'>
+
+    <br>
+    <div class="filter-container"><input ng-keypress="onEnterApplySearch($event)" class="form-control" ng-model="search_category" placeholder="Category"></div>
+    <div class="filter-container"><input ng-keypress="onEnterApplySearch($event)" class="form-control" ng-model="search_difficulty" placeholder="Difficulty"></div>
+    <div class="filter-container"><input ng-keypress="onEnterApplySearch($event)" class="form-control" ng-model="search_title" placeholder="Title"></div>
+    <div class="filter-container">
+        <div class="hasCode" ng-click="clickApplyFilter()">
+        <input class="form-check-input" type="checkbox" ng-model="search_has_code" id="has_code"> <label for="has_code">has code</label>
+        </div>
+    </div>
+    <div class="filter-container"><button type="submit" class="btn btn-info" ng-click="applySearch()">Search</button></div>
+    <div></div>
+    <div class="filter-container"><input ng-keypress="onEnterApplySearch($event)" class="form-control" ng-model="search_page" placeholder="Page Range(1-10)"></div>
+    <div class="filter-container">
+        <button ng-click="prevPage()" class="btn btn-info">&#8678;</button>
+        <button ng-click="nextPage()" class="btn btn-info">&#8680;</button>
+    </div>
+    
+    <br>
+    <br>
+    <br>
+    <hr>
+    <br>
+    <div ng-repeat="question in leetcode" class="lg-2">
+        <div ng-show="question.do_show && question.show_by_page">
+            <h2 ng-bind="question.title"></h2>
+            <div class="badge badge-secondary category" ng-bind="question.diff"></div>
+            <div class="badge badge-info category" ng-repeat="cat in question.categories" ng-bind="cat"></div>
+            <!-- <select data-role="tagsinput" multiple>
+                <option ng-repeat="cat in question.categories" ng-value="cat" ng-bind="cat"></option>
+            </select> -->
+            <div ng-bind-html="question.question"></div>
+            <pre class="highlight"><code ng-bind-html="question.code"></code></pre>
+            <hr>
+            <br>
+        </div>
+    </div>
+</div>
+</body>
+</html>
