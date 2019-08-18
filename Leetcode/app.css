@@ -61,3 +61,13 @@ body a{
 .hasCode{
     margin: 8px 20px !important;
 }
+@media print {
+.page-break { display: block; page-break-before: always; }
+}
+@page  
+{ 
+    size: auto;   /* auto is the initial value */ 
+
+    /* this affects the margin in the printer settings */ 
+    margin: 150mm !important;  
+} 
