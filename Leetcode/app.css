@@ -61,6 +61,9 @@ body a{
 .hasCode{
     margin: 8px 20px !important;
 }
+/*.reset{
+    margin-right: 15px;
+}*/
 @media print {
 .page-break { display: block; page-break-before: always; }
 }

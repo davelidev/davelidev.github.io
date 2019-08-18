@@ -1,3 +1,4 @@
+cache = ["search_category", "search_difficulty", "search_title", "search_page", "search_has_code"];
 angular.module('myApp', ['ngSanitize'])
     .controller('TodoListController', function() {
         var todoList = this;
@@ -39,6 +40,12 @@ angular.module('myApp', ['ngSanitize'])
         $scope.search_has_code = true;
         $scope.leetcode = {};
 
+        cache.forEach(function(cache_item){
+            if(localStorage[cache_item] !== "undefined")
+                $scope[cache_item] = localStorage[cache_item];
+
+        })
+
         function parsePg() {
             var from_page_to_page = $scope.search_page.replace(/ /g, '').split("-");
             var from_page = parseInt(from_page_to_page[0]);
@@ -67,6 +74,8 @@ angular.module('myApp', ['ngSanitize'])
         }
 
         $scope.applySearch = function(){
+            
+            cache.forEach(function(cache_item){localStorage[cache_item] = $scope[cache_item]; });
             $scope.leetcode.forEach(function (question, id) {
                 if ($scope.search_has_code && ! question.code)
                     question.do_show = false;
@@ -80,6 +89,8 @@ angular.module('myApp', ['ngSanitize'])
             searchPageRange();
         }
 
+
+
         function applyUpdateSearch() { setTimeout(function(){$scope.applySearch(); $scope.$apply();}, 20); }
 
         $scope.clickApplyFilter = function() { applyUpdateSearch(); }
@@ -87,6 +98,13 @@ angular.module('myApp', ['ngSanitize'])
         $scope.onEnterApplySearch = function(event) { if(event.keyCode == 13) applyUpdateSearch(); }
 
         $scope.hasCodeApplySearch = function() {$scope.applySearch();}
+
+        $scope.resetSearch = function()
+        { 
+            cache.forEach(function(cache_item){$scope[cache_item] = ""; });
+            $scope.search_has_code = true;
+            applyUpdateSearch();
+        }
 
         $scope.prevPage = function() {
             var from_page_to_page = parsePg();

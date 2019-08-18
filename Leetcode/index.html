@@ -24,14 +24,14 @@
         <input class="form-check-input" type="checkbox" ng-model="search_has_code" id="has_code"> <label for="has_code">has code</label>
         </div>
     </div>
-    <div class="filter-container"><button type="submit" class="btn btn-info" ng-click="applySearch()">Search</button></div>
+        <button ng-click="resetSearch()" class="btn btn-info reset">&#8635;</button>
+    <div class="filter-container"><button class="btn btn-info" ng-click="applySearch()">Search</button></div>
     <div></div>
     <div class="filter-container"><input ng-keypress="onEnterApplySearch($event)" class="form-control" ng-model="search_page" placeholder="Page Range(1-10)"></div>
     <div class="filter-container">
         <button ng-click="prevPage()" class="btn btn-info">&#8678;</button>
         <button ng-click="nextPage()" class="btn btn-info">&#8680;</button>
     </div>
-    
     <br>
     <br>
     <br>
