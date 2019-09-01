@@ -1,4 +1,4 @@
-cache = ["search_category", "search_difficulty", "search_title", "search_page", "search_has_code"];
+cache = ["search_num_cols", "search_category", "search_difficulty", "search_title", "search_page", "search_has_code", "search_has_code", "search_show_code", "cat_sel"];
 angular.module('myApp', ['ngSanitize'])
     .controller('TodoListController', function() {
         var todoList = this;
@@ -28,23 +28,24 @@ angular.module('myApp', ['ngSanitize'])
         };
     })
     .controller('main', function($scope, $http) {
-//         $http({
-//             method: 'GET',
-//             url: 'leetcode.json'
-//         }).then(function (response){
-//             $scope.leetcode = response.data
-//         });
-    })
-    .controller('main', function($scope, $http) {
-
+        var grid = null;
         $scope.search_has_code = true;
         $scope.leetcode = {};
+        $scope.search_show_code = true;
+        $scope.cat_sel = "All";
+        $scope.cat_to_questions = cat_to_questions;
 
         cache.forEach(function(cache_item){
             if(localStorage[cache_item] !== "undefined")
                 $scope[cache_item] = localStorage[cache_item];
+            if (["search_has_code", "search_show_code"].includes(cache_item))
+                $scope[cache_item] = localStorage[cache_item] == "true"
 
         })
+
+        $scope.openUrl = function(link) {
+            window.open(link, '_blank');
+        }
 
         function parsePg() {
             var from_page_to_page = $scope.search_page.replace(/ /g, '').split("-");
@@ -76,6 +77,8 @@ angular.module('myApp', ['ngSanitize'])
         $scope.applySearch = function(){
             
             cache.forEach(function(cache_item){localStorage[cache_item] = $scope[cache_item]; });
+            var patt = new RegExp($scope.cat_to_questions[$scope.cat_sel]);
+
             $scope.leetcode.forEach(function (question, id) {
                 if ($scope.search_has_code && ! question.code)
                     question.do_show = false;
@@ -83,15 +86,54 @@ angular.module('myApp', ['ngSanitize'])
                     question.do_show = 
                      question.categories.join().toLowerCase().includes(($scope.search_category || "").toLowerCase())
                            && question.diff.toLowerCase().includes(($scope.search_difficulty || "").toLowerCase())
-                           && question.title.toLowerCase().includes(($scope.search_title || "").toLowerCase());
+                           && question.title.toLowerCase().includes(($scope.search_title || "").toLowerCase())
+                           && question.companies.join().toLowerCase().includes(($scope.search_company || "").toLowerCase());
+                question.do_show = question.do_show && patt.test(question.title);
                 question.show_by_page = false;
+                question.show_code = $scope.search_show_code;
             });
             searchPageRange();
+            $scope.show_leetcode = $scope.leetcode.filter(function(question){ return question.do_show && question.show_by_page});
         }
 
+        $scope.reloadLayout = function(){
+                setTimeout(function(argument) {
+                    //$(".grid").isotope( 'layout').isotope();
+                    grid.isotope('reloadItems').isotope();
+                    grid.imagesLoaded().progress( function() {
+                      grid.isotope('layout');
+                    });
+                }, 0);
+        }
 
+        function applyUpdateSearch() { setTimeout(function(){
+            $scope.applySearch();
+            $scope.$apply();
+                
+            $scope.search_num_cols = $scope.search_num_cols || "2";
+            var classToRemove = $(".grid-item").attr('class').split(" ").filter(x => x.startsWith('col-') && x.endsWith("-custom"))[0];
+            $(".grid-item").removeClass(classToRemove);
+            $(".grid-item").addClass('col-' + $scope.search_num_cols + '-custom');
 
-        function applyUpdateSearch() { setTimeout(function(){$scope.applySearch(); $scope.$apply();}, 20); }
+            if (grid !== null)
+                $scope.reloadLayout();
+
+            if (grid === null)            
+            setTimeout(function(argument) {
+                grid = $('.grid').isotope({
+                  itemSelector: '.grid-item',
+                  percentPosition: true,
+                  transitionDuration: 0,
+                  masonry: {
+                    columnWidth: '.col-' + $scope.search_num_cols + '-custom'
+                  }, 
+                });
+                grid.imagesLoaded().progress( function() {
+                  grid.isotope('layout');
+                });
+            }, 500);
+        }, 0); 
+        }
 
         $scope.clickApplyFilter = function() { applyUpdateSearch(); }
 
@@ -101,7 +143,7 @@ angular.module('myApp', ['ngSanitize'])
 
         $scope.resetSearch = function()
         { 
-            cache.forEach(function(cache_item){$scope[cache_item] = ""; });
+            cache.forEach(function(cache_item){delete $scope[cache_item]; });
             $scope.search_has_code = true;
             applyUpdateSearch();
         }
@@ -161,7 +203,7 @@ angular.module('myApp', ['ngSanitize'])
             question.question = unescape(question.question);
         });
 
-        $scope.applySearch();
+        applyUpdateSearch();
 
         // var substringMatcher = function(categories) {
         //     return function findMatches(query, cb) {

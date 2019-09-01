@@ -1,11 +1,16 @@
 <!doctype html>
 <html ng-app="myApp">
 <head>
+    <meta charset="ISO-8859-1">
     <script src="lib/jquery-3.4.0.js"></script>
-    <script src="lib/typeahead.bundle.js"></script>
+    <!-- <script src="lib/typeahead.bundle.js"></script> -->
+    <script src="lib/isotope.js"></script>
     <script src="lib/angular.js"></script>
     <script src="lib/angular-sanitize.js"></script>
-    <script src="leetcode_json.js"></script>
+    <script src="lib/imagesloaded.js"></script>
+    <script src="leetcode_json.js" charset="utf-8"></script>
+    <script src="premium_json.js" charset="utf-8"></script>
+    <script src="category.js" charset="utf-8"></script>
     <script src="app.js"></script>
     <link rel="stylesheet" href="app.css">
     <link rel="stylesheet" href="lib/tagsinput/bootstrap-tagsinput.css">
@@ -14,46 +19,56 @@
 </head>
 <body>
 <div ng-controller="main" class='container-fluid'>
-
     <br>
     <div class="filter-container"><input ng-keypress="onEnterApplySearch($event)" class="form-control" ng-model="search_category" placeholder="Category"></div>
     <div class="filter-container"><input ng-keypress="onEnterApplySearch($event)" class="form-control" ng-model="search_difficulty" placeholder="Difficulty"></div>
     <div class="filter-container"><input ng-keypress="onEnterApplySearch($event)" class="form-control" ng-model="search_title" placeholder="Title"></div>
+    <div class="filter-container"><input ng-keypress="onEnterApplySearch($event)" class="form-control" ng-model="search_company" placeholder="Company"></div>
     <div class="filter-container">
-        <div class="hasCode" ng-click="clickApplyFilter()">
+        <div class="custCheckbox" ng-click="clickApplyFilter()">
         <input class="form-check-input" type="checkbox" ng-model="search_has_code" id="has_code"> <label for="has_code">has code</label>
+        </div>
+    </div>
+    <div class="filter-container">
+        <div class="custCheckbox" ng-click="clickApplyFilter()">
+        <input class="form-check-input" type="checkbox" ng-model="search_show_code" id="show_code"> <label for="show_code">show code</label>
         </div>
     </div>
         <button ng-click="resetSearch()" class="btn btn-info reset">&#8635;</button>
     <div class="filter-container"><button class="btn btn-info" ng-click="applySearch()">Search</button></div>
     <div></div>
+
     <div class="filter-container"><input ng-keypress="onEnterApplySearch($event)" class="form-control" ng-model="search_page" placeholder="Page Range(1-10)"></div>
+    <div class="filter-container"><input ng-keypress="onEnterApplySearch($event)" class="form-control" ng-model="search_num_cols" placeholder="Number of Columns"></div>
+    <div class="filter-container">
+
+    </div>
     <div class="filter-container">
         <button ng-click="prevPage()" class="btn btn-info">&#8678;</button>
         <button ng-click="nextPage()" class="btn btn-info">&#8680;</button>
     </div>
-    <br>
-    <br>
-    <br>
+    <select ng-model="cat_sel" ng-change="clickApplyFilter()" class="form-control cutSel">
+      <option ng-repeat="(cat, val) in cat_to_questions">{{cat}}</option>
+    </select>
     <hr>
-    <br>
     <div class="page-break"></div>
-    <div ng-repeat="question in leetcode" class="lg-2">
-        <div ng-show="question.do_show && question.show_by_page">
-            <h2 ng-bind="question.title"></h2>
+    <div class="grid">
+    <div ng-repeat="question in show_leetcode" class="grid-item">
+        <div>
+            <h2 ng-bind="question.title" ng-dblclick="openUrl(question.url)"></h2>
+            <!-- <a ng-href="{{question.url}}" target="_blank">link</a> -->
+            <br>
             <div class="badge badge-secondary category" ng-bind="question.diff"></div>
             <div class="badge badge-info category" ng-repeat="cat in question.categories" ng-bind="cat"></div>
             <!-- <select data-role="tagsinput" multiple>
                 <option ng-repeat="cat in question.categories" ng-value="cat" ng-bind="cat"></option>
             </select> -->
             <div ng-bind-html="question.question"></div>
-            <pre class="highlight"><code ng-bind-html="question.code"></code></pre>
-            <hr>
-            <br>
+            <pre class="highlight" ng-click="question.show_code=!question.show_code; reloadLayout()"><code ng-bind-html="question.code" ng-show="question.show_code"></code></pre>
         </div>
         <div class="page-break"></div>
     </div>
-
+</div>
 </div>
 </body>
 </html>
