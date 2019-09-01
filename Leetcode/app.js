@@ -73,6 +73,11 @@ angular.module('myApp', ['ngSanitize'])
                 $scope.leetcode.forEach(function (question, id) { question.show_by_page = true;});
             }
         }
+        $scope.openSol = function(question) {
+            if (!question.code) return;
+            $('#codeModal').modal('show');
+            $scope.cur_question = question;
+        }
 
         $scope.applySearch = function(){
             
@@ -88,7 +93,7 @@ angular.module('myApp', ['ngSanitize'])
                            && question.diff.toLowerCase().includes(($scope.search_difficulty || "").toLowerCase())
                            && question.title.toLowerCase().includes(($scope.search_title || "").toLowerCase())
                            && question.companies.join().toLowerCase().includes(($scope.search_company || "").toLowerCase());
-                question.do_show = question.do_show && patt.test(question.title);
+                question.do_show = question.do_show && (!$scope.cat_to_questions[$scope.cat_sel] || patt.test(question.title));
                 question.show_by_page = false;
                 question.show_code = $scope.search_show_code;
             });

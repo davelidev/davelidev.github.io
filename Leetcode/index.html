@@ -3,6 +3,7 @@
 <head>
     <meta charset="ISO-8859-1">
     <script src="lib/jquery-3.4.0.js"></script>
+    <script src="lib/bootstrap-4.3.1-dist/js/bootstrap.js"></script>
     <!-- <script src="lib/typeahead.bundle.js"></script> -->
     <script src="lib/isotope.js"></script>
     <script src="lib/angular.js"></script>
@@ -17,7 +18,7 @@
     <link rel="stylesheet" href="lib/bootstrap-4.3.1-dist/css/bootstrap.css">
     <script src="lib/tagsinput/bootstrap-tagsinput.js"></script>
 </head>
-<body>
+<body ng-init="cur_question=null">
 <div ng-controller="main" class='container-fluid'>
     <br>
     <div class="filter-container"><input ng-keypress="onEnterApplySearch($event)" class="form-control" ng-model="search_category" placeholder="Category"></div>
@@ -64,11 +65,40 @@
                 <option ng-repeat="cat in question.categories" ng-value="cat" ng-bind="cat"></option>
             </select> -->
             <div ng-bind-html="question.question"></div>
-            <pre class="highlight" ng-click="question.show_code=!question.show_code; reloadLayout()"><code ng-bind-html="question.code" ng-show="question.show_code"></code></pre>
+            <pre class="highlight" ng-click="openSol(question)"><code ng-bind-html="question.code" ng-if="search_show_code"></code></pre>
         </div>
         <div class="page-break"></div>
     </div>
+    </div>
+
+<div class="modal" id="codeModal">
+  <div class="modal-dialog modal-xl" >
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 class="modal-title text-center">{{cur_question.title}}</h2>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="container">
+            <div class="badge badge-secondary category" ng-bind="cur_question.diff"></div>
+            <div class="badge badge-info category" ng-repeat="cat in cur_question.categories" ng-bind="cat"></div>
+            <!-- <select data-role="tagsinput" multiple>
+                <option ng-repeat="cat in question.categories" ng-value="cat" ng-bind="cat"></option>
+            </select> -->
+            <div ng-bind-html="cur_question.question"></div>
+            <pre class="highlight"><code ng-bind-html="cur_question.code"></code></pre>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
 </div>
+
 </div>
+
 </body>
 </html>

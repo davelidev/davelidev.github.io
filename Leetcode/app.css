@@ -107,11 +107,11 @@ body a{
     width: 20%;
     /*overflow-x: scroll;*/
 }
-.badge{
+/*.badge{
     position: relative;
     z-index: -1 !important;
 }
-
+*/
 .grid-item {
     padding: 30px;
     /*border-bottom:1px solid gainsboro;*/
@@ -131,3 +131,6 @@ img{
     display: inline-block !important;
     margin-left: 30px;
 }
+/*.modal-dialog{
+    max-width: 90% !important
+}*/
