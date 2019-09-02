@@ -131,6 +131,7 @@ img{
     display: inline-block !important;
     margin-left: 30px;
 }
-/*.modal-dialog{
-    max-width: 90% !important
-}*/
+.cust-modal{
+    max-width: 1140px !important;
+    width: 95% !important
+}
