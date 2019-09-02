@@ -1,4 +1,4 @@
-cache = ["search_num_cols", "search_category", "search_difficulty", "search_title", "search_page", "search_has_code", "search_has_code", "search_show_code", "cat_sel"];
+cache = ["search_num_cols", "search_category", "search_difficulty", "search_title", "search_page", "search_has_code", "search_has_code", "search_show_code", "cat_sel", "search_company"];
 angular.module('myApp', ['ngSanitize'])
     .controller('TodoListController', function() {
         var todoList = this;

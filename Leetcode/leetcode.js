@@ -27,9 +27,12 @@ function timeout(){
 		diff: $('[diff]').html(),
 		title: $(_x('.//*[@data-cy="question-title"]')[0]).html(),
 		question: _x(".//*[contains(@class, 'question-content')]")[0].innerHTML,
+		solution: _x('//*[@id="solution"]/div[2]/div[2]/div[1]'),
+		companies: {},
 	}
+	_x('.//a[contains(@href, "/company/")]').forEach(function(item){item=item.innerText.split('\n|\n');item[1]=parseInt(item[1]); obj.companies[item[0].replace('\n|', '')]=item[1]; });
 		// companies: {},
-  //       _x('.//a[contains(@href, "/company/")]').forEach(function(item){item=item.innerText.split('\n|\n');item[1]=parseInt(item[1]); obj.companies[item[0]]=item[1]; });
+  	//_x('.//a[contains(@href, "/company/")]').forEach(function(item){item=item.innerText.split('\n|\n');item[1]=parseInt(item[1]); obj.companies[item[0]]=item[1]; });
 
 	id = obj.title.match(/\d+(?=\.)/)[0];
 	if (!result.hasOwnProperty(id)){
