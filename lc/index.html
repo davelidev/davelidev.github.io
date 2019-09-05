@@ -1,0 +1,143 @@
+<!doctype html>
+<html ng-app="myApp">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <script src="lib/jquery-3.4.0.js"></script>
+    <script src="lib/bootstrap-4.3.1-dist/js/bootstrap.js"></script>
+    <!-- <script src="lib/typeahead.bundle.js"></script> -->
+    <script src="lib/isotope.js"></script>
+    <script src="lib/angular.js"></script>
+    <script src="lib/angular-sanitize.js"></script>
+    <script src="lib/imagesloaded.js"></script>
+    <script src="leetcode_json.js" charset="utf-8"></script>
+    <!-- <script src="premium_json.js" charset="utf-8"></script> -->
+    <script src="category.js" charset="utf-8"></script>
+    <script src="app.js"></script>
+    <link rel="stylesheet" href="app.css">
+    <link rel="stylesheet" href="lib/tagsinput/bootstrap-tagsinput.css">
+    <link rel="stylesheet" href="lib/bootstrap-4.3.1-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="lib/fontawesome/css/all.css">
+    <script src="lib/tagsinput/bootstrap-tagsinput.js"></script>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.0/dist/katex.min.css" integrity="sha384-BdGj8xC2eZkQaxoQ8nSLefg4AV4/AwB3Fj+8SUSo7pnKP6Eoy18liIKTPn9oBYNG" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.0/dist/katex.min.js" integrity="sha384-JiKN5O8x9Hhs/UE5cT5AAJqieYlOZbGT3CHws/y97o3ty4R7/O5poG9F3JoiOYw1" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.0/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous"
+        onload="renderMathInElement(document.body);"></script>
+<script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+</head>
+<body ng-init="cur_question=null">
+
+<div ng-controller="main" class='container-fluid'>
+    <br>
+    <div class="filter-container"><input ng-keypress="onEnterApplySearch($event)" class="form-control" ng-model="search_category" placeholder="Category"></div>
+    <div class="filter-container"><input ng-keypress="onEnterApplySearch($event)" class="form-control" ng-model="search_difficulty" placeholder="Difficulty"></div>
+    <div class="filter-container"><input ng-keypress="onEnterApplySearch($event)" class="form-control" ng-model="search_title" placeholder="Title"></div>
+    <div class="filter-container"><input ng-keypress="onEnterApplySearch($event)" class="form-control" ng-model="search_company" placeholder="Company"></div>
+    <div class="filter-container">
+        <div class="custCheckbox" ng-click="clickApplyFilter()">
+        <input class="form-check-input" type="checkbox" ng-model="search_has_code" id="has_code"> <label for="has_code">has code</label>
+        </div>
+    </div>
+    <div class="filter-container">
+        <div class="custCheckbox" ng-click="clickApplyFilter()">
+        <input class="form-check-input" type="checkbox" ng-model="search_show_code" id="show_code"> <label for="show_code">show code</label>
+        </div>
+    </div>
+        <button ng-click="resetSearch()" class="btn btn-info reset">&#8635;</button>
+    <div class="filter-container"><button class="btn btn-info" ng-click="applySearch()">Search</button></div>
+    <div></div>
+
+    <div class="filter-container"><input ng-keypress="onEnterApplySearch($event)" class="form-control" ng-model="search_page" placeholder="Page Range(1-10)"></div>
+    <div class="filter-container"><input ng-keypress="onEnterApplySearch($event)" class="form-control" ng-model="search_num_cols" placeholder="Number of Columns"></div>
+    <div class="filter-container">
+
+    </div>
+    <div class="filter-container">
+        <button ng-click="prevPage()" class="btn btn-info">&#8678;</button>
+        <button ng-click="nextPage()" class="btn btn-info">&#8680;</button>
+    </div>
+    <select ng-model="cat_sel" ng-change="clickApplyFilter()" class="form-control cutSel">
+      <option ng-repeat="(cat, val) in cat_to_questions" ng-bind="cat"></option>
+    </select>
+    <hr>
+    <div class="page-break"></div>
+    <div class="grid">
+    <div ng-repeat="question in show_leetcode" class="grid-item">
+        <div>
+            <h2 ng-bind="question.title"></h2>
+            <!-- <a ng-href="{{question.url}}" target="_blank">link</a> -->
+            <br>
+            <div class="icon-container">
+            <i class="fa-3x fas fa-align-left" ng-class="{grayedOut: !question.code}" ng-click="openSol(question)"></i>
+            <a ng-href="{{question.url}}" target="_blank"><i class="fa-3x fas fa-edit"></i></a>
+            <i class="fa-3x fas fa-book" ng-class="{grayedOut: !question.article}" ng-click="openArticle(question)"></i>
+            </div>
+                       
+            <div class="badge badge-secondary category" ng-bind="question.diff"></div>
+            <div class="badge badge-info category" ng-repeat="cat in question.categories" ng-bind="cat"></div>
+            <!-- <select data-role="tagsinput" multiple>
+                <option ng-repeat="cat in question.categories" ng-value="cat" ng-bind="cat"></option>
+            </select> -->
+            <div ng-bind-html="question.question" class="question"></div>
+            <pre class="highlight" ng-click="openSol(question)" ng-if="search_show_code"><code ng-bind-html="question.code"></code></pre>
+        </div>
+        <div class="page-break"></div>
+    </div>
+    </div>
+
+<div class="modal " id="codeModal">
+  <div class="modal-dialog cust-modal" >
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 class="modal-title text-center">{{cur_question.title}}</h2>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="container">
+            <div class="badge badge-secondary category" ng-bind="cur_question.diff"></div>
+            <div class="badge badge-info category" ng-repeat="cat in cur_question.categories" ng-bind="cat"></div>
+            <!-- <select data-role="tagsinput" multiple>
+                <option ng-repeat="cat in question.categories" ng-value="cat" ng-bind="cat"></option>
+            </select> -->
+            <div ng-bind-html="cur_question.question"></div>
+            <pre class="highlight"><code ng-bind-html="cur_question.code"></code></pre>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal " id="articleModal">
+  <div class="modal-dialog cust-modal" >
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 class="modal-title text-center">{{cur_question.title}}</h2>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="container">
+            <div ng-bind-html="cur_question.article"></div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+</div>
+
+</body>
+</html>
