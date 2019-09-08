@@ -89,18 +89,22 @@ angular.module('myApp', ['ngSanitize'])
                                 .replace(/<[^<]*script[^>]*>/g, "$")
                                 .replace(/Rate this article:[^`]*/, "")
                                 .replace(/[^`]*(Average Rating:)/, "$1")
-                                .replace(/((src|href)=['"])([^#'"]*)(['"])/g, function(match) {
-                                    return match.search('=[\'"]\.') != -1 ? match.replace(/(=[\'"])/g, "$1http://leetcode.com/" + question.article_link + '/') : match;
-                                });
-                                //.replace(/\\/g, "_");
             $('#articleModal').modal('show');
             setTimeout(function() {
-                MathJax.Hub.Config({
-                  tex2jax: {
-                         inlineMath: [ ['$','$'], ['\\(','\\)'] ]
-                  }
-                });
+                // MathJax.Hub.Config({
+                //   tex2jax: {
+                //          inlineMath: [ ['$','$'], ['\\(','\\)'] ]
+                //   }
+                // });
                 MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
+                $('#articleModal [src], #articleModal [href]').each(function(i, item) {
+                        if (!!item.getAttribute('src') && item.getAttribute('src').startsWith('.'))
+                                item.setAttribute('src', "http://leetcode.com/" + question.article_link + '/' + item.getAttribute('src'))
+                        if (!!item.getAttribute('href') && item.getAttribute('href').startsWith('.'))
+                                item.setAttribute('href', "http://leetcode.com/" + question.article_link + '/' + item.getAttribute('href'))
+                        console.log(item);
+
+                })
             }, 500);
             $scope.cur_question = question;
         }
@@ -115,10 +119,10 @@ angular.module('myApp', ['ngSanitize'])
                     question.do_show = false;
                 else
                     question.do_show = 
-                     question.categories.join().toLowerCase().includes(($scope.search_category || "").toLowerCase())
-                           && question.diff.toLowerCase().includes(($scope.search_difficulty || "").toLowerCase())
-                           && question.title.toLowerCase().includes(($scope.search_title || "").toLowerCase())
-                           && question.companies.join().toLowerCase().includes(($scope.search_company || "").toLowerCase());
+                               (!$scope.search_category || question.categories.join().toLowerCase().includes(($scope.search_category).toLowerCase()))
+                           &&  (!$scope.search_difficulty || question.diff.toLowerCase().includes(($scope.search_difficulty).toLowerCase()))
+                           &&  (!$scope.search_company || question.companies.join().toLowerCase().includes(($scope.search_company).toLowerCase()));
+                    question.do_show = question.do_show && (!$scope.search_title || question.title.toLowerCase().search($scope.search_title.toLowerCase()) != -1);
                 question.do_show = question.do_show && (!$scope.cat_to_questions[$scope.cat_sel] || patt.test(question.title));
                 question.show_by_page = false;
                 question.show_code = $scope.search_show_code;
