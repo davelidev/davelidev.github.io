@@ -1,0 +1,13 @@
+{
+  "categories": [
+    "Array",
+    "Math",
+    "Bit Manipulation"
+  ],
+  "diff": "Easy",
+  "title": "268. Missing Number",
+  "question": "<div><p>Given an array containing <i>n</i> distinct numbers taken from <code>0, 1, 2, ..., n</code>, find the one that is missing from the array.</p>\n\n<p><b>Example 1:</b></p>\n\n<pre><b>Input:</b> [3,0,1]\n<b>Output:</b> 2\n</pre>\n\n<p><b>Example 2:</b></p>\n\n<pre><b>Input:</b> [9,6,4,2,3,5,7,0,1]\n<b>Output:</b> 8\n</pre>\n\n<p><b>Note</b>:<br>\nYour algorithm should run in linear runtime complexity. Could you implement it using only constant extra space complexity?</p></div>",
+  "url": "https://leetcode.com/problems/missing-number/",
+  "companies": {},
+  "code": "class Solution(object):\\u000A    def missingNumber(self, nums):\\u000A        \\u0022\\u0022\\u0022\\u000A        :type nums: List[int]\\u000A        :rtype: int\\u000A        \\u0022\\u0022\\u0022\\u000A        n \\u003D len(nums) + 1\\u000A        return (n * (n \\u002D 1)) / 2 \\u002D sum(nums)\\u000A"
+}

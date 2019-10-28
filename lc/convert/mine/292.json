@@ -1,0 +1,12 @@
+{
+  "categories": [
+    "Brainteaser",
+    "Minimax"
+  ],
+  "diff": "Easy",
+  "title": "292. Nim Game",
+  "question": "<div><p>You are playing the following Nim Game with your friend: There is a heap of stones on the table, each time one of you take turns to remove 1 to 3 stones. The one who removes the last stone will be the winner. You will take the first turn to remove the stones.</p>\n\n<p>Both of you are very clever and have optimal strategies for the game. Write a function to determine whether you can win the game given the number of stones in the heap.</p>\n\n<p><strong>Example:</strong></p>\n\n<pre><strong>Input:</strong> <code>4</code>\n<strong>Output:</strong> false \n<strong>Explanation: </strong>If there are 4 stones in the heap, then you will never win the game;\n&nbsp;            No matter 1, 2, or 3 stones you remove, the last stone will always be \n&nbsp;            removed by your friend.</pre></div>",
+  "url": "https://leetcode.com/problems/nim-game/",
+  "companies": {},
+  "code": "class Solution(object):\\u000A    def canWinNim(self, n):\\u000A        \\u0022\\u0022\\u0022\\u000A        :type n: int\\u000A        :rtype: bool\\u000A        \\u0022\\u0022\\u0022\\u000A        return  (n % 4) !\\u003D 0\\u000A"
+}

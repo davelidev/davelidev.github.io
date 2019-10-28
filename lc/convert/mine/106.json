@@ -1,0 +1,13 @@
+{
+  "categories": [
+    "Array",
+    "Tree",
+    "Depth-first Search"
+  ],
+  "diff": "Medium",
+  "title": "106. Construct Binary Tree from Inorder and Postorder Traversal",
+  "question": "<div><p>Given inorder and postorder traversal of a tree, construct the binary tree.</p>\n\n<p><strong>Note:</strong><br>\nYou may assume that duplicates do not exist in the tree.</p>\n\n<p>For example, given</p>\n\n<pre>inorder =&nbsp;[9,3,15,20,7]\npostorder = [9,15,7,20,3]</pre>\n\n<p>Return the following binary tree:</p>\n\n<pre>    3\n   / \\\n  9  20\n    /  \\\n   15   7\n</pre>\n</div>",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-inorder-and-postorder-traversal/",
+  "companies": {},
+  "code": "# Definition for a binary tree node.\\u000A# class TreeNode(object):\\u000A#     def __init__(self, x):\\u000A#         self.val \\u003D x\\u000A#         self.left \\u003D None\\u000A#         self.right \\u003D None\\u000A\\u000Aclass Solution(object):\\u000A    def buildTree(self, inorder, postorder):\\u000A        \\u0022\\u0022\\u0022\\u000A        :type inorder: List[int]\\u000A        :type postorder: List[int]\\u000A        :rtype: TreeNode\\u000A        \\u0022\\u0022\\u0022\\u000A        def _buildTree(i_l, i_r):\\u000A            if i_l \\u003E\\u003D i_r: return\\u000A            node \\u003D TreeNode(postorder.pop())\\u000A            elem_idx \\u003D inorder.index(node.val)\\u000A            node.right \\u003D _buildTree(elem_idx + 1, i_r)\\u000A            node.left \\u003D _buildTree(i_l, elem_idx)\\u000A            return node\\u000A        return _buildTree(0, len(inorder))"
+}

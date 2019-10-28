@@ -1,0 +1,12 @@
+{
+  "categories": [
+    "Hash Table",
+    "Math"
+  ],
+  "diff": "Easy",
+  "title": "645. Set Mismatch",
+  "question": "<div><p>\nThe set <code>S</code> originally contains numbers from 1 to <code>n</code>. But unfortunately, due to the data error, one of the numbers in the set got duplicated to <b>another</b> number in the set, which results in repetition of one number and loss of another number. \n</p>\n\n<p>\nGiven an array <code>nums</code> representing the data status of this set after the error. Your task is to firstly find the number occurs twice and then find the number that is missing. Return them in the form of an array.\n</p>\n\n\n<p><b>Example 1:</b><br>\n</p><pre><b>Input:</b> nums = [1,2,2,4]\n<b>Output:</b> [2,3]\n</pre>\n<p></p>\n\n<p><b>Note:</b><br>\n</p><ol>\n<li>The given array size will in the range [2, 10000].</li>\n<li>The given array's numbers won't have any order.</li>\n</ol>\n<p></p></div>",
+  "url": "https://leetcode.com/problems/set-mismatch/",
+  "companies": {},
+  "code": "class Solution(object):\\u000A    def findErrorNums(self, nums):\\u000A        \\u0022\\u0022\\u0022\\u000A        :type nums: List[int]\\u000A        :rtype: List[int]\\u000A        \\u0022\\u0022\\u0022\\u000A        for num in nums:\\u000A            if nums[abs(num) \\u002D 1] \\u003C 0: \\u000A                dup \\u003D abs(num)\\u000A                break\\u000A            nums[abs(num) \\u002D 1] \\u003D \\u002Dnums[abs(num) \\u002D 1]\\u000A        for i in range(len(nums)): nums[i] \\u003D abs(nums[i])\\u000A        n \\u003D len(nums)\\u000A        return dup, ((n * (n + 1) / 2)) \\u002D sum(nums) + dup"
+}

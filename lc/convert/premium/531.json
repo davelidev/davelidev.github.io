@@ -1,0 +1,13 @@
+{
+  "categories": [
+    "Array",
+    "Depth-first Search"
+  ],
+  "diff": "Medium",
+  "title": "531. Lonely Pixel I",
+  "question": "<div><p>Given a picture consisting of black and white pixels, find the number of <b>black</b> lonely pixels.</p>\n\n<p>The picture is represented by a 2D char array consisting of 'B' and 'W', which means black and white pixels respectively. </p>\n\n<p>A black lonely pixel is character 'B' that located at a specific position where the same row and same column don't have any other black pixels.</p>\n\n<p><b>Example:</b><br>\n</p><pre><b>Input:</b> \n[['W', 'W', 'B'],\n ['W', 'B', 'W'],\n ['B', 'W', 'W']]\n\n<b>Output:</b> 3\n<b>Explanation:</b> All the three 'B's are black lonely pixels.\n</pre>\n<p></p>\n\n<p><b>Note:</b><br>\n</p><ol>\n<li>The range of width and height of the input 2D array is [1,500].</li>\n</ol>\n<p></p></div>",
+  "url": "https://leetcode.com/problems/lonely-pixel-i/",
+  "companies": {
+    "Google": null
+  }
+}

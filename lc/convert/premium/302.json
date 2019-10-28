@@ -1,0 +1,12 @@
+{
+  "categories": [
+    "Binary Search"
+  ],
+  "diff": "Hard",
+  "title": "302. Smallest Rectangle Enclosing Black Pixels",
+  "question": "<div><p>An image is represented by a binary matrix with <code>0</code> as a white pixel and <code>1</code> as a black pixel. The black pixels are connected, i.e., there is only one black region. Pixels are connected horizontally and vertically. Given the location <code>(x, y)</code> of one of the black pixels, return the area of the smallest (axis-aligned) rectangle that encloses all black pixels.</p>\n\n<p><strong>Example:</strong></p>\n\n<pre><strong>Input:</strong>\n[\n  \"0010\",\n  \"0110\",\n  \"0100\"\n]\nand <code>x = 0<font face=\"sans-serif, Arial, Verdana, Trebuchet MS\">, </font></code><code>y = 2</code>\n\n<strong>Output:</strong> 6\n</pre>\n</div>",
+  "url": "https://leetcode.com/problems/smallest-rectangle-enclosing-black-pixels/",
+  "companies": {
+    "Google": 2
+  }
+}

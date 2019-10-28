@@ -1,0 +1,14 @@
+{
+  "categories": [
+    "Backtracking",
+    "Minimax"
+  ],
+  "diff": "Medium",
+  "title": "294. Flip Game II",
+  "question": "<div><p>You are playing the following Flip Game with your friend: Given a string that contains only these two characters: <code>+</code> and <code>-</code>, you and your friend take turns to flip two <b>consecutive</b> <code>\"++\"</code> into <code>\"--\"</code>. The game ends when a person can no longer make a move and therefore the other person will be the winner.</p>\n\n<p>Write a function to determine if the starting player can guarantee a win.</p>\n\n<p><strong>Example:</strong></p>\n\n<pre><strong>Input:</strong> <code>s = \"++++\"</code>\n<strong>Output:</strong> true \n<strong>Explanation: </strong>The starting player can guarantee a win by flipping the middle <code>\"++\"</code> to become <code>\"+--+\"</code>.\n</pre>\n\n<p><b>Follow up:</b><br>\nDerive your algorithm's runtime complexity.</p></div>",
+  "url": "https://leetcode.com/problems/flip-game-ii/",
+  "companies": {
+    "Google": null
+  },
+  "code": "class Solution(object):\\u000A    def canWin(self, s, memo\\u003D{}):\\u000A        if s in memo: return memo[s]\\u000A        return memo.setdefault(s, \\u005C\\u000A            any(s[k: k + 2] \\u003D\\u003D \\u0022++\\u0022 and not self.canWin(s[:k] + \\u0022\\u002D\\u002D\\u0022 + s[k + 2:])\\u000A                for k in range(len(s) \\u002D 1)))\\u000A"
+}

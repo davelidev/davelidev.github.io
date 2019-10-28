@@ -1,0 +1,12 @@
+{
+  "categories": [
+    "Array",
+    "Two Pointers"
+  ],
+  "diff": "Easy",
+  "title": "283. Move Zeroes",
+  "question": "<div><p>Given an array <code>nums</code>, write a function to move all <code>0</code>'s to the end of it while maintaining the relative order of the non-zero elements.</p>\n\n<p><b>Example:</b></p>\n\n<pre><b>Input:</b> <code>[0,1,0,3,12]</code>\n<b>Output:</b> <code>[1,3,12,0,0]</code></pre>\n\n<p><b>Note</b>:</p>\n\n<ol>\n\t<li>You must do this <b>in-place</b> without making a copy of the array.</li>\n\t<li>Minimize the total number of operations.</li>\n</ol></div>",
+  "url": "https://leetcode.com/problems/move-zeroes/",
+  "companies": {},
+  "code": "class Solution(object):\\u000A    def moveZeroes(self, nums):\\u000A        \\u0022\\u0022\\u0022\\u000A        :type nums: List[int]\\u000A        :rtype: void Do not return anything, modify nums in\\u002Dplace instead.\\u000A        \\u0022\\u0022\\u0022\\u000A        i \\u003D 0\\u000A        for j, num in enumerate(nums):\\u000A            if num !\\u003D 0:\\u000A                nums[i] \\u003D num\\u000A                i +\\u003D 1\\u000A        for j in range(i, len(nums)):\\u000A            nums[j] \\u003D 0\\u000A"
+}

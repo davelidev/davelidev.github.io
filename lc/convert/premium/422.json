@@ -1,0 +1,10 @@
+{
+  "categories": [],
+  "diff": "Easy",
+  "title": "422. Valid Word Square",
+  "question": "<div><p>Given a sequence of words, check whether it forms a valid word square.</p>\n\n<p>A sequence of words forms a valid word square if the <i>k</i><sup>th</sup> row and column read the exact same string, where 0 ≤ <i>k</i> &lt; max(numRows, numColumns).</p>\n\n<p><b>Note:</b><br>\n</p><ol>\n<li>The number of words given is at least 1 and does not exceed 500.</li>\n<li>Word length will be at least 1 and does not exceed 500.</li>\n<li>Each word contains only lowercase English alphabet <code>a-z</code>.</li>\n</ol>\n<p></p>\n\n<p><b>Example 1:</b>\n</p><pre><b>Input:</b>\n[\n  \"abcd\",\n  \"bnrt\",\n  \"crmy\",\n  \"dtye\"\n]\n\n<b>Output:</b>\ntrue\n\n<b>Explanation:</b>\nThe first row and first column both read \"abcd\".\nThe second row and second column both read \"bnrt\".\nThe third row and third column both read \"crmy\".\nThe fourth row and fourth column both read \"dtye\".\n\nTherefore, it is a valid word square.\n</pre>\n<p></p>\n\n<p><b>Example 2:</b>\n</p><pre><b>Input:</b>\n[\n  \"abcd\",\n  \"bnrt\",\n  \"crm\",\n  \"dt\"\n]\n\n<b>Output:</b>\ntrue\n\n<b>Explanation:</b>\nThe first row and first column both read \"abcd\".\nThe second row and second column both read \"bnrt\".\nThe third row and third column both read \"crm\".\nThe fourth row and fourth column both read \"dt\".\n\nTherefore, it is a valid word square.\n</pre>\n<p></p>\n\n<p><b>Example 3:</b>\n</p><pre><b>Input:</b>\n[\n  \"ball\",\n  \"area\",\n  \"read\",\n  \"lady\"\n]\n\n<b>Output:</b>\nfalse\n\n<b>Explanation:</b>\nThe third row reads \"read\" while the third column reads \"lead\".\n\nTherefore, it is <b>NOT</b> a valid word square.\n</pre>\n<p></p></div>",
+  "url": "https://leetcode.com/problems/valid-word-square/",
+  "companies": {
+    "Google": null
+  }
+}

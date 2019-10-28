@@ -1,0 +1,11 @@
+{
+  "categories": [
+    "Dynamic Programming"
+  ],
+  "diff": "Easy",
+  "title": "303. Range Sum Query - Immutable",
+  "question": "<div><p>Given an integer array <i>nums</i>, find the sum of the elements between indices <i>i</i> and <i>j</i> (<i>i</i> ≤ <i>j</i>), inclusive.</p>\n\n<p><b>Example:</b><br>\n</p><pre>Given nums = [-2, 0, 3, -5, 2, -1]\n\nsumRange(0, 2) -&gt; 1\nsumRange(2, 5) -&gt; -1\nsumRange(0, 5) -&gt; -3\n</pre>\n<p></p>\n\n<p><b>Note:</b><br>\n</p><ol>\n<li>You may assume that the array does not change.</li>\n<li>There are many calls to <i>sumRange</i> function.</li>\n</ol>\n<p></p></div>",
+  "url": "https://leetcode.com/problems/range-sum-query-immutable/",
+  "companies": {},
+  "code": "class NumArray(object):\\u000A\\u000A    def __init__(self, nums):\\u000A        self.l_sum \\u003D l_sum \\u003D nums\\u000A        for i in range(1, len(l_sum)): l_sum[i] \\u003D l_sum[i \\u002D 1] + l_sum[i]\\u000A        \\u000A\\u000A    def sumRange(self, i, j):\\u000A        return self.l_sum[j] \\u002D (self.l_sum[i \\u002D 1] if i \\u003E 0 else 0)\\u000A\\u000A\\u000A# Your NumArray object will be instantiated and called as such:\\u000A# obj \\u003D NumArray(nums)\\u000A# param_1 \\u003D obj.sumRange(i,j)"
+}

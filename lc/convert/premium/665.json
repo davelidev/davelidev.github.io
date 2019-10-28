@@ -1,0 +1,12 @@
+{
+  "categories": [
+    "Array"
+  ],
+  "diff": "Easy",
+  "title": "665. Non-decreasing Array",
+  "question": "<div><p>\nGiven an array with <code>n</code> integers, your task is to check if it could become non-decreasing by modifying <b>at most</b> <code>1</code> element.\n</p>\n\n<p>\nWe define an array is non-decreasing if <code>array[i] &lt;= array[i + 1]</code> holds for every <code>i</code> (1 &lt;= i &lt; n).\n</p>\n\n<p><b>Example 1:</b><br>\n</p><pre><b>Input:</b> [4,2,3]\n<b>Output:</b> True\n<b>Explanation:</b> You could modify the first <code>4</code> to <code>1</code> to get a non-decreasing array.\n</pre>\n<p></p>\n\n<p><b>Example 2:</b><br>\n</p><pre><b>Input:</b> [4,2,1]\n<b>Output:</b> False\n<b>Explanation:</b> You can't get a non-decreasing array by modify at most one element.\n</pre>\n<p></p>\n\n<p><b>Note:</b>\nThe <code>n</code> belongs to [1, 10,000].\n</p></div>",
+  "url": "https://leetcode.com/problems/non-decreasing-array/",
+  "companies": {
+    "Google": 2
+  }
+}

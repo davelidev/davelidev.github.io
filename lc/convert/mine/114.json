@@ -1,0 +1,12 @@
+{
+  "categories": [
+    "Tree",
+    "Depth-first Search"
+  ],
+  "diff": "Medium",
+  "title": "114. Flatten Binary Tree to Linked List",
+  "question": "<div><p>Given a binary tree, flatten it to a linked list in-place.</p>\n\n<p>For example, given the following tree:</p>\n\n<pre>    1\n   / \\\n  2   5\n / \\   \\\n3   4   6\n</pre>\n\n<p>The flattened tree should look like:</p>\n\n<pre>1\n \\\n  2\n   \\\n    3\n     \\\n      4\n       \\\n        5\n         \\\n          6\n</pre>\n</div>",
+  "url": "https://leetcode.com/problems/flatten-binary-tree-to-linked-list/",
+  "companies": {},
+  "code": "# Definition for a binary tree node.\\u000A# class TreeNode(object):\\u000A#     def __init__(self, x):\\u000A#         self.val \\u003D x\\u000A#         self.left \\u003D None\\u000A#         self.right \\u003D None\\u000A\\u000Aclass Solution(object):\\u000A    def flatten(self, root):\\u000A        \\u0022\\u0022\\u0022\\u000A        :type root: TreeNode\\u000A        :rtype: void Do not return anything, modify root in\\u002Dplace instead.\\u000A        \\u0022\\u0022\\u0022\\u000A        def _flatten(node):\\u000A            if not node:\\u000A                return\\u000A            flatten_left \\u003D _flatten(node.left)\\u000A            l_end \\u003D None\\u000A            if flatten_left:\\u000A                l_start, l_end \\u003D flatten_left\\u000A                node.right, l_end.right, node.left \\u003D l_start, node.right, None\\u000A                flatten_right \\u003D _flatten(l_end.right)\\u000A            else:\\u000A                flatten_right \\u003D _flatten(node.right)\\u000A            r_start, r_end \\u003D flatten_right if flatten_right else [None, None]\\u000A            \\u000A            if r_end:\\u000A                return node, r_end\\u000A            elif l_end:\\u000A                return node, l_end\\u000A            else:\\u000A                return node, node\\u000A        _flatten(root)\\u000A\\u000A"
+}

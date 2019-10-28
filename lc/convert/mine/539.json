@@ -1,0 +1,11 @@
+{
+  "categories": [
+    "String"
+  ],
+  "diff": "Medium",
+  "title": "539. Minimum Time Difference",
+  "question": "<div>Given a list of 24-hour clock time points in \"Hour:Minutes\" format, find the minimum <b>minutes</b> difference between any two time points in the list. \n\n<p><b>Example 1:</b><br>\n</p><pre><b>Input:</b> [\"23:59\",\"00:00\"]\n<b>Output:</b> 1\n</pre>\n<p></p>\n\n<p><b>Note:</b><br>\n</p><ol>\n<li>The number of time points in the given list is at least 2 and won't exceed 20000.</li>\n<li>The input time is legal and ranges from 00:00 to 23:59.</li>\n</ol>\n<p></p></div>",
+  "url": "https://leetcode.com/problems/minimum-time-difference/",
+  "companies": {},
+  "code": "\\u000Aclass Solution(object):\\u000A    def findMinDifference(self, timePoints):\\u000A        \\u0022\\u0022\\u0022\\u000A        :type timePoints: List[str]\\u000A        :rtype: int\\u000A        \\u0022\\u0022\\u0022\\u000A        timePoints \\u003D map(lambda x: [int(i) for i in x.split(\\u0027:\\u0027)], timePoints)\\u000A        timePoints \\u003D map(lambda x: x[0] * 60 + x[1], timePoints)\\u000A        min_in_a_day \\u003D 24*60\\u000A        hash_to_bucket \\u003D [False] * min_in_a_day\\u000A        for time in timePoints:\\u000A            if hash_to_bucket[time]:\\u000A                return 0\\u000A            hash_to_bucket[time] \\u003D True\\u000A        prev \\u003D None\\u000A        first \\u003D None\\u000A        min_diff \\u003D float(\\u0027inf\\u0027)\\u000A        for i, val in enumerate(hash_to_bucket):\\u000A            if val:\\u000A                if prev is not None:\\u000A                    min_diff \\u003D min(i \\u002D prev, min_diff)\\u000A                else:\\u000A                    first \\u003D i\\u000A                prev \\u003D i\\u000A        return min(min_in_a_day \\u002D (prev \\u002D first), min_diff)"
+}

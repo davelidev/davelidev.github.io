@@ -1,0 +1,13 @@
+{
+  "categories": [
+    "Breadth-first Search",
+    "Minimax"
+  ],
+  "diff": "Hard",
+  "title": "913. Cat and Mouse",
+  "question": "<div><p>A game on an <strong>undirected</strong> graph is played by two players, Mouse and Cat, who alternate turns.</p>\n\n<p>The graph is given as follows: <code>graph[a]</code> is a list of all nodes <code>b</code> such that <code>ab</code> is an edge of the graph.</p>\n\n<p>Mouse starts at node 1 and goes first, Cat starts at node 2 and goes second, and there is a Hole at node 0.</p>\n\n<p>During each player's turn, they <strong>must</strong> travel along one&nbsp;edge of the graph that meets where they are.&nbsp; For example, if the Mouse is at node <code>1</code>, it <strong>must</strong> travel to any node in <code>graph[1]</code>.</p>\n\n<p>Additionally, it is not allowed for the Cat to travel to the Hole (node 0.)</p>\n\n<p>Then, the game can end in 3 ways:</p>\n\n<ul>\n\t<li>If ever the Cat occupies the same node as the Mouse, the Cat wins.</li>\n\t<li>If ever the Mouse reaches the Hole, the Mouse wins.</li>\n\t<li>If ever a position is repeated (ie.&nbsp;the players are in the same position as a previous turn, and&nbsp;it is the same player's turn to move), the game is a draw.</li>\n</ul>\n\n<p>Given a <code>graph</code>, and assuming both players play optimally, return <code>1</code>&nbsp;if the game is won by Mouse, <code>2</code>&nbsp;if the game is won by Cat, and <code>0</code>&nbsp;if the game is a draw.</p>\n\n<p>&nbsp;</p>\n\n<ol>\n</ol>\n\n<div>\n<p><strong>Example 1:</strong></p>\n\n<pre><strong>Input: </strong><span id=\"example-input-1-1\">[[2,5],[3],[0,4,5],[1,4,5],[2,3],[0,2,3]]</span>\n<strong>Output: </strong><span id=\"example-output-1\">0\n<strong>Explanation:</strong>\n</span>4---3---1\n|&nbsp; &nbsp;|\n2---5\n&nbsp;\\&nbsp;/\n&nbsp; 0\n</pre>\n\n<p>&nbsp;</p>\n\n<p><strong>Note:</strong></p>\n\n<ol>\n\t<li><code>3 &lt;= graph.length &lt;= 50</code></li>\n\t<li>It is guaranteed that <code>graph[1]</code> is non-empty.</li>\n\t<li>It is guaranteed that <code>graph[2]</code> contains a non-zero element.&nbsp;</li>\n</ol>\n</div>\n</div>",
+  "url": "https://leetcode.com/problems/cat-and-mouse/",
+  "companies": {
+    "Google": 2
+  }
+}

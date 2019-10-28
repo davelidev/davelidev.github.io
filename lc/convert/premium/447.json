@@ -1,0 +1,12 @@
+{
+  "categories": [
+    "Hash Table"
+  ],
+  "diff": "Easy",
+  "title": "447. Number of Boomerangs",
+  "question": "<div><p>Given <i>n</i> points in the plane that are all pairwise distinct, a \"boomerang\" is a tuple of points <code>(i, j, k)</code> such that the distance between <code>i</code> and <code>j</code> equals the distance between <code>i</code> and <code>k</code> (<b>the order of the tuple matters</b>).</p>\n\n<p>Find the number of boomerangs. You may assume that <i>n</i> will be at most <b>500</b> and coordinates of points are all in the range <b>[-10000, 10000]</b> (inclusive).</p>\n\n<p><b>Example:</b></p>\n\n<pre><b>Input:</b>\n[[0,0],[1,0],[2,0]]\n\n<b>Output:</b>\n2\n\n<b>Explanation:</b>\nThe two boomerangs are <b>[[1,0],[0,0],[2,0]]</b> and <b>[[1,0],[2,0],[0,0]]</b>\n</pre>\n\n<p>&nbsp;</p>\n</div>",
+  "url": "https://leetcode.com/problems/number-of-boomerangs/",
+  "companies": {
+    "Google": 4
+  }
+}

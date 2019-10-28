@@ -1,0 +1,8 @@
+{
+  "categories": [],
+  "diff": "Medium",
+  "title": "1115. Print FooBar Alternately",
+  "question": "<div><p>Suppose you are given the following code:</p>\n\n<pre>class FooBar {\n  public void foo() {\n&nbsp; &nbsp; for (int i = 0; i &lt; n; i++) {\n&nbsp; &nbsp; &nbsp; print(\"foo\");\n&nbsp;   }\n  }\n\n  public void bar() {\n&nbsp; &nbsp; for (int i = 0; i &lt; n; i++) {\n&nbsp; &nbsp; &nbsp; print(\"bar\");\n&nbsp; &nbsp; }\n  }\n}\n</pre>\n\n<p>The same instance of <code>FooBar</code> will be passed to two different threads. Thread A will call&nbsp;<code>foo()</code> while thread B will call&nbsp;<code>bar()</code>.&nbsp;Modify the given program to output \"foobar\" <em>n</em> times.</p>\n\n<p>&nbsp;</p>\n\n<p><strong>Example 1:</strong></p>\n\n<pre><b>Input:</b> n = 1\n<b>Output:</b> \"foobar\"\n<strong>Explanation:</strong> There are two threads being fired asynchronously. One of them calls foo(), while the other calls bar(). \"foobar\" is being output 1 time.\n</pre>\n\n<p><strong>Example 2:</strong></p>\n\n<pre><b>Input:</b> n = 2\n<b>Output:</b> \"foobarfoobar\"\n<strong>Explanation:</strong> \"foobar\" is being output 2 times.\n</pre>\n</div>",
+  "url": "https://leetcode.com/problems/print-foobar-alternately/",
+  "companies": {}
+}

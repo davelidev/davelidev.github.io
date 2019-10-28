@@ -1,0 +1,12 @@
+{
+  "categories": [
+    "Tree",
+    "Depth-first Search"
+  ],
+  "diff": "Easy",
+  "title": "112. Path Sum",
+  "question": "<div><p>Given a binary tree and a sum, determine if the tree has a root-to-leaf path such that adding up all the values along the path equals the given sum.</p>\n\n<p><strong>Note:</strong>&nbsp;A leaf is a node with no children.</p>\n\n<p><strong>Example:</strong></p>\n\n<p>Given the below binary tree and <code>sum = 22</code>,</p>\n\n<pre>      <strong>5</strong>\n     <strong>/</strong> \\\n    <strong>4</strong>   8\n   <strong>/</strong>   / \\\n  <strong>11</strong>  13  4\n /  <strong>\\</strong>      \\\n7    <strong>2</strong>      1\n</pre>\n\n<p>return true, as there exist a root-to-leaf path <code>5-&gt;4-&gt;11-&gt;2</code> which sum is 22.</p>\n</div>",
+  "url": "https://leetcode.com/problems/path-sum/",
+  "companies": {},
+  "code": "# Definition for a binary tree node.\\u000A# class TreeNode(object):\\u000A#     def __init__(self, x):\\u000A#         self.val \\u003D x\\u000A#         self.left \\u003D None\\u000A#         self.right \\u003D None\\u000A\\u000Aclass Solution(object):\\u000A    def hasPathSum(self, root, total):\\u000A        cur_path \\u003D []\\u000A        def _pathSum(node, sum_from_root):\\u000A            if not node:\\u000A                return False\\u000A            sum_from_root +\\u003D node.val\\u000A            cur_path.append(node.val)\\u000A            if sum_from_root \\u003D\\u003D total and not node.left and not node.right:\\u000A                return True\\u000A            res \\u003D _pathSum(node.left, sum_from_root) or _pathSum(node.right, sum_from_root)\\u000A            cur_path.pop()\\u000A            return res\\u000A        return _pathSum(root, 0)\\u000A        "
+}

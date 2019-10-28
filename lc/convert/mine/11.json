@@ -1,0 +1,12 @@
+{
+  "categories": [
+    "Array",
+    "Two Pointers"
+  ],
+  "diff": "Medium",
+  "title": "11. Container With Most Water",
+  "question": "<div><p>Given <i>n</i> non-negative integers <i>a<sub>1</sub></i>, <i>a<sub>2</sub></i>, ..., <i>a<sub>n&nbsp;</sub></i>, where each represents a point at coordinate (<i>i</i>, <i>a<sub>i</sub></i>). <i>n</i> vertical lines are drawn such that the two endpoints of line <i>i</i> is at (<i>i</i>, <i>a<sub>i</sub></i>) and (<i>i</i>, 0). Find two lines, which together with x-axis forms a container, such that the container contains the most water.</p>\n\n<p><strong>Note:&nbsp;</strong>You may not slant the container and <i>n</i> is at least 2.</p>\n\n<p>&nbsp;</p>\n\n<p><img alt=\"\" src=\"https://s3-lc-upload.s3.amazonaws.com/uploads/2018/07/17/question_11.jpg\" style=\"width: 600px; height: 287px;\"></p>\n\n<p><small>The above vertical lines are represented by array [1,8,6,2,5,4,8,3,7]. In this case, the max area of water (blue section) the container can contain&nbsp;is 49. </small></p>\n\n<p>&nbsp;</p>\n\n<p><strong>Example:</strong></p>\n\n<pre><strong>Input:</strong> [1,8,6,2,5,4,8,3,7]\n<strong>Output:</strong> 49</pre></div>",
+  "url": "https://leetcode.com/problems/container-with-most-water/",
+  "companies": {},
+  "code": "class Solution(object):\\u000A    def maxArea(self, height):\\u000A        lmax \\u003D rmax \\u003D 0\\u000A        i, j \\u003D 0, len(height) \\u002D 1\\u000A        max_water \\u003D 0\\u000A        while i \\u003C j:\\u000A            lmax, rmax \\u003D max(lmax, height[i]), max(rmax, height[j])\\u000A            max_water \\u003D max(max_water, (j \\u002D i) * min(height[i], height[j]))\\u000A            if lmax \\u003C rmax: i +\\u003D 1\\u000A            else: j \\u002D\\u003D 1\\u000A        return max_water"
+}

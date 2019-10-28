@@ -1,0 +1,10 @@
+{
+  "categories": [
+    "Dynamic Programming"
+  ],
+  "diff": "Medium",
+  "title": "516. Longest Palindromic Subsequence",
+  "question": "<div><p>\nGiven a string s, find the longest palindromic subsequence's length in s. You may assume that the maximum length of s is 1000.\n</p>\n\n<p><b>Example 1:</b><br>\nInput: \n</p><pre>\"bbbab\"\n</pre>\nOutput: \n<pre>4\n</pre>\nOne possible longest palindromic subsequence is \"bbbb\".\n<p></p>\n\n<p><b>Example 2:</b><br>\nInput:\n</p><pre>\"cbbd\"\n</pre>\nOutput:\n<pre>2\n</pre>\nOne possible longest palindromic subsequence is \"bb\".\n<p></p></div>",
+  "url": "https://leetcode.com/problems/longest-palindromic-subsequence/",
+  "companies": {}
+}

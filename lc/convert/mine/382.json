@@ -1,0 +1,11 @@
+{
+  "categories": [
+    "Reservoir Sampling"
+  ],
+  "diff": "Medium",
+  "title": "382. Linked List Random Node",
+  "question": "<div><p>Given a singly linked list, return a random node's value from the linked list. Each node must have the <b>same probability</b> of being chosen.</p>\n\n<p><b>Follow up:</b><br>\nWhat if the linked list is extremely large and its length is unknown to you? Could you solve this efficiently without using extra space?\n</p>\n\n<p><b>Example:</b>\n</p><pre>// Init a singly linked list [1,2,3].\nListNode head = new ListNode(1);\nhead.next = new ListNode(2);\nhead.next.next = new ListNode(3);\nSolution solution = new Solution(head);\n\n// getRandom() should return either 1, 2, or 3 randomly. Each element should have equal probability of returning.\nsolution.getRandom();\n</pre>\n<p></p></div>",
+  "url": "https://leetcode.com/problems/linked-list-random-node/",
+  "companies": {},
+  "code": "# Definition for singly\\u002Dlinked list.\\u000A# class ListNode(object):\\u000A#     def __init__(self, x):\\u000A#         self.val \\u003D x\\u000A#         self.next \\u003D None\\u000Aimport random\\u000Aclass Solution(object):\\u000A\\u000A    def __init__(self, head):\\u000A        \\u0022\\u0022\\u0022\\u000A        @param head The linked list\\u0027s head.\\u000A        Note that the head is guaranteed to be not null, so it contains at least one node.\\u000A        :type head: ListNode\\u000A        \\u0022\\u0022\\u0022\\u000A        self.num_elem \\u003D 0\\u000A        self.head \\u003D cur \\u003D head\\u000A        while cur:\\u000A            self.num_elem +\\u003D 1\\u000A            cur \\u003D cur.next\\u000A\\u000A    def getRandom(self):\\u000A        \\u0022\\u0022\\u0022\\u000A        Returns a random node\\u0027s value.\\u000A        :rtype: int\\u000A        \\u0022\\u0022\\u0022\\u000A        idx \\u003D random.randint(0, self.num_elem \\u002D 1)\\u000A        cur \\u003D self.head\\u000A        while cur:\\u000A            if idx \\u003D\\u003D 0:\\u000A                return cur.val\\u000A            idx \\u002D\\u003D 1\\u000A            cur \\u003D cur.next\\u000A        \\u000A        \\u000A\\u000A\\u000A# Your Solution object will be instantiated and called as such:\\u000A# obj \\u003D Solution(head)\\u000A# param_1 \\u003D obj.getRandom()"
+}

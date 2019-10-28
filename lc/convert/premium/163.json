@@ -1,0 +1,13 @@
+{
+  "categories": [
+    "Array"
+  ],
+  "diff": "Medium",
+  "title": "163. Missing Ranges",
+  "question": "<div><p>Given a sorted integer array <strong><em>nums</em></strong>, where the range of elements are in the <strong>inclusive range</strong><b><strong> </strong>[<i>lower</i>, <i>upper</i>]</b>, return its missing ranges.</p>\n\n<p><strong>Example:</strong></p>\n\n<pre><strong>Input:</strong> <strong><em>nums</em></strong> = <code>[0, 1, 3, 50, 75]</code>, <strong><i>lower</i></strong> = 0 and <strong><i>upper</i></strong> = 99,\n<strong>Output:</strong> <code>[\"2\", \"4-&gt;49\", \"51-&gt;74\", \"76-&gt;99\"]</code>\n</pre>\n</div>",
+  "url": "https://leetcode.com/problems/missing-ranges/",
+  "companies": {
+    "Google": 5
+  },
+  "code": "class Solution(object):\\u000A    def findMissingRanges(self, nums, lower, upper):\\u000A        prev \\u003D None\\u000A        res \\u003D []\\u000A        from itertools import chain\\u000A        for num in chain([int(lower) \\u002D 1], nums, [int(upper) + 1]):\\u000A            if prev is not None and num \\u002D prev \\u003E 1:\\u000A                res.append(str(num \\u002D 1)\\u000A                           if prev \\u003D\\u003D num \\u002D 2\\u000A                           else str(prev + 1) + \\u0027\\u002D\\u003E\\u0027 + str(num \\u002D 1))\\u000A            prev \\u003D num\\u000A        return res\\u000A                "
+}

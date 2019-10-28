@@ -1,0 +1,11 @@
+{
+  "categories": [
+    "Array"
+  ],
+  "diff": "Medium",
+  "title": "915. Partition Array into Disjoint Intervals",
+  "question": "<div><p>Given an array <code>A</code>, partition it&nbsp;into two (contiguous) subarrays&nbsp;<code>left</code>&nbsp;and <code>right</code>&nbsp;so that:</p>\n\n<ul>\n\t<li>Every element in <code>left</code>&nbsp;is less than or equal to every element in <code>right</code>.</li>\n\t<li><code>left</code> and <code>right</code> are non-empty.</li>\n\t<li><code>left</code>&nbsp;has the smallest possible size.</li>\n</ul>\n\n<p>Return the <strong>length</strong> of <code>left</code> after such a partitioning.&nbsp; It is guaranteed that such a partitioning exists.</p>\n\n<p>&nbsp;</p>\n\n<p><strong>Example 1:</strong></p>\n\n<pre><strong>Input: </strong><span id=\"example-input-1-1\">[5,0,3,8,6]</span>\n<strong>Output: </strong><span id=\"example-output-1\">3</span>\n<strong>Explanation: </strong>left = [5,0,3], right = [8,6]\n</pre>\n\n<div>\n<p><strong>Example 2:</strong></p>\n\n<pre><strong>Input: </strong><span id=\"example-input-2-1\">[1,1,1,0,6,12]</span>\n<strong>Output: </strong><span id=\"example-output-2\">4</span>\n<strong>Explanation: </strong>left = [1,1,1,0], right = [6,12]\n</pre>\n\n<p>&nbsp;</p>\n</div>\n\n<p><strong>Note:</strong></p>\n\n<ol>\n\t<li><code>2 &lt;= A.length&nbsp;&lt;= 30000</code></li>\n\t<li><code>0 &lt;= A[i] &lt;= 10^6</code></li>\n\t<li>It is guaranteed there is at least one way to partition <code>A</code> as described.</li>\n</ol>\n\n<div>\n<div>&nbsp;</div>\n</div>\n</div>",
+  "url": "https://leetcode.com/problems/partition-array-into-disjoint-intervals/",
+  "companies": {},
+  "code": "class Solution(object):\\u000A    def partitionDisjoint(self, A):\\u000A        \\u0022\\u0022\\u0022\\u000A        :type A: List[int]\\u000A        :rtype: int\\u000A        \\u0022\\u0022\\u0022\\u000A        r_min \\u003D [A[\\u002D1]]\\u000A        for i in range(len(A) \\u002D2, \\u002D1, \\u002D1):\\u000A            r_min.append(min(A[i], r_min[\\u002D1]))\\u000A        r_min.reverse()\\u000A\\u000A        max_so_far \\u003D A[0]\\u000A        for i in range(len(A) \\u002D 1):\\u000A            if max_so_far \\u003C\\u003D  r_min[i + 1]:\\u000A                return i + 1\\u000A            max_so_far \\u003D max(max_so_far, A[i])\\u000A        return len(r_min)"
+}

@@ -1,0 +1,24 @@
+{
+  "categories": [
+    "String",
+    "Backtracking"
+  ],
+  "diff": "Medium",
+  "title": "22. Generate Parentheses",
+  "question": "<div><p>\nGiven <i>n</i> pairs of parentheses, write a function to generate all combinations of well-formed parentheses.\n</p>\n\n<p>\nFor example, given <i>n</i> = 3, a solution set is:\n</p>\n<pre>[\n  \"((()))\",\n  \"(()())\",\n  \"(())()\",\n  \"()(())\",\n  \"()()()\"\n]\n</pre></div>",
+  "url": "https://leetcode.com/problems/generate-parentheses/",
+  "companies": {
+    "Microsoft": 14,
+    "Amazon": 12,
+    "Facebook": 9,
+    "Walmart Labs": 4,
+    "Bloomberg": 3,
+    "Uber": 3,
+    "Lyft": 3,
+    "Apple": 3,
+    "Google": 2,
+    "Yandex": 2,
+    "Samsung": 2
+  },
+  "code": "class Solution(object):\\u000A    def generateParenthesis(self, n):\\u000A        def _gen(l\\u003D0, r\\u003D0, cur\\u003D[], res\\u003D[]):\\u000A            if l \\u003D\\u003D r \\u003D\\u003D n:\\u000A                res.append(\\u0027\\u0027.join(cur))\\u000A\\u000A            if n \\u003E\\u003D l \\u003E r:\\u000A                cur.append(\\u0027)\\u0027)\\u000A                _gen(l, r + 1)\\u000A                cur.pop()\\u000A            \\u000A            if l \\u003C n:\\u000A                cur.append(\\u0027(\\u0027)\\u000A                _gen(l + 1, r)\\u000A                cur.pop()\\u000A                \\u000A            return res\\u000A        return _gen()"
+}

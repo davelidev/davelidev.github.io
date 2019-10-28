@@ -1,0 +1,17 @@
+{
+  "categories": [
+    "Array",
+    "Math",
+    "Bit Manipulation"
+  ],
+  "diff": "Easy",
+  "title": "268. Missing Number",
+  "question": "<div><p>Given an array containing <i>n</i> distinct numbers taken from <code>0, 1, 2, ..., n</code>, find the one that is missing from the array.</p>\n\n<p><b>Example 1:</b></p>\n\n<pre><b>Input:</b> [3,0,1]\n<b>Output:</b> 2\n</pre>\n\n<p><b>Example 2:</b></p>\n\n<pre><b>Input:</b> [9,6,4,2,3,5,7,0,1]\n<b>Output:</b> 8\n</pre>\n\n<p><b>Note</b>:<br>\nYour algorithm should run in linear runtime complexity. Could you implement it using only constant extra space complexity?</p></div>",
+  "url": "https://leetcode.com/problems/missing-number/",
+  "companies": {
+    "Amazon": 4,
+    "Microsoft": 3,
+    "Google": 3,
+    "Apple": 2
+  }
+}

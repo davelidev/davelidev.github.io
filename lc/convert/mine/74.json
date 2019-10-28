@@ -1,0 +1,12 @@
+{
+  "categories": [
+    "Array",
+    "Binary Search"
+  ],
+  "diff": "Medium",
+  "title": "74. Search a 2D Matrix",
+  "question": "<div><p>Write an efficient algorithm that searches for a value in an <em>m</em> x <em>n</em> matrix. This matrix has the following properties:</p>\n\n<ul>\n\t<li>Integers in each row are sorted from left to right.</li>\n\t<li>The first integer of each row is greater than the last integer of the previous row.</li>\n</ul>\n\n<p><strong>Example 1:</strong></p>\n\n<pre><strong>Input:</strong>\nmatrix = [\n  [1,   3,  5,  7],\n  [10, 11, 16, 20],\n  [23, 30, 34, 50]\n]\ntarget = 3\n<strong>Output:</strong> true\n</pre>\n\n<p><strong>Example 2:</strong></p>\n\n<pre><strong>Input:</strong>\nmatrix = [\n  [1,   3,  5,  7],\n  [10, 11, 16, 20],\n  [23, 30, 34, 50]\n]\ntarget = 13\n<strong>Output:</strong> false</pre>\n</div>",
+  "url": "https://leetcode.com/problems/search-a-2d-matrix/",
+  "companies": {},
+  "code": "class Solution(object):\\u000A    def searchMatrix(self, matrix, target):\\u000A        \\u0022\\u0022\\u0022\\u000A        :type matrix: List[List[int]]\\u000A        :type target: int\\u000A        :rtype: bool\\u000A        \\u0022\\u0022\\u0022\\u000A        def _searchMatrix(start, end):\\u000A            if end \\u003C\\u003D 0:\\u000A                return False\\u000A            elif end \\u003D\\u003D start + 1:\\u000A                return matrix[start/len(matrix[0])][start%len(matrix[0])] \\u003D\\u003D target\\u000A            else:\\u000A                mid \\u003D (start + end) / 2\\u000A                mid_val \\u003D matrix[mid/len(matrix[0])][mid%len(matrix[0])]\\u000A                if mid_val \\u003D\\u003D target:\\u000A                    return True\\u000A                elif mid_val \\u003C target:\\u000A                    return _searchMatrix(mid, end)\\u000A                else:\\u000A                    return _searchMatrix(start, mid)\\u000A        if not matrix:\\u000A            return False\\u000A        return _searchMatrix(0, len(matrix[0]) * len(matrix))"
+}

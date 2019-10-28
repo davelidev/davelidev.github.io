@@ -1,0 +1,23 @@
+{
+  "categories": [
+    "Array",
+    "Backtracking"
+  ],
+  "diff": "Medium",
+  "title": "79. Word Search",
+  "question": "<div><p>Given a 2D board and a word, find if the word exists in the grid.</p>\n\n<p>The word can be constructed from letters of sequentially adjacent cell, where \"adjacent\" cells are those horizontally or vertically neighboring. The same letter cell may not be used more than once.</p>\n\n<p><strong>Example:</strong></p>\n\n<pre>board =\n[\n  ['A','B','C','E'],\n  ['S','F','C','S'],\n  ['A','D','E','E']\n]\n\nGiven word = \"<strong>ABCCED</strong>\", return <strong>true</strong>.\nGiven word = \"<strong>SEE</strong>\", return <strong>true</strong>.\nGiven word = \"<strong>ABCB</strong>\", return <strong>false</strong>.\n</pre>\n</div>",
+  "url": "https://leetcode.com/problems/word-search/",
+  "companies": {
+    "Amazon": 12,
+    "Facebook": 8,
+    "Uber": 7,
+    "Intuit": 6,
+    "Microsoft": 5,
+    "Google": 4,
+    "Bloomberg": 3,
+    "Apple": 3,
+    "Yahoo": 2,
+    "Snapchat": 2,
+    "Oracle": 2
+  }
+}

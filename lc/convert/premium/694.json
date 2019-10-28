@@ -1,0 +1,15 @@
+{
+  "categories": [
+    "Hash Table",
+    "Depth-first Search"
+  ],
+  "diff": "Medium",
+  "title": "694. Number of Distinct Islands",
+  "question": "<div><p>Given a non-empty 2D array <code>grid</code> of 0's and 1's, an <b>island</b> is a group of <code>1</code>'s (representing land) connected 4-directionally (horizontal or vertical.)  You may assume all four edges of the grid are surrounded by water.</p>\n\n<p>Count the number of <b>distinct</b> islands.  An island is considered to be the same as another if and only if one island can be translated (and not rotated or reflected) to equal the other.</p>\n\n<p><b>Example 1:</b><br>\n</p><pre>11000\n11000\n00011\n00011\n</pre>\nGiven the above grid map, return <code>1</code>.\n<p></p>\n\n<p><b>Example 2:</b><br>\n</p><pre>11011\n10000\n00001\n11011</pre>\nGiven the above grid map, return <code>3</code>.<br><br>\nNotice that:\n<pre>11\n1\n</pre>\nand\n<pre> 1\n11\n</pre>\nare considered different island shapes, because we do not consider reflection / rotation.\n<p></p>\n\n<p><b>Note:</b>\nThe length of each dimension in the given <code>grid</code> does not exceed 50.\n</p></div>",
+  "url": "https://leetcode.com/problems/number-of-distinct-islands/",
+  "companies": {
+    "Amazon": 3,
+    "Apple": 3,
+    "Facebook": 2
+  }
+}

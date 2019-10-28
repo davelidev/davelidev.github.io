@@ -1,0 +1,11 @@
+{
+  "categories": [
+    "Backtracking"
+  ],
+  "diff": "Medium",
+  "title": "131. Palindrome Partitioning",
+  "question": "<div><p>Given a string <em>s</em>, partition <em>s</em> such that every substring of the partition is a palindrome.</p>\n\n<p>Return all possible palindrome partitioning of <em>s</em>.</p>\n\n<p><strong>Example:</strong></p>\n\n<pre><strong>Input:</strong>&nbsp;\"aab\"\n<strong>Output:</strong>\n[\n  [\"aa\",\"b\"],\n  [\"a\",\"a\",\"b\"]\n]\n</pre>\n</div>",
+  "url": "https://leetcode.com/problems/palindrome-partitioning/",
+  "companies": {},
+  "code": "class Solution(object):\\u000A    def partition(self, s):\\u000A        \\u0022\\u0022\\u0022\\u000A        :type s: str\\u000A        :rtype: List[List[str]]\\u000A        \\u0022\\u0022\\u0022\\u000A        n \\u003D len(s) + 1\\u000A        # is_pa \\u003D [[False] * n for _ in xrange(n)]\\u000A        # for i in xrange(n):\\u000A        #     for j in xrange(i, n):\\u000A        #         if s[i:j] \\u003D\\u003D s[i:j][::\\u002D1]:\\u000A        #             is_pa[i][j] \\u003D True\\u000A        dp \\u003D [[[]]]\\u000A        for j in xrange(1, n):\\u000A            dp.append([prefix + [s[i:j]]\\u000A                            for i in xrange(j)\\u000A                                if s[i:j] \\u003D\\u003D s[i:j][::\\u002D1]\\u000A                                    for prefix in dp[i]])\\u000A        return dp[\\u002D1]"
+}

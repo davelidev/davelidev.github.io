@@ -1,0 +1,12 @@
+{
+  "categories": [
+    "Math",
+    "String"
+  ],
+  "diff": "Easy",
+  "title": "67. Add Binary",
+  "question": "<div><p>Given two binary strings, return their sum (also a binary string).</p>\n\n<p>The input strings are both <strong>non-empty</strong> and contains only characters <code>1</code> or&nbsp;<code>0</code>.</p>\n\n<p><strong>Example 1:</strong></p>\n\n<pre><strong>Input:</strong> a = \"11\", b = \"1\"\n<strong>Output:</strong> \"100\"</pre>\n\n<p><strong>Example 2:</strong></p>\n\n<pre><strong>Input:</strong> a = \"1010\", b = \"1011\"\n<strong>Output:</strong> \"10101\"</pre>\n</div>",
+  "url": "https://leetcode.com/problems/add-binary/",
+  "companies": {},
+  "code": "class Solution(object):\\u000A    def addBinary(self, a, b):\\u000A        \\u0022\\u0022\\u0022\\u000A        :type a: str\\u000A        :type b: str\\u000A        :rtype: str\\u000A        \\u0022\\u0022\\u0022\\u000A        a, b, carry \\u003D [int(i) for i in list(a)], [int(i) for i in list(b)], 0\\u000A        res \\u003D []\\u000A        while carry or a or b:\\u000A            cur \\u003D (a.pop() if a else 0) + (b.pop() if b else 0) + carry\\u000A            carry, digit \\u003D cur / 2, cur % 2\\u000A            res.append(str(digit))\\u000A        return \\u0027\\u0027.join(list(reversed(res)))"
+}

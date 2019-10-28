@@ -1,0 +1,13 @@
+{
+  "categories": [
+    "Stack",
+    "Tree"
+  ],
+  "diff": "Medium",
+  "title": "255. Verify Preorder Sequence in Binary Search Tree",
+  "question": "<div><p>Given an array of numbers, verify whether it is the correct preorder traversal sequence of a binary search tree.</p>\n\n<p>You may assume each number in the sequence is unique.</p>\n\n<p>Consider the following&nbsp;binary search tree:&nbsp;</p>\n\n<pre>     5\n    / \\\n   2   6\n  / \\\n 1   3</pre>\n\n<p><strong>Example 1:</strong></p>\n\n<pre><strong>Input:</strong> [5,2,6,1,3]\n<strong>Output:</strong> false</pre>\n\n<p><strong>Example 2:</strong></p>\n\n<pre><strong>Input:</strong> [5,2,1,3,6]\n<strong>Output:</strong> true</pre>\n\n<p><b>Follow up:</b><br>\nCould you do it using only constant space complexity?</p>\n</div>",
+  "url": "https://leetcode.com/problems/verify-preorder-sequence-in-binary-search-tree/",
+  "companies": {
+    "Mathworks": 4
+  }
+}

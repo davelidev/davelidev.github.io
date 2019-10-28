@@ -1,0 +1,14 @@
+{
+  "categories": [
+    "Backtracking"
+  ],
+  "diff": "Medium",
+  "title": "47. Permutations II",
+  "question": "<div><p>Given a collection of numbers that might contain duplicates, return all possible unique permutations.</p>\n\n<p><strong>Example:</strong></p>\n\n<pre><strong>Input:</strong> [1,1,2]\n<strong>Output:</strong>\n[\n  [1,1,2],\n  [1,2,1],\n  [2,1,1]\n]\n</pre>\n</div>",
+  "url": "https://leetcode.com/problems/permutations-ii/",
+  "companies": {
+    "LinkedIn": 2,
+    "Amazon": 2
+  },
+  "code": "class Solution(object):\\u000A    def permuteUnique(self, nums):\\u000A        from collections import Counter\\u000A        cnt \\u003D Counter(nums)\\u000A        \\u000A        def perm(cur\\u003D[], res\\u003D[]):\\u000A            if len(cur) \\u003D\\u003D len(nums):\\u000A                res.append(cur[:])\\u000A            else:\\u000A                for num in cnt:\\u000A                    if cnt[num]:\\u000A                        cnt[num] \\u002D\\u003D 1\\u000A                        cur.append(num)\\u000A                        perm()\\u000A                        cur.pop()\\u000A                        cnt[num] +\\u003D 1\\u000A            return res\\u000A                    \\u000A        return perm()"
+}

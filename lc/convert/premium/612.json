@@ -1,0 +1,10 @@
+{
+  "categories": [],
+  "diff": "Medium",
+  "title": "612. Shortest Distance in a Plane",
+  "question": "<div class=\"sql-schema-wrapper__3VBi\"><a class=\"sql-schema-link__3cEg\">SQL Schema<svg viewBox=\"0 0 24 24\" width=\"1em\" height=\"1em\" class=\"icon__3Su4\"><path fill-rule=\"evenodd\" d=\"M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z\"></path></svg></a></div><div>Table <code>point_2d</code> holds the coordinates (x,y) of some unique points (more than two) in a plane.\n<p>&nbsp;</p>\nWrite a query to find the shortest distance between these points rounded to 2 decimals.\n\n<p>&nbsp;</p>\n\n<pre>| x  | y  |\n|----|----|\n| -1 | -1 |\n| 0  | 0  |\n| -1 | -2 |\n</pre>\n\n<p>&nbsp;</p>\nThe shortest distance is 1.00 from point (-1,-1) to (-1,2). So the output should be:\n\n<p>&nbsp;</p>\n\n<pre>| shortest |\n|----------|\n| 1.00     |\n</pre>\n\n<p>&nbsp;</p>\n<b>Note:</b> The longest distance among all the points are less than 10000.\n\n<p>&nbsp;</p>\n</div>",
+  "url": "https://leetcode.com/problems/shortest-distance-in-a-plane/",
+  "companies": {
+    "Microsoft": 2
+  }
+}

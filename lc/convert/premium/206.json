@@ -1,0 +1,25 @@
+{
+  "categories": [
+    "Linked List"
+  ],
+  "diff": "Easy",
+  "title": "206. Reverse Linked List",
+  "question": "<div><p>Reverse a singly linked list.</p>\n\n<p><strong>Example:</strong></p>\n\n<pre><strong>Input:</strong> 1-&gt;2-&gt;3-&gt;4-&gt;5-&gt;NULL\n<strong>Output:</strong> 5-&gt;4-&gt;3-&gt;2-&gt;1-&gt;NULL\n</pre>\n\n<p><b>Follow up:</b></p>\n\n<p>A linked list can be reversed either iteratively or recursively. Could you implement both?</p>\n</div>",
+  "url": "https://leetcode.com/problems/reverse-linked-list/",
+  "companies": {
+    "Amazon": 23,
+    "Microsoft": 11,
+    "Mathworks": 7,
+    "Google": 5,
+    "Adobe": 4,
+    "Cisco": 4,
+    "Apple": 3,
+    "Facebook": 3,
+    "Yandex": 3,
+    "Yahoo": 3,
+    "Oracle": 3,
+    "eBay": 2,
+    "Walmart Labs": 2
+  },
+  "code": "# Definition for singly\\u002Dlinked list.\\u000A# class ListNode(object):\\u000A#     def __init__(self, x):\\u000A#         self.val \\u003D x\\u000A#         self.next \\u003D None\\u000A\\u000Aclass Solution(object):\\u000A    def reverseList(self, head):\\u000A        cur \\u003D head\\u000A        prev \\u003D None\\u000A        while cur:\\u000A            prev, cur.next, cur \\u003D cur, prev, cur.next\\u000A        return prev"
+}

@@ -1,0 +1,12 @@
+{
+  "categories": [
+    "Tree"
+  ],
+  "diff": "Medium",
+  "title": "450. Delete Node in a BST",
+  "question": "<div><p>Given a root node reference of a BST and a key, delete the node with the given key in the BST. Return the root node reference (possibly updated) of the BST.</p>\n\n<p>Basically, the deletion can be divided into two stages:\n</p><ol>\n<li>Search for a node to remove.</li>\n<li>If the node is found, delete the node.</li>\n</ol>\n<p></p>\n\n<p><b>Note:</b> Time complexity should be O(height of tree).</p>\n\n<p><b>Example:</b>\n</p><pre>root = [5,3,6,2,4,null,7]\nkey = 3\n\n    5\n   / \\\n  3   6\n / \\   \\\n2   4   7\n\nGiven key to delete is 3. So we find the node with value 3 and delete it.\n\nOne valid answer is [5,4,6,2,null,null,7], shown in the following BST.\n\n    5\n   / \\\n  4   6\n /     \\\n2       7\n\nAnother valid answer is [5,2,6,null,4,null,7].\n\n    5\n   / \\\n  2   6\n   \\   \\\n    4   7\n</pre>\n<p></p></div>",
+  "url": "https://leetcode.com/problems/delete-node-in-a-bst/",
+  "companies": {
+    "Microsoft": 3
+  }
+}

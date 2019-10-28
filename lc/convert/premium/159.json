@@ -1,0 +1,15 @@
+{
+  "categories": [
+    "Hash Table",
+    "Two Pointers",
+    "String",
+    "Sliding Window"
+  ],
+  "diff": "Hard",
+  "title": "159. Longest Substring with At Most Two Distinct Characters",
+  "question": "<div><p>Given a string <strong><em>s</em></strong> , find the length of the longest substring&nbsp;<strong><em>t&nbsp;&nbsp;</em></strong>that contains <strong>at most </strong>2 distinct characters.</p>\n\n<p><strong>Example 1:</strong></p>\n\n<pre><strong>Input:</strong> \"eceba\"\n<strong>Output: </strong>3\n<strong>Explanation: <em>t</em></strong><em> </em>is \"ece\" which its length is 3.\n</pre>\n\n<p><strong>Example 2:</strong></p>\n\n<pre><strong>Input:</strong> \"ccaabbb\"\n<strong>Output: </strong>5\n<strong>Explanation: <em>t</em></strong><em> </em>is \"aabbb\" which its length is 5.\n</pre></div>",
+  "url": "https://leetcode.com/problems/longest-substring-with-at-most-two-distinct-characters/",
+  "companies": {
+    "Google": 2
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "categories": [
+    "Linked List",
+    "Design"
+  ],
+  "diff": "Medium",
+  "title": "379. Design Phone Directory",
+  "question": "<div><p>Design a Phone Directory which supports the following operations:</p>\n\n<p>\n</p><ol>\n<li><code>get</code>: Provide a number which is not assigned to anyone.</li>\n<li><code>check</code>: Check if a number is available or not.</li>\n<li><code>release</code>: Recycle or release a number.</li>\n</ol>\n<p></p>\n\n<p><b>Example:</b>\n</p><pre>// Init a phone directory containing a total of 3 numbers: 0, 1, and 2.\nPhoneDirectory directory = new PhoneDirectory(3);\n\n// It can return any available phone number. Here we assume it returns 0.\ndirectory.get();\n\n// Assume it returns 1.\ndirectory.get();\n\n// The number 2 is available, so return true.\ndirectory.check(2);\n\n// It returns 2, the only number that is left.\ndirectory.get();\n\n// The number 2 is no longer available, so return false.\ndirectory.check(2);\n\n// Release number 2 back to the pool.\ndirectory.release(2);\n\n// Number 2 is available again, return true.\ndirectory.check(2);\n</pre>\n<p></p></div>",
+  "url": "https://leetcode.com/problems/design-phone-directory/",
+  "companies": {
+    "Dropbox": 7,
+    "Google": 2
+  }
+}

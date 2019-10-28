@@ -1,0 +1,13 @@
+{
+  "categories": [
+    "Array",
+    "Hash Table"
+  ],
+  "diff": "Easy",
+  "title": "1133. Largest Unique Number",
+  "question": "<div><p>Given an array of integers <code>A</code>, return the largest integer that only occurs once.</p>\n\n<p>If no integer occurs once, return -1.</p>\n\n<p>&nbsp;</p>\n\n<p><strong>Example 1:</strong></p>\n\n<pre><strong>Input: </strong><span id=\"example-input-1-1\">[5,7,3,9,4,9,8,3,1]</span>\n<strong>Output: </strong><span id=\"example-output-1\">8</span>\n<strong>Explanation: </strong>\nThe maximum integer in the array is 9 but it is repeated. The number 8 occurs only once, so it's the answer.\n</pre>\n\n<p><strong>Example 2:</strong></p>\n\n<pre><strong>Input: </strong><span id=\"example-input-1-1\">[9,9,8,8]</span>\n<strong>Output: </strong><span id=\"example-output-1\">-1</span>\n<strong>Explanation: </strong>\nThere is no number that occurs only once.\n</pre>\n\n<p>&nbsp;</p>\n\n<p><strong>Note:</strong></p>\n\n<ol>\n\t<li><code>1 &lt;= A.length &lt;= 2000</code></li>\n\t<li><code>0 &lt;= A[i] &lt;= 1000</code></li>\n</ol>\n</div>",
+  "url": "https://leetcode.com/problems/largest-unique-number/",
+  "companies": {
+    "Amazon": null
+  }
+}

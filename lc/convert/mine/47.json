@@ -1,0 +1,11 @@
+{
+  "categories": [
+    "Backtracking"
+  ],
+  "diff": "Medium",
+  "title": "47. Permutations II",
+  "question": "<div><p>Given a collection of numbers that might contain duplicates, return all possible unique permutations.</p>\n\n<p><strong>Example:</strong></p>\n\n<pre><strong>Input:</strong> [1,1,2]\n<strong>Output:</strong>\n[\n  [1,1,2],\n  [1,2,1],\n  [2,1,1]\n]\n</pre>\n</div>",
+  "url": "https://leetcode.com/problems/permutations-ii/",
+  "companies": {},
+  "code": "class Solution(object):\\u000A    def permuteUnique(self, nums):\\u000A        \\u0022\\u0022\\u0022\\u000A        :type nums: List[int]\\u000A        :rtype: List[List[int]]\\u000A        \\u0022\\u0022\\u0022\\u000A        from collections import Counter\\u000A        cnt \\u003D Counter(nums)\\u000A        \\u000A        def _gen_permutation(cur\\u003D[], res\\u003Dset()):\\u000A            print cur, cnt\\u000A            if not cnt:\\u000A                res.add(tuple(cur[:]))\\u000A                return res\\u000A            for key in cnt.keys():\\u000A                cnt[key] \\u002D\\u003D 1\\u000A                cur.append(key)\\u000A                if not cnt[key]:\\u000A                    del cnt[key]\\u000A                _gen_permutation(cur, res)\\u000A                cur.pop()\\u000A                cnt[key] +\\u003D 1\\u000A            return res\\u000A        return _gen_permutation()\\u000A            "
+}

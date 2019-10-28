@@ -1,0 +1,12 @@
+{
+  "categories": [
+    "Array",
+    "Backtracking"
+  ],
+  "diff": "Medium",
+  "title": "79. Word Search",
+  "question": "<div><p>Given a 2D board and a word, find if the word exists in the grid.</p>\n\n<p>The word can be constructed from letters of sequentially adjacent cell, where \"adjacent\" cells are those horizontally or vertically neighboring. The same letter cell may not be used more than once.</p>\n\n<p><strong>Example:</strong></p>\n\n<pre>board =\n[\n  ['A','B','C','E'],\n  ['S','F','C','S'],\n  ['A','D','E','E']\n]\n\nGiven word = \"<strong>ABCCED</strong>\", return <strong>true</strong>.\nGiven word = \"<strong>SEE</strong>\", return <strong>true</strong>.\nGiven word = \"<strong>ABCB</strong>\", return <strong>false</strong>.\n</pre>\n</div>",
+  "url": "https://leetcode.com/problems/word-search/",
+  "companies": {},
+  "code": "class Solution(object):\\u000A    def exist(self, board, word):\\u000A        \\u0022\\u0022\\u0022\\u000A        :type board: List[List[str]]\\u000A        :type word: str\\u000A        :rtype: bool\\u000A        \\u0022\\u0022\\u0022\\u000A        m, n \\u003D len(board), len(board[0])\\u000A        visited \\u003D [[False] * n for _ in range(m)]\\u000A        def exist(i, j, char_i):\\u000A            if word[char_i] !\\u003D board[i][j]: return False\\u000A            elif char_i \\u003D\\u003D len(word) \\u002D 1 and not visited[i][j]: return True\\u000A            adjs \\u003D [(i + a, j + b)\\u000A                    for a, b in zip([1,0,\\u002D1,0], [0,1,0,\\u002D1])\\u000A                    if (0 \\u003C\\u003D i + a \\u003C m) and (0 \\u003C\\u003D j + b \\u003C n)]\\u000A            visited[i][j] \\u003D True\\u000A            if any(not visited[x][y] and exist(x, y, char_i + 1)\\u000A                   for x, y in adjs):\\u000A                    return True\\u000A            visited[i][j] \\u003D False\\u000A            return False\\u000A\\u000A        return any(exist(i, j, 0)\\u000A                   for i in range(m)\\u000A                   for j in range(n))"
+}

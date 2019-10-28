@@ -1,0 +1,11 @@
+{
+  "categories": [
+    "Tree"
+  ],
+  "diff": "Easy",
+  "title": "404. Sum of Left Leaves",
+  "question": "<div><p>Find the sum of all left leaves in a given binary tree.</p>\n\n<p><b>Example:</b>\n</p><pre>    3\n   / \\\n  9  20\n    /  \\\n   15   7\n\nThere are two left leaves in the binary tree, with values <b>9</b> and <b>15</b> respectively. Return <b>24</b>.\n</pre>\n<p></p></div>",
+  "url": "https://leetcode.com/problems/sum-of-left-leaves/",
+  "companies": {},
+  "code": "# Definition for a binary tree node.\\u000A# class TreeNode(object):\\u000A#     def __init__(self, x):\\u000A#         self.val \\u003D x\\u000A#         self.left \\u003D None\\u000A#         self.right \\u003D None\\u000A\\u000Aclass Solution(object):\\u000A    def sumOfLeftLeaves(self, root):\\u000A        \\u0022\\u0022\\u0022\\u000A        :type root: TreeNode\\u000A        :rtype: int\\u000A        \\u0022\\u0022\\u0022\\u000A        if not root: return 0\\u000A        left_leave_sum \\u003D 0\\u000A        bfs \\u003D [root]\\u000A        while bfs:\\u000A            left_leave_sum +\\u003D sum(node.left.val for node in bfs if node.left and not node.left.right and not node.left.left)\\u000A            bfs \\u003D [kid for node in bfs for kid in [node.left, node.right] if kid]\\u000A        return left_leave_sum"
+}

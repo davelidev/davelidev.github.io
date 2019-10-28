@@ -1,0 +1,13 @@
+{
+  "categories": [
+    "Tree",
+    "Recursion"
+  ],
+  "diff": "Easy",
+  "title": "687. Longest Univalue Path",
+  "question": "<div><p>Given a binary tree, find the length of the longest path where each node in the path has the same value. This path may or may not pass through the root.</p>\n\n<p>The length of path between two nodes is represented by the number of edges between them.</p>\n\n<p>&nbsp;</p>\n\n<p><b>Example 1:</b></p>\n\n<p><strong>Input:</strong></p>\n\n<pre>              5\n             / \\\n            4   5\n           / \\   \\\n          1   1   5\n</pre>\n\n<p><strong>Output:</strong>&nbsp;2</p>\n\n<p>&nbsp;</p>\n\n<p><b>Example 2:</b></p>\n\n<p><strong>Input:</strong></p>\n\n<pre>              1\n             / \\\n            4   5\n           / \\   \\\n          4   4   5\n</pre>\n\n<p><strong>Output:</strong>&nbsp;2</p>\n\n<p>&nbsp;</p>\n\n<p><b>Note:</b> The given binary tree has not more than 10000 nodes. The height of the tree is not more than 1000.</p>\n</div>",
+  "url": "https://leetcode.com/problems/longest-univalue-path/",
+  "companies": {
+    "Amazon": 2
+  }
+}

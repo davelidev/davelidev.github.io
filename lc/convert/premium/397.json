@@ -1,0 +1,14 @@
+{
+  "categories": [
+    "Math",
+    "Bit Manipulation"
+  ],
+  "diff": "Medium",
+  "title": "397. Integer Replacement",
+  "question": "<div><p>\nGiven a positive integer <i>n</i> and you can do operations as follow:\n</p>\n\n<p>\n</p><ol>\n<li>If <i>n</i> is even, replace <i>n</i> with <code><i>n</i>/2</code>.</li>\n<li>If <i>n</i> is odd, you can replace <i>n</i> with either <code><i>n</i> + 1</code> or <code><i>n</i> - 1</code>.</li>\n</ol>\n<p></p>\n\n<p>\nWhat is the minimum number of replacements needed for <i>n</i> to become 1?\n</p>\n\n<p></p>\n\n<p><b>Example 1:</b>\n</p><pre><b>Input:</b>\n8\n\n<b>Output:</b>\n3\n\n<b>Explanation:</b>\n8 -&gt; 4 -&gt; 2 -&gt; 1\n</pre>\n<p></p>\n\n<p><b>Example 2:</b>\n</p><pre><b>Input:</b>\n7\n\n<b>Output:</b>\n4\n\n<b>Explanation:</b>\n7 -&gt; 8 -&gt; 4 -&gt; 2 -&gt; 1\nor\n7 -&gt; 6 -&gt; 3 -&gt; 2 -&gt; 1\n</pre>\n<p></p></div>",
+  "url": "https://leetcode.com/problems/integer-replacement/",
+  "companies": {
+    "Amazon": 3,
+    "Microsoft": 2
+  }
+}

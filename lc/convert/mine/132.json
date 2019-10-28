@@ -1,0 +1,11 @@
+{
+  "categories": [
+    "Dynamic Programming"
+  ],
+  "diff": "Hard",
+  "title": "132. Palindrome Partitioning II",
+  "question": "<div><p>Given a string <em>s</em>, partition <em>s</em> such that every substring of the partition is a palindrome.</p>\n\n<p>Return the minimum cuts needed for a palindrome partitioning of <em>s</em>.</p>\n\n<p><strong>Example:</strong></p>\n\n<pre><strong>Input:</strong>&nbsp;\"aab\"\n<strong>Output:</strong> 1\n<strong>Explanation:</strong> The palindrome partitioning [\"aa\",\"b\"] could be produced using 1 cut.\n</pre>\n</div>",
+  "url": "https://leetcode.com/problems/palindrome-partitioning-ii/",
+  "companies": {},
+  "code": "class Solution(object):\\u000A    def minCut(self, s):\\u000A        \\u0022\\u0022\\u0022\\u000A        :type s: str\\u000A        :rtype: int\\u000A        \\u0022\\u0022\\u0022\\u000A        n \\u003D len(s)\\u000A        is_pal \\u003D [[None] * (n + 1) for _ in range(n + 1)]\\u000A        for i in range(n): is_pal[i][i] \\u003D is_pal[i][i + 1] \\u003D True\\u000A        for k in range(2, n + 1):\\u000A            for i in range(n \\u002D k + 1):\\u000A                j \\u003D i + k\\u000A                is_pal[i][j] \\u003D s[i] \\u003D\\u003D s[j \\u002D 1] and is_pal[i + 1][j \\u002D 1]\\u000A        dp \\u003D [float(\\u0027inf\\u0027)] * (n + 1)\\u000A        dp[0] \\u003D \\u002D1\\u000A        for j in range(n + 1):\\u000A            if j: dp[j] \\u003D dp[j \\u002D 1] + 1\\u000A            for i in range(j):\\u000A                if is_pal[i][j]: dp[j] \\u003D min(dp[j], dp[i] + 1)\\u000A        return dp[\\u002D1]\\u000A                \\u000A                "
+}

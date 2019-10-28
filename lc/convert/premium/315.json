@@ -1,0 +1,18 @@
+{
+  "categories": [
+    "Binary Search",
+    "Divide and Conquer",
+    "Sort",
+    "Binary Indexed Tree",
+    "Segment Tree"
+  ],
+  "diff": "Hard",
+  "title": "315. Count of Smaller Numbers After Self",
+  "question": "<div><p>You are given an integer array <i>nums</i> and you have to return a new <i>counts</i> array. The <i>counts</i> array has the property where <code>counts[i]</code> is the number of smaller elements to the right of <code>nums[i]</code>.</p>\n\n<p><b>Example:</b></p>\n\n<pre><strong>Input:</strong> [5,2,6,1]\n<strong>Output:</strong> <code>[2,1,1,0] \n<strong>Explanation:</strong></code>\nTo the right of 5 there are <b>2</b> smaller elements (2 and 1).\nTo the right of 2 there is only <b>1</b> smaller element (1).\nTo the right of 6 there is <b>1</b> smaller element (1).\nTo the right of 1 there is <b>0</b> smaller element.\n</pre></div>",
+  "url": "https://leetcode.com/problems/count-of-smaller-numbers-after-self/",
+  "companies": {
+    "Google": 12,
+    "Amazon": 3,
+    "Oracle": 2
+  }
+}

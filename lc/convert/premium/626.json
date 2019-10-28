@@ -1,0 +1,8 @@
+{
+  "categories": [],
+  "diff": "Medium",
+  "title": "626. Exchange Seats",
+  "question": "<div class=\"sql-schema-wrapper__3VBi\"><a class=\"sql-schema-link__3cEg\">SQL Schema<svg viewBox=\"0 0 24 24\" width=\"1em\" height=\"1em\" class=\"icon__3Su4\"><path fill-rule=\"evenodd\" d=\"M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z\"></path></svg></a></div><div><p>Mary is a teacher in a middle school and she has a table <code>seat</code> storing students' names and their corresponding seat ids.</p>\nThe column <b>id</b> is continuous increment.\n\n<p>&nbsp;</p>\nMary wants to change seats for the adjacent students.\n\n<p>&nbsp;</p>\nCan you write a SQL query to output the result for Mary?\n\n<p>&nbsp;</p>\n\n<pre>+---------+---------+\n|    id   | student |\n+---------+---------+\n|    1    | Abbot   |\n|    2    | Doris   |\n|    3    | Emerson |\n|    4    | Green   |\n|    5    | Jeames  |\n+---------+---------+\n</pre>\nFor the sample input, the output is:\n\n<p>&nbsp;</p>\n\n<pre>+---------+---------+\n|    id   | student |\n+---------+---------+\n|    1    | Doris   |\n|    2    | Abbot   |\n|    3    | Green   |\n|    4    | Emerson |\n|    5    | Jeames  |\n+---------+---------+\n</pre>\n\n<p><b>Note:</b><br>\nIf the number of students is odd, there is no need to change the last one's seat.</p>\n</div>",
+  "url": "https://leetcode.com/problems/exchange-seats/",
+  "companies": {}
+}

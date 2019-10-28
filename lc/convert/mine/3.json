@@ -1,0 +1,14 @@
+{
+  "categories": [
+    "Hash Table",
+    "Two Pointers",
+    "String",
+    "Sliding Window"
+  ],
+  "diff": "Medium",
+  "title": "3. Longest Substring Without Repeating Characters",
+  "question": "<div><p>Given a string, find the length of the <b>longest substring</b> without repeating characters.</p>\n\n<div>\n<p><strong>Example 1:</strong></p>\n\n<pre><strong>Input: </strong><span id=\"example-input-1-1\">\"abcabcbb\"</span>\n<strong>Output: </strong><span id=\"example-output-1\">3 \n<strong>Explanation:</strong></span> The answer is <code>\"abc\"</code>, with the length of 3. \n</pre>\n\n<div>\n<p><strong>Example 2:</strong></p>\n\n<pre><strong>Input: </strong><span id=\"example-input-2-1\">\"bbbbb\"</span>\n<strong>Output: </strong><span id=\"example-output-2\">1\n</span><span id=\"example-output-1\"><strong>Explanation: </strong>T</span>he answer is <code>\"b\"</code>, with the length of 1.\n</pre>\n\n<div>\n<p><strong>Example 3:</strong></p>\n\n<pre><strong>Input: </strong><span id=\"example-input-3-1\">\"pwwkew\"</span>\n<strong>Output: </strong><span id=\"example-output-3\">3\n</span><span id=\"example-output-1\"><strong>Explanation: </strong></span>The answer is <code>\"wke\"</code>, with the length of 3. \n             Note that the answer must be a <b>substring</b>, <code>\"pwke\"</code> is a <i>subsequence</i> and not a substring.\n</pre>\n</div>\n</div>\n</div>\n</div>",
+  "url": "https://leetcode.com/problems/longest-substring-without-repeating-characters/",
+  "companies": {},
+  "code": "class Solution(object):\\u000A    def lengthOfLongestSubstring(self, s):\\u000A        \\u0022\\u0022\\u0022\\u000A        :type s: str\\u000A        :rtype: int\\u000A        \\u0022\\u0022\\u0022\\u000A        max_len \\u003D 0\\u000A        visited \\u003D {}\\u000A        i \\u003D 0\\u000A        for j, char in enumerate(s):\\u000A            if char not in visited or visited[char] \\u003C i:\\u000A                print s[i:j + 1]\\u000A                cur_len \\u003D j \\u002D i + 1\\u000A                max_len \\u003D max(max_len, cur_len)\\u000A            else:\\u000A                i \\u003D max(visited[char] + 1, i)\\u000A\\u000A            visited[char] \\u003D j\\u000A\\u000A        return max_len\\u000A\\u000A"
+}

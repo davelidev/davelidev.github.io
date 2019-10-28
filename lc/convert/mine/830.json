@@ -1,0 +1,11 @@
+{
+  "categories": [
+    "Array"
+  ],
+  "diff": "Easy",
+  "title": "830. Positions of Large Groups",
+  "question": "<div><p>In a string&nbsp;<code>S</code>&nbsp;of lowercase letters, these letters form consecutive groups of the same character.</p>\n\n<p>For example, a string like <code>S = \"abbxxxxzyy\"</code> has the groups <code>\"a\"</code>, <code>\"bb\"</code>, <code>\"xxxx\"</code>, <code>\"z\"</code> and&nbsp;<code>\"yy\"</code>.</p>\n\n<p>Call a group <em>large</em> if it has 3 or more characters.&nbsp; We would like the starting and ending positions of every large group.</p>\n\n<p>The final answer should be in lexicographic order.</p>\n\n<p>&nbsp;</p>\n\n<p><strong>Example 1:</strong></p>\n\n<pre><strong>Input: </strong>\"abbxxxxzzy\"\n<strong>Output: </strong>[[3,6]]\n<strong>Explanation</strong>: <code>\"xxxx\" is the single </code>large group with starting  3 and ending positions 6.\n</pre>\n\n<p><strong>Example 2:</strong></p>\n\n<pre><strong>Input: </strong>\"abc\"\n<strong>Output: </strong>[]\n<strong>Explanation</strong>: We have \"a\",\"b\" and \"c\" but no large group.\n</pre>\n\n<p><strong>Example 3:</strong></p>\n\n<pre><strong>Input: </strong>\"abcdddeeeeaabbbcd\"\n<strong>Output: </strong>[[3,5],[6,9],[12,14]]</pre>\n\n<p>&nbsp;</p>\n\n<p><strong>Note:&nbsp;</strong>&nbsp;<code>1 &lt;= S.length &lt;= 1000</code></p>\n</div>",
+  "url": "https://leetcode.com/problems/positions-of-large-groups/",
+  "companies": {},
+  "code": "class Solution(object):\\u000A    def largeGroupPositions(self, S):\\u000A        res \\u003D []\\u000A        prev \\u003D 0\\u000A        for i in range(len(S) + 1):\\u000A            if i \\u003D\\u003D 0: continue\\u000A            if i \\u003D\\u003D len(S) or S[i] !\\u003D S[i \\u002D 1]:\\u000A                if i \\u002D prev \\u003E\\u003D 3: res.append([prev, i \\u002D 1])\\u000A                prev \\u003D i\\u000A        return res"
+}

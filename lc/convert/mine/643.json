@@ -1,0 +1,11 @@
+{
+  "categories": [
+    "Array"
+  ],
+  "diff": "Easy",
+  "title": "643. Maximum Average Subarray I",
+  "question": "<div><p>Given an array consisting of <code>n</code> integers, find the contiguous subarray of given length <code>k</code> that has the maximum average value. And you need to output the maximum average value.</p>\n\n<p><b>Example 1:</b></p>\n\n<pre><b>Input:</b> [1,12,-5,-6,50,3], k = 4\n<b>Output:</b> 12.75\n<b>Explanation:</b> Maximum average is (12-5-6+50)/4 = 51/4 = 12.75\n</pre>\n\n<p>&nbsp;</p>\n\n<p><b>Note:</b></p>\n\n<ol>\n\t<li>1 &lt;= <code>k</code> &lt;= <code>n</code> &lt;= 30,000.</li>\n\t<li>Elements of the given array will be in the range [-10,000, 10,000].</li>\n</ol>\n\n<p>&nbsp;</p>\n</div>",
+  "url": "https://leetcode.com/problems/maximum-average-subarray-i/",
+  "companies": {},
+  "code": "class Solution(object):\\u000A    def findMaxAverage(self, nums, k):\\u000A        \\u0022\\u0022\\u0022\\u000A        :type nums: List[int]\\u000A        :type k: int\\u000A        :rtype: float\\u000A        \\u0022\\u0022\\u0022\\u000A        for i in range(len(nums) \\u002D 2, \\u002D1, \\u002D1): nums[i] +\\u003D nums[i + 1]\\u000A        nums.append(0)\\u000A        max_avg \\u003D float(\\u0027\\u002Dinf\\u0027)\\u000A        for i in range(len(nums) \\u002D k):max_avg \\u003D max(max_avg, (float(nums[i]) \\u002D nums[i + k]) / k)\\u000A        return max_avg"
+}

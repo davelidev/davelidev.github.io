@@ -1,0 +1,13 @@
+{
+  "categories": [
+    "Backtracking",
+    "Trie"
+  ],
+  "diff": "Hard",
+  "title": "425. Word Squares",
+  "question": "<div><p>Given a set of words <b>(without duplicates)</b>, find all <a href=\"https://en.wikipedia.org/wiki/Word_square\" target=\"_blank\">word squares</a> you can build from them.</p>\n\n<p>A sequence of words forms a valid word square if the <i>k</i><sup>th</sup> row and column read the exact same string, where 0 ≤ <i>k</i> &lt; max(numRows, numColumns).</p>\n\n<p>For example, the word sequence <code>[\"ball\",\"area\",\"lead\",\"lady\"]</code> forms a word square because each word reads the same both horizontally and vertically.</p>\n\n<pre>b a l l\na r e a\nl e a d\nl a d y\n</pre>\n\n<p><b>Note:</b><br>\n</p><ol>\n<li>There are at least 1 and at most 1000 words.</li>\n<li>All words will have the exact same length.</li>\n<li>Word length is at least 1 and at most 5.</li>\n<li>Each word contains only lowercase English alphabet <code>a-z</code>.</li>\n</ol>\n<p></p>\n\n<p><b>Example 1:</b>\n</p><pre><b>Input:</b>\n[\"area\",\"lead\",\"wall\",\"lady\",\"ball\"]\n\n<b>Output:</b>\n[\n  [ \"wall\",\n    \"area\",\n    \"lead\",\n    \"lady\"\n  ],\n  [ \"ball\",\n    \"area\",\n    \"lead\",\n    \"lady\"\n  ]\n]\n\n<b>Explanation:</b>\nThe output consists of two word squares. The order of output does not matter (just the order of words in each word square matters).\n</pre>\n<p></p>\n\n<p><b>Example 2:</b>\n</p><pre><b>Input:</b>\n[\"abat\",\"baba\",\"atan\",\"atal\"]\n\n<b>Output:</b>\n[\n  [ \"baba\",\n    \"abat\",\n    \"baba\",\n    \"atan\"\n  ],\n  [ \"baba\",\n    \"abat\",\n    \"baba\",\n    \"atal\"\n  ]\n]\n\n<b>Explanation:</b>\nThe output consists of two word squares. The order of output does not matter (just the order of words in each word square matters).\n</pre>\n<p></p></div>",
+  "url": "https://leetcode.com/problems/word-squares/",
+  "companies": {
+    "Oracle": 4
+  }
+}

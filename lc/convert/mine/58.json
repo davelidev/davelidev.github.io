@@ -1,0 +1,11 @@
+{
+  "categories": [
+    "String"
+  ],
+  "diff": "Easy",
+  "title": "58. Length of Last Word",
+  "question": "<div><p>Given a string <i>s</i> consists of upper/lower-case alphabets and empty space characters <code>' '</code>, return the length of last word in the string.</p>\n\n<p>If the last word does not exist, return 0.</p>\n\n<p><b>Note:</b> A word is defined as a character sequence consists of non-space characters only.</p>\n\n<p><b>Example:</b></p>\n\n<pre><b>Input:</b> \"Hello World\"\n<b>Output:</b> 5\n</pre>\n\n<p>&nbsp;</p>\n</div>",
+  "url": "https://leetcode.com/problems/length-of-last-word/",
+  "companies": {},
+  "code": "class Solution(object):\\u000A    def lengthOfLastWord(self, s):\\u000A        \\u0022\\u0022\\u0022\\u000A        :type s: str\\u000A        :rtype: int\\u000A        \\u0022\\u0022\\u0022\\u000A        s \\u003D s.strip(\\u0027 \\u0027)\\u000A        return len(s) \\u002D s.rfind(\\u0027 \\u0027) \\u002D 1"
+}

@@ -1,0 +1,11 @@
+{
+  "categories": [
+    "Bit Manipulation"
+  ],
+  "diff": "Easy",
+  "title": "693. Binary Number with Alternating Bits",
+  "question": "<div><p>Given a positive integer, check whether it has alternating bits: namely, if two adjacent bits will always have different values.</p>\n\n<p><b>Example 1:</b><br>\n</p><pre><b>Input:</b> 5\n<b>Output:</b> True\n<b>Explanation:</b>\nThe binary representation of 5 is: 101\n</pre>\n<p></p>\n\n<p><b>Example 2:</b><br>\n</p><pre><b>Input:</b> 7\n<b>Output:</b> False\n<b>Explanation:</b>\nThe binary representation of 7 is: 111.\n</pre>\n<p></p>\n\n<p><b>Example 3:</b><br>\n</p><pre><b>Input:</b> 11\n<b>Output:</b> False\n<b>Explanation:</b>\nThe binary representation of 11 is: 1011.\n</pre>\n<p></p>\n\n<p><b>Example 4:</b><br>\n</p><pre><b>Input:</b> 10\n<b>Output:</b> True\n<b>Explanation:</b>\nThe binary representation of 10 is: 1010.\n</pre>\n<p></p></div>",
+  "url": "https://leetcode.com/problems/binary-number-with-alternating-bits/",
+  "companies": {},
+  "code": "class Solution(object):\\u000A    def hasAlternatingBits(self, n):\\u000A        \\u0022\\u0022\\u0022\\u000A        :type n: int\\u000A        :rtype: bool\\u000A        \\u0022\\u0022\\u0022\\u000A        toggle \\u003D n \\u0026 1\\u000A        while n:\\u000A            n, is_one \\u003D divmod(n, 2)\\u000A            if toggle and not is_one or not toggle and is_one: return False\\u000A            toggle \\u003D not toggle\\u000A        return True"
+}

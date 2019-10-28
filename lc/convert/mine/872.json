@@ -1,0 +1,11 @@
+{
+  "categories": [
+    "Tree",
+    "Depth-first Search"
+  ],
+  "diff": "Easy",
+  "title": "872. Leaf-Similar Trees",
+  "question": "<div><p>Consider all the leaves of a binary tree.&nbsp; From&nbsp;left to right order, the values of those&nbsp;leaves form a <em>leaf value sequence.</em></p>\n\n<p><img alt=\"\" src=\"https://s3-lc-upload.s3.amazonaws.com/uploads/2018/07/16/tree.png\" style=\"width: 300px; height: 240px;\"></p>\n\n<p>For example, in the given tree above, the leaf value sequence is <code>(6, 7, 4, 9, 8)</code>.</p>\n\n<p>Two binary trees are considered <em>leaf-similar</em>&nbsp;if their leaf value sequence is the same.</p>\n\n<p>Return <code>true</code> if and only if the two given trees with head nodes <code>root1</code> and <code>root2</code> are leaf-similar.</p>\n\n<p>&nbsp;</p>\n\n<p><strong>Note:</strong></p>\n\n<ul>\n\t<li>Both of the given trees will have between <code>1</code> and <code>100</code> nodes.</li>\n</ul>\n</div>",
+  "url": "https://leetcode.com/problems/leaf-similar-trees/",
+  "companies": {}
+}

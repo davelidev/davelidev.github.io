@@ -1,0 +1,15 @@
+{
+  "categories": [
+    "Union Find",
+    "Graph"
+  ],
+  "diff": "Medium",
+  "title": "399. Evaluate Division",
+  "question": "<div><p>Equations are given in the format <code>A / B = k</code>, where <code>A</code> and <code>B</code> are variables represented as strings, and <code>k</code> is a real number (floating point number). Given some queries, return the answers. If the answer does not exist, return <code>-1.0</code>.</p>\n\n<p><b>Example:</b><br>\nGiven <code> a / b = 2.0, b / c = 3.0.</code><br>\nqueries are: <code> a / c = ?, b / a = ?, a / e = ?, a / a = ?, x / x = ? .</code><br>\nreturn <code> [6.0, 0.5, -1.0, 1.0, -1.0 ].</code></p>\n\n<p>The input is: <code> vector&lt;pair&lt;string, string&gt;&gt; equations, vector&lt;double&gt;&amp; values, vector&lt;pair&lt;string, string&gt;&gt; queries </code>, where <code>equations.size() == values.size()</code>, and the values are positive. This represents the equations. Return <code> vector&lt;double&gt;</code>.</p>\n\n<p>According to the example above:</p>\n\n<pre>equations = [ [\"a\", \"b\"], [\"b\", \"c\"] ],\nvalues = [2.0, 3.0],\nqueries = [ [\"a\", \"c\"], [\"b\", \"a\"], [\"a\", \"e\"], [\"a\", \"a\"], [\"x\", \"x\"] ]. </pre>\n\n<p>&nbsp;</p>\n\n<p>The input is always valid. You may assume that evaluating the queries will result in no division by zero and there is no contradiction.</p>\n</div>",
+  "url": "https://leetcode.com/problems/evaluate-division/",
+  "companies": {
+    "Bloomberg": 4,
+    "Google": 3,
+    "Amazon": 3
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "categories": [
+    "Hash Table",
+    "Math"
+  ],
+  "diff": "Easy",
+  "title": "202. Happy Number",
+  "question": "<div><p>Write an algorithm to determine if a number is \"happy\".</p>\n\n<p>A happy number is a number defined by the following process: Starting with any positive integer, replace the number by the sum of the squares of its digits, and repeat the process until the number equals 1 (where it will stay), or it loops endlessly in a cycle which does not include 1. Those numbers for which this process ends in 1 are happy numbers.</p>\n\n<p><strong>Example:&nbsp;</strong></p>\n\n<pre><strong>Input:</strong> 19\n<strong>Output:</strong> true\n<strong>Explanation: \n</strong>1<sup>2</sup> + 9<sup>2</sup> = 82\n8<sup>2</sup> + 2<sup>2</sup> = 68\n6<sup>2</sup> + 8<sup>2</sup> = 100\n1<sup>2</sup> + 0<sup>2</sup> + 0<sup>2</sup> = 1\n</pre></div>",
+  "url": "https://leetcode.com/problems/happy-number/",
+  "companies": {
+    "JPMorgan": 56,
+    "Apple": 5,
+    "Bloomberg": 3,
+    "Evernote": 2,
+    "Google": 2,
+    "Microsoft": 2
+  }
+}

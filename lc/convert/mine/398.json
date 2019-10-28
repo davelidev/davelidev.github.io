@@ -1,0 +1,11 @@
+{
+  "categories": [
+    "Reservoir Sampling"
+  ],
+  "diff": "Medium",
+  "title": "398. Random Pick Index",
+  "question": "<div><p>Given an array of integers with possible duplicates, randomly output the index of a given target number. You can assume that the given target number must exist in the array.</p>\n\n<p><b>Note:</b><br>\nThe array size can be very large. Solution that uses too much extra space will not pass the judge.</p>\n\n<p><b>Example:</b></p>\n\n<pre>int[] nums = new int[] {1,2,3,3,3};\nSolution solution = new Solution(nums);\n\n// pick(3) should return either index 2, 3, or 4 randomly. Each index should have equal probability of returning.\nsolution.pick(3);\n\n// pick(1) should return 0. Since in the array only nums[0] is equal to 1.\nsolution.pick(1);\n</pre>\n</div>",
+  "url": "https://leetcode.com/problems/random-pick-index/",
+  "companies": {},
+  "code": "class Solution(object):\\u000A\\u000A    def __init__(self, nums):\\u000A        self.num_to_idx \\u003D {}\\u000A        for i, num in enumerate(nums): self.num_to_idx.setdefault(num, []).append(i)\\u000A\\u000A    def pick(self, target):\\u000A        import random\\u000A        return random.choice(self.num_to_idx[target])\\u000A\\u000A\\u000A# Your Solution object will be instantiated and called as such:\\u000A# obj \\u003D Solution(nums)\\u000A# param_1 \\u003D obj.pick(target)"
+}

@@ -1,0 +1,12 @@
+{
+  "categories": [
+    "Math"
+  ],
+  "diff": "Easy",
+  "title": "507. Perfect Number",
+  "question": "<div><p>We define the Perfect Number is a <b>positive</b> integer that is equal to the sum of all its <b>positive</b> divisors except itself. \n</p>\nNow, given an <b>integer</b> n, write a function that returns true when it is a perfect number and false when it is not.\n<p></p>\n\n<p><b>Example:</b><br>\n</p><pre><b>Input:</b> 28\n<b>Output:</b> True\n<b>Explanation:</b> 28 = 1 + 2 + 4 + 7 + 14\n</pre>\n<p></p>\n\n<p><b>Note:</b>\nThe input number <b>n</b> will not exceed 100,000,000. (1e8)\n</p></div>",
+  "url": "https://leetcode.com/problems/perfect-number/",
+  "companies": {
+    "Amazon": 3
+  }
+}

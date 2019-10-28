@@ -1,0 +1,12 @@
+{
+  "categories": [
+    "Bit Manipulation"
+  ],
+  "diff": "Easy",
+  "title": "693. Binary Number with Alternating Bits",
+  "question": "<div><p>Given a positive integer, check whether it has alternating bits: namely, if two adjacent bits will always have different values.</p>\n\n<p><b>Example 1:</b><br>\n</p><pre><b>Input:</b> 5\n<b>Output:</b> True\n<b>Explanation:</b>\nThe binary representation of 5 is: 101\n</pre>\n<p></p>\n\n<p><b>Example 2:</b><br>\n</p><pre><b>Input:</b> 7\n<b>Output:</b> False\n<b>Explanation:</b>\nThe binary representation of 7 is: 111.\n</pre>\n<p></p>\n\n<p><b>Example 3:</b><br>\n</p><pre><b>Input:</b> 11\n<b>Output:</b> False\n<b>Explanation:</b>\nThe binary representation of 11 is: 1011.\n</pre>\n<p></p>\n\n<p><b>Example 4:</b><br>\n</p><pre><b>Input:</b> 10\n<b>Output:</b> True\n<b>Explanation:</b>\nThe binary representation of 10 is: 1010.\n</pre>\n<p></p></div>",
+  "url": "https://leetcode.com/problems/binary-number-with-alternating-bits/",
+  "companies": {
+    "Yahoo": null
+  }
+}

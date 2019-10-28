@@ -1,0 +1,9 @@
+{
+  "categories": [],
+  "diff": "Easy",
+  "title": "506. Relative Ranks",
+  "question": "<div><p>\nGiven scores of <b>N</b> athletes, find their relative ranks and the people with the top three highest scores, who will be awarded medals: \"Gold Medal\", \"Silver Medal\" and \"Bronze Medal\".</p>\n\n<p><b>Example 1:</b><br>\n</p><pre><b>Input:</b> [5, 4, 3, 2, 1]\n<b>Output:</b> [\"Gold Medal\", \"Silver Medal\", \"Bronze Medal\", \"4\", \"5\"]\n<b>Explanation:</b> The first three athletes got the top three highest scores, so they got \"Gold Medal\", \"Silver Medal\" and \"Bronze Medal\". <br>For the left two athletes, you just need to output their relative ranks according to their scores.\n</pre>\n<p></p>\n\n<p><b>Note:</b><br>\n</p><ol>\n<li>N is a positive integer and won't exceed 10,000.</li>\n<li>All the scores of athletes are guaranteed to be unique.</li>\n</ol>\n<p></p>\n</div>",
+  "url": "https://leetcode.com/problems/relative-ranks/",
+  "companies": {},
+  "code": "class Solution(object):\\u000A    def findRelativeRanks(self, nums):\\u000A        \\u0022\\u0022\\u0022\\u000A        :type nums: List[int]\\u000A        :rtype: List[str]\\u000A        \\u0022\\u0022\\u0022\\u000A        sorted_scores \\u003D sorted(nums, reverse\\u003DTrue)\\u000A        str_scores \\u003D [\\u0022Gold Medal\\u0022, \\u0022Silver Medal\\u0022, \\u0022Bronze Medal\\u0022]\\u000A        str_scores \\u003D (str_scores + [str(i) for i in xrange(4, len(nums) + 1)])[:len(nums)]\\u000A        score_to_str \\u003D dict(zip(sorted_scores, str_scores))\\u000A        return [score_to_str[score] for score in nums]"
+}

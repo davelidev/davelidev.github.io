@@ -1,0 +1,11 @@
+{
+  "categories": [
+    "Hash Table"
+  ],
+  "diff": "Medium",
+  "title": "438. Find All Anagrams in a String",
+  "question": "<div><p>Given a string <b>s</b> and a <b>non-empty</b> string <b>p</b>, find all the start indices of <b>p</b>'s anagrams in <b>s</b>.</p>\n\n<p>Strings consists of lowercase English letters only and the length of both strings <b>s</b> and <b>p</b> will not be larger than 20,100.</p>\n\n<p>The order of output does not matter.</p>\n\n<p><b>Example 1:</b>\n</p><pre><b>Input:</b>\ns: \"cbaebabacd\" p: \"abc\"\n\n<b>Output:</b>\n[0, 6]\n\n<b>Explanation:</b>\nThe substring with start index = 0 is \"cba\", which is an anagram of \"abc\".\nThe substring with start index = 6 is \"bac\", which is an anagram of \"abc\".\n</pre>\n<p></p>\n\n<p><b>Example 2:</b>\n</p><pre><b>Input:</b>\ns: \"abab\" p: \"ab\"\n\n<b>Output:</b>\n[0, 1, 2]\n\n<b>Explanation:</b>\nThe substring with start index = 0 is \"ab\", which is an anagram of \"ab\".\nThe substring with start index = 1 is \"ba\", which is an anagram of \"ab\".\nThe substring with start index = 2 is \"ab\", which is an anagram of \"ab\".\n</pre>\n<p></p></div>",
+  "url": "https://leetcode.com/problems/find-all-anagrams-in-a-string/",
+  "companies": {},
+  "code": "class Solution(object):\\u000A    def findAnagrams(self, s, p):\\u000A        \\u000A        if len(s) \\u003C len(p): return []\\u000A        \\u000A        from collections import Counter\\u000A        p_cnt \\u003D Counter(p)\\u000A        self.cnt \\u003D 0\\u000A        res \\u003D []\\u000A\\u000A        def update_val(idx, val):\\u000A            if s[idx] in p_cnt:\\u000A                prev \\u003D p_cnt[s[idx]]\\u000A                p_cnt[s[idx]] +\\u003D val\\u000A                if prev \\u003D\\u003D 0: self.cnt \\u002D\\u003D 1\\u000A                elif prev !\\u003D 0 and p_cnt[s[idx]] \\u003D\\u003D 0: self.cnt +\\u003D 1\\u000A\\u000A        for i in range(len(s)):\\u000A            if i \\u003C len(p): update_val(i, \\u002D1)\\u000A            else:\\u000A                update_val(i \\u002D len(p), 1)\\u000A                update_val(i, \\u002D1)\\u000A            if self.cnt \\u003D\\u003D len(p_cnt): res.append(i \\u002D len(p) + 1)\\u000A        return res"
+}

@@ -1,0 +1,12 @@
+{
+  "categories": [
+    "Array",
+    "Union Find"
+  ],
+  "diff": "Hard",
+  "title": "128. Longest Consecutive Sequence",
+  "question": "<div><p>Given an unsorted array of integers, find the length of the longest consecutive elements sequence.</p>\n\n<p>Your algorithm should run in O(<em>n</em>) complexity.</p>\n\n<p><strong>Example:</strong></p>\n\n<pre><strong>Input:</strong>&nbsp;[100, 4, 200, 1, 3, 2]\n<strong>Output:</strong> 4\n<strong>Explanation:</strong> The longest consecutive elements sequence is <code>[1, 2, 3, 4]</code>. Therefore its length is 4.\n</pre>\n</div>",
+  "url": "https://leetcode.com/problems/longest-consecutive-sequence/",
+  "companies": {},
+  "code": "class Solution(object):\\u000A    def longestConsecutive(self, nums):\\u000A        \\u0022\\u0022\\u0022\\u000A        :type nums: List[int]\\u000A        :rtype: int\\u000A        \\u0022\\u0022\\u0022\\u000A        nums \\u003D set(nums)\\u000A        res \\u003D 0\\u000A        for num in nums:\\u000A            if num \\u002D 1 not in nums:\\u000A                for i in range(len(nums)):\\u000A                    if num + i in nums: res \\u003D max(i + 1, res)\\u000A                    else: break\\u000A                \\u000A        return res"
+}

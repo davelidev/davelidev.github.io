@@ -1,0 +1,12 @@
+{
+  "categories": [
+    "String"
+  ],
+  "diff": "Easy",
+  "title": "1119. Remove Vowels from a String",
+  "question": "<div><p>Given a string <code>S</code>, remove the vowels <code>'a'</code>, <code>'e'</code>, <code>'i'</code>, <code>'o'</code>, and <code>'u'</code> from it, and return the new string.</p>\n\n<p>&nbsp;</p>\n\n<p><strong>Example 1:</strong></p>\n\n<pre><strong>Input: </strong><span id=\"example-input-1-1\">\"leetcodeisacommunityforcoders\"</span>\n<strong>Output: </strong><span id=\"example-output-1\">\"ltcdscmmntyfrcdrs\"</span>\n</pre>\n\n<p><strong>Example 2:</strong></p>\n\n<pre><strong>Input: </strong><span id=\"example-input-2-1\">\"aeiou\"</span>\n<strong>Output: </strong><span id=\"example-output-2\">\"\"</span>\n</pre>\n\n<p>&nbsp;</p>\n\n<p><strong>Note:</strong></p>\n\n<ol>\n\t<li><code>S</code> consists of lowercase English letters only.</li>\n\t<li><code>1 &lt;= S.length &lt;= 1000</code></li>\n</ol>\n</div>",
+  "url": "https://leetcode.com/problems/remove-vowels-from-a-string/",
+  "companies": {
+    "Amazon": null
+  }
+}

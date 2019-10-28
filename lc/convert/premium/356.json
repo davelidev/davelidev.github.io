@@ -1,0 +1,15 @@
+{
+  "categories": [
+    "Hash Table",
+    "Math"
+  ],
+  "diff": "Medium",
+  "title": "356. Line Reflection",
+  "question": "<div><p>Given n points on a 2D plane, find if there is such a line parallel to y-axis that reflect the given points.</p>\n\n<p><strong>Example 1:</strong></p>\n\n<pre><strong>Input: </strong><span id=\"example-input-1-1\">[[1,1],[-1,1]]</span>\n<strong>Output: </strong><span id=\"example-output-1\">true</span>\n</pre>\n\n<div>\n<p><strong>Example 2:</strong></p>\n\n<pre><strong>Input: </strong><span id=\"example-input-2-1\">[[1,1],[-1,-1]]</span>\n<strong>Output: </strong><span id=\"example-output-2\">false</span></pre>\n</div>\n\n<p><b>Follow up:</b><br>\nCould you do better than O(<i>n</i><sup>2</sup>) ?</p></div>",
+  "url": "https://leetcode.com/problems/line-reflection/",
+  "companies": {
+    "Amazon": 2,
+    "Google": null
+  },
+  "code": "class Solution(object):\\u000A    def isReflected(self, points):\\u000A        if not points: return True\\u000A        l, r \\u003D min(x for x, y in points), max(x for x, y in points)\\u000A        seen \\u003D set(map(tuple, points))\\u000A        for p in points:\\u000A            if (l + r \\u002D p[0], p[1]) not in seen: return False\\u000A        return True"
+}

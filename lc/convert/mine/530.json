@@ -1,0 +1,11 @@
+{
+  "categories": [
+    "Tree"
+  ],
+  "diff": "Easy",
+  "title": "530. Minimum Absolute Difference in BST",
+  "question": "<div><p>Given a binary search tree with non-negative values, find the minimum <a href=\"https://en.wikipedia.org/wiki/Absolute_difference\">absolute difference</a> between values of any two nodes.</p>\n\n<p><b>Example:</b></p>\n\n<pre><b>Input:</b>\n\n   1\n    \\\n     3\n    /\n   2\n\n<b>Output:</b>\n1\n\n<b>Explanation:</b>\nThe minimum absolute difference is 1, which is the difference between 2 and 1 (or between 2 and 3).\n</pre>\n\n<p>&nbsp;</p>\n\n<p><b>Note:</b> There are at least two nodes in this BST.</p></div>",
+  "url": "https://leetcode.com/problems/minimum-absolute-difference-in-bst/",
+  "companies": {},
+  "code": "# Definition for a binary tree node.\\u000A# class TreeNode(object):\\u000A#     def __init__(self, x):\\u000A#         self.val \\u003D x\\u000A#         self.left \\u003D None\\u000A#         self.right \\u003D None\\u000A\\u000Aclass Solution(object):\\u000A    def getMinimumDifference(self, root):\\u000A        \\u0022\\u0022\\u0022\\u000A        :type root: TreeNode\\u000A        :rtype: int\\u000A        \\u0022\\u0022\\u0022\\u000A        if not root: return\\u000A        bfs \\u003D [root]\\u000A        vals \\u003D []\\u000A        while bfs:\\u000A            vals.extend([node.val for node in bfs])\\u000A            bfs \\u003D [kid for node in bfs for kid in [node.left, node.right] if kid]\\u000A        vals.sort()\\u000A        return min(vals[i] \\u002D vals[i \\u002D 1] for i in xrange(1, len(vals)))"
+}

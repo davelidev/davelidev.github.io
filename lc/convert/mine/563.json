@@ -1,0 +1,11 @@
+{
+  "categories": [
+    "Tree"
+  ],
+  "diff": "Easy",
+  "title": "563. Binary Tree Tilt",
+  "question": "<div><p>Given a binary tree, return the tilt of the <b>whole tree</b>.</p>\n\n<p>The tilt of a <b>tree node</b> is defined as the <b>absolute difference</b> between the sum of all left subtree node values and the sum of all right subtree node values. Null node has tilt 0.</p>\n\n<p>The tilt of the <b>whole tree</b> is defined as the sum of all nodes' tilt.</p>\n\n<p><b>Example:</b><br>\n</p><pre><b>Input:</b> \n         1\n       /   \\\n      2     3\n<b>Output:</b> 1\n<b>Explanation:</b> \nTilt of node 2 : 0\nTilt of node 3 : 0\nTilt of node 1 : |2-3| = 1\nTilt of binary tree : 0 + 0 + 1 = 1\n</pre>\n<p></p>\n\n<p><b>Note:</b>\n</p><ol>\n<li>The sum of node values in any subtree won't exceed the range of 32-bit integer. </li>\n<li>All the tilt values won't exceed the range of 32-bit integer.</li>\n</ol>\n<p></p></div>",
+  "url": "https://leetcode.com/problems/binary-tree-tilt/",
+  "companies": {},
+  "code": "# Definition for a binary tree node.\\u000A# class TreeNode(object):\\u000A#     def __init__(self, x):\\u000A#         self.val \\u003D x\\u000A#         self.left \\u003D None\\u000A#         self.right \\u003D None\\u000A\\u000Aclass Solution(object):\\u000A    def findTilt(self, root):\\u000A        \\u0022\\u0022\\u0022\\u000A        :type root: TreeNode\\u000A        :rtype: int\\u000A        \\u0022\\u0022\\u0022\\u000A        self.tilt \\u003D 0\\u000A        def get_sum_update_tilt(node):\\u000A            if not node: return 0\\u000A            l, r \\u003D get_sum_update_tilt(node.left), get_sum_update_tilt(node.right)\\u000A            self.tilt +\\u003D abs(l \\u002D r)\\u000A            return l + r + node.val\\u000A        get_sum_update_tilt(root)\\u000A        return self.tilt"
+}

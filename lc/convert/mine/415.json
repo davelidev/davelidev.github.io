@@ -1,0 +1,11 @@
+{
+  "categories": [
+    "String"
+  ],
+  "diff": "Easy",
+  "title": "415. Add Strings",
+  "question": "<div><p>Given two non-negative integers <code>num1</code> and <code>num2</code> represented as string, return the sum of <code>num1</code> and <code>num2</code>.</p>\n\n<p><b>Note:</b>\n</p><ol>\n<li>The length of both <code>num1</code> and <code>num2</code> is &lt; 5100.</li>\n<li>Both <code>num1</code> and <code>num2</code> contains only digits <code>0-9</code>.</li>\n<li>Both <code>num1</code> and <code>num2</code> does not contain any leading zero.</li>\n<li>You <b>must not use any built-in BigInteger library</b> or <b>convert the inputs to integer</b> directly.</li>\n</ol>\n<p></p></div>",
+  "url": "https://leetcode.com/problems/add-strings/",
+  "companies": {},
+  "code": "class Solution(object):\\u000A    def addStrings(self, num1, num2):\\u000A        \\u0022\\u0022\\u0022\\u000A        :type num1: str\\u000A        :type num2: str\\u000A        :rtype: str\\u000A        \\u0022\\u0022\\u0022\\u000A        def convert_to_int(num):\\u000A            res \\u003D 0\\u000A            for digit in num:\\u000A                res *\\u003D 10\\u000A                res +\\u003D ord(digit) \\u002D ord(\\u00270\\u0027)\\u000A            return res\\u000A        print convert_to_int(num1), convert_to_int(num2)\\u000A        return str(convert_to_int(num1) + convert_to_int(num2))"
+}

@@ -1,0 +1,15 @@
+{
+  "categories": [
+    "Tree",
+    "Depth-first Search"
+  ],
+  "diff": "Easy",
+  "title": "110. Balanced Binary Tree",
+  "question": "<div><p>Given a binary tree, determine if it is height-balanced.</p>\n\n<p>For this problem, a height-balanced binary tree is defined as:</p>\n\n<blockquote>\n<p>a binary tree in which the left and right subtrees of <em>every</em> node differ in height by no more than 1.</p>\n</blockquote>\n\n<p>&nbsp;</p>\n\n<p><strong>Example 1:</strong></p>\n\n<p>Given the following tree <code>[3,9,20,null,null,15,7]</code>:</p>\n\n<pre>    3\n   / \\\n  9  20\n    /  \\\n   15   7</pre>\n\n<p>Return true.<br>\n<br>\n<strong>Example 2:</strong></p>\n\n<p>Given the following tree <code>[1,2,2,3,3,null,null,4,4]</code>:</p>\n\n<pre>       1\n      / \\\n     2   2\n    / \\\n   3   3\n  / \\\n 4   4\n</pre>\n\n<p>Return false.</p>\n</div>",
+  "url": "https://leetcode.com/problems/balanced-binary-tree/",
+  "companies": {
+    "Microsoft": 3,
+    "Facebook": 2,
+    "Google": 2
+  }
+}

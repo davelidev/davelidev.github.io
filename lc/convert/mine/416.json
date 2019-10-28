@@ -1,0 +1,11 @@
+{
+  "categories": [
+    "Dynamic Programming"
+  ],
+  "diff": "Medium",
+  "title": "416. Partition Equal Subset Sum",
+  "question": "<div><p>Given a <b>non-empty</b> array containing <b>only positive integers</b>, find if the array can be partitioned into two subsets such that the sum of elements in both subsets is equal.</p>\n\n<p><b>Note:</b></p>\n\n<ol>\n\t<li>Each of the array element will not exceed 100.</li>\n\t<li>The array size will not exceed 200.</li>\n</ol>\n\n<p>&nbsp;</p>\n\n<p><b>Example 1:</b></p>\n\n<pre>Input: [1, 5, 11, 5]\n\nOutput: true\n\nExplanation: The array can be partitioned as [1, 5, 5] and [11].\n</pre>\n\n<p>&nbsp;</p>\n\n<p><b>Example 2:</b></p>\n\n<pre>Input: [1, 2, 3, 5]\n\nOutput: false\n\nExplanation: The array cannot be partitioned into equal sum subsets.\n</pre>\n\n<p>&nbsp;</p>\n</div>",
+  "url": "https://leetcode.com/problems/partition-equal-subset-sum/",
+  "companies": {},
+  "code": "class Solution(object):\\u000A    def canPartition(self, nums):\\u000A        \\u0022\\u0022\\u0022\\u000A        :type nums: List[int]\\u000A        :rtype: bool\\u000A        \\u0022\\u0022\\u0022\\u000A        target \\u003D sum(nums) / 2.\\u000A        all_sum \\u003D {0}\\u000A        for num in nums: all_sum |\\u003D {num + i for i in all_sum}\\u000A        return target in all_sum"
+}

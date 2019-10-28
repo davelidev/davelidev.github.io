@@ -1,0 +1,11 @@
+{
+  "categories": [
+    "Depth-first Search"
+  ],
+  "diff": "Medium",
+  "title": "473. Matchsticks to Square",
+  "question": "<div><p>Remember the story of Little Match Girl? By now, you know exactly what matchsticks the little match girl has, please find out a way you can make one square by using up all those matchsticks. You should not break any stick, but you can link them up, and each matchstick must be used <b>exactly</b> one time.</p>\n\n<p> Your input will be several matchsticks the girl has, represented with their stick length. Your output will either be true or false, to represent whether you could make one square using all the matchsticks the little match girl has.</p>\n\n<p><b>Example 1:</b><br>\n</p><pre><b>Input:</b> [1,1,2,2,2]\n<b>Output:</b> true\n\n<b>Explanation:</b> You can form a square with length 2, one side of the square came two sticks with length 1.\n</pre>\n<p></p>\n\n<p><b>Example 2:</b><br>\n</p><pre><b>Input:</b> [3,3,3,3,4]\n<b>Output:</b> false\n\n<b>Explanation:</b> You cannot find a way to form a square with all the matchsticks.\n</pre>\n<p></p>\n\n<p><b>Note:</b><br>\n</p><ol>\n<li>The length sum of the given matchsticks is in the range of <code>0</code> to <code>10^9</code>.\n</li><li>The length of the given matchstick array will not exceed <code>15</code>.</li>\n</ol>\n<p></p></div>",
+  "url": "https://leetcode.com/problems/matchsticks-to-square/",
+  "companies": {},
+  "code": "class Solution(object):\\u000A\\u000A    def makesquare(self, nums):\\u000A        sum_of_elems \\u003D sum(nums)\\u000A        if len(nums) \\u003C 4 or sum_of_elems % 4: return False\\u000A        nums.sort(reverse\\u003DTrue)\\u000A        def _makesquare(pos, sums):\\u000A            if pos \\u003E\\u003D len(nums): return not any(sums)\\u000A            next_elem \\u003D nums[pos]\\u000A            visited \\u003D set()\\u000A            for i in range(len(sums)):\\u000A                if sums[i] \\u002D next_elem \\u003E\\u003D 0 and sums[i] not in visited:\\u000A                    sums[i] \\u002D\\u003D next_elem\\u000A                    if _makesquare(pos + 1, sums): return True\\u000A                    sums[i] +\\u003D next_elem\\u000A                    visited.add(sums[i])\\u000A            return False\\u000A        return _makesquare(0, [sum_of_elems / 4 for _ in range(4)])"
+}

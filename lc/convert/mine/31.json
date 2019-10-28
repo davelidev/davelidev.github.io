@@ -1,0 +1,11 @@
+{
+  "categories": [
+    "Array"
+  ],
+  "diff": "Medium",
+  "title": "31. Next Permutation",
+  "question": "<div><p>Implement <strong>next permutation</strong>, which rearranges numbers into the lexicographically next greater permutation of numbers.</p>\n\n<p>If such arrangement is not possible, it must rearrange it as the lowest possible order (ie, sorted in ascending order).</p>\n\n<p>The replacement must be <strong><a href=\"http://en.wikipedia.org/wiki/In-place_algorithm\" target=\"_blank\">in-place</a></strong> and use only constant&nbsp;extra memory.</p>\n\n<p>Here are some examples. Inputs are in the left-hand column and its corresponding outputs are in the right-hand column.</p>\n\n<p><code>1,2,3</code> → <code>1,3,2</code><br>\n<code>3,2,1</code> → <code>1,2,3</code><br>\n<code>1,1,5</code> → <code>1,5,1</code></p>\n</div>",
+  "url": "https://leetcode.com/problems/next-permutation/",
+  "companies": {},
+  "code": "class Solution(object):\\u000A    def nextPermutation(self, nums):\\u000A        if len(nums) \\u003C\\u003D 1: return\\u000A        l, r \\u003D 0, len(nums) \\u002D 1\\u000A        # find first decreasing pair from the right,\\u000A        # then swap it with the smallest element that\\u0027s strictly greater.\\u000A        for i in xrange(len(nums) \\u002D 2, \\u002D1, \\u002D1):\\u000A            if nums[i] \\u003C nums[i+1]:\\u000A                right_greater \\u003D min(((nums[j], j) for j in range(i + 1, len(nums)) if nums[j] \\u003E nums[i]), \\u005C\\u000A                                    key\\u003Dlambda x: (x[0], \\u002Dx[1]))[1]\\u000A                nums[i], nums[right_greater] \\u003D nums[right_greater], nums[i]\\u000A                l \\u003D i + 1\\u000A                break\\u000A        # reverse the elems to the right\\u000A        while l \\u003C r:\\u000A            nums[l], nums[r] \\u003D nums[r], nums[l]\\u000A            l, r \\u003D l + 1, r \\u002D 1"
+}

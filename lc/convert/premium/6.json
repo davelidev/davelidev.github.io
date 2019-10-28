@@ -1,0 +1,14 @@
+{
+  "categories": [
+    "String"
+  ],
+  "diff": "Medium",
+  "title": "6. ZigZag Conversion",
+  "question": "<div><p>The string <code>\"PAYPALISHIRING\"</code> is written in a zigzag pattern on a given number of rows like this: (you may want to display this pattern in a fixed font for better legibility)</p>\n\n<pre>P   A   H   N\nA P L S I I G\nY   I   R\n</pre>\n\n<p>And then read line by line: <code>\"PAHNAPLSIIGYIR\"</code></p>\n\n<p>Write the code that will take a string and make this conversion given a number of rows:</p>\n\n<pre>string convert(string s, int numRows);</pre>\n\n<p><strong>Example 1:</strong></p>\n\n<pre><strong>Input:</strong> s = \"PAYPALISHIRING\", numRows = 3\n<strong>Output:</strong> \"PAHNAPLSIIGYIR\"\n</pre>\n\n<p><strong>Example 2:</strong></p>\n\n<pre><strong>Input:</strong> s = \"PAYPALISHIRING\", numRows =&nbsp;4\n<strong>Output:</strong>&nbsp;\"PINALSIGYAHRPI\"\n<strong>Explanation:</strong>\n\nP     I    N\nA   L S  I G\nY A   H R\nP     I</pre>\n</div>",
+  "url": "https://leetcode.com/problems/zigzag-conversion/",
+  "companies": {
+    "Amazon": 6,
+    "Adobe": 3
+  },
+  "code": "class Solution(object):\\u000A    def convert(self, s, numRows):\\u000A        res \\u003D [[] for _ in range(numRows)]\\u000A        i, di \\u003D \\u002D1, 1\\u000A        for char in s:\\u000A            if not 0 \\u003C\\u003D i + di \\u003C numRows:\\u000A                di *\\u003D \\u002D1\\u000A            i +\\u003D di\\u000A            res[i].append(char)\\u000A        return \\u0027\\u0027.join([\\u0027\\u0027.join(row) for row in res])"
+}

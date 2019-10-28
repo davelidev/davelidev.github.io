@@ -1,0 +1,14 @@
+{
+  "categories": [
+    "Hash Table",
+    "String"
+  ],
+  "diff": "Medium",
+  "title": "249. Group Shifted Strings",
+  "question": "<div><p>Given a string, we can \"shift\" each of its letter to its successive letter, for example: <code>\"abc\" -&gt; \"bcd\"</code>. We can keep \"shifting\" which forms the sequence:</p>\n\n<pre>\"abc\" -&gt; \"bcd\" -&gt; ... -&gt; \"xyz\"</pre>\n\n<p>Given a list of strings which contains only lowercase alphabets, group all strings that belong to the same shifting sequence.</p>\n\n<p><b>Example:</b></p>\n\n<pre><b>Input:</b> <code>[\"abc\", \"bcd\", \"acef\", \"xyz\", \"az\", \"ba\", \"a\", \"z\"],</code>\n<b>Output:</b> \n[\n  [\"abc\",\"bcd\",\"xyz\"],\n  [\"az\",\"ba\"],\n  [\"acef\"],\n  [\"a\",\"z\"]\n]\n</pre>\n</div>",
+  "url": "https://leetcode.com/problems/group-shifted-strings/",
+  "companies": {
+    "Google": 3,
+    "Facebook": 2
+  }
+}

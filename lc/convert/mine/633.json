@@ -1,0 +1,11 @@
+{
+  "categories": [
+    "Math"
+  ],
+  "diff": "Easy",
+  "title": "633. Sum of Square Numbers",
+  "question": "<div><p>Given a non-negative integer <code>c</code>, your task is to decide whether there're two integers <code>a</code> and <code>b</code> such that a<sup>2</sup> + b<sup>2</sup> = c.</p>\n\n<p><b>Example 1:</b></p>\n\n<pre><b>Input:</b> 5\n<b>Output:</b> True\n<b>Explanation:</b> 1 * 1 + 2 * 2 = 5\n</pre>\n\n<p>&nbsp;</p>\n\n<p><b>Example 2:</b></p>\n\n<pre><b>Input:</b> 3\n<b>Output:</b> False\n</pre>\n\n<p>&nbsp;</p>\n</div>",
+  "url": "https://leetcode.com/problems/sum-of-square-numbers/",
+  "companies": {},
+  "code": "class Solution(object):\\u000A    def judgeSquareSum(self, c):\\u000A        a, b \\u003D 0, int(c ** (0.5))\\u000A        dp \\u003D [0]\\u000A        inc \\u003D 1\\u000A        for i in range(b + 1):\\u000A            dp.append(inc + dp[\\u002D1])\\u000A            inc +\\u003D 2\\u000A        while a \\u003C\\u003D b:\\u000A            eq \\u003D dp[a] + dp[b]\\u000A            if eq \\u003D\\u003D c: return True\\u000A            elif eq \\u003C c: a +\\u003D 1\\u000A            elif eq \\u003E c: b \\u002D\\u003D 1\\u000A        return False"
+}

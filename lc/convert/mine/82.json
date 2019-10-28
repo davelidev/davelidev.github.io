@@ -1,0 +1,11 @@
+{
+  "categories": [
+    "Linked List"
+  ],
+  "diff": "Medium",
+  "title": "82. Remove Duplicates from Sorted List II",
+  "question": "<div><p>Given a sorted linked list, delete all nodes that have duplicate numbers, leaving only <em>distinct</em> numbers from the original list.</p>\n\n<p><strong>Example 1:</strong></p>\n\n<pre><strong>Input:</strong> 1-&gt;2-&gt;3-&gt;3-&gt;4-&gt;4-&gt;5\n<strong>Output:</strong> 1-&gt;2-&gt;5\n</pre>\n\n<p><strong>Example 2:</strong></p>\n\n<pre><strong>Input:</strong> 1-&gt;1-&gt;1-&gt;2-&gt;3\n<strong>Output:</strong> 2-&gt;3\n</pre>\n</div>",
+  "url": "https://leetcode.com/problems/remove-duplicates-from-sorted-list-ii/",
+  "companies": {},
+  "code": "# Definition for singly\\u002Dlinked list.\\u000A# class ListNode(object):\\u000A#     def __init__(self, x):\\u000A#         self.val \\u003D x\\u000A#         self.next \\u003D None\\u000A\\u000Aclass Solution(object):\\u000A    def deleteDuplicates(self, head):\\u000A        \\u0022\\u0022\\u0022\\u000A        :type head: ListNode\\u000A        :rtype: ListNode\\u000A        \\u0022\\u0022\\u0022\\u000A        prev \\u003D dummy \\u003D ListNode(\\u0027dummy\\u0027)\\u000A        cur \\u003D dummy.next \\u003D head\\u000A        while cur and cur.next:\\u000A            if cur.val \\u003D\\u003D cur.next.val:\\u000A                next_diff \\u003D cur\\u000A                while next_diff.next and next_diff.val \\u003D\\u003D next_diff.next.val:\\u000A                    next_diff \\u003D next_diff.next\\u000A                prev.next \\u003D cur \\u003D next_diff.next\\u000A            else:\\u000A                prev, cur \\u003D cur, cur.next\\u000A        return dummy.next"
+}

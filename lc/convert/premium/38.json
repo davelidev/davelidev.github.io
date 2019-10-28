@@ -1,0 +1,16 @@
+{
+  "categories": [
+    "String"
+  ],
+  "diff": "Easy",
+  "title": "38. Count and Say",
+  "question": "<div><p>The count-and-say sequence is the sequence of integers with the first five terms as following:</p>\n\n<pre>1.     1\n2.     11\n3.     21\n4.     1211\n5.     111221\n</pre>\n\n<p><code>1</code> is read off as <code>\"one 1\"</code> or <code>11</code>.<br>\n<code>11</code> is read off as <code>\"two 1s\"</code> or <code>21</code>.<br>\n<code>21</code> is read off as <code>\"one 2</code>, then <code>one 1\"</code> or <code>1211</code>.</p>\n\n<p>Given an integer <i>n</i>&nbsp;where 1 ≤ <em>n</em> ≤ 30, generate the <i>n</i><sup>th</sup> term of the count-and-say sequence.</p>\n\n<p>Note: Each term of the sequence of integers will be represented as a string.</p>\n\n<p>&nbsp;</p>\n\n<p><b>Example 1:</b></p>\n\n<pre><b>Input:</b> 1\n<b>Output:</b> \"1\"\n</pre>\n\n<p><b>Example 2:</b></p>\n\n<pre><b>Input:</b> 4\n<b>Output:</b> \"1211\"</pre>\n</div>",
+  "url": "https://leetcode.com/problems/count-and-say/",
+  "companies": {
+    "Google": 8,
+    "Microsoft": 3,
+    "Amazon": 3,
+    "Facebook": 2,
+    "Epic Systems": 2
+  }
+}

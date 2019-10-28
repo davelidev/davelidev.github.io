@@ -1,0 +1,11 @@
+{
+  "categories": [
+    "Array"
+  ],
+  "diff": "Medium",
+  "title": "611. Valid Triangle Number",
+  "question": "<div>Given an array consists of non-negative integers,  your task is to count the number of triplets chosen from the array that can make triangles if we take them as side lengths of a triangle.\n\n<p><b>Example 1:</b><br>\n</p><pre><b>Input:</b> [2,2,3,4]\n<b>Output:</b> 3\n<b>Explanation:</b>\nValid combinations are: \n2,3,4 (using the first 2)\n2,3,4 (using the second 2)\n2,2,3\n</pre>\n<p></p>\n\n<p><b>Note:</b><br>\n</p><ol>\n<li>The length of the given array won't exceed 1000.</li>\n<li>The integers in the given array are in the range of [0, 1000].</li>\n</ol>\n<p></p>\n</div>",
+  "url": "https://leetcode.com/problems/valid-triangle-number/",
+  "companies": {},
+  "code": "class Solution(object):\\u000A    def triangleNumber(self, nums):\\u000A        \\u0022\\u0022\\u0022\\u000A        :type nums: List[int]\\u000A        :rtype: int\\u000A        \\u0022\\u0022\\u0022\\u000A        res \\u003D 0\\u000A        nums.sort()\\u000A        res \\u003D 0\\u000A        for i in range(len(nums) \\u002D1, 1, \\u002D1):\\u000A            l, r \\u003D 0, i \\u002D 1\\u000A            while l \\u003C r:\\u000A                if nums[l] + nums[r] \\u003E nums[i]:\\u000A                    res +\\u003D (r \\u002D l)\\u000A                    r \\u002D\\u003D 1\\u000A                else:\\u000A                    l +\\u003D 1\\u000A        return res\\u000A                    "
+}

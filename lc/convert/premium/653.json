@@ -1,0 +1,12 @@
+{
+  "categories": [
+    "Tree"
+  ],
+  "diff": "Easy",
+  "title": "653. Two Sum IV - Input is a BST",
+  "question": "<div><p>Given a Binary Search Tree and a target number, return true if there exist two elements in the BST such that their sum is equal to the given target.</p>\n\n<p><b>Example 1:</b></p>\n\n<pre><b>Input:</b> \n    5\n   / \\\n  3   6\n / \\   \\\n2   4   7\n\nTarget = 9\n\n<b>Output:</b> True\n</pre>\n\n<p>&nbsp;</p>\n\n<p><b>Example 2:</b></p>\n\n<pre><b>Input:</b> \n    5\n   / \\\n  3   6\n / \\   \\\n2   4   7\n\nTarget = 28\n\n<b>Output:</b> False\n</pre>\n\n<p>&nbsp;</p>\n</div>",
+  "url": "https://leetcode.com/problems/two-sum-iv-input-is-a-bst/",
+  "companies": {
+    "Amazon": 8
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "categories": [
+    "String"
+  ],
+  "diff": "Hard",
+  "title": "68. Text Justification",
+  "question": "<div><p>Given an array of words and a width&nbsp;<em>maxWidth</em>, format the text such that each line has exactly <em>maxWidth</em> characters and is fully (left and right) justified.</p>\n\n<p>You should pack your words in a greedy approach; that is, pack as many words as you can in each line. Pad extra spaces <code>' '</code> when necessary so that each line has exactly <em>maxWidth</em> characters.</p>\n\n<p>Extra spaces between words should be distributed as evenly as possible. If the number of spaces on a line do not divide evenly between words, the empty slots on the left will be assigned more spaces than the slots on the right.</p>\n\n<p>For the last line of text, it should be left justified and no <strong>extra</strong> space is inserted between words.</p>\n\n<p><strong>Note:</strong></p>\n\n<ul>\n\t<li>A word is defined as a character sequence consisting&nbsp;of non-space characters only.</li>\n\t<li>Each word's length is&nbsp;guaranteed to be greater than 0 and not exceed <em>maxWidth</em>.</li>\n\t<li>The input array <code>words</code>&nbsp;contains at least one word.</li>\n</ul>\n\n<p><strong>Example 1:</strong></p>\n\n<pre><strong>Input:</strong>\nwords = [\"This\", \"is\", \"an\", \"example\", \"of\", \"text\", \"justification.\"]\nmaxWidth = 16\n<strong>Output:</strong>\n[\n&nbsp; &nbsp;\"This &nbsp; &nbsp;is &nbsp; &nbsp;an\",\n&nbsp; &nbsp;\"example &nbsp;of text\",\n&nbsp; &nbsp;\"justification. &nbsp;\"\n]\n</pre>\n\n<p><strong>Example 2:</strong></p>\n\n<pre><strong>Input:</strong>\nwords = [\"What\",\"must\",\"be\",\"acknowledgment\",\"shall\",\"be\"]\nmaxWidth = 16\n<strong>Output:</strong>\n[\n&nbsp; \"What &nbsp; must &nbsp; be\",\n&nbsp; \"acknowledgment &nbsp;\",\n&nbsp; \"shall be &nbsp; &nbsp; &nbsp; &nbsp;\"\n]\n<strong>Explanation:</strong> Note that the last line is \"shall be    \" instead of \"shall     be\",\n&nbsp;            because the last line must be left-justified instead of fully-justified.\n             Note that the second line is also left-justified becase it contains only one word.\n</pre>\n\n<p><strong>Example 3:</strong></p>\n\n<pre><strong>Input:</strong>\nwords = [\"Science\",\"is\",\"what\",\"we\",\"understand\",\"well\",\"enough\",\"to\",\"explain\",\n&nbsp;        \"to\",\"a\",\"computer.\",\"Art\",\"is\",\"everything\",\"else\",\"we\",\"do\"]\nmaxWidth = 20\n<strong>Output:</strong>\n[\n&nbsp; \"Science &nbsp;is &nbsp;what we\",\n  \"understand &nbsp; &nbsp; &nbsp;well\",\n&nbsp; \"enough to explain to\",\n&nbsp; \"a &nbsp;computer. &nbsp;Art is\",\n&nbsp; \"everything &nbsp;else &nbsp;we\",\n&nbsp; \"do &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;\"\n]\n</pre>\n</div>",
+  "url": "https://leetcode.com/problems/text-justification/",
+  "companies": {
+    "Intuit": 9,
+    "Box": 5,
+    "Uber": 4,
+    "LinkedIn": 3,
+    "Microsoft": 3,
+    "Amazon": 3,
+    "Airbnb": 3,
+    "Google": 2,
+    "Twilio": 2
+  }
+}

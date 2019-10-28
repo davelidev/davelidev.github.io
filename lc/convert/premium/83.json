@@ -1,0 +1,13 @@
+{
+  "categories": [
+    "Linked List"
+  ],
+  "diff": "Easy",
+  "title": "83. Remove Duplicates from Sorted List",
+  "question": "<div><p>Given a sorted linked list, delete all duplicates such that each element appear only <em>once</em>.</p>\n\n<p><strong>Example 1:</strong></p>\n\n<pre><strong>Input:</strong> 1-&gt;1-&gt;2\n<strong>Output:</strong> 1-&gt;2\n</pre>\n\n<p><strong>Example 2:</strong></p>\n\n<pre><strong>Input:</strong> 1-&gt;1-&gt;2-&gt;3-&gt;3\n<strong>Output:</strong> 1-&gt;2-&gt;3\n</pre>\n</div>",
+  "url": "https://leetcode.com/problems/remove-duplicates-from-sorted-list/",
+  "companies": {
+    "Amazon": 5,
+    "Microsoft": 2
+  }
+}

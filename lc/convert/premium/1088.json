@@ -1,0 +1,13 @@
+{
+  "categories": [
+    "Math",
+    "Backtracking"
+  ],
+  "diff": "Hard",
+  "title": "1088. Confusing Number II",
+  "question": "<div><p>We can rotate digits by 180 degrees to form new digits. When 0, 1, 6, 8, 9 are rotated 180 degrees, they become 0, 1, 9, 8, 6 respectively. When 2, 3, 4, 5 and 7 are rotated 180 degrees, they become invalid.</p>\n\n<p>A <em>confusing number</em> is a number that when rotated 180 degrees becomes a <strong>different</strong> number with each digit valid.(Note that the rotated number can be greater than the original number.)</p>\n\n<p>Given a positive integer <code>N</code>, return the number of confusing numbers between <code>1</code> and <code>N</code>&nbsp;inclusive.</p>\n\n<p>&nbsp;</p>\n\n<p><strong>Example 1:</strong></p>\n\n<pre><strong>Input: </strong><span id=\"example-input-1-1\">20</span>\n<strong>Output: </strong><span id=\"example-output-1\">6</span>\n<strong>Explanation: </strong>\nThe confusing numbers are [6,9,10,16,18,19].\n6 converts to 9.\n9 converts to 6.\n10 converts to 01 which is just 1.\n16 converts to 91.\n18 converts to 81.\n19 converts to 61.\n</pre>\n\n<p><strong>Example 2:</strong></p>\n\n<pre><strong>Input: </strong><span id=\"example-input-2-1\">100</span>\n<strong>Output: </strong><span id=\"example-output-2\">19</span>\n<strong>Explanation: </strong>\nThe confusing numbers are [6,9,10,16,18,19,60,61,66,68,80,81,86,89,90,91,98,99,100].\n</pre>\n\n<p>&nbsp;</p>\n\n<p><strong>Note:</strong></p>\n\n<ol>\n\t<li><code>1 &lt;= N &lt;= 10^9</code></li>\n</ol></div>",
+  "url": "https://leetcode.com/problems/confusing-number-ii/",
+  "companies": {
+    "Google": 4
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "categories": [
+    "Array",
+    "Two Pointers"
+  ],
+  "diff": "Medium",
+  "title": "16. 3Sum Closest",
+  "question": "<div><p>Given an array <code>nums</code> of <em>n</em> integers and an integer <code>target</code>, find three integers in <code>nums</code>&nbsp;such that the sum is closest to&nbsp;<code>target</code>. Return the sum of the three integers. You may assume that each input would have exactly one solution.</p>\n\n<p><strong>Example:</strong></p>\n\n<pre>Given array nums = [-1, 2, 1, -4], and target = 1.\n\nThe sum that is closest to the target is 2. (-1 + 2 + 1 = 2).\n</pre>\n</div>",
+  "url": "https://leetcode.com/problems/3sum-closest/",
+  "companies": {
+    "Google": 3,
+    "Bloomberg": 2
+  },
+  "code": "class Solution(object):\\u000A    def threeSumClosest(self, nums, tar):\\u000A        nums.sort()\\u000A        res \\u003D None\\u000A        for i, left in enumerate(nums):\\u000A            j, k \\u003D i + 1, len(nums) \\u002D 1\\u000A            while j \\u003C k:\\u000A                mid, right \\u003D nums[j], nums[k]\\u000A                comb_sum \\u003D left + mid + right\\u000A                if res is None or abs(res \\u002D tar) \\u003E abs(comb_sum \\u002D tar):\\u000A                    res \\u003D comb_sum\\u000A                if comb_sum \\u003C tar:\\u000A                    j +\\u003D 1\\u000A                else:\\u000A                    k \\u002D\\u003D 1\\u000A        return res"
+}

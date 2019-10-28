@@ -1,0 +1,12 @@
+{
+  "categories": [
+    "Design"
+  ],
+  "diff": "Medium",
+  "title": "251. Flatten 2D Vector",
+  "question": "<div><p>Design and implement an iterator to flatten a 2d vector. It should support the following operations: <code>next</code> and <code>hasNext</code>.</p>\n\n<p>&nbsp;</p>\n\n<p><b>Example:</b></p>\n\n<pre>Vector2D iterator = new Vector2D([[1,2],[3],[4]]);\n\niterator.next(); // return 1\niterator.next(); // return 2\niterator.next(); // return 3\niterator.hasNext(); // return true\niterator.hasNext(); // return true\niterator.next(); // return 4\niterator.hasNext(); // return false\n</pre>\n\n<p>&nbsp;</p>\n\n<p><strong>Notes:</strong></p>\n\n<ol>\n\t<li>Please remember to <b>RESET</b> your class variables declared in Vector2D, as static/class variables are <b>persisted across multiple test cases</b>. Please see <a href=\"https://leetcode.com/faq/\" target=\"_blank\">here</a> for more details.</li>\n\t<li>You may assume that <code>next()</code> call will always be valid, that is, there will be at least a next element in the 2d vector when <code>next()</code> is called.</li>\n</ol>\n\n<p>&nbsp;</p>\n\n<p><b>Follow up:</b></p>\n\n<p>As an added challenge, try to code it using only <a href=\"http://www.cplusplus.com/reference/iterator/iterator/\" target=\"_blank\">iterators in C++</a> or <a href=\"http://docs.oracle.com/javase/7/docs/api/java/util/Iterator.html\" target=\"_blank\">iterators in Java</a>.</p>\n</div>",
+  "url": "https://leetcode.com/problems/flatten-2d-vector/",
+  "companies": {
+    "Airbnb": 5
+  }
+}

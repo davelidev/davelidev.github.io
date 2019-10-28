@@ -1,0 +1,12 @@
+{
+  "categories": [
+    "Two Pointers",
+    "Sort"
+  ],
+  "diff": "Medium",
+  "title": "524. Longest Word in Dictionary through Deleting",
+  "question": "<div><p>\nGiven a string and a string dictionary, find the longest string in the dictionary that can be formed by deleting some characters of the given string. If there are more than one possible results, return the longest word with the smallest lexicographical order. If there is no possible result, return the empty string.\n</p>\n<p><b>Example 1:</b><br>\n</p><pre><b>Input:</b>\ns = \"abpcplea\", d = [\"ale\",\"apple\",\"monkey\",\"plea\"]\n\n<b>Output:</b> \n\"apple\"\n</pre>\n<p></p>\n\n<p></p>\n<p><b>Example 2:</b><br>\n</p><pre><b>Input:</b>\ns = \"abpcplea\", d = [\"a\",\"b\",\"c\"]\n\n<b>Output:</b> \n\"a\"\n</pre>\n<p></p>\n\n<p><b>Note:</b><br>\n</p><ol>\n<li>All the strings in the input will only contain lower-case letters.</li>\n<li>The size of the dictionary won't exceed 1,000.</li>\n<li>The length of all the strings in the input won't exceed 1,000.</li>\n</ol>\n<p></p></div>",
+  "url": "https://leetcode.com/problems/longest-word-in-dictionary-through-deleting/",
+  "companies": {},
+  "code": "class Solution(object):\\u000A    def findLongestWord(self, s, d):\\u000A        \\u0022\\u0022\\u0022\\u000A        :type s: str\\u000A        :type d: List[str]\\u000A        :rtype: str\\u000A        \\u0022\\u0022\\u0022\\u000A        def subseq_str(s, subseq_s):\\u000A            subseq_s \\u003D list(subseq_s)[::\\u002D1]\\u000A            for char in s:\\u000A                if char \\u003D\\u003D subseq_s[\\u002D1]: subseq_s.pop()\\u000A                if not subseq_s: return True\\u000A            return False\\u000A        d.sort(key\\u003Dlambda word: (\\u002Dlen(word), word))\\u000A        return next((word for word in d if subseq_str(s, word)), \\u0022\\u0022)\\u000A            \\u000A            "
+}

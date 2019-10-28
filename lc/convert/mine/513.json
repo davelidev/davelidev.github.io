@@ -1,0 +1,13 @@
+{
+  "categories": [
+    "Tree",
+    "Depth-first Search",
+    "Breadth-first Search"
+  ],
+  "diff": "Medium",
+  "title": "513. Find Bottom Left Tree Value",
+  "question": "<div><p>\nGiven a binary tree, find the leftmost value in the last row of the tree. \n</p>\n\n<p><b>Example 1:</b><br>\n</p><pre>Input:\n\n    2\n   / \\\n  1   3\n\nOutput:\n1\n</pre>\n<p></p>\n\n<p> <b> Example 2: </b><br>\n</p><pre>Input:\n\n        1\n       / \\\n      2   3\n     /   / \\\n    4   5   6\n       /\n      7\n\nOutput:\n7\n</pre>\n<p></p>\n\n<p><b>Note:</b>\nYou may assume the tree (i.e., the given root node) is not <b>NULL</b>.\n</p></div>",
+  "url": "https://leetcode.com/problems/find-bottom-left-tree-value/",
+  "companies": {},
+  "code": "# Definition for a binary tree node.\\u000A# class TreeNode(object):\\u000A#     def __init__(self, x):\\u000A#         self.val \\u003D x\\u000A#         self.left \\u003D None\\u000A#         self.right \\u003D None\\u000A\\u000Aclass Solution(object):\\u000A    def findBottomLeftValue(self, root):\\u000A        prev \\u003D []\\u000A        bfs \\u003D [root]\\u000A        while bfs:\\u000A            prev \\u003D bfs\\u000A            bfs \\u003D [kid for node in bfs for kid in [node.left, node.right] if kid]\\u000A        return prev[0].val"
+}

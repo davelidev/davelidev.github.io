@@ -1,0 +1,13 @@
+{
+  "categories": [
+    "Array",
+    "Hash Table"
+  ],
+  "diff": "Easy",
+  "title": "624. Maximum Distance in Arrays",
+  "question": "<div><p>\nGiven <code>m</code> arrays, and each array is sorted in ascending order. Now you can pick up two integers from two different arrays (each array picks one) and calculate the distance. We define the distance between two integers <code>a</code> and <code>b</code> to be their absolute difference <code>|a-b|</code>. Your task is to find the maximum distance.\n</p>\n\n<p><b>Example 1:</b><br>\n</p><pre><b>Input:</b> \n[[1,2,3],\n [4,5],\n [1,2,3]]\n<b>Output:</b> 4\n<b>Explanation:</b> \nOne way to reach the maximum distance 4 is to pick 1 in the first or third array and pick 5 in the second array.\n</pre>\n<p></p>\n\t\n<p><b>Note:</b><br>\n</p><ol>\n<li>Each given array will have at least 1 number. There will be at least two non-empty arrays.</li>\n<li>The total number of the integers in <b>all</b> the <code>m</code> arrays will be in the range of [2, 10000].</li>\n<li>The integers in the <code>m</code> arrays will be in the range of [-10000, 10000].</li>\n</ol>\n<p></p></div>",
+  "url": "https://leetcode.com/problems/maximum-distance-in-arrays/",
+  "companies": {
+    "Yahoo": null
+  }
+}

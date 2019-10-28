@@ -1,0 +1,11 @@
+{
+  "categories": [
+    "Tree"
+  ],
+  "diff": "Easy",
+  "title": "226. Invert Binary Tree",
+  "question": "<div><p>Invert a binary tree.</p>\n\n<p><strong>Example:</strong></p>\n\n<p>Input:</p>\n\n<pre>     4\n   /   \\\n  2     7\n / \\   / \\\n1   3 6   9</pre>\n\n<p>Output:</p>\n\n<pre>     4\n   /   \\\n  7     2\n / \\   / \\\n9   6 3   1</pre>\n\n<p><strong>Trivia:</strong><br>\nThis problem was inspired by <a href=\"https://twitter.com/mxcl/status/608682016205344768\" target=\"_blank\">this original tweet</a> by <a href=\"https://twitter.com/mxcl\" target=\"_blank\">Max Howell</a>:</p>\n\n<blockquote>Google: 90% of our engineers use the software you wrote (Homebrew), but you can’t invert a binary tree on a whiteboard so f*** off.</blockquote>\n</div>",
+  "url": "https://leetcode.com/problems/invert-binary-tree/",
+  "companies": {},
+  "code": "# Definition for a binary tree node.\\u000A# class TreeNode(object):\\u000A#     def __init__(self, x):\\u000A#         self.val \\u003D x\\u000A#         self.left \\u003D None\\u000A#         self.right \\u003D None\\u000A\\u000Aclass Solution(object):\\u000A    def invertTree(self, root):\\u000A        \\u0022\\u0022\\u0022\\u000A        :type root: TreeNode\\u000A        :rtype: TreeNode\\u000A        \\u0022\\u0022\\u0022\\u000A        if not root: return\\u000A        bfs \\u003D [root]\\u000A        while bfs:\\u000A            for node in bfs:\\u000A                node.left, node.right \\u003D node.right, node.left\\u000A            bfs \\u003D [kid for node in bfs for kid in [node.left, node.right] if kid]\\u000A        return root"
+}

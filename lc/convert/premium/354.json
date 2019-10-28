@@ -1,0 +1,15 @@
+{
+  "categories": [
+    "Binary Search",
+    "Dynamic Programming"
+  ],
+  "diff": "Hard",
+  "title": "354. Russian Doll Envelopes",
+  "question": "<div><p>You have a number of envelopes with widths and heights given as a pair of integers <code>(w, h)</code>. One envelope can fit into another if and only if both the width and height of one envelope is greater than the width and height of the other envelope.</p>\n\n<p>What is the maximum number of envelopes can you Russian doll? (put one inside other)</p>\n\n<p><b>Note:</b><br>\nRotation is not allowed.</p>\n\n<p><strong>Example:</strong></p>\n\n<div>\n<pre><strong>Input: </strong><span id=\"example-input-1-1\">[[5,4],[6,4],[6,7],[2,3]]</span>\n<strong>Output: </strong><span id=\"example-output-1\">3 \n<strong>Explanation: T</strong></span>he maximum number of envelopes you can Russian doll is <code>3</code> ([2,3] =&gt; [5,4] =&gt; [6,7]).\n</pre>\n</div>\n</div>",
+  "url": "https://leetcode.com/problems/russian-doll-envelopes/",
+  "companies": {
+    "Google": 4,
+    "Microsoft": 3
+  },
+  "code": "class Solution {\\u000Apublic int maxEnvelopes(int[][] envelopes) {\\u000A        // sort the widths and then longest increasing subseq problem for heights\\u000A        if (envelopes \\u003D\\u003D null || envelopes.length \\u003D\\u003D 0) {\\u000A            return 0\\u003B\\u000A        }\\u000A        Comparator comp \\u003D Comparator.comparing((int[] arr)\\u002D\\u003E arr[0]).thenComparing((int[] arr)\\u002D\\u003Earr[1], Comparator.reverseOrder())\\u003B\\u000A        Arrays.sort(envelopes, comp)\\u003B\\u000A        int result \\u003D 1\\u003B\\u000A        int[] dp \\u003D new int[envelopes.length]\\u003B\\u000A        Arrays.fill(dp, 1)\\u003B\\u000A        for (int i \\u003D 1\\u003B i \\u003C envelopes.length\\u003B i ++) {\\u000A            for (int j \\u003D 0\\u003B j \\u003C i \\u003B j ++) {\\u000A                if (envelopes[i][0] \\u003E envelopes[j][0] \\u0026\\u0026 envelopes[i][1] \\u003E envelopes[j][1]) {\\u000A                    dp[i] \\u003D Math.max(dp[i], 1 + dp[j])\\u003B\\u000A                }\\u000A            }\\u000A            result \\u003D Math.max(dp[i], result)\\u003B\\u000A        }\\u000A        return result\\u003B\\u000A    }\\u000A}"
+}

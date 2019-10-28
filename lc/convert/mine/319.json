@@ -1,0 +1,12 @@
+{
+  "categories": [
+    "Math",
+    "Brainteaser"
+  ],
+  "diff": "Medium",
+  "title": "319. Bulb Switcher",
+  "question": "<div><p>There are <i>n</i> bulbs that are initially off. You first turn on all the bulbs. Then, you turn off every second bulb. On the third round, you toggle every third bulb (turning on if it's off or turning off if it's on). For the <i>i</i>-th round, you toggle every <i>i</i> bulb. For the <i>n</i>-th round, you only toggle the last bulb. Find how many bulbs are on after <i>n</i> rounds.</p>\n\n<p><b>Example:</b></p>\n\n<pre><strong>Input: </strong>3\n<strong>Output:</strong> 1 \n<strong>Explanation:</strong> \nAt first, the three bulbs are <b>[off, off, off]</b>.\nAfter first round, the three bulbs are <b>[on, on, on]</b>.\nAfter second round, the three bulbs are <b>[on, off, on]</b>.\nAfter third round, the three bulbs are <b>[on, off, off]</b>. \n\nSo you should return 1, because there is only one bulb is on.\n</pre>\n</div>",
+  "url": "https://leetcode.com/problems/bulb-switcher/",
+  "companies": {},
+  "code": "class Solution(object):\\u000A    def bulbSwitch(self, n):\\u000A        \\u0022\\u0022\\u0022\\u000A        :type n: int\\u000A        :rtype: int\\u000A        \\u0022\\u0022\\u0022\\u000A        return int(n ** (1.0/2))"
+}

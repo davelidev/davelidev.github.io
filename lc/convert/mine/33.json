@@ -1,0 +1,12 @@
+{
+  "categories": [
+    "Array",
+    "Binary Search"
+  ],
+  "diff": "Medium",
+  "title": "33. Search in Rotated Sorted Array",
+  "question": "<div><p>Suppose an array sorted in ascending order is rotated at some pivot unknown to you beforehand.</p>\n\n<p>(i.e., <code>[0,1,2,4,5,6,7]</code> might become <code>[4,5,6,7,0,1,2]</code>).</p>\n\n<p>You are given a target value to search. If found in the array return its index, otherwise return <code>-1</code>.</p>\n\n<p>You may assume no duplicate exists in the array.</p>\n\n<p>Your algorithm's runtime complexity must be in the order of&nbsp;<em>O</em>(log&nbsp;<em>n</em>).</p>\n\n<p><strong>Example 1:</strong></p>\n\n<pre><strong>Input:</strong> nums = [<code>4,5,6,7,0,1,2]</code>, target = 0\n<strong>Output:</strong> 4\n</pre>\n\n<p><strong>Example 2:</strong></p>\n\n<pre><strong>Input:</strong> nums = [<code>4,5,6,7,0,1,2]</code>, target = 3\n<strong>Output:</strong> -1</pre>\n</div>",
+  "url": "https://leetcode.com/problems/search-in-rotated-sorted-array/",
+  "companies": {},
+  "code": "class Solution(object):\\u000A    def search(self, nums, target):\\u000A        \\u0022\\u0022\\u0022\\u000A        :type nums: List[int]\\u000A        :type target: int\\u000A        :rtype: int\\u000A        \\u0022\\u0022\\u0022\\u000A        lo, hi \\u003D 0, len(nums) \\u002D 1\\u000A        while lo \\u003C\\u003D hi:\\u000A            mid \\u003D (lo + hi) / 2\\u000A            print lo, hi, mid\\u000A            if nums[mid] \\u003D\\u003D target: return mid\\u000A            elif nums[lo] \\u003C\\u003D target \\u003C nums[mid] or \\u005C\\u000A                (nums[lo] \\u003E nums[mid] and (target \\u003C nums[mid] or target \\u003E\\u003D nums[lo])): hi \\u003D mid \\u002D 1\\u000A            else: lo \\u003D mid + 1\\u000A        return \\u002D1"
+}

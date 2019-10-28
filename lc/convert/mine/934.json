@@ -1,0 +1,11 @@
+{
+  "categories": [
+    "Depth-first Search",
+    "Breadth-first Search"
+  ],
+  "diff": "Medium",
+  "title": "934. Shortest Bridge",
+  "question": "<div><p>In a given 2D binary array <code>A</code>, there are two islands.&nbsp; (An island is a 4-directionally connected group of&nbsp;<code>1</code>s not connected to any other 1s.)</p>\n\n<p>Now, we may change <code>0</code>s to <code>1</code>s so as to connect the two islands together to form 1 island.</p>\n\n<p>Return the smallest number of <code>0</code>s that must be flipped.&nbsp; (It is guaranteed that the answer is at least 1.)</p>\n\n<p>&nbsp;</p>\n\n<p><strong>Example 1:</strong></p>\n\n<pre><strong>Input: </strong><span id=\"example-input-1-1\">[[0,1],[1,0]]</span>\n<strong>Output: </strong>1\n</pre>\n\n<div>\n<p><strong>Example 2:</strong></p>\n\n<pre><strong>Input: </strong><span id=\"example-input-2-1\">[[0,1,0],[0,0,0],[0,0,1]]</span>\n<strong>Output: </strong>2\n</pre>\n\n<div>\n<p><strong>Example 3:</strong></p>\n\n<pre><strong>Input: </strong><span id=\"example-input-3-1\">[[1,1,1,1,1],[1,0,0,0,1],[1,0,1,0,1],[1,0,0,0,1],[1,1,1,1,1]]</span>\n<strong>Output: </strong><span id=\"example-output-3\">1</span></pre>\n\n<p>&nbsp;</p>\n</div>\n</div>\n\n<p><strong>Note:</strong></p>\n\n<ol>\n\t<li><code>1 &lt;= A.length =&nbsp;A[0].length &lt;= 100</code></li>\n\t<li><code>A[i][j] == 0</code> or <code>A[i][j] == 1</code></li>\n</ol>\n\n<div>\n<div>\n<div>&nbsp;</div>\n</div>\n</div></div>",
+  "url": "https://leetcode.com/problems/shortest-bridge/",
+  "companies": {}
+}

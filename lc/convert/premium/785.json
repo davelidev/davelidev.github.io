@@ -1,0 +1,15 @@
+{
+  "categories": [
+    "Depth-first Search",
+    "Breadth-first Search",
+    "Graph"
+  ],
+  "diff": "Medium",
+  "title": "785. Is Graph Bipartite?",
+  "question": "<div><p>Given an undirected&nbsp;<code>graph</code>, return <code>true</code> if and only if it is bipartite.</p>\n\n<p>Recall that a graph is <em>bipartite</em> if we can split it's set of nodes into two independent&nbsp;subsets A and B such that every edge in the graph has one node in A and another node in B.</p>\n\n<p>The graph is given in the following form: <code>graph[i]</code> is a list of indexes <code>j</code> for which the edge between nodes <code>i</code> and <code>j</code> exists.&nbsp; Each node is an integer between <code>0</code> and <code>graph.length - 1</code>.&nbsp; There are no self edges or parallel edges: <code>graph[i]</code> does not contain <code>i</code>, and it doesn't contain any element twice.</p>\n\n<pre><strong>Example 1:</strong>\n<strong>Input:</strong> [[1,3], [0,2], [1,3], [0,2]]\n<strong>Output:</strong> true\n<strong>Explanation:</strong> \nThe graph looks like this:\n0----1\n|    |\n|    |\n3----2\nWe can divide the vertices into two groups: {0, 2} and {1, 3}.\n</pre>\n\n<pre><strong>Example 2:</strong>\n<strong>Input:</strong> [[1,2,3], [0,2], [0,1,3], [0,2]]\n<strong>Output:</strong> false\n<strong>Explanation:</strong> \nThe graph looks like this:\n0----1\n| \\  |\n|  \\ |\n3----2\nWe cannot find a way to divide the set of nodes into two independent subsets.\n</pre>\n\n<p>&nbsp;</p>\n\n<p><strong>Note:</strong></p>\n\n<ul>\n\t<li><code>graph</code> will have length in range <code>[1, 100]</code>.</li>\n\t<li><code>graph[i]</code> will contain integers in range <code>[0, graph.length - 1]</code>.</li>\n\t<li><code>graph[i]</code> will not contain <code>i</code> or duplicate values.</li>\n\t<li>The graph is undirected: if any element <code>j</code> is in <code>graph[i]</code>, then <code>i</code> will be in <code>graph[j]</code>.</li>\n</ul>\n</div>",
+  "url": "https://leetcode.com/problems/is-graph-bipartite/",
+  "companies": {
+    "Facebook": 14,
+    "Amazon": 4
+  }
+}

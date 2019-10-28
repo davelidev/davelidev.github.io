@@ -1,0 +1,12 @@
+{
+  "categories": [
+    "Array",
+    "Backtracking"
+  ],
+  "diff": "Medium",
+  "title": "90. Subsets II",
+  "question": "<div><p>Given a collection of integers that might contain duplicates, <strong><em>nums</em></strong>, return all possible subsets (the power set).</p>\n\n<p><strong>Note:</strong> The solution set must not contain duplicate subsets.</p>\n\n<p><strong>Example:</strong></p>\n\n<pre><strong>Input:</strong> [1,2,2]\n<strong>Output:</strong>\n[\n  [2],\n  [1],\n  [1,2,2],\n  [2,2],\n  [1,2],\n  []\n]\n</pre>\n</div>",
+  "url": "https://leetcode.com/problems/subsets-ii/",
+  "companies": {},
+  "code": "class Solution(object):\\u000A    def subsetsWithDup(self, nums):\\u000A        \\u0022\\u0022\\u0022\\u000A        :type nums: List[int]\\u000A        :rtype: List[List[int]]\\u000A        \\u0022\\u0022\\u0022\\u000A        from collections import Counter\\u000A        counts \\u003D Counter(nums)\\u000A        uniq \\u003D counts.keys()\\u000A        cur, res \\u003D [], [[]]\\u000A        def _subsetsWithDup(idx\\u003D0):\\u000A            if idx \\u003E\\u003D len(uniq): return\\u000A            if counts[uniq[idx]]:\\u000A                counts[uniq[idx]] \\u002D\\u003D 1\\u000A                cur.append(uniq[idx])\\u000A                res.append(cur[:])\\u000A                _subsetsWithDup(idx)\\u000A                cur.pop()\\u000A                counts[uniq[idx]] +\\u003D 1\\u000A            _subsetsWithDup(idx + 1)\\u000A        _subsetsWithDup()\\u000A        return res\\u000A"
+}

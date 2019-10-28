@@ -1,0 +1,9 @@
+{
+  "categories": [],
+  "diff": "Easy",
+  "title": "412. Fizz Buzz",
+  "question": "<div><p>Write a program that outputs the string representation of numbers from 1 to <i>n</i>.</p>\n\n<p>But for multiples of three it should output “Fizz” instead of the number and for the multiples of five output “Buzz”. For numbers which are multiples of both three and five output “FizzBuzz”.</p>\n\n<p><b>Example:</b>\n</p><pre>n = 15,\n\nReturn:\n[\n    \"1\",\n    \"2\",\n    \"Fizz\",\n    \"4\",\n    \"Buzz\",\n    \"Fizz\",\n    \"7\",\n    \"8\",\n    \"Fizz\",\n    \"Buzz\",\n    \"11\",\n    \"Fizz\",\n    \"13\",\n    \"14\",\n    \"FizzBuzz\"\n]\n</pre>\n<p></p></div>",
+  "url": "https://leetcode.com/problems/fizz-buzz/",
+  "companies": {},
+  "code": "class Solution(object):\\u000A    def fizzBuzz(self, n):\\u000A        \\u0022\\u0022\\u0022\\u000A        :type n: int\\u000A        :rtype: List[str]\\u000A        \\u0022\\u0022\\u0022\\u000A        return [(\\u0027Fizz\\u0027 * (not i % 3) + \\u0027Buzz\\u0027 * (not i % 5)) or str(i) for i in xrange(1, n + 1)]"
+}

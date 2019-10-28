@@ -1,0 +1,17 @@
+{
+  "categories": [
+    "String",
+    "Dynamic Programming"
+  ],
+  "diff": "Hard",
+  "title": "32. Longest Valid Parentheses",
+  "question": "<div><p>Given a string containing just the characters <code>'('</code> and <code>')'</code>, find the length of the longest valid (well-formed) parentheses substring.</p>\n\n<p><strong>Example 1:</strong></p>\n\n<pre><strong>Input:</strong> \"(()\"\n<strong>Output:</strong> 2\n<strong>Explanation:</strong> The longest valid parentheses substring is <code>\"()\"</code>\n</pre>\n\n<p><strong>Example 2:</strong></p>\n\n<pre><strong>Input:</strong> \"<code>)()())</code>\"\n<strong>Output:</strong> 4\n<strong>Explanation:</strong> The longest valid parentheses substring is <code>\"()()\"</code>\n</pre>\n</div>",
+  "url": "https://leetcode.com/problems/longest-valid-parentheses/",
+  "companies": {
+    "Amazon": 6,
+    "Facebook": 5,
+    "Uber": 5,
+    "Citadel": 3,
+    "Yahoo": 2
+  }
+}

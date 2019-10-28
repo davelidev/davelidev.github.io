@@ -1,0 +1,18 @@
+{
+  "categories": [
+    "Depth-first Search",
+    "Breadth-first Search"
+  ],
+  "diff": "Hard",
+  "title": "301. Remove Invalid Parentheses",
+  "question": "<div><p>Remove the minimum number of invalid parentheses in order to make the input string valid. Return all possible results.</p>\n\n<p><strong>Note:</strong>&nbsp;The input string may contain letters other than the parentheses <code>(</code> and <code>)</code>.</p>\n\n<p><b>Example 1:</b></p>\n\n<pre><b>Input:</b> \"()())()\"\n<b>Output:</b> [\"()()()\", \"(())()\"]\n</pre>\n\n<p><b>Example 2:</b></p>\n\n<pre><b>Input:</b> \"(a)())()\"\n<b>Output:</b> [\"(a)()()\", \"(a())()\"]\n</pre>\n\n<p><b>Example 3:</b></p>\n\n<pre><b>Input:</b> \")(\"\n<b>Output: </b>[\"\"]\n</pre></div>",
+  "url": "https://leetcode.com/problems/remove-invalid-parentheses/",
+  "companies": {
+    "Facebook": 50,
+    "Uber": 5,
+    "Bloomberg": 3,
+    "Amazon": 3,
+    "Postmates": 3,
+    "Houzz": 2
+  }
+}

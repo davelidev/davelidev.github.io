@@ -1,0 +1,11 @@
+{
+  "categories": [
+    "Tree"
+  ],
+  "diff": "Easy",
+  "title": "437. Path Sum III",
+  "question": "<div><p>You are given a binary tree in which each node contains an integer value.</p>\n\n<p>Find the number of paths that sum to a given value.</p>\n\n<p>The path does not need to start or end at the root or a leaf, but it must go downwards\n(traveling only from parent nodes to child nodes).</p>\n\n<p>The tree has no more than 1,000 nodes and the values are in the range -1,000,000 to 1,000,000.\n\n</p><p><b>Example:</b>\n</p><pre>root = [10,5,-3,3,2,null,11,3,-2,null,1], sum = 8\n\n      10\n     /  \\\n    <b>5</b>   <b>-3</b>\n   <b>/</b> <b>\\</b>    <b>\\</b>\n  <b>3</b>   <b>2</b>   <b>11</b>\n / \\   <b>\\</b>\n3  -2   <b>1</b>\n\nReturn 3. The paths that sum to 8 are:\n\n1.  5 -&gt; 3\n2.  5 -&gt; 2 -&gt; 1\n3. -3 -&gt; 11\n</pre>\n<p></p></div>",
+  "url": "https://leetcode.com/problems/path-sum-iii/",
+  "companies": {},
+  "code": "# Definition for a binary tree node.\\u000A# class TreeNode(object):\\u000A#     def __init__(self, x):\\u000A#         self.val \\u003D x\\u000A#         self.left \\u003D None\\u000A#         self.right \\u003D None\\u000A\\u000Aclass Solution(object):\\u000A    def pathSum(self, root, sum):\\u000A        \\u0022\\u0022\\u0022\\u000A        :type root: TreeNode\\u000A        :type sum: int\\u000A        :rtype: int\\u000A        \\u0022\\u0022\\u0022\\u000A        def _pathSum(node, target, sums_count\\u003D{0: 1}, so_far\\u003D0):\\u000A            if not node: return 0\\u000A            so_far +\\u003D node.val\\u000A            count \\u003D sums_count.get(so_far \\u002D target, 0)\\u000A            sums_count.setdefault(so_far, 0)\\u000A            sums_count[so_far] +\\u003D 1\\u000A            count +\\u003D _pathSum(node.left, target, sums_count, so_far)\\u000A            count +\\u003D _pathSum(node.right, target, sums_count, so_far)\\u000A            sums_count[so_far] \\u002D\\u003D 1\\u000A            if so_far in sums_count and not sums_count[so_far]: del sums_count[so_far]\\u000A            return count\\u000A        return _pathSum(root, sum)"
+}

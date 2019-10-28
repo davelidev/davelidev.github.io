@@ -1,0 +1,10 @@
+{
+  "categories": [
+    "Heap"
+  ],
+  "diff": "Easy",
+  "title": "703. Kth Largest Element in a Stream",
+  "question": "<div><p>Design a class to find&nbsp;the <strong>k</strong>th largest element in a stream. Note that it is the kth largest element in the sorted order, not the kth distinct element.</p>\n\n<p>Your&nbsp;<code>KthLargest</code>&nbsp;class will have a constructor which accepts an integer <code>k</code> and an integer array <code>nums</code>, which contains initial elements from&nbsp;the stream. For each call to the method <code>KthLargest.add</code>, return the element representing the kth largest element in the stream.</p>\n\n<p><strong>Example:</strong></p>\n\n<pre>int k = 3;\nint[] arr = [4,5,8,2];\nKthLargest kthLargest = new KthLargest(3, arr);\nkthLargest.add(3);&nbsp; &nbsp;// returns 4\nkthLargest.add(5);&nbsp; &nbsp;// returns 5\nkthLargest.add(10);&nbsp; // returns 5\nkthLargest.add(9);&nbsp; &nbsp;// returns 8\nkthLargest.add(4);&nbsp; &nbsp;// returns 8\n</pre>\n\n<p><strong>Note: </strong><br>\nYou may assume that&nbsp;<code>nums</code>' length&nbsp;≥&nbsp;<code>k-1</code>&nbsp;and <code>k</code> ≥&nbsp;1.</p>\n</div>",
+  "url": "https://leetcode.com/problems/kth-largest-element-in-a-stream/",
+  "companies": {}
+}

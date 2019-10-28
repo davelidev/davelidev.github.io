@@ -1,0 +1,12 @@
+{
+  "categories": [
+    "Array",
+    "Binary Search"
+  ],
+  "diff": "Medium",
+  "title": "162. Find Peak Element",
+  "question": "<div><p>A peak element is an element that is greater than its neighbors.</p>\n\n<p>Given an input array <code>nums</code>, where <code>nums[i] ≠ nums[i+1]</code>, find a peak element and return its index.</p>\n\n<p>The array may contain multiple peaks, in that case return the index to any one of the peaks is fine.</p>\n\n<p>You may imagine that <code>nums[-1] = nums[n] = -∞</code>.</p>\n\n<p><strong>Example 1:</strong></p>\n\n<pre><strong>Input:</strong> <strong>nums</strong> = <code>[1,2,3,1]</code>\n<strong>Output:</strong> 2\n<strong>Explanation:</strong> 3 is a peak element and your function should return the index number 2.</pre>\n\n<p><strong>Example 2:</strong></p>\n\n<pre><strong>Input:</strong> <strong>nums</strong> = <code>[</code>1,2,1,3,5,6,4]\n<strong>Output:</strong> 1 or 5 \n<strong>Explanation:</strong> Your function can return either index number 1 where the peak element is 2, \n&nbsp;            or index number 5 where the peak element is 6.\n</pre>\n\n<p><strong>Note:</strong></p>\n\n<p>Your solution should be in logarithmic complexity.</p>\n</div>",
+  "url": "https://leetcode.com/problems/find-peak-element/",
+  "companies": {},
+  "code": "class Solution(object):\\u000A    def findPeakElement(self, nums):\\u000A        \\u0022\\u0022\\u0022\\u000A        :type nums: List[int]\\u000A        :rtype: int\\u000A        \\u0022\\u0022\\u0022\\u000A        if not nums: return 0\\u000A        def get_val(idx):\\u000A            return nums[idx] if 0 \\u003C\\u003D idx \\u003C len(nums) else float(\\u0027\\u002Dinf\\u0027)\\u000A        lo, hi \\u003D 0, len(nums) \\u002D 1\\u000A        while True:\\u000A            mid \\u003D (lo + hi) / 2\\u000A            if get_val(mid \\u002D 1) \\u003C get_val(mid) \\u003E get_val(mid + 1): return mid\\u000A            elif get_val(mid \\u002D 1) \\u003E get_val(mid): hi \\u003D mid \\u002D 1\\u000A            else: lo \\u003D mid + 1\\u000A"
+}

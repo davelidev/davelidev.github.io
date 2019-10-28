@@ -1,0 +1,12 @@
+{
+  "categories": [
+    "Linked List",
+    "Two Pointers"
+  ],
+  "diff": "Medium",
+  "title": "19. Remove Nth Node From End of List",
+  "question": "<div><p>Given a linked list, remove the <em>n</em>-th node from the end of list and return its head.</p>\n\n<p><strong>Example:</strong></p>\n\n<pre>Given linked list: <strong>1-&gt;2-&gt;3-&gt;4-&gt;5</strong>, and <strong><em>n</em> = 2</strong>.\n\nAfter removing the second node from the end, the linked list becomes <strong>1-&gt;2-&gt;3-&gt;5</strong>.\n</pre>\n\n<p><strong>Note:</strong></p>\n\n<p>Given <em>n</em> will always be valid.</p>\n\n<p><strong>Follow up:</strong></p>\n\n<p>Could you do this in one pass?</p>\n</div>",
+  "url": "https://leetcode.com/problems/remove-nth-node-from-end-of-list/",
+  "companies": {},
+  "code": "# Definition for singly\\u002Dlinked list.\\u000A# class ListNode(object):\\u000A#     def __init__(self, x):\\u000A#         self.val \\u003D x\\u000A#         self.next \\u003D None\\u000A\\u000Aclass Solution(object):\\u000A    def removeNthFromEnd(self, head, n):\\u000A        \\u0022\\u0022\\u0022\\u000A        :type head: ListNode\\u000A        :type n: int\\u000A        :rtype: ListNode\\u000A        \\u0022\\u0022\\u0022\\u000A        nth \\u003D head\\u000A        for _ in range(n): nth \\u003D nth.next\\u000A        nth, cur, prev \\u003D head, nth, None\\u000A        while cur: cur, prev, nth \\u003D cur.next, nth, nth.next\\u000A        if nth \\u003D\\u003D head: return head.next\\u000A        if prev and prev.next: prev.next \\u003D prev.next.next\\u000A        return head"
+}

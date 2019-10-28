@@ -1,0 +1,13 @@
+{
+  "categories": [
+    "String",
+    "Dynamic Programming",
+    "Backtracking",
+    "Greedy"
+  ],
+  "diff": "Hard",
+  "title": "44. Wildcard Matching",
+  "question": "<div><p>Given an input string (<code>s</code>) and a pattern (<code>p</code>), implement wildcard pattern matching with support for <code>'?'</code> and <code>'*'</code>.</p>\n\n<pre>'?' Matches any single character.\n'*' Matches any sequence of characters (including the empty sequence).\n</pre>\n\n<p>The matching should cover the <strong>entire</strong> input string (not partial).</p>\n\n<p><strong>Note:</strong></p>\n\n<ul>\n\t<li><code>s</code>&nbsp;could be empty and contains only lowercase letters <code>a-z</code>.</li>\n\t<li><code>p</code> could be empty and contains only lowercase letters <code>a-z</code>, and characters like <code><font face=\"monospace\">?</font></code>&nbsp;or&nbsp;<code>*</code>.</li>\n</ul>\n\n<p><strong>Example 1:</strong></p>\n\n<pre><strong>Input:</strong>\ns = \"aa\"\np = \"a\"\n<strong>Output:</strong> false\n<strong>Explanation:</strong> \"a\" does not match the entire string \"aa\".\n</pre>\n\n<p><strong>Example 2:</strong></p>\n\n<pre><strong>Input:</strong>\ns = \"aa\"\np = \"*\"\n<strong>Output:</strong> true\n<strong>Explanation:</strong>&nbsp;'*' matches any sequence.\n</pre>\n\n<p><strong>Example 3:</strong></p>\n\n<pre><strong>Input:</strong>\ns = \"cb\"\np = \"?a\"\n<strong>Output:</strong> false\n<strong>Explanation:</strong>&nbsp;'?' matches 'c', but the second letter is 'a', which does not match 'b'.\n</pre>\n\n<p><strong>Example 4:</strong></p>\n\n<pre><strong>Input:</strong>\ns = \"adceb\"\np = \"*a*b\"\n<strong>Output:</strong> true\n<strong>Explanation:</strong>&nbsp;The first '*' matches the empty sequence, while the second '*' matches the substring \"dce\".\n</pre>\n\n<p><strong>Example 5:</strong></p>\n\n<pre><strong>Input:</strong>\ns = \"acdcb\"\np = \"a*c?b\"\n<strong>Output:</strong> false\n</pre>\n</div>",
+  "url": "https://leetcode.com/problems/wildcard-matching/",
+  "companies": {}
+}

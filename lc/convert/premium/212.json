@@ -1,0 +1,18 @@
+{
+  "categories": [
+    "Backtracking",
+    "Trie"
+  ],
+  "diff": "Hard",
+  "title": "212. Word Search II",
+  "question": "<div><p>Given a 2D board and a list of words from the dictionary, find all words in the board.</p>\n\n<p>Each word must be constructed from letters of sequentially adjacent cell, where \"adjacent\" cells are those horizontally or vertically neighboring. The same letter cell may not be used more than once in a word.</p>\n\n<p>&nbsp;</p>\n\n<p><strong>Example:</strong></p>\n\n<pre><strong>Input:</strong> \n<b>board </b>= [\n  ['<span style=\"color:#d70\">o</span>','<span style=\"color:#d70\">a</span>','a','n'],\n  ['e','<span style=\"color:#d30\">t</span>','<span style=\"color:#d00\">a</span>','<span style=\"color:#d00\">e</span>'],\n  ['i','<span style=\"color:#d70\">h</span>','k','r'],\n  ['i','f','l','v']\n]\n<b>words</b> = <code>[\"oath\",\"pea\",\"eat\",\"rain\"]</code>\n\n<strong>Output:&nbsp;</strong><code>[\"eat\",\"oath\"]</code>\n</pre>\n\n<p>&nbsp;</p>\n\n<p><b>Note:</b></p>\n\n<ol>\n\t<li>All inputs are consist of lowercase letters <code>a-z</code>.</li>\n\t<li>The values of&nbsp;<code>words</code> are distinct.</li>\n</ol>\n</div>",
+  "url": "https://leetcode.com/problems/word-search-ii/",
+  "companies": {
+    "Amazon": 12,
+    "Microsoft": 4,
+    "Uber": 4,
+    "Apple": 4,
+    "Facebook": 3,
+    "Google": 2
+  }
+}

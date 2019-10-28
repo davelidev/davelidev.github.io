@@ -1,0 +1,10 @@
+{
+  "categories": [
+    "Two Pointers"
+  ],
+  "diff": "Hard",
+  "title": "828. Unique Letter String",
+  "question": "<div><p>A character is unique in string <code>S</code> if it occurs exactly once in it.</p>\n\n<p>For example, in string <code>S = \"LETTER\"</code>, the only unique characters are <code>\"L\"</code> and <code>\"R\"</code>.</p>\n\n<p>Let's define <code>UNIQ(S)</code> as the number of unique characters in string <code>S</code>.</p>\n\n<p>For example, <code>UNIQ(\"LETTER\") =&nbsp; 2</code>.</p>\n\n<p>Given a string <code>S</code> with only uppercases, calculate the sum of <code>UNIQ(substring)</code> over all non-empty substrings of <code>S</code>.</p>\n\n<p>If there are two or more equal substrings at different positions in <code>S</code>, we consider them different.</p>\n\n<p>Since the answer can be very large, return&nbsp;the answer&nbsp;modulo&nbsp;<code>10 ^ 9 + 7</code>.</p>\n\n<p>&nbsp;</p>\n\n<p><strong>Example 1:</strong></p>\n\n<pre><strong>Input: </strong>\"ABC\"\n<strong>Output: </strong>10\n<strong>Explanation: </strong>All possible substrings are: \"A\",\"B\",\"C\",\"AB\",\"BC\" and \"ABC\".\nEvey substring is composed with only unique letters.\nSum of lengths of all substring is 1 + 1 + 1 + 2 + 2 + 3 = 10</pre>\n\n<p><strong>Example 2:</strong></p>\n\n<pre><strong>Input: </strong>\"ABA\"\n<strong>Output: </strong>8\n<strong>Explanation: </strong>The same as example 1, except uni(\"ABA\") = 1.\n</pre>\n\n<p>&nbsp;</p>\n\n<p><strong>Note:</strong> <code>0 &lt;= S.length &lt;= 10000</code>.</p>\n</div>",
+  "url": "https://leetcode.com/problems/unique-letter-string/",
+  "companies": {}
+}

@@ -1,0 +1,11 @@
+{
+  "categories": [
+    "Tree"
+  ],
+  "diff": "Easy",
+  "title": "501. Find Mode in Binary Search Tree",
+  "question": "<div><p>Given a binary search tree (BST) with duplicates, find all the <a href=\"https://en.wikipedia.org/wiki/Mode_(statistics)\" target=\"_blank\">mode(s)</a> (the most frequently occurred element) in the given BST.</p>\n\n<p>Assume a BST is defined as follows:</p>\n\n<ul>\n\t<li>The left subtree of a node contains only nodes with keys <b>less than or equal to</b> the node's key.</li>\n\t<li>The right subtree of a node contains only nodes with keys <b>greater than or equal to</b> the node's key.</li>\n\t<li>Both the left and right subtrees must also be binary search trees.</li>\n</ul>\n\n<p>&nbsp;</p>\n\n<p>For example:<br>\nGiven BST <code>[1,null,2,2]</code>,</p>\n\n<pre>   1\n    \\\n     2\n    /\n   2\n</pre>\n\n<p>&nbsp;</p>\n\n<p>return <code>[2]</code>.</p>\n\n<p><b>Note:</b> If a tree has more than one mode, you can return them in any order.</p>\n\n<p><b>Follow up:</b> Could you do that without using any extra space? (Assume that the implicit stack space incurred due to recursion does not count).</p>\n</div>",
+  "url": "https://leetcode.com/problems/find-mode-in-binary-search-tree/",
+  "companies": {},
+  "code": "# Definition for a binary tree node.\\u000A# class TreeNode(object):\\u000A#     def __init__(self, x):\\u000A#         self.val \\u003D x\\u000A#         self.left \\u003D None\\u000A#         self.right \\u003D None\\u000A\\u000Aclass Solution(object):\\u000A    def findMode(self, root):\\u000A        \\u0022\\u0022\\u0022\\u000A        :type root: TreeNode\\u000A        :rtype: List[int]\\u000A        \\u0022\\u0022\\u0022\\u000A        counts \\u003D {}\\u000A        if not root: return []\\u000A        bfs \\u003D [root]\\u000A        while bfs:\\u000A            for node in bfs:\\u000A                counts[node.val] \\u003D counts.get(node.val, 0) + 1\\u000A            bfs \\u003D [kid for node in bfs for kid in [node.left, node.right] if kid]\\u000A        max_freq \\u003D max(counts.values())\\u000A        return [key for key, freq in counts.iteritems() if freq \\u003D\\u003D max_freq]"
+}

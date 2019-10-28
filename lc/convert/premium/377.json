@@ -1,0 +1,13 @@
+{
+  "categories": [
+    "Dynamic Programming"
+  ],
+  "diff": "Medium",
+  "title": "377. Combination Sum IV",
+  "question": "<div><p>Given an integer array with all positive numbers and no duplicates, find the number of possible combinations that add up to a positive integer target.</p>\n\n<p><b>Example:</b></p>\n\n<pre><i><b>nums</b></i> = [1, 2, 3]\n<i><b>target</b></i> = 4\n\nThe possible combination ways are:\n(1, 1, 1, 1)\n(1, 1, 2)\n(1, 2, 1)\n(1, 3)\n(2, 1, 1)\n(2, 2)\n(3, 1)\n\nNote that different sequences are counted as different combinations.\n\nTherefore the output is <i><b>7</b></i>.\n</pre>\n\n<p>&nbsp;</p>\n\n<p><b>Follow up:</b><br>\nWhat if negative numbers are allowed in the given array?<br>\nHow does it change the problem?<br>\nWhat limitation we need to add to the question to allow negative numbers?</p>\n\n<p><b>Credits:</b><br>\nSpecial thanks to <a href=\"https://leetcode.com/pbrother/\">@pbrother</a> for adding this problem and creating all test cases.</p>\n</div>",
+  "url": "https://leetcode.com/problems/combination-sum-iv/",
+  "companies": {
+    "Amazon": 2
+  },
+  "code": "class Solution(object):\\u000A    def combinationSum4(self, nums, target):\\u000A        # A[ith coin incl][amount]\\u000A        A \\u003D [0] * (target + 1)\\u000A        A[0] \\u003D 1\\u000A        \\u000A        for i in range(target + 1):\\u000A            for c in nums:\\u000A                if i \\u002D c \\u003E\\u003D 0:\\u000A                    A[i] +\\u003D A[i\\u002Dc]\\u000A        return A[\\u002D1]\\u000A                "
+}

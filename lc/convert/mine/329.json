@@ -1,0 +1,13 @@
+{
+  "categories": [
+    "Depth-first Search",
+    "Topological Sort",
+    "Memoization"
+  ],
+  "diff": "Hard",
+  "title": "329. Longest Increasing Path in a Matrix",
+  "question": "<div><p>Given an integer matrix, find the length of the longest increasing path.</p>\n\n<p>From each cell, you can either move to four directions: left, right, up or down. You may NOT move diagonally or move outside of the boundary (i.e. wrap-around is not allowed).</p>\n\n<p><b>Example 1:</b></p>\n\n<pre><strong>Input: </strong>nums = \n[\n  [<font color=\"red\">9</font>,9,4],\n  [<font color=\"red\">6</font>,6,8],\n  [<font color=\"red\">2</font>,<font color=\"red\">1</font>,1]\n] \n<strong>Output:</strong> 4 \n<strong>Explanation:</strong> The longest increasing path is <code>[1, 2, 6, 9]</code>.\n</pre>\n\n<p><b>Example 2:</b></p>\n\n<pre><strong>Input:</strong> nums = \n[\n  [<font color=\"red\">3</font>,<font color=\"red\">4</font>,<font color=\"red\">5</font>],\n  [3,2,<font color=\"red\">6</font>],\n  [2,2,1]\n] \n<strong>Output: </strong>4 \n<strong>Explanation: </strong>The longest increasing path is <code>[3, 4, 5, 6]</code>. Moving diagonally is not allowed.\n</pre>\n</div>",
+  "url": "https://leetcode.com/problems/longest-increasing-path-in-a-matrix/",
+  "companies": {},
+  "code": "class Solution(object):\\u000A    def longestIncreasingPath(self, matrix):\\u000A        \\u0022\\u0022\\u0022\\u000A        :type matrix: List[List[int]]\\u000A        :rtype: int\\u000A        \\u0022\\u0022\\u0022\\u000A        xy_dir \\u003D zip([\\u002D1, 0, 1, 0], [0, \\u002D1, 0, 1])\\u000A        m, n \\u003D len(matrix), len(matrix[0]) if matrix else 0\\u000A        dp \\u003D [[None] * n for _ in range(m)]\\u000A        def get_max_inc(x, y):\\u000A            if dp[x][y] is not None: return dp[x][y]\\u000A            adj \\u003D [(i, j) for i, j in [(x + x_d, y + y_d) for x_d, y_d in xy_dir]\\u000A                   if 0 \\u003C\\u003D i \\u003C m and 0 \\u003C\\u003D j \\u003C n and matrix[x][y] \\u003E matrix[i][j]]\\u000A            dp[x][y] \\u003D max([(get_max_inc(i, j) + 1) for i, j in adj] or [1])\\u000A            return dp[x][y]\\u000A        return max([get_max_inc(x, y) for x in range(m) for y in range(n)] or [0])"
+}

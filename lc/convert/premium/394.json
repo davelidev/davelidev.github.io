@@ -1,0 +1,23 @@
+{
+  "categories": [
+    "Stack",
+    "Depth-first Search"
+  ],
+  "diff": "Medium",
+  "title": "394. Decode String",
+  "question": "<div><p>Given an encoded string, return its decoded string.</p>\n\n<p>The encoding rule is: <code>k[encoded_string]</code>, where the <i>encoded_string</i> inside the square brackets is being repeated exactly <i>k</i> times. Note that <i>k</i> is guaranteed to be a positive integer.</p>\n\n<p>You may assume that the input string is always valid; No extra white spaces, square brackets are well-formed, etc.</p>\n\n<p>Furthermore, you may assume that the original data does not contain any digits and that digits are only for those repeat numbers, <i>k</i>. For example, there won't be input like <code>3a</code> or <code>2[4]</code>.</p>\n\n<p><b>Examples:</b></p>\n\n<pre>s = \"3[a]2[bc]\", return \"aaabcbc\".\ns = \"3[a2[c]]\", return \"accaccacc\".\ns = \"2[abc]3[cd]ef\", return \"abcabccdcdcdef\".\n</pre>\n\n<p>&nbsp;</p>\n</div>",
+  "url": "https://leetcode.com/problems/decode-string/",
+  "companies": {
+    "Bloomberg": 11,
+    "Amazon": 8,
+    "Google": 6,
+    "Facebook": 5,
+    "Apple": 3,
+    "Atlassian": 3,
+    "Oracle": 2,
+    "Salesforce": 2,
+    "VMware": 2,
+    "Tencent": 2
+  },
+  "code": "class Solution(object):\\u000A    def decodeString(self, s):\\u000A        res \\u003D []\\u000A        stack \\u003D [[1, \\u0022\\u0022]]\\u000A        num \\u003D \\u0022\\u0022\\u000A        for c in s:\\u000A            if c.isdigit():\\u000A                num +\\u003D c\\u000A            elif c \\u003D\\u003D \\u0027[\\u0027:\\u000A                stack.append([int(num), \\u0022\\u0022])\\u000A                num \\u003D \\u0027\\u0027\\u000A            elif c \\u003D\\u003D \\u0027]\\u0027:\\u000A                cnt, st \\u003D stack.pop()\\u000A                stack[\\u002D1][1] +\\u003D st * cnt\\u000A            else:\\u000A                stack[\\u002D1][1] +\\u003D c\\u000A        return stack[0][1]\\u000A                \\u000A        "
+}

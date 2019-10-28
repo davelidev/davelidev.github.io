@@ -1,0 +1,13 @@
+{
+  "categories": [
+    "Array",
+    "Math"
+  ],
+  "diff": "Easy",
+  "title": "628. Maximum Product of Three Numbers",
+  "question": "<div><p>Given an integer array, find three numbers whose product is maximum and output the maximum product.</p>\n\n<p><b>Example 1:</b></p>\n\n<pre><b>Input:</b> [1,2,3]\n<b>Output:</b> 6\n</pre>\n\n<p>&nbsp;</p>\n\n<p><b>Example 2:</b></p>\n\n<pre><b>Input:</b> [1,2,3,4]\n<b>Output:</b> 24\n</pre>\n\n<p>&nbsp;</p>\n\n<p><b>Note:</b></p>\n\n<ol>\n\t<li>The length of the given array will be in range [3,10<sup>4</sup>] and all elements are in the range [-1000, 1000].</li>\n\t<li>Multiplication of any three numbers in the input won't exceed the range of 32-bit signed integer.</li>\n</ol>\n\n<p>&nbsp;</p>\n</div>",
+  "url": "https://leetcode.com/problems/maximum-product-of-three-numbers/",
+  "companies": {
+    "Amazon": 5
+  }
+}

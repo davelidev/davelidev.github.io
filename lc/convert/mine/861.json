@@ -1,0 +1,11 @@
+{
+  "categories": [
+    "Greedy"
+  ],
+  "diff": "Medium",
+  "title": "861. Score After Flipping Matrix",
+  "question": "<div><p>We have a two dimensional matrix&nbsp;<code>A</code> where each value is <code>0</code> or <code>1</code>.</p>\n\n<p>A move consists of choosing any row or column, and toggling each value in that row or column: changing all <code>0</code>s to <code>1</code>s, and all <code>1</code>s to <code>0</code>s.</p>\n\n<p>After making any number of moves, every row of this matrix is interpreted as a binary number, and the score of the matrix is the sum of these numbers.</p>\n\n<p>Return the highest possible&nbsp;score.</p>\n\n<p>&nbsp;</p>\n\n<ol>\n</ol>\n\n<div>\n<p><strong>Example 1:</strong></p>\n\n<pre><strong>Input: </strong><span id=\"example-input-1-1\">[[0,0,1,1],[1,0,1,0],[1,1,0,0]]</span>\n<strong>Output: </strong><span id=\"example-output-1\">39</span>\n<strong>Explanation:\n</strong>Toggled to <span id=\"example-input-1-1\">[[1,1,1,1],[1,0,0,1],[1,1,1,1]].\n0b1111 + 0b1001 + 0b1111 = 15 + 9 + 15 = 39</span></pre>\n\n<p>&nbsp;</p>\n\n<p><strong>Note:</strong></p>\n\n<ol>\n\t<li><code>1 &lt;= A.length &lt;= 20</code></li>\n\t<li><code>1 &lt;= A[0].length &lt;= 20</code></li>\n\t<li><code>A[i][j]</code>&nbsp;is <code>0</code> or <code>1</code>.</li>\n</ol>\n</div>\n</div>",
+  "url": "https://leetcode.com/problems/score-after-flipping-matrix/",
+  "companies": {},
+  "code": "class Solution(object):\\u000A    def matrixScore(self, A):\\u000A        \\u0022\\u0022\\u0022\\u000A        :type A: List[List[int]]\\u000A        :rtype: int\\u000A        \\u0022\\u0022\\u0022\\u000A        m, n \\u003D len(A), len(A[0]) if A else 0\\u000A\\u000A        def get_score():\\u000A            return sum(reduce(lambda x, bit: x \\u003C\\u003C 1 | bit, row, 0) for row in A)\\u000A\\u000A        for r in range(m):\\u000A            if not A[r][0]:\\u000A                for c in range(n): A[r][c] \\u003D not A[r][c]\\u000A        \\u000A        for c in range(1, n):\\u000A            if sum(A[r][c] for r in range(m)) \\u003C\\u003D (m / 2):\\u000A                for r in range(m): A[r][c] \\u003D not A[r][c]\\u000A        \\u000A        return get_score()\\u000A\\u000A                "
+}

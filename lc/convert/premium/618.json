@@ -1,0 +1,8 @@
+{
+  "categories": [],
+  "diff": "Hard",
+  "title": "618. Students Report By Geography",
+  "question": "<div class=\"sql-schema-wrapper__3VBi\"><a class=\"sql-schema-link__3cEg\">SQL Schema<svg viewBox=\"0 0 24 24\" width=\"1em\" height=\"1em\" class=\"icon__3Su4\"><path fill-rule=\"evenodd\" d=\"M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z\"></path></svg></a></div><div>A U.S graduate school has students from Asia, Europe and America. The students' location information are stored in table <code>student</code> as below.\n<p>&nbsp;</p>\n\n<pre>| name   | continent |\n|--------|-----------|\n| Jack   | America   |\n| Pascal | Europe    |\n| Xi     | Asia      |\n| Jane   | America   |\n</pre>\n\n<p>&nbsp;</p>\n<a href=\"https://en.wikipedia.org/wiki/Pivot_table\"> Pivot</a> the continent column in this table so that each name is sorted alphabetically and displayed underneath its corresponding continent. The output headers should be America, Asia and Europe respectively. It is guaranteed that the student number from America is no less than either Asia or Europe.\n\n<p>&nbsp;</p>\nFor the sample input, the output is:\n\n<p>&nbsp;</p>\n\n<pre>| America | Asia | Europe |\n|---------|------|--------|\n| Jack    | Xi   | Pascal |\n| Jane    |      |        |\n</pre>\n\n<p>&nbsp;</p>\n<b>Follow-up:</b> If it is unknown which continent has the most students, can you write a query to generate the student report?\n\n<p>&nbsp;</p>\n</div>",
+  "url": "https://leetcode.com/problems/students-report-by-geography/",
+  "companies": {}
+}

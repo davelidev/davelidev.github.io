@@ -1,0 +1,21 @@
+{
+  "categories": [
+    "Stack",
+    "Tree",
+    "Breadth-first Search"
+  ],
+  "diff": "Medium",
+  "title": "103. Binary Tree Zigzag Level Order Traversal",
+  "question": "<div><p>Given a binary tree, return the <i>zigzag level order</i> traversal of its nodes' values. (ie, from left to right, then right to left for the next level and alternate between).</p>\n\n<p>\nFor example:<br>\nGiven binary tree <code>[3,9,20,null,null,15,7]</code>,<br>\n</p><pre>    3\n   / \\\n  9  20\n    /  \\\n   15   7\n</pre>\n<p></p>\n<p>\nreturn its zigzag level order traversal as:<br>\n</p><pre>[\n  [3],\n  [20,9],\n  [15,7]\n]\n</pre>\n<p></p></div>",
+  "url": "https://leetcode.com/problems/binary-tree-zigzag-level-order-traversal/",
+  "companies": {
+    "Amazon": 26,
+    "Microsoft": 10,
+    "Bloomberg": 3,
+    "ServiceNow": 3,
+    "Qualtrics": 3,
+    "Facebook": 2,
+    "ByteDance": 2
+  },
+  "code": "# Definition for a binary tree node.\\u000A# class TreeNode(object):\\u000A#     def __init__(self, x):\\u000A#         self.val \\u003D x\\u000A#         self.left \\u003D None\\u000A#         self.right \\u003D None\\u000A\\u000Aclass Solution(object):\\u000A    def zigzagLevelOrder(self, root):\\u000A        if not root: return []\\u000A        bfs \\u003D [root]\\u000A        lr \\u003D True\\u000A        res \\u003D []\\u000A        \\u000A        while bfs:\\u000A            res.append([node.val for node in (bfs if lr else reversed(bfs))])\\u000A            lr \\u003D not lr\\u000A            bfs \\u003D [child for node in bfs for child in [node.left, node.right] if child]\\u000A        \\u000A        return res"
+}

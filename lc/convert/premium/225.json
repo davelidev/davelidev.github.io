@@ -1,0 +1,14 @@
+{
+  "categories": [
+    "Stack",
+    "Design"
+  ],
+  "diff": "Easy",
+  "title": "225. Implement Stack using Queues",
+  "question": "<div><p>Implement the following operations of a stack using queues.</p>\n\n<ul>\n\t<li>push(x) -- Push element x onto stack.</li>\n\t<li>pop() -- Removes the element on top of the stack.</li>\n\t<li>top() -- Get the top element.</li>\n\t<li>empty() -- Return whether the stack is empty.</li>\n</ul>\n\n<p><b>Example:</b></p>\n\n<pre>MyStack stack = new MyStack();\n\nstack.push(1);\nstack.push(2);  \nstack.top();   // returns 2\nstack.pop();   // returns 2\nstack.empty(); // returns false</pre>\n\n<p><b>Notes:</b></p>\n\n<ul>\n\t<li>You must use <i>only</i> standard operations of a queue -- which means only <code>push to back</code>, <code>peek/pop from front</code>, <code>size</code>, and <code>is empty</code> operations are valid.</li>\n\t<li>Depending on your language, queue may not be supported natively. You may simulate a queue by using a list or deque (double-ended queue), as long as you use only standard operations of a queue.</li>\n\t<li>You may assume that all operations are valid (for example, no pop or top operations will be called on an empty stack).</li>\n</ul>\n</div>",
+  "url": "https://leetcode.com/problems/implement-stack-using-queues/",
+  "companies": {
+    "Amazon": 4,
+    "Microsoft": 3
+  }
+}

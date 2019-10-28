@@ -1,0 +1,11 @@
+{
+  "categories": [
+    "Array"
+  ],
+  "diff": "Medium",
+  "title": "238. Product of Array Except Self",
+  "question": "<div><p>Given an array <code>nums</code> of <em>n</em> integers where <em>n</em> &gt; 1, &nbsp;return an array <code>output</code> such that <code>output[i]</code> is equal to the product of all the elements of <code>nums</code> except <code>nums[i]</code>.</p>\n\n<p><b>Example:</b></p>\n\n<pre><b>Input:</b>  <code>[1,2,3,4]</code>\n<b>Output:</b> <code>[24,12,8,6]</code>\n</pre>\n\n<p><strong>Note: </strong>Please solve it <strong>without division</strong> and in O(<em>n</em>).</p>\n\n<p><strong>Follow up:</strong><br>\nCould you solve it with constant space complexity? (The output array <strong>does not</strong> count as extra space for the purpose of space complexity analysis.)</p>\n</div>",
+  "url": "https://leetcode.com/problems/product-of-array-except-self/",
+  "companies": {},
+  "code": "class Solution(object):\\u000A    def productExceptSelf(self, nums):\\u000A        \\u0022\\u0022\\u0022\\u000A        :type nums: List[int]\\u000A        :rtype: List[int]\\u000A        \\u0022\\u0022\\u0022\\u000A        dp \\u003D [1]\\u000A        for num in reversed(nums): dp.append(num * dp[\\u002D1])\\u000A        dp \\u003D dp[::\\u002D1]\\u000A        mul_so_far \\u003D 1\\u000A        res \\u003D []\\u000A        for i in range(len(nums)):\\u000A            res.append(mul_so_far * dp[i + 1])\\u000A            mul_so_far *\\u003D nums[i]\\u000A        return res"
+}

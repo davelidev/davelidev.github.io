@@ -1,0 +1,12 @@
+{
+  "categories": [
+    "Graph"
+  ],
+  "diff": "Hard",
+  "title": "1153. String Transforms Into Another String",
+  "question": "<div><p>Given two strings <code>str1</code> and <code>str2</code>&nbsp;of the same length, determine whether you can transform <code>str1</code>&nbsp;into <code>str2</code> by doing <strong>zero or more</strong>&nbsp;<em>conversions</em>.</p>\n\n<p>In one conversion you can convert&nbsp;<strong>all</strong> occurrences of one character in <code>str1</code> to&nbsp;<strong>any</strong> other lowercase English character.</p>\n\n<p>Return <code>true</code>&nbsp;if and only if you can transform <code>str1</code> into <code>str2</code>.</p>\n\n<p>&nbsp;</p>\n\n<p><strong>Example 1:</strong></p>\n\n<pre><strong>Input: </strong>str1 = <span id=\"example-input-1-1\">\"aabcc\"</span>, str2 = <span id=\"example-input-1-2\">\"ccdee\"</span>\n<strong>Output: </strong><span id=\"example-output-1\">true</span>\n<strong>Explanation: </strong>Convert 'c' to 'e' then 'b' to 'd' then 'a' to 'c'. Note that the order of conversions matter.\n</pre>\n\n<p><strong>Example 2:</strong></p>\n\n<pre><strong>Input: </strong>str1 = <span id=\"example-input-2-1\">\"leetcode\"</span>, str2 = <span id=\"example-input-2-2\">\"codeleet\"</span>\n<strong>Output: </strong><span id=\"example-output-2\">false</span>\n<strong>Explanation: </strong>There is no way to transform str1 to str2.\n</pre>\n\n<p>&nbsp;</p>\n\n<p><strong>Note:</strong></p>\n\n<ol>\n\t<li><code>1 &lt;= str1.length == str2.length &lt;= 10^4</code></li>\n\t<li>Both <code>str1</code> and <code>str2</code> contain only lowercase English letters.</li>\n</ol>\n</div>",
+  "url": "https://leetcode.com/problems/string-transforms-into-another-string/",
+  "companies": {
+    "Google": 7
+  }
+}

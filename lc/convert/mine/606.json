@@ -1,0 +1,12 @@
+{
+  "categories": [
+    "String",
+    "Tree"
+  ],
+  "diff": "Easy",
+  "title": "606. Construct String from Binary Tree",
+  "question": "<div><p>You need to construct a string consists of parenthesis and integers from a binary tree with the preorder traversing way.</p>\n\n<p>The null node needs to be represented by empty parenthesis pair \"()\". And you need to omit all the empty parenthesis pairs that don't affect the one-to-one mapping relationship between the string and the original binary tree.</p>\n\n<p><b>Example 1:</b><br>\n</p><pre><b>Input:</b> Binary tree: [1,2,3,4]\n       1\n     /   \\\n    2     3\n   /    \n  4     \n\n<b>Output:</b> \"1(2(4))(3)\"\n<br><b>Explanation:</b> Originallay it needs to be \"1(2(4)())(3()())\", <br>but you need to omit all the unnecessary empty parenthesis pairs. <br>And it will be \"1(2(4))(3)\".\n</pre>\n<p></p>\n\n<p><b>Example 2:</b><br>\n</p><pre><b>Input:</b> Binary tree: [1,2,3,null,4]\n       1\n     /   \\\n    2     3\n     \\  \n      4 \n\n<b>Output:</b> \"1(2()(4))(3)\"\n<br><b>Explanation:</b> Almost the same as the first example, <br>except we can't omit the first parenthesis pair to break the one-to-one mapping relationship between the input and the output.\n</pre>\n<p></p></div>",
+  "url": "https://leetcode.com/problems/construct-string-from-binary-tree/",
+  "companies": {},
+  "code": "# Definition for a binary tree node.\\u000A# class TreeNode(object):\\u000A#     def __init__(self, x):\\u000A#         self.val \\u003D x\\u000A#         self.left \\u003D None\\u000A#         self.right \\u003D None\\u000A\\u000Aclass Solution(object):\\u000A    def tree2str(self, t):\\u000A        \\u0022\\u0022\\u0022\\u000A        :type t: TreeNode\\u000A        :rtype: str\\u000A        \\u0022\\u0022\\u0022\\u000A        def _tree2str(node):\\u000A            if not node: return \\u0027\\u0027\\u000A            left \\u003D _tree2str(node.left)\\u000A            right \\u003D _tree2str(node.right)\\u000A            if not left and not right: return str(node.val)\\u000A            elif not right: return \\u0027%d(%s)\\u0027 %(node.val, left)\\u000A            else: return \\u0027%d(%s)(%s)\\u0027 %(node.val, left, right)\\u000A        return _tree2str(t)"
+}

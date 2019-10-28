@@ -1,0 +1,12 @@
+{
+  "categories": [
+    "Array",
+    "Dynamic Programming"
+  ],
+  "diff": "Medium",
+  "title": "152. Maximum Product Subarray",
+  "question": "<div><p>Given an integer array&nbsp;<code>nums</code>, find the contiguous subarray within an array (containing at least one number) which has the largest product.</p>\n\n<p><strong>Example 1:</strong></p>\n\n<pre><strong>Input:</strong> [2,3,-2,4]\n<strong>Output:</strong> <code>6</code>\n<strong>Explanation:</strong>&nbsp;[2,3] has the largest product 6.\n</pre>\n\n<p><strong>Example 2:</strong></p>\n\n<pre><strong>Input:</strong> [-2,0,-1]\n<strong>Output:</strong> 0\n<strong>Explanation:</strong>&nbsp;The result cannot be 2, because [-2,-1] is not a subarray.</pre>\n</div>",
+  "url": "https://leetcode.com/problems/maximum-product-subarray/",
+  "companies": {},
+  "code": "class Solution(object):\\u000A    def maxProduct(self, nums):\\u000A        \\u0022\\u0022\\u0022\\u000A        :type nums: List[int]\\u000A        :rtype: int\\u000A        \\u0022\\u0022\\u0022\\u000A        large \\u003D small \\u003D max_val \\u003D nums[0]\\u000A        for i in range(1, len(nums)):\\u000A            num \\u003D nums[i]\\u000A            vals \\u003D [num, small * num, large * num]\\u000A            small, large \\u003D min(vals), max(vals)\\u000A            max_val \\u003D max(large, max_val)\\u000A        return max_val\\u000A        "
+}

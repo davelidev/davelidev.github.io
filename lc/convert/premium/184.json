@@ -1,0 +1,10 @@
+{
+  "categories": [],
+  "diff": "Medium",
+  "title": "184. Department Highest Salary",
+  "question": "<div class=\"sql-schema-wrapper__3VBi\"><a class=\"sql-schema-link__3cEg\">SQL Schema<svg viewBox=\"0 0 24 24\" width=\"1em\" height=\"1em\" class=\"icon__3Su4\"><path fill-rule=\"evenodd\" d=\"M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z\"></path></svg></a></div><div><p>The <code>Employee</code> table holds all employees. Every employee has an Id, a salary, and there is also a column for the department Id.</p>\n\n<pre>+----+-------+--------+--------------+\n| Id | Name  | Salary | DepartmentId |\n+----+-------+--------+--------------+\n| 1  | Joe   | 70000  | 1            |\n| 2 &nbsp;| Jim &nbsp; | 90000 &nbsp;| 1 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;|\n| 3  | Henry | 80000  | 2            |\n| 4  | Sam   | 60000  | 2            |\n| 5  | Max   | 90000  | 1            |\n+----+-------+--------+--------------+\n</pre>\n\n<p>The <code>Department</code> table holds all departments of the company.</p>\n\n<pre>+----+----------+\n| Id | Name     |\n+----+----------+\n| 1  | IT       |\n| 2  | Sales    |\n+----+----------+\n</pre>\n\n<p>Write a SQL query to find employees who have the highest salary in each of the departments.&nbsp;For the above tables, your SQL query should return the following rows (order of rows does not matter).</p>\n\n<pre>+------------+----------+--------+\n| Department | Employee | Salary |\n+------------+----------+--------+\n| IT         | Max      | 90000  |\n| IT &nbsp; &nbsp; &nbsp; &nbsp; | Jim &nbsp; &nbsp; &nbsp;| 90000 &nbsp;|\n| Sales      | Henry    | 80000  |\n+------------+----------+--------+\n</pre>\n\n<p><strong>Explanation:</strong></p>\n\n<p>Max and Jim both have&nbsp;the highest salary in the IT department and Henry has the highest salary in the Sales department.</p>\n</div>",
+  "url": "https://leetcode.com/problems/department-highest-salary/",
+  "companies": {
+    "Oracle": 2
+  }
+}

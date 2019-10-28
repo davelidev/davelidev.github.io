@@ -1,0 +1,10 @@
+{
+  "categories": [
+    "Math"
+  ],
+  "diff": "Medium",
+  "title": "372. Super Pow",
+  "question": "<div><p>Your task is to calculate <i>a</i><sup><i>b</i></sup> mod 1337 where <i>a</i> is a positive integer and <i>b</i> is an extremely large positive integer given in the form of an array.</p>\n\n<p><strong>Example 1:</strong></p>\n\n<div>\n<pre><strong>Input: </strong>a = <span id=\"example-input-1-1\">2</span>, b = <span id=\"example-input-1-2\">[3]</span>\n<strong>Output: </strong><span id=\"example-output-1\">8</span>\n</pre>\n\n<div>\n<p><strong>Example 2:</strong></p>\n\n<pre><strong>Input: </strong>a = <span id=\"example-input-2-1\">2</span>, b = <span id=\"example-input-2-2\">[1,0]</span>\n<strong>Output: </strong><span id=\"example-output-2\">1024</span>\n</pre>\n</div>\n</div></div>",
+  "url": "https://leetcode.com/problems/super-pow/",
+  "companies": {}
+}

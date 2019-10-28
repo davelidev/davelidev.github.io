@@ -1,0 +1,14 @@
+{
+  "categories": [
+    "Divide and Conquer"
+  ],
+  "diff": "Medium",
+  "title": "241. Different Ways to Add Parentheses",
+  "question": "<div><p>Given a string of numbers and operators, return all possible results from computing all the different possible ways to group numbers and operators. The valid operators are <code>+</code>, <code>-</code> and <code>*</code>.</p>\n\n<p><b>Example 1:</b></p>\n\n<pre><b>Input:</b> <code>\"2-1-1\"</code>\n<b>Output:</b> <code>[0, 2]</code>\n<strong>Explanation: </strong>\n((2-1)-1) = 0 \n(2-(1-1)) = 2</pre>\n\n<p><b>Example 2:</b></p>\n\n<pre><b>Input: </b><code>\"2*3-4*5\"</code>\n<b>Output:</b> <code>[-34, -14, -10, -10, 10]</code>\n<strong>Explanation: \n</strong>(2*(3-(4*5))) = -34 \n((2*3)-(4*5)) = -14 \n((2*(3-4))*5) = -10 \n(2*((3-4)*5)) = -10 \n(((2*3)-4)*5) = 10<strong>\n</strong></pre></div>",
+  "url": "https://leetcode.com/problems/different-ways-to-add-parentheses/",
+  "companies": {
+    "Google": 4,
+    "Facebook": 2
+  },
+  "code": "class Solution(object):\\u000A    def diffWaysToCompute(self, eq):\\u000A        import re\\u000A        eq_split \\u003D [0]\\u000A        for i, char in enumerate(eq):\\u000A            if i and char.isdigit() !\\u003D eq[i\\u002D1].isdigit(): eq_split.append(i)\\u000A        eq_split.append(len(eq))\\u000A        eq \\u003D [eq[eq_split[i]: eq_split[i + 1]] for i in range(len(eq_split) \\u002D 1)]\\u000A        \\u000A        def gen(i, j, memo\\u003D{}):\\u000A            if (i, j) in memo: return memo[(i, j)]\\u000A            \\u000A            if i \\u003D\\u003D j \\u002D 1: return memo.setdefault((i, j), [int(eq[i])])\\u000A            else:\\u000A                return memo.setdefault((i, j),\\u000A                                       [eval(\\u0027(%s%s%s)\\u0027 %(l, eq[k], r))\\u000A                                        for k in range(i + 1, j, 2)\\u000A                                        for l in gen(i, k)\\u000A                                        for r in gen(k + 1, j)])\\u000A        \\u000A        return gen(0, len(eq))"
+}

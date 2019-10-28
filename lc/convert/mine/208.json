@@ -1,0 +1,12 @@
+{
+  "categories": [
+    "Design",
+    "Trie"
+  ],
+  "diff": "Medium",
+  "title": "208. Implement Trie (Prefix Tree)",
+  "question": "<div><p>Implement a trie with <code>insert</code>, <code>search</code>, and <code>startsWith</code> methods.</p>\n\n<p><b>Example:</b></p>\n\n<pre>Trie trie = new Trie();\n\ntrie.insert(\"apple\");\ntrie.search(\"apple\");   // returns true\ntrie.search(\"app\");     // returns false\ntrie.startsWith(\"app\"); // returns true\ntrie.insert(\"app\");   \ntrie.search(\"app\");     // returns true\n</pre>\n\n<p><b>Note:</b></p>\n\n<ul>\n\t<li>You may assume that all inputs are consist of lowercase letters <code>a-z</code>.</li>\n\t<li>All inputs are guaranteed to be non-empty strings.</li>\n</ul>\n</div>",
+  "url": "https://leetcode.com/problems/implement-trie-prefix-tree/",
+  "companies": {},
+  "code": "class Trie(object):\\u000A\\u000A    def __init__(self):\\u000A        \\u0022\\u0022\\u0022\\u000A        Initialize your data structure here.\\u000A        \\u0022\\u0022\\u0022\\u000A        self.trie_tree \\u003D {}\\u000A\\u000A    def insert(self, word):\\u000A        \\u0022\\u0022\\u0022\\u000A        Inserts a word into the trie.\\u000A        :type word: str\\u000A        :rtype: void\\u000A        \\u0022\\u0022\\u0022\\u000A        cur \\u003D self.trie_tree\\u000A        for char in word: cur \\u003D cur.setdefault(char, {})\\u000A        cur[True] \\u003D True\\u000A\\u000A    def search(self, word):\\u000A        \\u0022\\u0022\\u0022\\u000A        Returns if the word is in the trie.\\u000A        :type word: str\\u000A        :rtype: bool\\u000A        \\u0022\\u0022\\u0022\\u000A        cur \\u003D self.trie_tree\\u000A        for char in word: \\u000A            if char not in cur: return False\\u000A            cur \\u003D cur[char]\\u000A        return True in cur\\u000A        \\u000A\\u000A    def startsWith(self, prefix):\\u000A        \\u0022\\u0022\\u0022\\u000A        Returns if there is any word in the trie that starts with the given prefix.\\u000A        :type prefix: str\\u000A        :rtype: bool\\u000A        \\u0022\\u0022\\u0022\\u000A        cur \\u003D self.trie_tree\\u000A        for char in prefix:\\u000A            if char not in cur: return False\\u000A            cur \\u003D cur[char]\\u000A        return True\\u000A\\u000A\\u000A# Your Trie object will be instantiated and called as such:\\u000A# obj \\u003D Trie()\\u000A# obj.insert(word)\\u000A# param_2 \\u003D obj.search(word)\\u000A# param_3 \\u003D obj.startsWith(prefix)"
+}

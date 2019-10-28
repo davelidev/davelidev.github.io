@@ -1,0 +1,11 @@
+{
+  "categories": [
+    "Array"
+  ],
+  "diff": "Easy",
+  "title": "849. Maximize Distance to Closest Person",
+  "question": "<div><p>In a row of <code>seats</code>, <code>1</code> represents a person sitting in that seat, and <code>0</code> represents that the seat is empty.&nbsp;</p>\n\n<p>There is at least one empty seat, and at least one person sitting.</p>\n\n<p>Alex wants to sit in the seat such that the distance between him and the closest person to him is maximized.&nbsp;</p>\n\n<p>Return that maximum distance to closest person.</p>\n\n<div>\n<p><strong>Example 1:</strong></p>\n\n<pre><strong>Input: </strong><span id=\"example-input-1-1\">[1,0,0,0,1,0,1]</span>\n<strong>Output: </strong><span id=\"example-output-1\">2</span>\n<strong>Explanation: </strong>\nIf Alex sits in the second open seat (seats[2]), then the closest person has distance 2.\nIf Alex sits in any other open seat, the closest person has distance 1.\nThus, the maximum distance to the closest person is 2.</pre>\n\n<div>\n<p><strong>Example 2:</strong></p>\n\n<pre><strong>Input: </strong><span id=\"example-input-2-1\">[1,0,0,0]</span>\n<strong>Output: </strong><span id=\"example-output-2\">3</span>\n<strong>Explanation: </strong>\nIf Alex sits in the last seat, the closest person is 3 seats away.\nThis is the maximum distance possible, so the answer is 3.\n</pre>\n\n<p><strong>Note:</strong></p>\n\n<ol>\n\t<li><code>1 &lt;= seats.length &lt;= 20000</code></li>\n\t<li><code>seats</code>&nbsp;contains only 0s or 1s, at least one <code>0</code>, and at least one <code>1</code>.</li>\n</ol>\n</div>\n</div>\n</div>",
+  "url": "https://leetcode.com/problems/maximize-distance-to-closest-person/",
+  "companies": {},
+  "code": "class Solution(object):\\u000A    def maxDistToClosest(self, seats):\\u000A        prev \\u003D None\\u000A        res \\u003D 0\\u000A        for i, seated in enumerate(seats):\\u000A            if seated:\\u000A                if prev is None: res \\u003D i\\u000A                else: res \\u003D max(res, (i \\u002D prev) / 2)\\u000A                prev \\u003D i\\u000A        return max(res, len(seats) \\u002D prev \\u002D 1)"
+}

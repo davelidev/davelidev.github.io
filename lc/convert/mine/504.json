@@ -1,0 +1,9 @@
+{
+  "categories": [],
+  "diff": "Easy",
+  "title": "504. Base 7",
+  "question": "<div><p>Given an integer, return its base 7 string representation.</p>\n\n<p><b>Example 1:</b><br>\n</p><pre><b>Input:</b> 100\n<b>Output:</b> \"202\"\n</pre>\n<p></p>\n\n<p><b>Example 2:</b><br>\n</p><pre><b>Input:</b> -7\n<b>Output:</b> \"-10\"\n</pre>\n<p></p>\n\n<p><b>Note:</b>\nThe input will be in range of [-1e7, 1e7].\n</p></div>",
+  "url": "https://leetcode.com/problems/base-7/",
+  "companies": {},
+  "code": "class Solution(object):\\u000A    def convertToBase7(self, num):\\u000A        \\u0022\\u0022\\u0022\\u000A        :type num: int\\u000A        :rtype: str\\u000A        \\u0022\\u0022\\u0022\\u000A        base \\u003D 7\\u000A        res \\u003D \\u0022\\u0022\\u000A        neg_prefix \\u003D \\u0027\\u002D\\u0027 if num \\u003C 0 else \\u0027\\u0027\\u000A        num \\u003D abs(num)\\u000A        while num !\\u003D 0:\\u000A            num, mod \\u003D divmod(num, base)\\u000A            res \\u003D str(mod) + res\\u000A        return (neg_prefix + res) or \\u00270\\u0027"
+}

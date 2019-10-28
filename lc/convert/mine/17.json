@@ -1,0 +1,12 @@
+{
+  "categories": [
+    "String",
+    "Backtracking"
+  ],
+  "diff": "Medium",
+  "title": "17. Letter Combinations of a Phone Number",
+  "question": "<div><p>Given a string containing digits from <code>2-9</code> inclusive, return all possible letter combinations that the number could represent.</p>\n\n<p>A mapping of digit to letters (just like on the telephone buttons) is given below. Note that 1 does not map to any letters.</p>\n\n<p><img src=\"http://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Telephone-keypad2.svg/200px-Telephone-keypad2.svg.png\"></p>\n\n<p><strong>Example:</strong></p>\n\n<pre><strong>Input: </strong>\"23\"\n<strong>Output:</strong> [\"ad\", \"ae\", \"af\", \"bd\", \"be\", \"bf\", \"cd\", \"ce\", \"cf\"].\n</pre>\n\n<p><strong>Note:</strong></p>\n\n<p>Although the above answer is in lexicographical order, your answer could be in any order you want.</p>\n</div>",
+  "url": "https://leetcode.com/problems/letter-combinations-of-a-phone-number/",
+  "companies": {},
+  "code": "class Solution(object):\\u000A    def letterCombinations(self, digits):\\u000A        \\u0022\\u0022\\u0022\\u000A        :type digits: str\\u000A        :rtype: List[str]\\u000A        \\u0022\\u0022\\u0022\\u000A        if not digits: return []\\u000A        mappings \\u003D [\\u0027\\u0027, \\u0027\\u0027, \\u0027abc\\u0027, \\u0027def\\u0027, \\u0027ghi\\u0027, \\u0027jkl\\u0027, \\u0027mno\\u0027, \\u0027pqrs\\u0027, \\u0027tuv\\u0027, \\u0027wxyz\\u0027]\\u000A        res \\u003D [\\u0027\\u0027]\\u000A        for digit in digits: res \\u003D [item + char for item in res for char in mappings[int(digit)]]\\u000A        return res"
+}

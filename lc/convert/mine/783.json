@@ -1,0 +1,12 @@
+{
+  "categories": [
+    "Tree",
+    "Recursion"
+  ],
+  "diff": "Easy",
+  "title": "783. Minimum Distance Between BST Nodes",
+  "question": "<div><p>Given a Binary Search Tree (BST) with the root node <code>root</code>, return&nbsp;the minimum difference between the values of any two different nodes in the tree.</p>\n\n<p><strong>Example :</strong></p>\n\n<pre><strong>Input:</strong> root = [4,2,6,1,3,null,null]\n<strong>Output:</strong> 1\n<strong>Explanation:</strong>\nNote that root is a TreeNode object, not an array.\n\nThe given tree [4,2,6,1,3,null,null] is represented by the following diagram:\n\n          4\n        /   \\\n      2      6\n     / \\    \n    1   3  \n\nwhile the minimum difference in this tree is 1, it occurs between node 1 and node 2, also between node 3 and node 2.\n</pre>\n\n<p><strong>Note:</strong></p>\n\n<ol>\n\t<li>The size of the BST will be between 2 and&nbsp;<code>100</code>.</li>\n\t<li>The BST is always valid, each node's value is an integer, and each node's value is different.</li>\n</ol></div>",
+  "url": "https://leetcode.com/problems/minimum-distance-between-bst-nodes/",
+  "companies": {},
+  "code": "# Definition for a binary tree node.\\u000A# class TreeNode(object):\\u000A#     def __init__(self, x):\\u000A#         self.val \\u003D x\\u000A#         self.left \\u003D None\\u000A#         self.right \\u003D None\\u000A\\u000Aclass Solution(object):\\u000A    def minDiffInBST(self, root):\\u000A        \\u0022\\u0022\\u0022\\u000A        :type root: TreeNode\\u000A        :rtype: int\\u000A        \\u0022\\u0022\\u0022\\u000A        self.prev, self.min_dif \\u003D float(\\u0027\\u002Dinf\\u0027), float(\\u0027inf\\u0027)\\u000A        def in_order(node):\\u000A            if not node: return\\u000A            in_order(node.left)\\u000A            self.min_dif \\u003D min(self.min_dif, node.val \\u002D self.prev)\\u000A            self.prev \\u003D node.val\\u000A            in_order(node.right)\\u000A        in_order(root)\\u000A        return self.min_dif"
+}

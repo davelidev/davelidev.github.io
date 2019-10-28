@@ -1,0 +1,12 @@
+{
+  "categories": [
+    "Array",
+    "Two Pointers"
+  ],
+  "diff": "Easy",
+  "title": "88. Merge Sorted Array",
+  "question": "<div><p>Given two sorted integer arrays <em>nums1</em> and <em>nums2</em>, merge <em>nums2</em> into <em>nums1</em> as one sorted array.</p>\n\n<p><strong>Note:</strong></p>\n\n<ul>\n\t<li>The number of elements initialized in <em>nums1</em> and <em>nums2</em> are <em>m</em> and <em>n</em> respectively.</li>\n\t<li>You may assume that <em>nums1</em> has enough space (size that is greater or equal to <em>m</em> + <em>n</em>) to hold additional elements from <em>nums2</em>.</li>\n</ul>\n\n<p><strong>Example:</strong></p>\n\n<pre><strong>Input:</strong>\nnums1 = [1,2,3,0,0,0], m = 3\nnums2 = [2,5,6],       n = 3\n\n<strong>Output:</strong>&nbsp;[1,2,2,3,5,6]\n</pre></div>",
+  "url": "https://leetcode.com/problems/merge-sorted-array/",
+  "companies": {},
+  "code": "class Solution(object):\\u000A    def merge(self, nums1, m, nums2, n):\\u000A        \\u0022\\u0022\\u0022\\u000A        :type nums1: List[int]\\u000A        :type m: int\\u000A        :type nums2: List[int]\\u000A        :type n: int\\u000A        :rtype: void Do not return anything, modify nums1 in\\u002Dplace instead.\\u000A        \\u0022\\u0022\\u0022\\u000A        i, j \\u003D m \\u002D 1, n \\u002D 1\\u000A        for k in range(i + j + 1, \\u002D1, \\u002D1):\\u000A            if j \\u003C 0: nums1[k], i \\u003D nums1[i], i \\u002D 1\\u000A            elif i \\u003C 0: nums1[k], j \\u003D nums2[j], j \\u002D 1\\u000A            elif nums1[i] \\u003E nums2[j]: nums1[k], i \\u003D nums1[i], i \\u002D 1\\u000A            else: nums1[k], j \\u003D nums2[j], j \\u002D 1"
+}

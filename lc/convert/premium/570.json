@@ -1,0 +1,10 @@
+{
+  "categories": [],
+  "diff": "Medium",
+  "title": "570. Managers with at Least 5 Direct Reports",
+  "question": "<div class=\"sql-schema-wrapper__3VBi\"><a class=\"sql-schema-link__3cEg\">SQL Schema<svg viewBox=\"0 0 24 24\" width=\"1em\" height=\"1em\" class=\"icon__3Su4\"><path fill-rule=\"evenodd\" d=\"M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z\"></path></svg></a></div><div><p>The <code>Employee</code> table holds all employees including their managers. Every employee has an Id, and there is also a column for the manager Id.</p>\n\n<pre>+------+----------+-----------+----------+\n|Id    |Name \t  |Department |ManagerId |\n+------+----------+-----------+----------+\n|101   |John \t  |A \t      |null      |\n|102   |Dan \t  |A \t      |101       |\n|103   |James \t  |A \t      |101       |\n|104   |Amy \t  |A \t      |101       |\n|105   |Anne \t  |A \t      |101       |\n|106   |Ron \t  |B \t      |101       |\n+------+----------+-----------+----------+\n</pre>\n\n<p>Given the <code>Employee</code> table, write a SQL query that finds out managers with at least 5 direct report. For the above table, your SQL query should return:</p>\n\n<pre>+-------+\n| Name  |\n+-------+\n| John  |\n+-------+\n</pre>\n\n<p><b>Note:</b><br>\nNo one would report to himself.</p>\n</div>",
+  "url": "https://leetcode.com/problems/managers-with-at-least-5-direct-reports/",
+  "companies": {
+    "Bloomberg": null
+  }
+}

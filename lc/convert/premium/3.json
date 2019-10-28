@@ -1,0 +1,34 @@
+{
+  "categories": [
+    "Hash Table",
+    "Two Pointers",
+    "String",
+    "Sliding Window"
+  ],
+  "diff": "Medium",
+  "title": "3. Longest Substring Without Repeating Characters",
+  "question": "<div><p>Given a string, find the length of the <b>longest substring</b> without repeating characters.</p>\n\n<div>\n<p><strong>Example 1:</strong></p>\n\n<pre><strong>Input: </strong><span id=\"example-input-1-1\">\"abcabcbb\"</span>\n<strong>Output: </strong><span id=\"example-output-1\">3 \n<strong>Explanation:</strong></span> The answer is <code>\"abc\"</code>, with the length of 3. \n</pre>\n\n<div>\n<p><strong>Example 2:</strong></p>\n\n<pre><strong>Input: </strong><span id=\"example-input-2-1\">\"bbbbb\"</span>\n<strong>Output: </strong><span id=\"example-output-2\">1\n</span><span id=\"example-output-1\"><strong>Explanation: </strong>T</span>he answer is <code>\"b\"</code>, with the length of 1.\n</pre>\n\n<div>\n<p><strong>Example 3:</strong></p>\n\n<pre><strong>Input: </strong><span id=\"example-input-3-1\">\"pwwkew\"</span>\n<strong>Output: </strong><span id=\"example-output-3\">3\n</span><span id=\"example-output-1\"><strong>Explanation: </strong></span>The answer is <code>\"wke\"</code>, with the length of 3. \n             Note that the answer must be a <b>substring</b>, <code>\"pwke\"</code> is a <i>subsequence</i> and not a substring.\n</pre>\n</div>\n</div>\n</div>\n</div>",
+  "url": "https://leetcode.com/problems/longest-substring-without-repeating-characters/",
+  "companies": {
+    "Amazon": 27,
+    "Microsoft": 14,
+    "Cisco": 13,
+    "Google": 11,
+    "Facebook": 9,
+    "Adobe": 9,
+    "Uber": 7,
+    "Bloomberg": 4,
+    "Goldman Sachs": 3,
+    "Atlassian": 3,
+    "Alation": 2,
+    "eBay": 2,
+    "Apple": 2,
+    "Samsung": 2,
+    "SAP": 2,
+    "VMware": 2,
+    "Oracle": 2,
+    "Zillow": 2,
+    "ByteDance": 2
+  },
+  "code": "class Solution(object):\\u000A    def lengthOfLongestSubstring(self, s):\\u000A        i \\u003D res \\u003D 0\\u000A        visited \\u003D set()\\u000A        for j, end in enumerate(s):\\u000A            while end in visited:\\u000A                visited.remove(s[i])\\u000A                i +\\u003D 1\\u000A            visited.add(end)\\u000A            res \\u003D max(res, j \\u002D i + 1)\\u000A        return res"
+}

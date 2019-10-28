@@ -1,0 +1,11 @@
+{
+  "categories": [
+    "Tree"
+  ],
+  "diff": "Easy",
+  "title": "538. Convert BST to Greater Tree",
+  "question": "<div><p>Given a Binary Search Tree (BST), convert it to a Greater Tree such that every key of the original BST is changed to the original key plus sum of all keys greater than the original key in BST.</p>\n\n<p>\n<b>Example:</b>\n</p><pre><b>Input:</b> The root of a Binary Search Tree like this:\n              5\n            /   \\\n           2     13\n\n<b>Output:</b> The root of a Greater Tree like this:\n             18\n            /   \\\n          20     13\n</pre>\n<p></p></div>",
+  "url": "https://leetcode.com/problems/convert-bst-to-greater-tree/",
+  "companies": {},
+  "code": "# Definition for a binary tree node.\\u000A# class TreeNode(object):\\u000A#     def __init__(self, x):\\u000A#         self.val \\u003D x\\u000A#         self.left \\u003D None\\u000A#         self.right \\u003D None\\u000A\\u000Aclass Solution(object):\\u000A    def convertBST(self, root):\\u000A        \\u0022\\u0022\\u0022\\u000A        :type root: TreeNode\\u000A        :rtype: TreeNode\\u000A        \\u0022\\u0022\\u0022\\u000A        self.cur_sum \\u003D 0\\u000A        def _convertBST(node):\\u000A            if not node: return\\u000A            _convertBST(node.right)\\u000A            node.val \\u003D self.cur_sum \\u003D node.val + self.cur_sum\\u000A            _convertBST(node.left)\\u000A        _convertBST(root)\\u000A        return root"
+}

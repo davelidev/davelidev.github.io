@@ -1,0 +1,12 @@
+{
+  "categories": [
+    "Backtracking"
+  ],
+  "diff": "Medium",
+  "title": "254. Factor Combinations",
+  "question": "<div><p>Numbers can be regarded as product of its factors. For example,</p>\n\n<pre>8 = 2 x 2 x 2;\n  = 2 x 4.\n</pre>\n\n<p>Write a function that takes an integer <i>n</i> and return all possible combinations of its factors.</p>\n\n<p><b>Note:</b></p>\n\n<ol>\n\t<li>You may assume that <i>n</i> is always positive.</li>\n\t<li>Factors should be greater than 1 and less than <i>n</i>.</li>\n</ol>\n\n<p><b>Example&nbsp;1: </b></p>\n\n<pre><strong>Input:</strong> <code>1</code>\n<strong>Output:</strong> []\n</pre>\n\n<p><b>Example&nbsp;2: </b></p>\n\n<pre><strong>Input:</strong> <code>37</code>\n<strong>Output:</strong>[]</pre>\n\n<p><b>Example&nbsp;3: </b></p>\n\n<pre><strong>Input:</strong> <code>12</code>\n<strong>Output:</strong>\n[\n  [2, 6],\n  [2, 2, 3],\n  [3, 4]\n]</pre>\n\n<p><b>Example&nbsp;4: </b></p>\n\n<pre><strong>Input:</strong> <code>32</code>\n<strong>Output:</strong>\n[\n  [2, 16],\n  [2, 2, 8],\n  [2, 2, 2, 4],\n  [2, 2, 2, 2, 2],\n  [2, 4, 4],\n  [4, 8]\n]\n</pre>\n</div>",
+  "url": "https://leetcode.com/problems/factor-combinations/",
+  "companies": {
+    "LinkedIn": 3
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "categories": [
+    "Math"
+  ],
+  "diff": "Hard",
+  "title": "233. Number of Digit One",
+  "question": "<div><p>Given an integer n, count the total number of digit 1 appearing in all non-negative integers less than or equal to n.</p>\n\n<p><strong>Example:</strong></p>\n\n<pre><strong>Input:</strong> 13\n<strong>Output:</strong> 6 \n<strong>Explanation: </strong>Digit 1 occurred in the following numbers: 1, 10, 11, 12, 13.\n</pre>\n</div>",
+  "url": "https://leetcode.com/problems/number-of-digit-one/",
+  "companies": {
+    "Apple": 2
+  }
+}

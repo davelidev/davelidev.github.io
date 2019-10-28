@@ -1,0 +1,25 @@
+{
+  "categories": [
+    "Linked List"
+  ],
+  "diff": "Easy",
+  "title": "21. Merge Two Sorted Lists",
+  "question": "<div><p>Merge two sorted linked lists and return it as a new list. The new list should be made by splicing together the nodes of the first two lists.</p>\n\n<p><b>Example:</b>\n</p><pre><b>Input:</b> 1-&gt;2-&gt;4, 1-&gt;3-&gt;4\n<b>Output:</b> 1-&gt;1-&gt;2-&gt;3-&gt;4-&gt;4\n</pre>\n<p></p></div>",
+  "url": "https://leetcode.com/problems/merge-two-sorted-lists/",
+  "companies": {
+    "Amazon": 45,
+    "Microsoft": 16,
+    "Adobe": 9,
+    "Facebook": 5,
+    "Apple": 3,
+    "Tencent": 3,
+    "Bloomberg": 3,
+    "Yandex": 3,
+    "ByteDance": 3,
+    "Uber": 2,
+    "VMware": 2,
+    "Yahoo": 2,
+    "Atlassian": 2
+  },
+  "code": "# Definition for singly\\u002Dlinked list.\\u000A# class ListNode(object):\\u000A#     def __init__(self, x):\\u000A#         self.val \\u003D x\\u000A#         self.next \\u003D None\\u000A\\u000Aclass Solution(object):\\u000A    def mergeTwoLists(self, l1, l2):\\u000A        cur \\u003D dummy \\u003D ListNode(\\u0027dummy\\u0027)\\u000A        while l1 or l2:\\u000A            if not l1:\\u000A                cur.next, l2 \\u003D l2, None\\u000A            elif not l2:\\u000A                cur.next, l1 \\u003D l1, None\\u000A            else:\\u000A                l1, l2 \\u003D (l1, l2) if l1.val \\u003C l2.val else (l2, l1)\\u000A                cur.next, l1 \\u003D l1, l1.next\\u000A                cur \\u003D cur.next\\u000A        return dummy.next\\u000A            "
+}

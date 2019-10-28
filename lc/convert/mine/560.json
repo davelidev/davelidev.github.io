@@ -1,0 +1,12 @@
+{
+  "categories": [
+    "Array",
+    "Hash Table"
+  ],
+  "diff": "Medium",
+  "title": "560. Subarray Sum Equals K",
+  "question": "<div><p>Given an array of integers and an integer <b>k</b>, you need to find the total number of continuous subarrays whose sum equals to <b>k</b>.</p>\n\n<p><b>Example 1:</b><br>\n</p><pre><b>Input:</b>nums = [1,1,1], k = 2\n<b>Output:</b> 2\n</pre>\n<p></p>\n\n<p><b>Note:</b><br>\n</p><ol>\n<li>The length of the array is in range [1, 20,000].</li>\n<li>The range of numbers in the array is [-1000, 1000] and the range of the integer <b>k</b> is [-1e7, 1e7].</li>\n</ol>\n<p></p>\n</div>",
+  "url": "https://leetcode.com/problems/subarray-sum-equals-k/",
+  "companies": {},
+  "code": "class Solution(object):\\u000A    def subarraySum(self, nums, k):\\u000A        \\u0022\\u0022\\u0022\\u000A        :type nums: List[int]\\u000A        :type k: int\\u000A        :rtype: int\\u000A        \\u0022\\u0022\\u0022\\u000A        sum_from_left \\u003D 0\\u000A        sum_count \\u003D {0:1}\\u000A        res \\u003D 0\\u000A        for i, num in enumerate(nums):\\u000A            sum_from_left +\\u003D num\\u000A            target_key \\u003D sum_from_left \\u002D k\\u000A            if target_key in sum_count:\\u000A                res +\\u003D sum_count[target_key]\\u000A            sum_count.setdefault(sum_from_left, 0)\\u000A            sum_count[sum_from_left] +\\u003D 1\\u000A        return res"
+}

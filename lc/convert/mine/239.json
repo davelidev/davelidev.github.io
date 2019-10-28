@@ -1,0 +1,11 @@
+{
+  "categories": [
+    "Heap",
+    "Sliding Window"
+  ],
+  "diff": "Hard",
+  "title": "239. Sliding Window Maximum",
+  "question": "<div><p>Given an array <em>nums</em>, there is a sliding window of size <em>k</em> which is moving from the very left of the array to the very right. You can only see the <em>k</em> numbers in the window. Each time the sliding window moves right by one position. Return the max sliding window.</p>\n\n<p><strong>Example:</strong></p>\n\n<pre><strong>Input:</strong> <em>nums</em> = <code>[1,3,-1,-3,5,3,6,7]</code>, and <em>k</em> = 3\n<strong>Output: </strong><code>[3,3,5,5,6,7] \n<strong>Explanation: \n</strong></code>\nWindow position                Max\n---------------               -----\n[1  3  -1] -3  5  3  6  7       <strong>3</strong>\n 1 [3  -1  -3] 5  3  6  7       <strong>3</strong>\n 1  3 [-1  -3  5] 3  6  7      <strong> 5</strong>\n 1  3  -1 [-3  5  3] 6  7       <strong>5</strong>\n 1  3  -1  -3 [5  3  6] 7       <strong>6</strong>\n 1  3  -1  -3  5 [3  6  7]      <strong>7</strong>\n</pre>\n\n<p><strong>Note: </strong><br>\nYou may assume <em>k</em> is always valid, 1 ≤ k ≤ input array's size for non-empty array.</p>\n\n<p><strong>Follow up:</strong><br>\nCould you solve it in linear time?</p></div>",
+  "url": "https://leetcode.com/problems/sliding-window-maximum/",
+  "companies": {}
+}

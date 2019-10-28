@@ -1,0 +1,13 @@
+{
+  "categories": [
+    "String"
+  ],
+  "diff": "Medium",
+  "title": "271. Encode and Decode Strings",
+  "question": "<div><p>Design an algorithm to encode <b>a list of strings</b> to <b>a string</b>. The encoded string is then sent over the network and is decoded back to the original list of strings.</p>\n\n<p>Machine 1 (sender) has the function:</p>\n\n<pre>string encode(vector&lt;string&gt; strs) {\n  // ... your code\n  return encoded_string;\n}</pre>\nMachine 2 (receiver) has the function:\n\n<pre>vector&lt;string&gt; decode(string s) {\n  //... your code\n  return strs;\n}\n</pre>\n\n<p>So Machine 1 does:</p>\n\n<pre>string encoded_string = encode(strs);\n</pre>\n\n<p>and Machine 2 does:</p>\n\n<pre>vector&lt;string&gt; strs2 = decode(encoded_string);\n</pre>\n\n<p><code>strs2</code> in Machine 2 should be the same as <code>strs</code> in Machine 1.</p>\n\n<p>Implement the <code>encode</code> and <code>decode</code> methods.</p>\n\n<p>&nbsp;</p>\n\n<p><b>Note:</b></p>\n\n<ul>\n\t<li>The string may contain any possible characters out of 256 valid ascii characters. Your algorithm should be generalized enough to work on any possible characters.</li>\n\t<li>Do not use class member/global/static variables to store states. Your encode and decode algorithms should be stateless.</li>\n\t<li>Do not rely on any library method such as <code>eval</code> or serialize methods. You should implement your own encode/decode algorithm.</li>\n</ul>\n</div>",
+  "url": "https://leetcode.com/problems/encode-and-decode-strings/",
+  "companies": {
+    "Google": 5,
+    "Square": 2
+  }
+}

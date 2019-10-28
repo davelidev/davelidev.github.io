@@ -1,0 +1,12 @@
+{
+  "categories": [
+    "Dynamic Programming"
+  ],
+  "diff": "Medium",
+  "title": "750. Number Of Corner Rectangles",
+  "question": "<div><p>Given a grid where each entry is only 0 or 1, find the number of corner rectangles.</p>\n\n<p>A <em>corner rectangle</em> is 4 distinct 1s on the grid that form an axis-aligned rectangle. Note that only the corners need to have the value 1. Also, all four 1s used must be distinct.</p>\n\n<p>&nbsp;</p>\n\n<p><strong>Example 1:</strong></p>\n\n<pre><strong>Input:</strong> grid = \n[[1, 0, 0, 1, 0],\n [0, 0, 1, 0, 1],\n [0, 0, 0, 1, 0],\n [1, 0, 1, 0, 1]]\n<strong>Output:</strong> 1\n<strong>Explanation:</strong> There is only one corner rectangle, with corners grid[1][2], grid[1][4], grid[3][2], grid[3][4].\n</pre>\n\n<p>&nbsp;</p>\n\n<p><strong>Example 2:</strong></p>\n\n<pre><strong>Input:</strong> grid = \n[[1, 1, 1],\n [1, 1, 1],\n [1, 1, 1]]\n<strong>Output:</strong> 9\n<strong>Explanation:</strong> There are four 2x2 rectangles, four 2x3 and 3x2 rectangles, and one 3x3 rectangle.\n</pre>\n\n<p>&nbsp;</p>\n\n<p><strong>Example 3:</strong></p>\n\n<pre><strong>Input:</strong> grid = \n[[1, 1, 1, 1]]\n<strong>Output:</strong> 0\n<strong>Explanation:</strong> Rectangles must have four distinct corners.\n</pre>\n\n<p>&nbsp;</p>\n\n<p><strong>Note:</strong></p>\n\n<ol>\n\t<li>The number of rows and columns of <code>grid</code> will each be in the range <code>[1, 200]</code>.</li>\n\t<li>Each <code>grid[i][j]</code> will be either <code>0</code> or <code>1</code>.</li>\n\t<li>The number of <code>1</code>s in the grid will be at most <code>6000</code>.</li>\n</ol>\n\n<p>&nbsp;</p>\n</div>",
+  "url": "https://leetcode.com/problems/number-of-corner-rectangles/",
+  "companies": {
+    "Google": 5
+  }
+}

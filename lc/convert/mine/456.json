@@ -1,0 +1,11 @@
+{
+  "categories": [
+    "Stack"
+  ],
+  "diff": "Medium",
+  "title": "456. 132 Pattern",
+  "question": "<div><p>\nGiven a sequence of n integers a<sub>1</sub>, a<sub>2</sub>, ..., a<sub>n</sub>, a 132 pattern is a subsequence a<sub><b>i</b></sub>, a<sub><b>j</b></sub>, a<sub><b>k</b></sub> such\nthat <b>i</b> &lt; <b>j</b> &lt; <b>k</b> and a<sub><b>i</b></sub> &lt; a<sub><b>k</b></sub> &lt; a<sub><b>j</b></sub>. Design an algorithm that takes a list of n numbers as input and checks whether there is a 132 pattern in the list.</p>\n\n<p><b>Note:</b> n will be less than 15,000.</p>\n\n<p><b>Example 1:</b><br>\n</p><pre><b>Input:</b> [1, 2, 3, 4]\n\n<b>Output:</b> False\n\n<b>Explanation:</b> There is no 132 pattern in the sequence.\n</pre>\n<p></p>\n\n<p><b>Example 2:</b><br>\n</p><pre><b>Input:</b> [3, 1, 4, 2]\n\n<b>Output:</b> True\n\n<b>Explanation:</b> There is a 132 pattern in the sequence: [1, 4, 2].\n</pre>\n<p></p>\n\n<p><b>Example 3:</b><br>\n</p><pre><b>Input:</b> [-1, 3, 2, 0]\n\n<b>Output:</b> True\n\n<b>Explanation:</b> There are three 132 patterns in the sequence: [-1, 3, 2], [-1, 3, 0] and [-1, 2, 0].\n</pre>\n<p></p></div>",
+  "url": "https://leetcode.com/problems/132-pattern/",
+  "companies": {},
+  "code": "class Solution(object):\\u000A    def find132pattern(self, nums):\\u000A        \\u0022\\u0022\\u0022\\u000A        :type nums: List[int]\\u000A        :rtype: bool\\u000A        \\u0022\\u0022\\u0022\\u000A        s3 \\u003D float(\\u0027\\u002Dinf\\u0027)\\u000A        stack \\u003D []\\u000A        for num in reversed(nums):\\u000A            if num \\u003C s3: return True\\u000A            else:\\u000A                while stack and stack[\\u002D1] \\u003C num: s3 \\u003D stack.pop()\\u000A                stack.append(num)\\u000A        return False"
+}

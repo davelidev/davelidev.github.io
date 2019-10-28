@@ -1,0 +1,12 @@
+{
+  "categories": [
+    "Dynamic Programming"
+  ],
+  "diff": "Easy",
+  "title": "276. Paint Fence",
+  "question": "<div><p>There is a fence with n posts, each post can be painted with one of the k colors.</p>\n\n<p>You have to paint all the posts such that no more than two adjacent fence posts have the same color.</p>\n\n<p>Return the total number of ways you can paint the fence.</p>\n\n<p><b>Note:</b><br>\nn and k are non-negative integers.</p>\n\n<p><b>Example:</b></p>\n\n<pre><b>Input:</b> n = 3, k = 2\n<b>Output:</b> 6\n<strong>Explanation: </strong>Take c1 as color 1, c2 as color 2. All possible ways are:\n\n&nbsp;           post1  post2  post3      \n -----      -----  -----  -----       \n   1         c1     c1     c2 \n&nbsp;  2         c1     c2     c1 \n&nbsp;  3         c1     c2     c2 \n&nbsp;  4         c2     c1     c1&nbsp; \n   5         c2     c1     c2\n&nbsp;  6         c2     c2     c1\n</pre>\n</div>",
+  "url": "https://leetcode.com/problems/paint-fence/",
+  "companies": {
+    "Google": 3
+  }
+}

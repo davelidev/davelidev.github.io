@@ -1,0 +1,13 @@
+{
+  "categories": [
+    "Hash Table"
+  ],
+  "diff": "Easy",
+  "title": "599. Minimum Index Sum of Two Lists",
+  "question": "<div><p>\nSuppose Andy and Doris want to choose a restaurant for dinner, and they both have a list of favorite restaurants represented by strings. \n</p>\n<p>\nYou need to help them find out their <b>common interest</b> with the <b>least list index sum</b>. If there is a choice tie between answers, output all of them with no order requirement. You could assume there always exists an answer.\n</p>\n\n\n<p><b>Example 1:</b><br>\n</p><pre><b>Input:</b>\n[\"Shogun\", \"Tapioca Express\", \"Burger King\", \"KFC\"]\n[\"Piatti\", \"The Grill at Torrey Pines\", \"Hungry Hunter Steakhouse\", \"Shogun\"]\n<b>Output:</b> [\"Shogun\"]\n<b>Explanation:</b> The only restaurant they both like is \"Shogun\".\n</pre>\n<p></p>\n\n<p><b>Example 2:</b><br>\n</p><pre><b>Input:</b>\n[\"Shogun\", \"Tapioca Express\", \"Burger King\", \"KFC\"]\n[\"KFC\", \"Shogun\", \"Burger King\"]\n<b>Output:</b> [\"Shogun\"]\n<b>Explanation:</b> The restaurant they both like and have the least index sum is \"Shogun\" with index sum 1 (0+1).\n</pre>\n<p></p>\n\n\n<p><b>Note:</b><br>\n</p><ol>\n<li>The length of both lists will be in the range of [1, 1000].</li>\n<li>The length of strings in both lists will be in the range of [1, 30].</li>\n<li>The index is starting from 0 to the list length minus 1.</li>\n<li>No duplicates in both lists.</li>\n</ol>\n<p></p></div>",
+  "url": "https://leetcode.com/problems/minimum-index-sum-of-two-lists/",
+  "companies": {
+    "Oracle": 3,
+    "Yelp": 2
+  }
+}

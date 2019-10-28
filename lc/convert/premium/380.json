@@ -1,0 +1,26 @@
+{
+  "categories": [
+    "Array",
+    "Hash Table",
+    "Design"
+  ],
+  "diff": "Medium",
+  "title": "380. Insert Delete GetRandom O(1)",
+  "question": "<div><p>Design a data structure that supports all following operations in <i>average</i> <b>O(1)</b> time.</p>\n\n<p>\n</p><ol>\n<li><code>insert(val)</code>: Inserts an item val to the set if not already present.</li>\n<li><code>remove(val)</code>: Removes an item val from the set if present.</li>\n<li><code>getRandom</code>: Returns a random element from current set of elements. Each element must have the <b>same probability</b> of being returned.</li>\n</ol>\n<p></p>\n\n<p><b>Example:</b>\n</p><pre>// Init an empty set.\nRandomizedSet randomSet = new RandomizedSet();\n\n// Inserts 1 to the set. Returns true as 1 was inserted successfully.\nrandomSet.insert(1);\n\n// Returns false as 2 does not exist in the set.\nrandomSet.remove(2);\n\n// Inserts 2 to the set, returns true. Set now contains [1,2].\nrandomSet.insert(2);\n\n// getRandom should return either 1 or 2 randomly.\nrandomSet.getRandom();\n\n// Removes 1 from the set, returns true. Set now contains [2].\nrandomSet.remove(1);\n\n// 2 was already in the set, so return false.\nrandomSet.insert(2);\n\n// Since 2 is the only number in the set, getRandom always return 2.\nrandomSet.getRandom();\n</pre>\n<p></p></div>",
+  "url": "https://leetcode.com/problems/insert-delete-getrandom-o1/",
+  "companies": {
+    "Amazon": 12,
+    "Facebook": 8,
+    "Google": 5,
+    "Microsoft": 5,
+    "Databricks": 5,
+    "Bloomberg": 4,
+    "LinkedIn": 3,
+    "Uber": 3,
+    "Apple": 3,
+    "Quora": 3,
+    "Affirm": 2,
+    "Goldman Sachs": 2,
+    "Yandex": 2
+  }
+}

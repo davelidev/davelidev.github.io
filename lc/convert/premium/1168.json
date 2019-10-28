@@ -1,0 +1,13 @@
+{
+  "categories": [
+    "Union Find",
+    "Graph"
+  ],
+  "diff": "Hard",
+  "title": "1168. Optimize Water Distribution in a Village",
+  "question": "<div><p>There are <code><font face=\"monospace\">n</font></code>&nbsp;houses in a village. We want to supply water for all the houses by building wells and laying pipes.</p>\n\n<p>For each house <code>i</code>, we can either build a well inside it directly with cost <code>wells[i]</code>, or pipe in water from another well to it. The costs to lay pipes between houses are given by the array <code>pipes</code>, where each&nbsp;<code>pipes[i] = [house1, house2, cost]</code>&nbsp;represents the cost to connect&nbsp;<code>house1</code>&nbsp;and <code>house2</code>&nbsp;together using a pipe.&nbsp;Connections are bidirectional.</p>\n\n<p>Find the minimum total cost to supply water to all houses.</p>\n\n<p>&nbsp;</p>\n<p><strong>Example 1:</strong></p>\n\n<p><strong><img alt=\"\" src=\"https://assets.leetcode.com/uploads/2019/05/22/1359_ex1.png\" style=\"width: 189px; height: 196px;\"></strong></p>\n\n<pre><strong>Input:</strong> n = 3, wells = [1,2,2], pipes = [[1,2,1],[2,3,1]]\n<strong>Output:</strong> 3\n<strong>Explanation: </strong>\nThe image shows the costs of connecting houses using pipes.\nThe best strategy is to build a well in the first house with cost 1 and connect the other houses to it with cost 2 so the total cost is 3.\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= n&nbsp;&lt;= 10000</code></li>\n\t<li><code>wells.length == n</code></li>\n\t<li><code>0 &lt;= wells[i] &lt;= 10^5</code></li>\n\t<li><code>1 &lt;= pipes.length &lt;= 10000</code></li>\n\t<li><code>1 &lt;= pipes[i][0], pipes[i][1] &lt;= n</code></li>\n\t<li><code>0 &lt;= pipes[i][2] &lt;= 10^5</code></li>\n\t<li><code>pipes[i][0] != pipes[i][1]</code></li>\n</ul>\n</div>",
+  "url": "https://leetcode.com/problems/optimize-water-distribution-in-a-village/",
+  "companies": {
+    "Google": 2
+  }
+}

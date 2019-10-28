@@ -1,0 +1,22 @@
+{
+  "categories": [
+    "Array"
+  ],
+  "diff": "Medium",
+  "title": "54. Spiral Matrix",
+  "question": "<div><p>Given a matrix of <em>m</em> x <em>n</em> elements (<em>m</em> rows, <em>n</em> columns), return all elements of the matrix in spiral order.</p>\n\n<p><strong>Example 1:</strong></p>\n\n<pre><strong>Input:</strong>\n[\n [ 1, 2, 3 ],\n [ 4, 5, 6 ],\n [ 7, 8, 9 ]\n]\n<strong>Output:</strong> [1,2,3,6,9,8,7,4,5]\n</pre>\n\n<p><strong>Example 2:</strong></p>\n<pre><strong>Input:</strong>\n[\n  [1, 2, 3, 4],\n  [5, 6, 7, 8],\n  [9,10,11,12]\n]\n<strong>Output:</strong> [1,2,3,4,8,12,11,10,9,5,6,7]\n</pre></div>",
+  "url": "https://leetcode.com/problems/spiral-matrix/",
+  "companies": {
+    "Goldman Sachs": 13,
+    "Microsoft": 12,
+    "Amazon": 5,
+    "Robinhood": 3,
+    "Apple": 3,
+    "Google": 3,
+    "Facebook": 3,
+    "eBay": 2,
+    "Uber": 2,
+    "Paypal": 2,
+    "Snapchat": 2
+  }
+}

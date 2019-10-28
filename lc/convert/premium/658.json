@@ -1,0 +1,12 @@
+{
+  "categories": [
+    "Binary Search"
+  ],
+  "diff": "Medium",
+  "title": "658. Find K Closest Elements",
+  "question": "<div><p>\nGiven a sorted array, two integers <code>k</code> and <code>x</code>, find the <code>k</code> closest elements to <code>x</code> in the array.  The result should also be sorted in ascending order.\nIf there is a tie,  the smaller elements are always preferred.\n</p>\n\n<p><b>Example 1:</b><br>\n</p><pre><b>Input:</b> [1,2,3,4,5], k=4, x=3\n<b>Output:</b> [1,2,3,4]\n</pre>\n<p></p>\n\n\n<p><b>Example 2:</b><br>\n</p><pre><b>Input:</b> [1,2,3,4,5], k=4, x=-1\n<b>Output:</b> [1,2,3,4]\n</pre>\n<p></p>\n\n<p><b>Note:</b><br>\n</p><ol>\n<li>The value k is positive and will always be smaller than the length of the sorted array.</li>\n<li> Length of the given array is positive and will not exceed 10<sup>4</sup></li>\n<li> Absolute value of elements in the array and x will not exceed 10<sup>4</sup></li>\n</ol>\n<p></p>\n\n<hr>\n\n<p>\n<b><font color=\"red\">UPDATE (2017/9/19):</font></b><br>\nThe <i>arr</i> parameter had been changed to an <b>array of integers</b> (instead of a list of integers). <b><i>Please reload the code definition to get the latest changes</i></b>.\n</p></div>",
+  "url": "https://leetcode.com/problems/find-k-closest-elements/",
+  "companies": {
+    "Snapchat": 2
+  }
+}

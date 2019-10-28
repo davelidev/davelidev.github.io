@@ -1,0 +1,12 @@
+{
+  "categories": [
+    "Dynamic Programming"
+  ],
+  "diff": "Medium",
+  "title": "361. Bomb Enemy",
+  "question": "<div><p>Given a 2D grid, each cell is either a wall <code>'W'</code>, an enemy <code>'E'</code> or empty <code>'0'</code> (the number zero), return the maximum enemies you can kill using one bomb.<br>\nThe bomb kills all the enemies in the same row and column from the planted point until it hits the wall since the wall is too strong to be destroyed.<br>\n<strong>Note: </strong>You can only put the bomb at an empty cell.</p>\n\n<p><strong>Example:</strong></p>\n\n<div>\n<pre><strong>Input: </strong><span id=\"example-input-1-1\">[[\"0\",\"E\",\"0\",\"0\"],[\"E\",\"0\",\"W\",\"E\"],[\"0\",\"E\",\"0\",\"0\"]]</span>\n<strong>Output: </strong><span id=\"example-output-1\">3 \n<strong>Explanation: </strong></span>For the given grid,\n\n0 E 0 0 \nE 0 W E \n0 E 0 0\n\nPlacing a bomb at (1,1) kills 3 enemies.\n</pre>\n</div></div>",
+  "url": "https://leetcode.com/problems/bomb-enemy/",
+  "companies": {
+    "Uber": 2
+  }
+}

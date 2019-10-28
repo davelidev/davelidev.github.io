@@ -1,0 +1,29 @@
+{
+  "categories": [
+    "Array",
+    "Two Pointers"
+  ],
+  "diff": "Medium",
+  "title": "15. 3Sum",
+  "question": "<div><p>Given an array <code>nums</code> of <em>n</em> integers, are there elements <em>a</em>, <em>b</em>, <em>c</em> in <code>nums</code> such that <em>a</em> + <em>b</em> + <em>c</em> = 0? Find all unique triplets in the array which gives the sum of zero.</p>\n\n<p><strong>Note:</strong></p>\n\n<p>The solution set must not contain duplicate triplets.</p>\n\n<p><strong>Example:</strong></p>\n\n<pre>Given array nums = [-1, 0, 1, 2, -1, -4],\n\nA solution set is:\n[\n  [-1, 0, 1],\n  [-1, -1, 2]\n]\n</pre></div>",
+  "url": "https://leetcode.com/problems/3sum/",
+  "companies": {
+    "Amazon": 29,
+    "Facebook": 18,
+    "Microsoft": 12,
+    "Bloomberg": 8,
+    "Google": 8,
+    "Apple": 4,
+    "Yahoo": 3,
+    "Uber": 2,
+    "Qualtrics": 2,
+    "Adobe": 2,
+    "Tencent": 2,
+    "Square": 2,
+    "Visa": 2,
+    "Walmart Labs": 2,
+    "Cisco": 2,
+    "Oracle": 2
+  },
+  "code": "class Solution(object):\\u000A    def threeSum(self, nums):\\u000A        nums.sort()\\u000A        res \\u003D []\\u000A        for i, left in enumerate(nums):\\u000A            if i !\\u003D 0 and nums[i] \\u003D\\u003D nums[i \\u002D 1]:\\u000A                continue\\u000A            j, k \\u003D i + 1, len(nums) \\u002D 1\\u000A            while j \\u003C k:\\u000A                mid, right \\u003D nums[j], nums[k]\\u000A                if mid + right \\u003D\\u003D \\u002Dleft:\\u000A                    res.append((left, mid, right))\\u000A                    while j \\u003C k and nums[j] \\u003D\\u003D mid:\\u000A                        j +\\u003D 1\\u000A                    while j \\u003C k and nums[k] \\u003D\\u003D mid:\\u000A                        k \\u002D\\u003D 1\\u000A                elif mid + right \\u003C \\u002Dleft:\\u000A                    j +\\u003D 1\\u000A                else:\\u000A                    k \\u002D\\u003D 1\\u000A        return res"
+}

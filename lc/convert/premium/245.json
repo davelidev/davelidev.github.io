@@ -1,0 +1,13 @@
+{
+  "categories": [
+    "Array"
+  ],
+  "diff": "Medium",
+  "title": "245. Shortest Word Distance III",
+  "question": "<div><p>Given a list of words and two words <em>word1</em> and <em>word2</em>, return the shortest distance between these two words in the list.</p>\n\n<p><em>word1</em> and <em>word2</em> may be the same and they represent two individual words in the list.</p>\n\n<p><strong>Example:</strong><br>\nAssume that words = <code>[\"practice\", \"makes\", \"perfect\", \"coding\", \"makes\"]</code>.</p>\n\n<pre><b>Input:</b> <em>word1</em> = <code>“makes”</code>, <em>word2</em> = <code>“coding”</code>\n<b>Output:</b> 1\n</pre>\n\n<pre><b>Input:</b> <em>word1</em> = <code>\"makes\"</code>, <em>word2</em> = <code>\"makes\"</code>\n<b>Output:</b> 3\n</pre>\n\n<p><strong>Note:</strong><br>\nYou may assume <em>word1</em> and <em>word2</em> are both in the list.</p>\n</div>",
+  "url": "https://leetcode.com/problems/shortest-word-distance-iii/",
+  "companies": {
+    "LinkedIn": 4,
+    "Microsoft": 2
+  }
+}

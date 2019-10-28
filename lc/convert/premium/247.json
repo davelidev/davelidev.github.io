@@ -1,0 +1,14 @@
+{
+  "categories": [
+    "Math",
+    "Recursion"
+  ],
+  "diff": "Medium",
+  "title": "247. Strobogrammatic Number II",
+  "question": "<div><p>A strobogrammatic number is a number that looks the same when rotated 180 degrees (looked at upside down).</p>\n\n<p>Find all strobogrammatic numbers that are of length = n.</p>\n\n<p><b>Example:</b></p>\n\n<pre><b>Input:</b>  n = 2\n<b>Output:</b> <code>[\"11\",\"69\",\"88\",\"96\"]</code>\n</pre>\n</div>",
+  "url": "https://leetcode.com/problems/strobogrammatic-number-ii/",
+  "companies": {
+    "Google": 6,
+    "Facebook": 2
+  }
+}

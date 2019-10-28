@@ -1,0 +1,11 @@
+{
+  "categories": [
+    "Array"
+  ],
+  "diff": "Medium",
+  "title": "229. Majority Element II",
+  "question": "<div><p>Given an integer array of size <i>n</i>, find all elements that appear more than <code>⌊ n/3 ⌋</code> times.</p>\n\n<p><strong>Note: </strong>The algorithm should run in linear time and in O(1) space.</p>\n\n<p><strong>Example 1:</strong></p>\n\n<pre><strong>Input:</strong> [3,2,3]\n<strong>Output:</strong> [3]</pre>\n\n<p><strong>Example 2:</strong></p>\n\n<pre><strong>Input:</strong> [1,1,1,3,3,2,2,2]\n<strong>Output:</strong> [1,2]</pre>\n</div>",
+  "url": "https://leetcode.com/problems/majority-element-ii/",
+  "companies": {},
+  "code": "class Solution(object):\\u000A    def majorityElement(self, nums):\\u000A        \\u0022\\u0022\\u0022\\u000A        :type nums: List[int]\\u000A        :rtype: List[int]\\u000A        \\u0022\\u0022\\u0022\\u000A        if not nums or len(nums) \\u003C\\u003D 1:\\u000A            return nums[:]\\u000A\\u000A        candidate1, candidate2, counter1, counter2 \\u003D float(\\u0027inf\\u0027), float(\\u0027inf\\u0027), 0, 0\\u000A        for num in nums:\\u000A            if num \\u003D\\u003D candidate1:\\u000A                counter1 +\\u003D 1\\u000A            elif num \\u003D\\u003D candidate2:\\u000A                counter2 +\\u003D 1\\u000A            elif counter1 \\u003D\\u003D 0:\\u000A                candidate1, counter1 \\u003D num, 1\\u000A            elif counter2 \\u003D\\u003D 0:\\u000A                candidate2, counter2 \\u003D num, 1\\u000A            else:\\u000A                counter1 \\u002D\\u003D 1\\u000A                counter2 \\u002D\\u003D 1\\u000A        return [ i for i in [candidate1, candidate2] if nums.count(i) \\u003E (len(nums) / 3.)]"
+}

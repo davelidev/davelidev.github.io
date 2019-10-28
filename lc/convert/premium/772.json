@@ -1,0 +1,15 @@
+{
+  "categories": [
+    "String",
+    "Stack"
+  ],
+  "diff": "Hard",
+  "title": "772. Basic Calculator III",
+  "question": "<div><p>Implement a basic calculator to evaluate a simple expression string.</p>\n\n<p>The expression string may contain open <code>(</code> and closing parentheses <code>)</code>, the plus <code>+</code> or minus sign <code>-</code>, <strong>non-negative</strong> integers and empty spaces <code> </code>.</p>\n\n<p>The expression string contains only non-negative integers, <code>+</code>, <code>-</code>, <code>*</code>, <code>/</code> operators , open <code>(</code> and closing parentheses <code>)</code> and empty spaces <code> </code>. The integer division should truncate toward zero.</p>\n\n<p>You may assume that the given expression is always valid. All intermediate results will be in the range of <code>[-2147483648, 2147483647]</code>.</p>\n\n<p>Some examples:</p>\n\n<pre>\"1 + 1\" = 2\n\" 6-4 / 2 \" = 4\n\"2*(5+5*2)/3+(6/2+8)\" = 21\n\"(2+6* 3+5- (3*14/7+2)*5)+3\"=-12\n</pre>\n\n<p>&nbsp;</p>\n\n<p><strong>Note:</strong> <strong>Do not</strong> use the <code>eval</code> built-in library function.</p>\n</div>",
+  "url": "https://leetcode.com/problems/basic-calculator-iii/",
+  "companies": {
+    "Amazon": 9,
+    "Google": 3,
+    "Uber": 3
+  }
+}

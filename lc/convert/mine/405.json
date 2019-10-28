@@ -1,0 +1,11 @@
+{
+  "categories": [
+    "Bit Manipulation"
+  ],
+  "diff": "Easy",
+  "title": "405. Convert a Number to Hexadecimal",
+  "question": "<div><p>\nGiven an integer, write an algorithm to convert it to hexadecimal. For negative integer, <a href=\"https://en.wikipedia.org/wiki/Two%27s_complement\" target=\"_blank\">two’s complement</a> method is used.\n</p>\n\n<p><b>Note:</b>\n</p><ol>\n<li>All letters in hexadecimal (<code>a-f</code>) must be in lowercase.</li>\n<li>The hexadecimal string must not contain extra leading <code>0</code>s. If the number is zero, it is represented by a single zero character <code>'0'</code>; otherwise, the first character in the hexadecimal string will not be the zero character.</li>\n<li>The given number is guaranteed to fit within the range of a 32-bit signed integer.</li>\n<li>You <b>must not use <i>any</i> method provided by the library</b> which converts/formats the number to hex directly.</li>\n</ol>\n<p></p>\n\n<p><b>Example 1:</b>\n</p><pre>Input:\n26\n\nOutput:\n\"1a\"\n</pre>\n<p></p>\n\n<p><b>Example 2:</b>\n</p><pre>Input:\n-1\n\nOutput:\n\"ffffffff\"\n</pre>\n<p></p></div>",
+  "url": "https://leetcode.com/problems/convert-a-number-to-hexadecimal/",
+  "companies": {},
+  "code": "class Solution(object):\\u000A    def toHex(self, num):\\u000A        \\u0022\\u0022\\u0022\\u000A        :type num: int\\u000A        :rtype: str\\u000A        \\u0022\\u0022\\u0022\\u000A        if not num: return \\u00270\\u0027\\u000A        res \\u003D \\u0027\\u0027\\u000A        mask \\u003D reduce(lambda x,y: x | (1 \\u003C\\u003C y), range(4), 0)\\u000A        mapping \\u003D \\u00270123456789abcdef\\u0027\\u000A        for _ in range(8):\\u000A            res \\u003D mapping[(num \\u0026 mask) % len(mapping)] + res\\u000A            num \\u003E\\u003E\\u003D 4\\u000A        return res.lstrip(\\u00270\\u0027)"
+}

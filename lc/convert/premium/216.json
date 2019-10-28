@@ -1,0 +1,13 @@
+{
+  "categories": [
+    "Array",
+    "Backtracking"
+  ],
+  "diff": "Medium",
+  "title": "216. Combination Sum III",
+  "question": "<div><div>\n<p>Find all possible combinations of <i><b>k</b></i> numbers that add up to a number <i><b>n</b></i>, given that only numbers from 1 to 9 can be used and each combination should be a unique set of numbers.</p>\n\n<p><strong>Note:</strong></p>\n\n<ul>\n\t<li>All numbers will be positive integers.</li>\n\t<li>The solution set must not contain duplicate combinations.</li>\n</ul>\n\n<p><strong>Example 1:</strong></p>\n\n<pre><strong>Input:</strong> <i><b>k</b></i> = 3, <i><b>n</b></i> = 7\n<strong>Output:</strong> [[1,2,4]]\n</pre>\n\n<p><strong>Example 2:</strong></p>\n\n<pre><strong>Input:</strong> <i><b>k</b></i> = 3, <i><b>n</b></i> = 9\n<strong>Output:</strong> [[1,2,6], [1,3,5], [2,3,4]]\n</pre>\n</div></div>",
+  "url": "https://leetcode.com/problems/combination-sum-iii/",
+  "companies": {
+    "Microsoft": 2
+  }
+}

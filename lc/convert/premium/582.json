@@ -1,0 +1,13 @@
+{
+  "categories": [
+    "Tree",
+    "Queue"
+  ],
+  "diff": "Medium",
+  "title": "582. Kill Process",
+  "question": "<div><p>Given <b>n</b> processes, each process has a unique <b>PID (process id)</b> and its <b>PPID (parent process id)</b>. \n\n</p><p>Each process only has one parent process, but may have one or more children processes. This is just like a tree structure.  Only one process has PPID that is 0, which means this process has no parent process. All the PIDs will be distinct positive integers.</p>\n\n<p>We use two list of integers to represent a list of processes, where the first list contains PID for each process and the second list contains the corresponding PPID. </p>\n \n<p>Now given the two lists, and a PID representing a process you want to kill, return a list of PIDs of processes that will be killed in the end. You should assume that when a process is killed, all its children processes will be killed. No order is required for the final answer.</p>\n\n<p><b>Example 1:</b><br>\n</p><pre><b>Input:</b> \npid =  [1, 3, 10, 5]\nppid = [3, 0, 5, 3]\nkill = 5\n<b>Output:</b> [5,10]\n<b>Explanation:</b> \n           3\n         /   \\\n        1     5\n             /\n            10\nKill 5 will also kill 10.\n</pre>\n<p></p>\n\n<p><b>Note:</b><br>\n</p><ol>\n<li>The given kill id is guaranteed to be one of the given PIDs.</li>\n<li>n &gt;= 1.</li>\n</ol>\n<p></p></div>",
+  "url": "https://leetcode.com/problems/kill-process/",
+  "companies": {
+    "Bloomberg": 2
+  }
+}

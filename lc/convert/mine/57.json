@@ -1,0 +1,12 @@
+{
+  "categories": [
+    "Array",
+    "Sort"
+  ],
+  "diff": "Hard",
+  "title": "57. Insert Interval",
+  "question": "<div><p>Given a set of <em>non-overlapping</em> intervals, insert a new interval into the intervals (merge if necessary).</p>\n\n<p>You may assume that the intervals were initially sorted according to their start times.</p>\n\n<p><strong>Example 1:</strong></p>\n\n<pre><strong>Input:</strong> intervals = [[1,3],[6,9]], newInterval = [2,5]\n<strong>Output:</strong> [[1,5],[6,9]]\n</pre>\n\n<p><strong>Example 2:</strong></p>\n\n<pre><strong>Input:</strong> intervals = <code>[[1,2],[3,5],[6,7],[8,10],[12,16]]</code>, newInterval = <code>[4,8]</code>\n<strong>Output:</strong> [[1,2],[3,10],[12,16]]\n<strong>Explanation:</strong> Because the new interval <code>[4,8]</code> overlaps with <code>[3,5],[6,7],[8,10]</code>.</pre>\n\n<p><strong>NOTE:</strong>&nbsp;input types have been changed on April 15, 2019. Please reset to default code definition to get new method signature.</p>\n</div>",
+  "url": "https://leetcode.com/problems/insert-interval/",
+  "companies": {},
+  "code": "# Definition for an interval.\\u000A# class Interval(object):\\u000A#     def __init__(self, s\\u003D0, e\\u003D0):\\u000A#         self.start \\u003D s\\u000A#         self.end \\u003D e\\u000A\\u000Aclass Solution(object):\\u000A    def insert(self, intervals, newInterval):\\u000A        \\u0022\\u0022\\u0022\\u000A        :type intervals: List[Interval]\\u000A        :type newInterval: Interval\\u000A        :rtype: List[Interval]\\u000A        \\u0022\\u0022\\u0022\\u000A        left, right \\u003D [], []\\u000A        s, e \\u003D newInterval.start, newInterval.end\\u000A        for interval in intervals:\\u000A            if interval.end \\u003C s: left.append(interval)\\u000A            elif e \\u003C interval.start: right.append(interval)\\u000A            else: s, e \\u003D min(interval.start, s), max(interval.end, e)\\u000A        return left + [Interval(s, e)] + right\\u000A        "
+}

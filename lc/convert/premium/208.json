@@ -1,0 +1,18 @@
+{
+  "categories": [
+    "Design",
+    "Trie"
+  ],
+  "diff": "Medium",
+  "title": "208. Implement Trie (Prefix Tree)",
+  "question": "<div><p>Implement a trie with <code>insert</code>, <code>search</code>, and <code>startsWith</code> methods.</p>\n\n<p><b>Example:</b></p>\n\n<pre>Trie trie = new Trie();\n\ntrie.insert(\"apple\");\ntrie.search(\"apple\");   // returns true\ntrie.search(\"app\");     // returns false\ntrie.startsWith(\"app\"); // returns true\ntrie.insert(\"app\");   \ntrie.search(\"app\");     // returns true\n</pre>\n\n<p><b>Note:</b></p>\n\n<ul>\n\t<li>You may assume that all inputs are consist of lowercase letters <code>a-z</code>.</li>\n\t<li>All inputs are guaranteed to be non-empty strings.</li>\n</ul>\n</div>",
+  "url": "https://leetcode.com/problems/implement-trie-prefix-tree/",
+  "companies": {
+    "Google": 8,
+    "Amazon": 4,
+    "Facebook": 3,
+    "Microsoft": 2,
+    "eBay": 2,
+    "Walmart Labs": 2
+  }
+}

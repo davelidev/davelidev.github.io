@@ -1,0 +1,11 @@
+{
+  "categories": [
+    "Array"
+  ],
+  "diff": "Medium",
+  "title": "59. Spiral Matrix II",
+  "question": "<div><p>Given a positive integer <em>n</em>, generate a square matrix filled with elements from 1 to <em>n</em><sup>2</sup> in spiral order.</p>\n\n<p><strong>Example:</strong></p>\n\n<pre><strong>Input:</strong> 3\n<strong>Output:</strong>\n[\n [ 1, 2, 3 ],\n [ 8, 9, 4 ],\n [ 7, 6, 5 ]\n]\n</pre>\n</div>",
+  "url": "https://leetcode.com/problems/spiral-matrix-ii/",
+  "companies": {},
+  "code": "class Solution(object):\\u000A    def generateMatrix(self, n):\\u000A        \\u0022\\u0022\\u0022\\u000A        :type n: int\\u000A        :rtype: List[List[int]]\\u000A        \\u0022\\u0022\\u0022\\u000A        res \\u003D [[None] * n for _ in xrange(n)]\\u000A        cur_dir \\u003D x \\u003D 0\\u000A        y \\u003D \\u002D1\\u000A        new_pos_lambda \\u003D {\\u000A            0: lambda x, y: (x, y + 1),\\u000A            1: lambda x, y: (x + 1, y),\\u000A            2: lambda x, y: (x, y \\u002D 1),\\u000A            3: lambda x, y: (x \\u002D 1, y)\\u000A        }\\u000A        for i in xrange(1, n * n + 1):\\u000A            new_x, new_y \\u003D new_pos_lambda[cur_dir % 4](x, y)\\u000A            if not (0 \\u003C\\u003D new_x \\u003C n and  0 \\u003C\\u003D new_y \\u003C n) or res[new_x][new_y] is not None:\\u000A                cur_dir +\\u003D 1\\u000A                new_x, new_y \\u003D new_pos_lambda[cur_dir % 4](x, y)\\u000A            res[new_x][new_y] \\u003D i\\u000A            x, y \\u003D new_x, new_y\\u000A        return res\\u000A        "
+}

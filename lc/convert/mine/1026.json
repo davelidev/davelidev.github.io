@@ -1,0 +1,12 @@
+{
+  "categories": [
+    "Tree",
+    "Depth-first Search"
+  ],
+  "diff": "Medium",
+  "title": "1026. Maximum Difference Between Node and Ancestor",
+  "question": "<div><p>Given the <code>root</code> of a binary tree, find the maximum value <code>V</code> for which there exists <strong>different</strong> nodes <code>A</code> and <code>B</code> where <code>V = |A.val - B.val|</code>&nbsp;and <code>A</code> is an ancestor of <code>B</code>.</p>\n\n<p>(A node A is an ancestor of B if either: any child of A is equal to B, or any child of A is an ancestor of B.)</p>\n\n<p>&nbsp;</p>\n\n<p><strong>Example 1:</strong></p>\n\n<p><img alt=\"\" src=\"https://assets.leetcode.com/uploads/2019/09/09/2whqcep.jpg\" style=\"height: 230px; width: 300px;\"></p>\n\n<pre><strong>Input: </strong><span id=\"example-input-1-1\">[8,3,10,1,6,null,14,null,null,4,7,13]</span>\n<strong>Output: </strong><span id=\"example-output-1\">7</span>\n<strong>Explanation: </strong>\nWe have various ancestor-node differences, some of which are given below :\n|8 - 3| = 5\n|3 - 7| = 4\n|8 - 1| = 7\n|10 - 13| = 3\nAmong all possible differences, the maximum value of 7 is obtained by |8 - 1| = 7.\n</pre>\n\n<p>&nbsp;</p>\n\n<p><strong>Note:</strong></p>\n\n<ol>\n\t<li>The number of nodes in the tree is between <code>2</code> and <code>5000</code>.</li>\n\t<li>Each node will have value between <code>0</code> and <code>100000</code>.</li>\n</ol>\n</div>",
+  "url": "https://leetcode.com/problems/maximum-difference-between-node-and-ancestor/",
+  "companies": {},
+  "code": "# Definition for a binary tree node.\\u000A# class TreeNode(object):\\u000A#     def __init__(self, x):\\u000A#         self.val \\u003D x\\u000A#         self.left \\u003D None\\u000A#         self.right \\u003D None\\u000A\\u000Aclass Solution(object):\\u000A    def maxAncestorDiff(self, root):\\u000A        \\u0022\\u0022\\u0022\\u000A        :type root: TreeNode\\u000A        :rtype: int\\u000A        \\u0022\\u0022\\u0022\\u000A        def dfs(node, l\\u003DNone, s\\u003DNone):\\u000A            if not node: return 0\\u000A            print l, s, node.val\\u000A            l \\u003D max(node.val if l is None else l, node.val)\\u000A            s \\u003D min(node.val if s is None else s, node.val)\\u000A            print l, s\\u000A            return max(dfs(node.left, l, s), dfs(node.right, l, s), l \\u002D s)\\u000A            \\u000A        \\u000A        return dfs(root)"
+}

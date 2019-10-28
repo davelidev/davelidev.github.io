@@ -1,0 +1,12 @@
+{
+  "categories": [
+    "Linked List",
+    "Depth-first Search"
+  ],
+  "diff": "Medium",
+  "title": "109. Convert Sorted List to Binary Search Tree",
+  "question": "<div><p>Given a singly linked list where elements are sorted in ascending order, convert it to a height balanced BST.</p>\n\n<p>For this problem, a height-balanced binary tree is defined as a binary tree in which the depth of the two subtrees of <em>every</em> node never differ by more than 1.</p>\n\n<p><strong>Example:</strong></p>\n\n<pre>Given the sorted linked list: [-10,-3,0,5,9],\n\nOne possible answer is: [0,-3,9,-10,null,5], which represents the following height balanced BST:\n\n      0\n     / \\\n   -3   9\n   /   /\n -10  5\n</pre>\n</div>",
+  "url": "https://leetcode.com/problems/convert-sorted-list-to-binary-search-tree/",
+  "companies": {},
+  "code": "# Definition for singly\\u002Dlinked list.\\u000A# class ListNode(object):\\u000A#     def __init__(self, x):\\u000A#         self.val \\u003D x\\u000A#         self.next \\u003D None\\u000A\\u000A# Definition for a binary tree node.\\u000A# class TreeNode(object):\\u000A#     def __init__(self, x):\\u000A#         self.val \\u003D x\\u000A#         self.left \\u003D None\\u000A#         self.right \\u003D None\\u000A\\u000Aclass Solution(object):\\u000A    def sortedListToBST(self, head):\\u000A        \\u0022\\u0022\\u0022\\u000A        :type head: ListNode\\u000A        :rtype: TreeNode\\u000A        \\u0022\\u0022\\u0022\\u000A        lst \\u003D []\\u000A        cur \\u003D head\\u000A        while cur:\\u000A            lst.append(cur.val)\\u000A            cur \\u003D cur.next\\u000A\\u000A        def _sortedListToBST(start, end):\\u000A            if start \\u003E\\u003D end:\\u000A                return\\u000A            mid \\u003D (end + start) / 2\\u000A            node \\u003D TreeNode(lst[mid])\\u000A            node.left \\u003D _sortedListToBST(start, mid)\\u000A            node.right \\u003D _sortedListToBST(mid + 1, end)\\u000A            return node\\u000A        \\u000A        return _sortedListToBST(0, len(lst))\\u000A            \\u000A            "
+}

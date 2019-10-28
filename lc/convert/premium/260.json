@@ -1,0 +1,12 @@
+{
+  "categories": [
+    "Bit Manipulation"
+  ],
+  "diff": "Medium",
+  "title": "260. Single Number III",
+  "question": "<div><p>Given an array of numbers <code>nums</code>, in which exactly two elements appear only once and all the other elements appear exactly twice. Find the two elements that appear only once.</p>\n\n<p><strong>Example:</strong></p>\n\n<pre><strong>Input:</strong>  <code>[1,2,1,3,2,5]</code>\n<strong>Output:</strong> <code>[3,5]</code></pre>\n\n<p><b>Note</b>:</p>\n\n<ol>\n\t<li>The order of the result is not important. So in the above example, <code>[5, 3]</code> is also correct.</li>\n\t<li>Your algorithm should run in linear runtime complexity. Could you implement it using only constant space complexity?</li>\n</ol></div>",
+  "url": "https://leetcode.com/problems/single-number-iii/",
+  "companies": {
+    "Amazon": 3
+  }
+}

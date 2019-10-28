@@ -1,0 +1,11 @@
+{
+  "categories": [
+    "Tree"
+  ],
+  "diff": "Easy",
+  "title": "637. Average of Levels in Binary Tree",
+  "question": "<div>Given a non-empty binary tree, return the average value of the nodes on each level in the form of an array.\n\n<p><b>Example 1:</b><br>\n</p><pre><b>Input:</b>\n    3\n   / \\\n  9  20\n    /  \\\n   15   7\n<b>Output:</b> [3, 14.5, 11]\n<b>Explanation:</b>\nThe average value of nodes on level 0 is 3,  on level 1 is 14.5, and on level 2 is 11. Hence return [3, 14.5, 11].\n</pre>\n<p></p>\n\n<p><b>Note:</b><br>\n</p><ol>\n<li>The range of node's value is in the range of 32-bit signed integer.</li>\n</ol>\n<p></p></div>",
+  "url": "https://leetcode.com/problems/average-of-levels-in-binary-tree/",
+  "companies": {},
+  "code": "# Definition for a binary tree node.\\u000A# class TreeNode(object):\\u000A#     def __init__(self, x):\\u000A#         self.val \\u003D x\\u000A#         self.left \\u003D None\\u000A#         self.right \\u003D None\\u000A\\u000Aclass Solution(object):\\u000A    def averageOfLevels(self, root):\\u000A        \\u0022\\u0022\\u0022\\u000A        :type root: TreeNode\\u000A        :rtype: List[float]\\u000A        \\u0022\\u0022\\u0022\\u000A        if not root: return []\\u000A        avgs \\u003D []\\u000A        bfs \\u003D [root]\\u000A        while bfs:\\u000A            vals \\u003D [node.val for node in bfs]\\u000A            avgs.append(float(sum(vals)) / len(vals))\\u000A            bfs \\u003D [kid for node in bfs for kid in [node.left, node.right] if kid]\\u000A        return avgs"
+}

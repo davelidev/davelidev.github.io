@@ -1,0 +1,19 @@
+{
+  "categories": [
+    "Binary Search",
+    "Divide and Conquer"
+  ],
+  "diff": "Medium",
+  "title": "240. Search a 2D Matrix II",
+  "question": "<div><p>Write an efficient algorithm that searches for a value in an <i>m</i> x <i>n</i> matrix. This matrix has the following properties:</p>\n\n<ul>\n\t<li>Integers in each row are sorted in ascending from left to right.</li>\n\t<li>Integers in each column are sorted in ascending from top to bottom.</li>\n</ul>\n\n<p><strong>Example:</strong></p>\n\n<p>Consider the following matrix:</p>\n\n<pre>[\n  [1,   4,  7, 11, 15],\n  [2,   5,  8, 12, 19],\n  [3,   6,  9, 16, 22],\n  [10, 13, 14, 17, 24],\n  [18, 21, 23, 26, 30]\n]\n</pre>\n\n<p>Given&nbsp;target&nbsp;=&nbsp;<code>5</code>, return&nbsp;<code>true</code>.</p>\n\n<p>Given&nbsp;target&nbsp;=&nbsp;<code>20</code>, return&nbsp;<code>false</code>.</p>\n</div>",
+  "url": "https://leetcode.com/problems/search-a-2d-matrix-ii/",
+  "companies": {
+    "Amazon": 28,
+    "Microsoft": 10,
+    "Facebook": 4,
+    "SAP": 2,
+    "Citadel": 2,
+    "Paypal": 2,
+    "Salesforce": 2
+  }
+}

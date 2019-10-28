@@ -1,0 +1,12 @@
+{
+  "categories": [
+    "Array",
+    "Sort"
+  ],
+  "diff": "Medium",
+  "title": "56. Merge Intervals",
+  "question": "<div><p>Given a collection of intervals, merge all overlapping intervals.</p>\n\n<p><strong>Example 1:</strong></p>\n\n<pre><strong>Input:</strong> [[1,3],[2,6],[8,10],[15,18]]\n<strong>Output:</strong> [[1,6],[8,10],[15,18]]\n<strong>Explanation:</strong> Since intervals [1,3] and [2,6] overlaps, merge them into [1,6].\n</pre>\n\n<p><strong>Example 2:</strong></p>\n\n<pre><strong>Input:</strong> [[1,4],[4,5]]\n<strong>Output:</strong> [[1,5]]\n<strong>Explanation:</strong> Intervals [1,4] and [4,5] are considered overlapping.</pre>\n\n<p><strong>NOTE:</strong>&nbsp;input types have been changed on April 15, 2019. Please reset to default code definition to get new method signature.</p>\n</div>",
+  "url": "https://leetcode.com/problems/merge-intervals/",
+  "companies": {},
+  "code": "# Definition for an interval.\\u000A# class Interval(object):\\u000A#     def __init__(self, s\\u003D0, e\\u003D0):\\u000A#         self.start \\u003D s\\u000A#         self.end \\u003D e\\u000A\\u000Aclass Solution(object):\\u000A    def merge(self, intervals):\\u000A        \\u0022\\u0022\\u0022\\u000A        :type intervals: List[Interval]\\u000A        :rtype: List[Interval]\\u000A        \\u0022\\u0022\\u0022\\u000A        res \\u003D []\\u000A        intervals \\u003D [[interval.start, interval.end] for interval in intervals]\\u000A        intervals.sort(reverse\\u003DTrue)\\u000A        while intervals:\\u000A            res.append(intervals.pop())\\u000A            if len(res) \\u003E\\u003D 2:\\u000A                [a,b], [c,d] \\u003D res[\\u002D2], res[\\u002D1]\\u000A                print [a,b], [c,d], a \\u003C\\u003D c \\u003C\\u003D b\\u000A                if a \\u003C\\u003D c \\u003C\\u003D b:\\u000A                    res.pop()\\u003B res.pop()\\u000A                    res.append([a, max(b, d)])\\u000A        return [Interval(start, end) for start, end in res]"
+}

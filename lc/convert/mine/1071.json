@@ -1,0 +1,10 @@
+{
+  "categories": [
+    "String"
+  ],
+  "diff": "Easy",
+  "title": "1071. Greatest Common Divisor of Strings",
+  "question": "<div><p>For strings <code>S</code> and <code>T</code>, we say \"<code>T</code> divides <code>S</code>\" if and only if <code>S = T + ... + T</code>&nbsp; (<code>T</code> concatenated with itself 1 or more times)</p>\n\n<p>Return the largest string <code>X</code> such that <code>X</code> divides <font face=\"monospace\">str1</font>&nbsp;and <code>X</code> divides <font face=\"monospace\">str2</font>.</p>\n\n<p>&nbsp;</p>\n\n<p><strong>Example 1:</strong></p>\n\n<pre><strong>Input: </strong>str1 = <span id=\"example-input-1-1\">\"ABCABC\"</span>, str2 = <span id=\"example-input-1-2\">\"ABC\"</span>\n<strong>Output: </strong><span id=\"example-output-1\">\"ABC\"</span>\n</pre>\n\n<p><strong>Example 2:</strong></p>\n\n<pre><strong>Input: </strong>str1 = <span id=\"example-input-2-1\">\"ABABAB\"</span>, str2 = <span id=\"example-input-2-2\">\"ABAB\"</span>\n<strong>Output: </strong><span id=\"example-output-2\">\"AB\"</span>\n</pre>\n\n<p><strong>Example 3:</strong></p>\n\n<pre><strong>Input: </strong>str1 = <span id=\"example-input-3-1\">\"LEET\"</span>, str2 = <span id=\"example-input-3-2\">\"CODE\"</span>\n<strong>Output: </strong><span id=\"example-output-3\">\"\"</span>\n</pre>\n\n<p>&nbsp;</p>\n\n<p><strong>Note:</strong></p>\n\n<ol>\n\t<li><code>1 &lt;= str1.length &lt;= 1000</code></li>\n\t<li><code>1 &lt;= str2.length &lt;= 1000</code></li>\n\t<li><code>str1[i]</code> and <code>str2[i]</code> are English uppercase letters.</li>\n</ol>\n</div>",
+  "url": "https://leetcode.com/problems/greatest-common-divisor-of-strings/",
+  "companies": {}
+}

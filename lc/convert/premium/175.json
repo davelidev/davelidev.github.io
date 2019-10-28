@@ -1,0 +1,11 @@
+{
+  "categories": [],
+  "diff": "Easy",
+  "title": "175. Combine Two Tables",
+  "question": "<div class=\"sql-schema-wrapper__3VBi\"><a class=\"sql-schema-link__3cEg\">SQL Schema<svg viewBox=\"0 0 24 24\" width=\"1em\" height=\"1em\" class=\"icon__3Su4\"><path fill-rule=\"evenodd\" d=\"M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z\"></path></svg></a></div><div><p>Table: <code>Person</code></p>\n\n<pre>+-------------+---------+\n| Column Name | Type    |\n+-------------+---------+\n| PersonId    | int     |\n| FirstName   | varchar |\n| LastName    | varchar |\n+-------------+---------+\nPersonId is the primary key column for this table.\n</pre>\n\n<p>Table: <code>Address</code></p>\n\n<pre>+-------------+---------+\n| Column Name | Type    |\n+-------------+---------+\n| AddressId   | int     |\n| PersonId    | int     |\n| City        | varchar |\n| State       | varchar |\n+-------------+---------+\nAddressId is the primary key column for this table.\n</pre>\n\n<p>&nbsp;</p>\n\n<p>Write a SQL query for a report that provides the following information for each person in the Person table, regardless if there is an address for each of those people:</p>\n\n<pre>FirstName, LastName, City, State\n</pre>\n</div>",
+  "url": "https://leetcode.com/problems/combine-two-tables/",
+  "companies": {
+    "Amazon": 2,
+    "Apple": 2
+  }
+}

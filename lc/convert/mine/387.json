@@ -1,0 +1,12 @@
+{
+  "categories": [
+    "Hash Table",
+    "String"
+  ],
+  "diff": "Easy",
+  "title": "387. First Unique Character in a String",
+  "question": "<div><p>\nGiven a string, find the first non-repeating character in it and return it's index. If it doesn't exist, return -1.\n</p>\n<p><b>Examples:</b>\n</p><pre>s = \"leetcode\"\nreturn 0.\n\ns = \"loveleetcode\",\nreturn 2.\n</pre>\n<p></p>\n\n<p>\n<b>Note:</b> You may assume the string contain only lowercase letters.\n</p></div>",
+  "url": "https://leetcode.com/problems/first-unique-character-in-a-string/",
+  "companies": {},
+  "code": "class Solution(object):\\u000A    def firstUniqChar(self, s):\\u000A        \\u0022\\u0022\\u0022\\u000A        :type s: str\\u000A        :rtype: int\\u000A        \\u0022\\u0022\\u0022\\u000A        from collections import Counter\\u000A        counts \\u003D Counter(s)\\u000A        for i, char in enumerate(s):\\u000A            if counts[char] \\u003D\\u003D 1:\\u000A                return i\\u000A        return \\u002D1"
+}

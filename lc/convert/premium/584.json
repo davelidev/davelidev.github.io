@@ -1,0 +1,8 @@
+{
+  "categories": [],
+  "diff": "Easy",
+  "title": "584. Find Customer Referee",
+  "question": "<div class=\"sql-schema-wrapper__3VBi\"><a class=\"sql-schema-link__3cEg\">SQL Schema<svg viewBox=\"0 0 24 24\" width=\"1em\" height=\"1em\" class=\"icon__3Su4\"><path fill-rule=\"evenodd\" d=\"M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z\"></path></svg></a></div><div><p>Given a table <code>customer</code> holding customers information and the referee.</p>\n\n<pre>+------+------+-----------+\n| id   | name | referee_id|\n+------+------+-----------+\n|    1 | Will |      NULL |\n|    2 | Jane |      NULL |\n|    3 | Alex |         2 |\n|    4 | Bill |      NULL |\n|    5 | Zack |         1 |\n|    6 | Mark |         2 |\n+------+------+-----------+\n</pre>\n\n<p>Write a query to return the list of customers <b>NOT</b> referred by the person with id '2'.</p>\n\n<p>For the sample data above, the result is:</p>\n\n<pre>+------+\n| name |\n+------+\n| Will |\n| Jane |\n| Bill |\n| Zack |\n+------+\n</pre>\n</div>",
+  "url": "https://leetcode.com/problems/find-customer-referee/",
+  "companies": {}
+}

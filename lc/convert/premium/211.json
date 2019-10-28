@@ -1,0 +1,16 @@
+{
+  "categories": [
+    "Backtracking",
+    "Design",
+    "Trie"
+  ],
+  "diff": "Medium",
+  "title": "211. Add and Search Word - Data structure design",
+  "question": "<div><p>Design a data structure that supports the following two operations:</p>\n\n<pre>void addWord(word)\nbool search(word)\n</pre>\n\n<p>search(word) can search a literal word or a regular expression string containing only letters <code>a-z</code> or <code>.</code>. A <code>.</code> means it can represent any one letter.</p>\n\n<p><strong>Example:</strong></p>\n\n<pre>addWord(\"bad\")\naddWord(\"dad\")\naddWord(\"mad\")\nsearch(\"pad\") -&gt; false\nsearch(\"bad\") -&gt; true\nsearch(\".ad\") -&gt; true\nsearch(\"b..\") -&gt; true\n</pre>\n\n<p><b>Note:</b><br>\nYou may assume that all words are consist of lowercase letters <code>a-z</code>.</p>\n</div>",
+  "url": "https://leetcode.com/problems/add-and-search-word-data-structure-design/",
+  "companies": {
+    "Facebook": 13,
+    "Amazon": 4,
+    "Microsoft": 2
+  }
+}

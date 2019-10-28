@@ -1,0 +1,12 @@
+{
+  "categories": [
+    "Bit Manipulation"
+  ],
+  "diff": "Easy",
+  "title": "476. Number Complement",
+  "question": "<div><p>Given a positive integer, output its complement number. The complement strategy is to flip the bits of its binary representation.</p>\n\n<p><b>Note:</b><br>\n</p><ol>\n<li>The given integer is guaranteed to fit within the range of a 32-bit signed integer.</li>\n<li>You could assume no leading zero bit in the integer’s binary representation.</li>\n</ol>\n<p></p>\n\n<p><b>Example 1:</b><br>\n</p><pre><b>Input:</b> 5\n<b>Output:</b> 2\n<b>Explanation:</b> The binary representation of 5 is 101 (no leading zero bits), and its complement is 010. So you need to output 2.\n</pre>\n<p></p>\n\n<p><b>Example 2:</b><br>\n</p><pre><b>Input:</b> 1\n<b>Output:</b> 0\n<b>Explanation:</b> The binary representation of 1 is 1 (no leading zero bits), and its complement is 0. So you need to output 0.\n</pre>\n<p></p></div>",
+  "url": "https://leetcode.com/problems/number-complement/",
+  "companies": {
+    "Cloudera": null
+  }
+}

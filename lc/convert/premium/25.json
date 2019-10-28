@@ -1,0 +1,15 @@
+{
+  "categories": [
+    "Linked List"
+  ],
+  "diff": "Hard",
+  "title": "25. Reverse Nodes in k-Group",
+  "question": "<div><p>Given a linked list, reverse the nodes of a linked list <em>k</em> at a time and return its modified list.</p>\n\n<p><em>k</em> is a positive integer and is less than or equal to the length of the linked list. If the number of nodes is not a multiple of <em>k</em> then left-out nodes in the end should remain as it is.</p>\n\n<ul>\n</ul>\n\n<p><strong>Example:</strong></p>\n\n<p>Given this linked list: <code>1-&gt;2-&gt;3-&gt;4-&gt;5</code></p>\n\n<p>For <em>k</em> = 2, you should return: <code>2-&gt;1-&gt;4-&gt;3-&gt;5</code></p>\n\n<p>For <em>k</em> = 3, you should return: <code>3-&gt;2-&gt;1-&gt;4-&gt;5</code></p>\n\n<p><strong>Note:</strong></p>\n\n<ul>\n\t<li>Only constant extra memory is allowed.</li>\n\t<li>You may not alter the values in the list's nodes, only nodes itself may be changed.</li>\n</ul>\n</div>",
+  "url": "https://leetcode.com/problems/reverse-nodes-in-k-group/",
+  "companies": {
+    "Amazon": 4,
+    "Microsoft": 4,
+    "Facebook": 3,
+    "ByteDance": 2
+  }
+}

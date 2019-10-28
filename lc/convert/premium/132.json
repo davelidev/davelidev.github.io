@@ -1,0 +1,12 @@
+{
+  "categories": [
+    "Dynamic Programming"
+  ],
+  "diff": "Hard",
+  "title": "132. Palindrome Partitioning II",
+  "question": "<div><p>Given a string <em>s</em>, partition <em>s</em> such that every substring of the partition is a palindrome.</p>\n\n<p>Return the minimum cuts needed for a palindrome partitioning of <em>s</em>.</p>\n\n<p><strong>Example:</strong></p>\n\n<pre><strong>Input:</strong>&nbsp;\"aab\"\n<strong>Output:</strong> 1\n<strong>Explanation:</strong> The palindrome partitioning [\"aa\",\"b\"] could be produced using 1 cut.\n</pre>\n</div>",
+  "url": "https://leetcode.com/problems/palindrome-partitioning-ii/",
+  "companies": {
+    "Google": 4
+  }
+}

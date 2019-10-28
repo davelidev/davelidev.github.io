@@ -1,0 +1,11 @@
+{
+  "categories": [
+    "Dynamic Programming",
+    "Minimax"
+  ],
+  "diff": "Medium",
+  "title": "464. Can I Win",
+  "question": "<div><p>In the \"100 game,\" two players take turns adding, to a running total, any integer from 1..10. The player who first causes the running total to reach or exceed 100 wins. </p>\n\n<p>What if we change the game so that players cannot re-use integers? </p>\n\n<p>For example, two players might take turns drawing from a common pool of numbers of 1..15 without replacement until they reach a total &gt;= 100.</p>\n\n<p>Given an integer <code>maxChoosableInteger</code> and another integer <code>desiredTotal</code>, determine if the first player to move can force a win, assuming both players play optimally. </p>\n\n<p>You can always assume that <code>maxChoosableInteger</code> will not be larger than 20 and <code>desiredTotal</code> will not be larger than 300.\n</p>\n\n<p><b>Example</b>\n</p><pre><b>Input:</b>\nmaxChoosableInteger = 10\ndesiredTotal = 11\n\n<b>Output:</b>\nfalse\n\n<b>Explanation:</b>\nNo matter which integer the first player choose, the first player will lose.\nThe first player can choose an integer from 1 up to 10.\nIf the first player choose 1, the second player can only choose integers from 2 up to 10.\nThe second player will win by choosing 10 and get a total = 11, which is &gt;= desiredTotal.\nSame with other integers chosen by the first player, the second player will always win.\n</pre>\n<p></p></div>",
+  "url": "https://leetcode.com/problems/can-i-win/",
+  "companies": {}
+}

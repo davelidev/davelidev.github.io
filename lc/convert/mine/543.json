@@ -1,0 +1,11 @@
+{
+  "categories": [
+    "Tree"
+  ],
+  "diff": "Easy",
+  "title": "543. Diameter of Binary Tree",
+  "question": "<div><p>\nGiven a binary tree, you need to compute the length of the diameter of the tree. The diameter of a binary tree is the length of the <b>longest</b> path between any two nodes in a tree. This path may or may not pass through the root.\n</p>\n\n<p>\n<b>Example:</b><br>\nGiven a binary tree <br>\n</p><pre>          1\n         / \\\n        2   3\n       / \\     \n      4   5    \n</pre>\n<p></p>\n<p>\nReturn <b>3</b>, which is the length of the path [4,2,1,3] or [5,2,1,3].\n</p>\n\n<p><b>Note:</b>\nThe length of path between two nodes is represented by the number of edges between them.\n</p></div>",
+  "url": "https://leetcode.com/problems/diameter-of-binary-tree/",
+  "companies": {},
+  "code": "# Definition for a binary tree node.\\u000A# class TreeNode(object):\\u000A#     def __init__(self, x):\\u000A#         self.val \\u003D x\\u000A#         self.left \\u003D None\\u000A#         self.right \\u003D None\\u000A\\u000Aclass Solution(object):\\u000A    def diameterOfBinaryTree(self, root):\\u000A        \\u0022\\u0022\\u0022\\u000A        :type root: TreeNode\\u000A        :rtype: int\\u000A        \\u0022\\u0022\\u0022\\u000A        self.max \\u003D 0\\u000A        def _longest_len(node):\\u000A            if not node: return 0\\u000A            l, r \\u003D _longest_len(node.left), _longest_len(node.right)\\u000A            self.max \\u003D max(self.max, l + r)\\u000A            return max(l, r) + 1\\u000A        _longest_len(root)\\u000A        return self.max"
+}

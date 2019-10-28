@@ -1,0 +1,13 @@
+{
+  "categories": [
+    "String"
+  ],
+  "diff": "Hard",
+  "title": "214. Shortest Palindrome",
+  "question": "<div><p>Given a string <em><b>s</b></em>, you are allowed to convert it to a palindrome by adding characters in front of it. Find and return the shortest palindrome you can find by performing this transformation.</p>\n\n<p><strong>Example 1:</strong></p>\n\n<pre><strong>Input: </strong><code>\"aacecaaa\"</code>\n<strong>Output:</strong> <code>\"aaacecaaa\"</code>\n</pre>\n\n<p><strong>Example 2:</strong></p>\n\n<pre><strong>Input: </strong><code>\"abcd\"</code>\n<strong>Output:</strong> <code>\"dcbabcd\"</code></pre></div>",
+  "url": "https://leetcode.com/problems/shortest-palindrome/",
+  "companies": {
+    "Amazon": 3,
+    "Microsoft": 2
+  }
+}

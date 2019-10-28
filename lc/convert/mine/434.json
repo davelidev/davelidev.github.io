@@ -1,0 +1,11 @@
+{
+  "categories": [
+    "String"
+  ],
+  "diff": "Easy",
+  "title": "434. Number of Segments in a String",
+  "question": "<div><p>Count the number of segments in a string, where a segment is defined to be a contiguous sequence of non-space characters.</p>\n\n<p>Please note that the string does not contain any <b>non-printable</b> characters.</p>\n\n<p><b>Example:</b></p>\n<pre><b>Input:</b> \"Hello, my name is John\"\n<b>Output:</b> 5\n</pre>\n<p></p></div>",
+  "url": "https://leetcode.com/problems/number-of-segments-in-a-string/",
+  "companies": {},
+  "code": "class Solution(object):\\u000A    def countSegments(self, s):\\u000A        if not s: return 0\\u000A        return sum(s[i \\u002D 1] \\u003D\\u003D \\u0022 \\u0022 and s[i] !\\u003D \\u0022 \\u0022 for i in range(1, len(s))) + (s[0] !\\u003D \\u0022 \\u0022)"
+}

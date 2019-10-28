@@ -1,0 +1,34 @@
+{
+  "categories": [
+    "Depth-first Search",
+    "Breadth-first Search",
+    "Union Find"
+  ],
+  "diff": "Medium",
+  "title": "200. Number of Islands",
+  "question": "<div><p>Given a 2d grid map of <code>'1'</code>s (land) and <code>'0'</code>s (water), count the number of islands. An island is surrounded by water and is formed by connecting adjacent lands horizontally or vertically. You may assume all four edges of the grid are all surrounded by water.</p>\n\n<p><b>Example 1:</b></p>\n\n<pre><strong>Input:</strong>\n11110\n11010\n11000\n00000\n\n<strong>Output:</strong>&nbsp;1\n</pre>\n\n<p><b>Example 2:</b></p>\n\n<pre><strong>Input:</strong>\n11000\n11000\n00100\n00011\n\n<strong>Output: </strong>3\n</pre></div>",
+  "url": "https://leetcode.com/problems/number-of-islands/",
+  "companies": {
+    "Amazon": 75,
+    "Google": 17,
+    "Microsoft": 14,
+    "Bloomberg": 10,
+    "Facebook": 10,
+    "Walmart Labs": 7,
+    "LinkedIn": 6,
+    "Uber": 6,
+    "Snapchat": 4,
+    "Atlassian": 4,
+    "Cruise Automation": 4,
+    "Oracle": 3,
+    "Apple": 3,
+    "Affirm": 3,
+    "Twitch": 3,
+    "Lyft": 2,
+    "Adobe": 2,
+    "Qualtrics": 2,
+    "Expedia": 2,
+    "JPMorgan": 2
+  },
+  "code": "class Solution(object):\\u000A    def numIslands(self, grid):\\u000A        if not grid or not grid[0]: return 0\\u000A        m, n \\u003D len(grid), len(grid[0])\\u000A        \\u000A        def to_visit(i, j):\\u000A            if not (0 \\u003C\\u003D i \\u003C m and 0 \\u003C\\u003D j \\u003C n):\\u000A                return False\\u000A            is_land \\u003D grid[i][j] \\u003D\\u003D 1\\u000A            grid[i][j] \\u003D \\u002D1\\u000A            return is_land\\u000A        \\u000A        for i in range(m):\\u000A            for j in range(n):\\u000A                grid[i][j] \\u003D int(grid[i][j])\\u000A        \\u000A        res \\u003D 0\\u000A        for i in range(m):\\u000A            for j in range(n):\\u000A                if grid[i][j] \\u003E 0:\\u000A                    res +\\u003D 1\\u000A                    bfs \\u003D [(i,j)]\\u000A                    grid[i][j] \\u003D \\u002D1\\u000A                    while bfs:\\u000A                        bfs \\u003D [(a_adj, b_adj)\\u000A                               for a, b in bfs\\u000A                               for a_adj, b_adj in [(a \\u002D 1, b), (a + 1, b),\\u000A                                                    (a, b \\u002D 1),(a, b + 1)]\\u000A                               if to_visit(a_adj, b_adj)]\\u000A        return res"
+}

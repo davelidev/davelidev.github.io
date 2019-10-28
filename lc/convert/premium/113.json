@@ -1,0 +1,16 @@
+{
+  "categories": [
+    "Tree",
+    "Depth-first Search"
+  ],
+  "diff": "Medium",
+  "title": "113. Path Sum II",
+  "question": "<div><p>Given a binary tree and a sum, find all root-to-leaf paths where each path's sum equals the given sum.</p>\n\n<p><strong>Note:</strong>&nbsp;A leaf is a node with no children.</p>\n\n<p><strong>Example:</strong></p>\n\n<p>Given the below binary tree and <code>sum = 22</code>,</p>\n\n<pre>      <strong>5</strong>\n     <strong>/ \\</strong>\n    <strong>4   8</strong>\n   <strong>/</strong>   / <strong>\\</strong>\n  <strong>11</strong>  13  <strong>4</strong>\n /  <strong>\\</strong>    <strong>/</strong> \\\n7    <strong>2</strong>  <strong>5</strong>   1\n</pre>\n\n<p>Return:</p>\n\n<pre>[\n   [5,4,11,2],\n   [5,8,4,5]\n]\n</pre>\n</div>",
+  "url": "https://leetcode.com/problems/path-sum-ii/",
+  "companies": {
+    "Amazon": 3,
+    "Facebook": 2,
+    "Zillow": 2,
+    "Google": 2
+  }
+}

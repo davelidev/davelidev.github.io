@@ -1,0 +1,13 @@
+{
+  "categories": [
+    "Array",
+    "Hash Table",
+    "Two Pointers"
+  ],
+  "diff": "Medium",
+  "title": "18. 4Sum",
+  "question": "<div><p>Given an array <code>nums</code> of <em>n</em> integers and an integer <code>target</code>, are there elements <em>a</em>, <em>b</em>, <em>c</em>, and <em>d</em> in <code>nums</code> such that <em>a</em> + <em>b</em> + <em>c</em> + <em>d</em> = <code>target</code>? Find all unique quadruplets in the array which gives the sum of <code>target</code>.</p>\n\n<p><strong>Note:</strong></p>\n\n<p>The solution set must not contain duplicate quadruplets.</p>\n\n<p><strong>Example:</strong></p>\n\n<pre>Given array nums = [1, 0, -1, 0, -2, 2], and target = 0.\n\nA solution set is:\n[\n  [-1,  0, 0, 1],\n  [-2, -1, 1, 2],\n  [-2,  0, 0, 2]\n]\n</pre>\n</div>",
+  "url": "https://leetcode.com/problems/4sum/",
+  "companies": {},
+  "code": "class Solution(object):\\u000A    def fourSum(self, nums, target):\\u000A        \\u0022\\u0022\\u0022\\u000A        :type nums: List[int]\\u000A        :type target: int\\u000A        :rtype: List[List[int]]\\u000A        \\u0022\\u0022\\u0022\\u000A        n \\u003D len(nums)\\u000A        res \\u003D set()\\u000A        from collections import defaultdict\\u000A        sum_to_ind \\u003D defaultdict(list)\\u000A        for i in range(2, n):\\u000A            for j in range(i + 1, n):\\u000A                sum_to_ind[(nums[i] + nums[j])].append((i, [nums[i], nums[j]]))\\u000A        for i in range(n \\u002D 2):\\u000A            for j in range(i + 1, n \\u002D 1):\\u000A                pair_1 \\u003D [nums[i], nums[j]]\\u000A                pair_1_sum \\u003D sum(pair_1)\\u000A                new_tar \\u003D target \\u002D pair_1_sum\\u000A                if new_tar in sum_to_ind:\\u000A                    for idx, pair_2 in reversed(sum_to_ind[new_tar]):\\u000A                        if idx \\u003C\\u003D j: break\\u000A                        res.add(tuple(sorted(pair_1 + pair_2)))\\u000A        return list(res)\\u000A                    \\u000A        "
+}

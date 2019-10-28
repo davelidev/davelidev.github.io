@@ -1,0 +1,12 @@
+{
+  "categories": [
+    "Array"
+  ],
+  "diff": "Medium",
+  "title": "370. Range Addition",
+  "question": "<div><p>Assume you have an array of length <b><i>n</i></b> initialized with all <b>0</b>'s and are given <b><i>k</i></b> update operations.</p>\n\n<p>Each operation is represented as a triplet: <b>[startIndex, endIndex, inc]</b> which increments each element of subarray <b>A[startIndex ... endIndex]</b> (startIndex and endIndex inclusive) with <b>inc</b>.</p>\n\n<p>Return the modified array after all <b><i>k</i></b> operations were executed.</p>\n\n<p><strong>Example:</strong></p>\n\n<pre><strong>Input: </strong>length = <span id=\"example-input-1-1\">5</span>, updates = <span id=\"example-input-1-2\">[[1,3,2],[2,4,3],[0,2,-2]]</span>\n<strong>Output: </strong><span id=\"example-output-1\">[-2,0,3,5,3]</span>\n</pre>\n\n<p><b>Explanation:</b></p>\n\n<pre>Initial state:\n[0,0,0,0,0]\n\nAfter applying operation [1,3,2]:\n[0,2,2,2,0]\n\nAfter applying operation [2,4,3]:\n[0,2,5,5,3]\n\nAfter applying operation [0,2,-2]:\n[-2,0,3,5,3]\n</pre></div>",
+  "url": "https://leetcode.com/problems/range-addition/",
+  "companies": {
+    "Google": 3
+  }
+}

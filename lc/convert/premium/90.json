@@ -1,0 +1,15 @@
+{
+  "categories": [
+    "Array",
+    "Backtracking"
+  ],
+  "diff": "Medium",
+  "title": "90. Subsets II",
+  "question": "<div><p>Given a collection of integers that might contain duplicates, <strong><em>nums</em></strong>, return all possible subsets (the power set).</p>\n\n<p><strong>Note:</strong> The solution set must not contain duplicate subsets.</p>\n\n<p><strong>Example:</strong></p>\n\n<pre><strong>Input:</strong> [1,2,2]\n<strong>Output:</strong>\n[\n  [2],\n  [1],\n  [1,2,2],\n  [2,2],\n  [1,2],\n  []\n]\n</pre>\n</div>",
+  "url": "https://leetcode.com/problems/subsets-ii/",
+  "companies": {
+    "Amazon": 3,
+    "Microsoft": 2
+  },
+  "code": "class Solution(object):\\u000A    def subsetsWithDup(self, nums):\\u000A        from collections import Counter\\u000A        cnt \\u003D Counter(nums)        \\u000A        def comb(keys\\u003Dcnt.keys(), cur\\u003D[], res\\u003D[]):\\u000A            if not keys:\\u000A                res.append(cur[:])\\u000A            else:\\u000A                # not inc keys[\\u002D1]\\u000A                tmp \\u003D keys.pop()\\u000A                comb()\\u000A                keys.append(tmp)\\u000A\\u000A                # inc 1 more keys[\\u002D1]\\u000A                if cnt[keys[\\u002D1]]:\\u000A                    cnt[keys[\\u002D1]] \\u002D\\u003D 1\\u000A                    cur.append(keys[\\u002D1])\\u000A                    comb()\\u000A                    cnt[keys[\\u002D1]] +\\u003D 1\\u000A                    cur.pop()\\u000A            return res\\u000A        \\u000A        return comb()\\u000A                "
+}

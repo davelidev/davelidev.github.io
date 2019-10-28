@@ -1,0 +1,10 @@
+{
+  "categories": [
+    "Tree"
+  ],
+  "diff": "Easy",
+  "title": "590. N-ary Tree Postorder Traversal",
+  "question": "<div><p>Given an n-ary tree, return the <i>postorder</i> traversal of its nodes' values.</p>\n\n<p>For example, given a <code>3-ary</code> tree:</p>\n\n<p>&nbsp;</p>\n\n<p><img src=\"https://assets.leetcode.com/uploads/2018/10/12/narytreeexample.png\" style=\"width: 100%; max-width: 300px;\"></p>\n\n<p>&nbsp;</p>\n\n<p>Return its postorder traversal as: <code>[5,6,3,2,4,1]</code>.</p>\n&nbsp;\n\n<p><b>Note:</b></p>\n\n<p>Recursive solution is trivial, could you do it iteratively?</p>\n</div>",
+  "url": "https://leetcode.com/problems/n-ary-tree-postorder-traversal/",
+  "companies": {}
+}

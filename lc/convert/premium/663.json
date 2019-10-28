@@ -1,0 +1,13 @@
+{
+  "categories": [
+    "Tree"
+  ],
+  "diff": "Medium",
+  "title": "663. Equal Tree Partition",
+  "question": "<div><p>\nGiven a binary tree with <code>n</code> nodes, your task is to check if it's possible to partition the tree to two trees which have the equal sum of values after removing <b>exactly</b> one edge on the original tree.\n</p>\n\n<p><b>Example 1:</b><br>\n</p><pre><b>Input:</b>     \n    5\n   / \\\n  10 10\n    /  \\\n   2   3\n\n<b>Output:</b> True\n<b>Explanation:</b> \n    5\n   / \n  10\n      \nSum: 15\n\n   10\n  /  \\\n 2    3\n\nSum: 15\n</pre>\n<p></p>\n\n\n<p><b>Example 2:</b><br>\n</p><pre><b>Input:</b>     \n    1\n   / \\\n  2  10\n    /  \\\n   2   20\n\n<b>Output:</b> False\n<b>Explanation:</b> You can't split the tree into two trees with equal sum after removing exactly one edge on the tree.\n</pre>\n<p></p>\n\n<p><b>Note:</b><br>\n</p><ol>\n<li>The range of tree node value is in the range of [-100000, 100000].</li>\n<li>1 &lt;= n &lt;= 10000</li>\n</ol>\n<p></p></div>",
+  "url": "https://leetcode.com/problems/equal-tree-partition/",
+  "companies": {
+    "Facebook": 2,
+    "Amazon": null
+  }
+}

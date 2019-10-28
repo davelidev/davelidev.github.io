@@ -1,0 +1,13 @@
+{
+  "categories": [
+    "Array",
+    "Binary Search"
+  ],
+  "diff": "Easy",
+  "title": "1150. Check If a Number Is Majority Element in a Sorted Array",
+  "question": "<div><p>Given an array <code>nums</code> sorted in <strong>non-decreasing</strong> order, and a number <code>target</code>, return <code>True</code> if and only if <code>target</code> is a majority element.</p>\n\n<p>A <em>majority element</em> is an element that appears <strong>more than <code>N/2</code></strong> times in an array of length <code>N</code>.</p>\n\n<p>&nbsp;</p>\n\n<p><strong>Example 1:</strong></p>\n\n<pre><strong>Input: </strong>nums = <span id=\"example-input-1-1\">[2,4,5,5,5,5,5,6,6]</span>, target = <span id=\"example-input-1-2\">5</span>\n<strong>Output: </strong><span id=\"example-output-1\">true</span>\n<strong>Explanation: </strong>\nThe value 5 appears 5 times and the length of the array is 9.\nThus, 5 is a majority element because 5 &gt; 9/2 is true.\n</pre>\n\n<p><strong>Example 2:</strong></p>\n\n<pre><strong>Input: </strong>nums = <span id=\"example-input-2-1\">[10,100,101,101]</span>, target = <span id=\"example-input-2-2\">101</span>\n<strong>Output: </strong><span id=\"example-output-2\">false</span>\n<strong>Explanation: </strong>\nThe value 101 appears 2 times and the length of the array is 4.\nThus, 101 is not a majority element because 2 &gt; 4/2 is false.\n</pre>\n\n<p>&nbsp;</p>\n\n<p><span><strong>Note:</strong></span></p>\n\n<ol>\n\t<li><code>1 &lt;= nums.length &lt;= 1000</code></li>\n\t<li><code>1 &lt;= nums[i] &lt;= 10^9</code></li>\n\t<li><code>1 &lt;= target &lt;= 10^9</code></li>\n</ol>\n</div>",
+  "url": "https://leetcode.com/problems/check-if-a-number-is-majority-element-in-a-sorted-array/",
+  "companies": {
+    "Salesforce": null
+  }
+}

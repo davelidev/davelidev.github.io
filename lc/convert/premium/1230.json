@@ -1,0 +1,13 @@
+{
+  "categories": [
+    "Math",
+    "Dynamic Programming"
+  ],
+  "diff": "Medium",
+  "title": "1230. Toss Strange Coins",
+  "question": "<div><p>You have some coins.&nbsp; The <code>i</code>-th&nbsp;coin has a probability&nbsp;<code>prob[i]</code> of facing heads when tossed.</p>\n\n<p>Return the probability that the number of coins facing heads equals <code>target</code> if you toss every coin exactly once.</p>\n\n<p>&nbsp;</p>\n<p><strong>Example 1:</strong></p>\n<pre><strong>Input:</strong> prob = [0.4], target = 1\n<strong>Output:</strong> 0.40000\n</pre><p><strong>Example 2:</strong></p>\n<pre><strong>Input:</strong> prob = [0.5,0.5,0.5,0.5,0.5], target = 0\n<strong>Output:</strong> 0.03125\n</pre>\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= prob.length &lt;= 1000</code></li>\n\t<li><code>0 &lt;= prob[i] &lt;= 1</code></li>\n\t<li><code>0 &lt;= target&nbsp;</code><code>&lt;= prob.length</code></li>\n\t<li>Answers will be accepted as correct if they are within <code>10^-5</code> of the correct answer.</li>\n</ul>\n</div>",
+  "url": "https://leetcode.com/problems/toss-strange-coins/",
+  "companies": {
+    "Twitch": null
+  }
+}

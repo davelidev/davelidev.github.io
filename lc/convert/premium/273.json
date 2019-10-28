@@ -1,0 +1,18 @@
+{
+  "categories": [
+    "Math",
+    "String"
+  ],
+  "diff": "Hard",
+  "title": "273. Integer to English Words",
+  "question": "<div><p>Convert a non-negative integer to its english words representation. Given input is guaranteed to be less than 2<sup>31</sup> - 1.</p>\n\n<p><b>Example 1:</b></p>\n\n<pre><b>Input:</b> 123\n<b>Output:</b> \"One Hundred Twenty Three\"\n</pre>\n\n<p><b>Example 2:</b></p>\n\n<pre><b>Input:</b> 12345\n<b>Output:</b> \"Twelve Thousand Three Hundred Forty Five\"</pre>\n\n<p><b>Example 3:</b></p>\n\n<pre><b>Input:</b> 1234567\n<b>Output:</b> \"One Million Two Hundred Thirty Four Thousand Five Hundred Sixty Seven\"\n</pre>\n\n<p><b>Example 4:</b></p>\n\n<pre><b>Input:</b> 1234567891\n<b>Output:</b> \"One Billion Two Hundred Thirty Four Million Five Hundred Sixty Seven Thousand Eight Hundred Ninety One\"\n</pre>\n</div>",
+  "url": "https://leetcode.com/problems/integer-to-english-words/",
+  "companies": {
+    "Facebook": 27,
+    "Amazon": 11,
+    "Microsoft": 5,
+    "LinkedIn": 5,
+    "Google": 3,
+    "Splunk": 3
+  }
+}

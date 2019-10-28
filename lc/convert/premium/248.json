@@ -1,0 +1,13 @@
+{
+  "categories": [
+    "Math",
+    "Recursion"
+  ],
+  "diff": "Hard",
+  "title": "248. Strobogrammatic Number III",
+  "question": "<div><p>A strobogrammatic number is a number that looks the same when rotated 180 degrees (looked at upside down).</p>\n\n<p>Write a function to count the total strobogrammatic numbers that exist in the range of low &lt;= num &lt;= high.</p>\n\n<p><b>Example:</b></p>\n\n<pre><b>Input:</b> low = \"50\", high = \"100\"\n<b>Output:</b> 3 \n<strong>Explanation: </strong>69, 88, and 96 are three strobogrammatic numbers.</pre>\n\n<p><strong>Note:</strong><br>\nBecause the range might be a large number, the <em>low</em> and <em>high</em> numbers are represented as string.</p>\n</div>",
+  "url": "https://leetcode.com/problems/strobogrammatic-number-iii/",
+  "companies": {
+    "Google": 7
+  }
+}

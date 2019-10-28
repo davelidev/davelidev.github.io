@@ -1,0 +1,19 @@
+{
+  "categories": [
+    "Hash Table",
+    "Stack",
+    "Tree"
+  ],
+  "diff": "Medium",
+  "title": "94. Binary Tree Inorder Traversal",
+  "question": "<div><p>Given a binary tree, return the <em>inorder</em> traversal of its nodes' values.</p>\n\n<p><strong>Example:</strong></p>\n\n<pre><strong>Input:</strong> [1,null,2,3]\n   1\n    \\\n     2\n    /\n   3\n\n<strong>Output:</strong> [1,3,2]</pre>\n\n<p><strong>Follow up:</strong> Recursive solution is trivial, could you do it iteratively?</p>\n</div>",
+  "url": "https://leetcode.com/problems/binary-tree-inorder-traversal/",
+  "companies": {
+    "Amazon": 5,
+    "Facebook": 3,
+    "Microsoft": 2,
+    "Google": 2,
+    "SAP": 2
+  },
+  "code": "# Definition for a binary tree node.\\u000A# class TreeNode(object):\\u000A#     def __init__(self, x):\\u000A#         self.val \\u003D x\\u000A#         self.left \\u003D None\\u000A#         self.right \\u003D None\\u000A\\u000Aclass Solution(object):\\u000A    def inorderTraversal(self, root):\\u000A        stack \\u003D []\\u000A        \\u000A        def move_left(node):\\u000A            while node:\\u000A                stack.append(node)\\u000A                node \\u003D node.left\\u000A        \\u000A        move_left(root)\\u000A        \\u000A        res \\u003D []\\u000A        while stack:\\u000A            node \\u003D stack.pop()\\u000A            res.append(node.val)\\u000A            move_left(node.right)\\u000A        \\u000A        return res"
+}

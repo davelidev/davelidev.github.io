@@ -1,0 +1,12 @@
+{
+  "categories": [
+    "Hash Table",
+    "Heap"
+  ],
+  "diff": "Medium",
+  "title": "347. Top K Frequent Elements",
+  "question": "<div><p>Given a non-empty array of integers, return the <b><i>k</i></b> most frequent elements.</p>\n\n<p><strong>Example 1:</strong></p>\n\n<pre><strong>Input: </strong>nums = <span id=\"example-input-1-1\">[1,1,1,2,2,3]</span>, k = <span id=\"example-input-1-2\">2</span>\n<strong>Output: </strong><span id=\"example-output-1\">[1,2]</span>\n</pre>\n\n<div>\n<p><strong>Example 2:</strong></p>\n\n<pre><strong>Input: </strong>nums = <span id=\"example-input-2-1\">[1]</span>, k = <span id=\"example-input-2-2\">1</span>\n<strong>Output: </strong><span id=\"example-output-2\">[1]</span></pre>\n</div>\n\n<p><b>Note: </b></p>\n\n<ul>\n\t<li>You may assume <i>k</i> is always valid, 1 ≤ <i>k</i> ≤ number of unique elements.</li>\n\t<li>Your algorithm's time complexity <b>must be</b> better than O(<i>n</i> log <i>n</i>), where <i>n</i> is the array's size.</li>\n</ul>\n</div>",
+  "url": "https://leetcode.com/problems/top-k-frequent-elements/",
+  "companies": {},
+  "code": "class Solution(object):\\u000A    def topKFrequent(self, nums, k):\\u000A        from collections import Counter\\u000A        import heapq\\u000A        freq_to_nums \\u003D [(\\u002Dcnt, num) for num, cnt in  Counter(nums).iteritems()]\\u000A        heapq.heapify(freq_to_nums)\\u000A        return [heapq.heappop(freq_to_nums)[1] for _ in range(k)]"
+}

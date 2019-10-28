@@ -1,0 +1,12 @@
+{
+  "categories": [
+    "Array",
+    "Math"
+  ],
+  "diff": "Medium",
+  "title": "670. Maximum Swap",
+  "question": "<div><p>\nGiven a non-negative integer, you could swap two digits <b>at most</b> once to get the maximum valued number. Return the maximum valued number you could get.\n</p>\n\n<p><b>Example 1:</b><br>\n</p><pre><b>Input:</b> 2736\n<b>Output:</b> 7236\n<b>Explanation:</b> Swap the number 2 and the number 7.\n</pre>\n<p></p>\n\n<p><b>Example 2:</b><br>\n</p><pre><b>Input:</b> 9973\n<b>Output:</b> 9973\n<b>Explanation:</b> No swap.\n</pre>\n<p></p>\n\n\n<p><b>Note:</b><br>\n</p><ol>\n<li>The given number is in the range [0, 10<sup>8</sup>]</li>\n</ol>\n<p></p></div>",
+  "url": "https://leetcode.com/problems/maximum-swap/",
+  "companies": {},
+  "code": "class Solution(object):\\u000A    def maximumSwap(self, num):\\u000A        \\u0022\\u0022\\u0022\\u000A        :type num: int\\u000A        :rtype: int\\u000A        \\u0022\\u0022\\u0022\\u000A        num \\u003D [int(i) for i in list(str(num))]\\u000A        max_from_right \\u003D [None] * len(num)\\u000A        for i in range(len(num) \\u002D 1, \\u002D1, \\u002D1):\\u000A            if i \\u003D\\u003D len(num) \\u002D 1 or num[max_from_right[i + 1]] \\u003C num[i]:\\u000A                max_from_right[i] \\u003D i\\u000A            else: max_from_right[i] \\u003D max_from_right[i + 1]\\u000A        print num, max_from_right\\u000A        for i in range(len(num)):\\u000A            if max_from_right[i] !\\u003D i and num[i] !\\u003D num[max_from_right[i]] :\\u000A                num[i], num[max_from_right[i]] \\u003D num[max_from_right[i]], num[i]\\u000A                break\\u000A        return int(\\u0027\\u0027.join([str(item) for item in num]))"
+}

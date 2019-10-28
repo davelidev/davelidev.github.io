@@ -1,0 +1,16 @@
+{
+  "categories": [
+    "Hash Table",
+    "Bit Manipulation"
+  ],
+  "diff": "Easy",
+  "title": "136. Single Number",
+  "question": "<div><p>Given a <strong>non-empty</strong>&nbsp;array of integers, every element appears <em>twice</em> except for one. Find that single one.</p>\n\n<p><strong>Note:</strong></p>\n\n<p>Your algorithm should have a linear runtime complexity. Could you implement it without using extra memory?</p>\n\n<p><strong>Example 1:</strong></p>\n\n<pre><strong>Input:</strong> [2,2,1]\n<strong>Output:</strong> 1\n</pre>\n\n<p><strong>Example 2:</strong></p>\n\n<pre><strong>Input:</strong> [4,1,2,1,2]\n<strong>Output:</strong> 4\n</pre>\n</div>",
+  "url": "https://leetcode.com/problems/single-number/",
+  "companies": {
+    "Amazon": 7,
+    "Apple": 6,
+    "Bloomberg": 2,
+    "Facebook": 2
+  }
+}

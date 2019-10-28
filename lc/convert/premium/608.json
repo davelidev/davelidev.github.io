@@ -1,0 +1,10 @@
+{
+  "categories": [],
+  "diff": "Medium",
+  "title": "608. Tree Node",
+  "question": "<div class=\"sql-schema-wrapper__3VBi\"><a class=\"sql-schema-link__3cEg\">SQL Schema<svg viewBox=\"0 0 24 24\" width=\"1em\" height=\"1em\" class=\"icon__3Su4\"><path fill-rule=\"evenodd\" d=\"M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z\"></path></svg></a></div><div><p>Given a table <code>tree</code>, <b>id</b> is identifier of the tree node and <b>p_id</b> is its parent node's <b>id</b>.</p>\n\n<pre>+----+------+\n| id | p_id |\n+----+------+\n| 1  | null |\n| 2  | 1    |\n| 3  | 1    |\n| 4  | 2    |\n| 5  | 2    |\n+----+------+\n</pre>\nEach node in the tree can be one of three types:\n\n<ul>\n\t<li>Leaf: if the node is a leaf node.</li>\n\t<li>Root: if the node is the root of the tree.</li>\n\t<li>Inner: If the node is neither a leaf node nor a root node.</li>\n</ul>\n\n<p>&nbsp;</p>\nWrite a query to print the node id and the type of the node. Sort your output by the node id. The result for the above sample is:\n\n<p>&nbsp;</p>\n\n<pre>+----+------+\n| id | Type |\n+----+------+\n| 1  | Root |\n| 2  | Inner|\n| 3  | Leaf |\n| 4  | Leaf |\n| 5  | Leaf |\n+----+------+\n</pre>\n\n<p>&nbsp;</p>\n\n<p><b>Explanation</b></p>\n\n<p>&nbsp;</p>\n\n<ul>\n\t<li>Node '1' is root node, because its parent node is NULL and it has child node '2' and '3'.</li>\n\t<li>Node '2' is inner node, because it has parent node '1' and child node '4' and '5'.</li>\n\t<li>Node '3', '4' and '5' is Leaf node, because they have parent node and they don't have child node.</li>\n\t<br>\n\t<li>And here is the image of the sample tree as below:\n\t<p>&nbsp;</p>\n\n\t<pre>\t\t\t  1\n\t\t\t/   \\\n                      2       3\n                    /   \\\n                  4       5\n</pre>\n\n\t<p><b>Note</b></p>\n\n\t<p>If there is only one node on the tree, you only need to output its root attributes.</p>\n\t</li>\n</ul>\n</div>",
+  "url": "https://leetcode.com/problems/tree-node/",
+  "companies": {
+    "Twitter": 2
+  }
+}

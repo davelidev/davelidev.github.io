@@ -1,0 +1,13 @@
+{
+  "categories": [
+    "Stack",
+    "Tree",
+    "Design"
+  ],
+  "diff": "Medium",
+  "title": "173. Binary Search Tree Iterator",
+  "question": "<div><p>Implement an iterator over a binary search tree (BST). Your iterator will be initialized with the root node of a BST.</p>\n\n<p>Calling <code>next()</code> will return the next smallest number in the BST.</p>\n\n<p>&nbsp;</p>\n\n<ul>\n</ul>\n\n<p><strong>Example:</strong></p>\n\n<p><strong><img alt=\"\" src=\"https://assets.leetcode.com/uploads/2018/12/25/bst-tree.png\" style=\"width: 189px; height: 178px;\"></strong></p>\n\n<pre>BSTIterator iterator = new BSTIterator(root);\niterator.next();    // return 3\niterator.next();    // return 7\niterator.hasNext(); // return true\niterator.next();    // return 9\niterator.hasNext(); // return true\niterator.next();    // return 15\niterator.hasNext(); // return true\niterator.next();    // return 20\niterator.hasNext(); // return false\n</pre>\n\n<p>&nbsp;</p>\n\n<p><b>Note:</b></p>\n\n<ul>\n\t<li><code>next()</code> and <code>hasNext()</code> should run in average O(1) time and uses O(<i>h</i>) memory, where <i>h</i> is the height of the tree.</li>\n\t<li>You may assume that&nbsp;<code>next()</code>&nbsp;call&nbsp;will always be valid, that is, there will be at least a next smallest number in the BST when <code>next()</code> is called.</li>\n</ul>\n</div>",
+  "url": "https://leetcode.com/problems/binary-search-tree-iterator/",
+  "companies": {},
+  "code": "# Definition for a  binary tree node\\u000A# class TreeNode(object):\\u000A#     def __init__(self, x):\\u000A#         self.val \\u003D x\\u000A#         self.left \\u003D None\\u000A#         self.right \\u003D None\\u000A\\u000Aclass BSTIterator(object):\\u000A    def __init__(self, root):\\u000A        \\u0022\\u0022\\u0022\\u000A        :type root: TreeNode\\u000A        \\u0022\\u0022\\u0022\\u000A        cur \\u003D root\\u000A        self.stack \\u003D []\\u000A        while cur:\\u000A            self.stack.append(cur)\\u000A            cur \\u003D cur.left\\u000A\\u000A    def hasNext(self):\\u000A        \\u0022\\u0022\\u0022\\u000A        :rtype: bool\\u000A        \\u0022\\u0022\\u0022\\u000A        return bool(self.stack)\\u000A\\u000A    def next(self):\\u000A        cur \\u003D ret \\u003D self.stack.pop()\\u000A        cur \\u003D cur.right\\u000A        while cur:\\u000A            self.stack.append(cur)\\u000A            cur \\u003D cur.left\\u000A        return ret.val\\u000A        \\u000A        \\u000A\\u000A# Your BSTIterator will be called like this:\\u000A# i, v \\u003D BSTIterator(root), []\\u000A# while i.hasNext(): v.append(i.next())"
+}

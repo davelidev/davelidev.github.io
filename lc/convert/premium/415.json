@@ -1,0 +1,15 @@
+{
+  "categories": [
+    "String"
+  ],
+  "diff": "Easy",
+  "title": "415. Add Strings",
+  "question": "<div><p>Given two non-negative integers <code>num1</code> and <code>num2</code> represented as string, return the sum of <code>num1</code> and <code>num2</code>.</p>\n\n<p><b>Note:</b>\n</p><ol>\n<li>The length of both <code>num1</code> and <code>num2</code> is &lt; 5100.</li>\n<li>Both <code>num1</code> and <code>num2</code> contains only digits <code>0-9</code>.</li>\n<li>Both <code>num1</code> and <code>num2</code> does not contain any leading zero.</li>\n<li>You <b>must not use any built-in BigInteger library</b> or <b>convert the inputs to integer</b> directly.</li>\n</ol>\n<p></p></div>",
+  "url": "https://leetcode.com/problems/add-strings/",
+  "companies": {
+    "Facebook": 15,
+    "Microsoft": 2,
+    "Snapchat": 2,
+    "Adobe": 2
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "categories": [
+    "String",
+    "Stack"
+  ],
+  "diff": "Medium",
+  "title": "856. Score of Parentheses",
+  "question": "<div><p>Given a balanced parentheses string <code>S</code>, compute the score of the string based on the following rule:</p>\n\n<ul>\n\t<li><code>()</code> has score 1</li>\n\t<li><code>AB</code> has score <code>A + B</code>, where A and B are balanced parentheses strings.</li>\n\t<li><code>(A)</code> has score <code>2 * A</code>, where A is a balanced parentheses string.</li>\n</ul>\n\n<p>&nbsp;</p>\n\n<div>\n<p><strong>Example 1:</strong></p>\n\n<pre><strong>Input: </strong><span id=\"example-input-1-1\">\"()\"</span>\n<strong>Output: </strong><span id=\"example-output-1\">1</span>\n</pre>\n\n<div>\n<p><strong>Example 2:</strong></p>\n\n<pre><strong>Input: </strong><span id=\"example-input-2-1\">\"(())\"</span>\n<strong>Output: </strong><span id=\"example-output-2\">2</span>\n</pre>\n\n<div>\n<p><strong>Example 3:</strong></p>\n\n<pre><strong>Input: </strong><span id=\"example-input-3-1\">\"()()\"</span>\n<strong>Output: </strong><span id=\"example-output-3\">2</span>\n</pre>\n\n<div>\n<p><strong>Example 4:</strong></p>\n\n<pre><strong>Input: </strong><span id=\"example-input-4-1\">\"(()(()))\"</span>\n<strong>Output: </strong><span id=\"example-output-4\">6</span>\n</pre>\n\n<p>&nbsp;</p>\n\n<p><strong>Note:</strong></p>\n\n<ol>\n\t<li><code>S</code> is a balanced parentheses string, containing only <code>(</code> and <code>)</code>.</li>\n\t<li><code>2 &lt;= S.length &lt;= 50</code></li>\n</ol>\n</div>\n</div>\n</div>\n</div>\n</div>",
+  "url": "https://leetcode.com/problems/score-of-parentheses/",
+  "companies": {},
+  "code": "class Solution(object):\\u000A    def scoreOfParentheses(self, S):\\u000A        \\u0022\\u0022\\u0022\\u000A        :type S: str\\u000A        :rtype: int\\u000A        \\u0022\\u0022\\u0022\\u000A        # True is open, False is close\\u000A        points \\u003D [0] * (len(S) + 1)\\u000A        cur_lvl \\u003D 0\\u000A        for char in S:\\u000A            if char \\u003D\\u003D \\u0027(\\u0027:\\u000A                cur_lvl +\\u003D 1\\u000A            elif char \\u003D\\u003D \\u0027)\\u0027:\\u000A                cur_lvl \\u002D\\u003D 1\\u000A                if points[cur_lvl + 1]:\\u000A                    points[cur_lvl] +\\u003D points[cur_lvl + 1] * 2\\u000A                    points[cur_lvl + 1] \\u003D 0\\u000A                else:\\u000A                    points[cur_lvl] +\\u003D 1\\u000A        return points[0]\\u000A"
+}

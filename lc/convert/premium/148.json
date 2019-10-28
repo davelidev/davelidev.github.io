@@ -1,0 +1,16 @@
+{
+  "categories": [
+    "Linked List",
+    "Sort"
+  ],
+  "diff": "Medium",
+  "title": "148. Sort List",
+  "question": "<div><p>Sort a linked list in <em>O</em>(<em>n</em> log <em>n</em>) time using constant space complexity.</p>\n\n<p><strong>Example 1:</strong></p>\n\n<pre><strong>Input:</strong> 4-&gt;2-&gt;1-&gt;3\n<strong>Output:</strong> 1-&gt;2-&gt;3-&gt;4\n</pre>\n\n<p><strong>Example 2:</strong></p>\n\n<pre><strong>Input:</strong> -1-&gt;5-&gt;3-&gt;4-&gt;0\n<strong>Output:</strong> -1-&gt;0-&gt;3-&gt;4-&gt;5</pre>\n</div>",
+  "url": "https://leetcode.com/problems/sort-list/",
+  "companies": {
+    "Microsoft": 3,
+    "Adobe": 2,
+    "Google": 2,
+    "Amazon": 2
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "categories": [
+    "Array",
+    "Dynamic Programming"
+  ],
+  "diff": "Hard",
+  "title": "123. Best Time to Buy and Sell Stock III",
+  "question": "<div><p>Say you have an array for which the <em>i</em><sup>th</sup> element is the price of a given stock on day <em>i</em>.</p>\n\n<p>Design an algorithm to find the maximum profit. You may complete at most <em>two</em> transactions.</p>\n\n<p><strong>Note:&nbsp;</strong>You may not engage in multiple transactions at the same time (i.e., you must sell the stock before you buy again).</p>\n\n<p><strong>Example 1:</strong></p>\n\n<pre><strong>Input:</strong> [3,3,5,0,0,3,1,4]\n<strong>Output:</strong> 6\n<strong>Explanation:</strong> Buy on day 4 (price = 0) and sell on day 6 (price = 3), profit = 3-0 = 3.\n&nbsp;            Then buy on day 7 (price = 1) and sell on day 8 (price = 4), profit = 4-1 = 3.</pre>\n\n<p><strong>Example 2:</strong></p>\n\n<pre><strong>Input:</strong> [1,2,3,4,5]\n<strong>Output:</strong> 4\n<strong>Explanation:</strong> Buy on day 1 (price = 1) and sell on day 5 (price = 5), profit = 5-1 = 4.\n&nbsp;            Note that you cannot buy on day 1, buy on day 2 and sell them later, as you are\n&nbsp;            engaging multiple transactions at the same time. You must sell before buying again.\n</pre>\n\n<p><strong>Example 3:</strong></p>\n\n<pre><strong>Input:</strong> [7,6,4,3,1]\n<strong>Output:</strong> 0\n<strong>Explanation:</strong> In this case, no transaction is done, i.e. max profit = 0.</pre>\n</div>",
+  "url": "https://leetcode.com/problems/best-time-to-buy-and-sell-stock-iii/",
+  "companies": {}
+}

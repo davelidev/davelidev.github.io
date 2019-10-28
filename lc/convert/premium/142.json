@@ -1,0 +1,13 @@
+{
+  "categories": [
+    "Linked List",
+    "Two Pointers"
+  ],
+  "diff": "Medium",
+  "title": "142. Linked List Cycle II",
+  "question": "<div><p>Given a linked list, return the node where the cycle begins. If there is no cycle, return <code>null</code>.</p>\n\n<p>To represent a cycle in the given linked list, we use an integer <code>pos</code> which represents the position (0-indexed)&nbsp;in the linked list where tail connects to. If <code>pos</code> is <code>-1</code>, then there is no cycle in the linked list.</p>\n\n<p><b>Note:</b> Do not modify the linked list.</p>\n\n<p>&nbsp;</p>\n\n<p><strong>Example 1:</strong></p>\n\n<pre><strong>Input: </strong>head = [3,2,0,-4], pos = 1\n<strong>Output: </strong>tail connects to node index 1\n<strong>Explanation:</strong> There is a cycle in the linked list, where tail connects to the second node.\n</pre>\n\n<p><img alt=\"\" src=\"https://assets.leetcode.com/uploads/2018/12/07/circularlinkedlist.png\" style=\"height: 97px; width: 300px;\"></p>\n\n<p><strong>Example 2:</strong></p>\n\n<pre><strong>Input: </strong>head = [1,2], pos = 0\n<strong>Output: </strong>tail connects to node index 0\n<strong>Explanation:</strong> There is a cycle in the linked list, where tail connects to the first node.\n</pre>\n\n<p><img alt=\"\" src=\"https://assets.leetcode.com/uploads/2018/12/07/circularlinkedlist_test2.png\" style=\"height: 74px; width: 141px;\"></p>\n\n<p><strong>Example 3:</strong></p>\n\n<pre><strong>Input: </strong>head = [1], pos = -1\n<strong>Output: </strong>no cycle\n<strong>Explanation:</strong> There is no cycle in the linked list.\n</pre>\n\n<p><img alt=\"\" src=\"https://assets.leetcode.com/uploads/2018/12/07/circularlinkedlist_test3.png\" style=\"height: 45px; width: 45px;\"></p>\n\n<p>&nbsp;</p>\n\n<p><b>Follow-up</b>:<br>\nCan you solve it without using extra space?</p>\n</div>",
+  "url": "https://leetcode.com/problems/linked-list-cycle-ii/",
+  "companies": {
+    "Amazon": 3
+  }
+}

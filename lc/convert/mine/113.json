@@ -1,0 +1,12 @@
+{
+  "categories": [
+    "Tree",
+    "Depth-first Search"
+  ],
+  "diff": "Medium",
+  "title": "113. Path Sum II",
+  "question": "<div><p>Given a binary tree and a sum, find all root-to-leaf paths where each path's sum equals the given sum.</p>\n\n<p><strong>Note:</strong>&nbsp;A leaf is a node with no children.</p>\n\n<p><strong>Example:</strong></p>\n\n<p>Given the below binary tree and <code>sum = 22</code>,</p>\n\n<pre>      <strong>5</strong>\n     <strong>/ \\</strong>\n    <strong>4   8</strong>\n   <strong>/</strong>   / <strong>\\</strong>\n  <strong>11</strong>  13  <strong>4</strong>\n /  <strong>\\</strong>    <strong>/</strong> \\\n7    <strong>2</strong>  <strong>5</strong>   1\n</pre>\n\n<p>Return:</p>\n\n<pre>[\n   [5,4,11,2],\n   [5,8,4,5]\n]\n</pre>\n</div>",
+  "url": "https://leetcode.com/problems/path-sum-ii/",
+  "companies": {},
+  "code": "# Definition for a binary tree node.\\u000A# class TreeNode(object):\\u000A#     def __init__(self, x):\\u000A#         self.val \\u003D x\\u000A#         self.left \\u003D None\\u000A#         self.right \\u003D None\\u000A\\u000Aclass Solution(object):\\u000A    def pathSum(self, root, total):\\u000A        \\u0022\\u0022\\u0022\\u000A        :type root: TreeNode\\u000A        :type sum: int\\u000A        :rtype: List[List[int]]\\u000A        \\u0022\\u0022\\u0022\\u000A        cur_path \\u003D []\\u000A        res \\u003D []\\u000A        \\u000A        def _pathSum(node, sum_from_root):\\u000A            if not node:\\u000A                return\\u000A            sum_from_root +\\u003D node.val\\u000A            cur_path.append(node.val)\\u000A            if sum_from_root \\u003D\\u003D total and not node.left and not node.right:\\u000A                res.append(cur_path[:])\\u000A            _pathSum(node.left, sum_from_root)\\u000A            _pathSum(node.right, sum_from_root)\\u000A            cur_path.pop()\\u000A        _pathSum(root, 0)\\u000A        return res\\u000A            \\u000A            "
+}

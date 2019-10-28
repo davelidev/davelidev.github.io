@@ -1,0 +1,11 @@
+{
+  "categories": [
+    "Array"
+  ],
+  "diff": "Easy",
+  "title": "605. Can Place Flowers",
+  "question": "<div><p>Suppose you have a long flowerbed in which some of the plots are planted and some are not. However, flowers cannot be planted in adjacent plots - they would compete for water and both would die.</p>\n\n<p>Given a flowerbed (represented as an array containing 0 and 1, where 0 means empty and 1 means not empty), and a number <b>n</b>, return if <b>n</b> new flowers can be planted in it without violating the no-adjacent-flowers rule.</p>\n\n<p><b>Example 1:</b><br>\n</p><pre><b>Input:</b> flowerbed = [1,0,0,0,1], n = 1\n<b>Output:</b> True\n</pre>\n<p></p>\n\n<p><b>Example 2:</b><br>\n</p><pre><b>Input:</b> flowerbed = [1,0,0,0,1], n = 2\n<b>Output:</b> False\n</pre>\n<p></p>\n\n<p><b>Note:</b><br>\n</p><ol>\n<li>The input array won't violate no-adjacent-flowers rule.</li>\n<li>The input array size is in the range of [1, 20000].</li>\n<li><b>n</b> is a non-negative integer which won't exceed the input array size.</li>\n</ol>\n<p></p></div>",
+  "url": "https://leetcode.com/problems/can-place-flowers/",
+  "companies": {},
+  "code": "class Solution(object):\\u000A    def canPlaceFlowers(self, flowerbed, n):\\u000A        \\u0022\\u0022\\u0022\\u000A        :type flowerbed: List[int]\\u000A        :type n: int\\u000A        :rtype: bool\\u000A        \\u0022\\u0022\\u0022\\u000A        count \\u003D 0\\u000A        for i, planted in enumerate(flowerbed):\\u000A            if not planted:\\u000A                if (i \\u003D\\u003D 0 or not flowerbed[i\\u002D1]) and (i \\u003D\\u003D (len(flowerbed) \\u002D 1) or not flowerbed[i+1]):\\u000A                    flowerbed[i] \\u003D 1\\u000A                    count +\\u003D 1\\u000A            if count \\u003E\\u003D n: return True\\u000A        return False"
+}

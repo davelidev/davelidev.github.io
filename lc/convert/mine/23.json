@@ -1,0 +1,13 @@
+{
+  "categories": [
+    "Linked List",
+    "Divide and Conquer",
+    "Heap"
+  ],
+  "diff": "Hard",
+  "title": "23. Merge k Sorted Lists",
+  "question": "<div><p>Merge <em>k</em> sorted linked lists and return it as one sorted list. Analyze and describe its complexity.</p>\n\n<p><strong>Example:</strong></p>\n\n<pre><strong>Input:</strong>\n[\n&nbsp; 1-&gt;4-&gt;5,\n&nbsp; 1-&gt;3-&gt;4,\n&nbsp; 2-&gt;6\n]\n<strong>Output:</strong> 1-&gt;1-&gt;2-&gt;3-&gt;4-&gt;4-&gt;5-&gt;6\n</pre>\n</div>",
+  "url": "https://leetcode.com/problems/merge-k-sorted-lists/",
+  "companies": {},
+  "code": "# Definition for singly\\u002Dlinked list.\\u000A# class ListNode(object):\\u000A#     def __init__(self, x):\\u000A#         self.val \\u003D x\\u000A#         self.next \\u003D None\\u000A\\u000Aclass Solution(object):\\u000A    def mergeKLists(self, lists):\\u000A        \\u0022\\u0022\\u0022\\u000A        :type lists: List[ListNode]\\u000A        :rtype: ListNode\\u000A        \\u0022\\u0022\\u0022\\u000A        import heapq\\u000A        heap \\u003D [(lst.val, lst) for lst in lists if lst]\\u000A        heapq.heapify(heap)\\u000A        cur \\u003D dummy_head \\u003D ListNode(\\u0027dummy\\u0027)\\u000A        while heap:\\u000A            elem, lst \\u003D heapq.heappop(heap)\\u000A            cur.next \\u003D lst\\u000A            cur, lst \\u003D cur.next, lst.next\\u000A            if lst: heapq.heappush(heap, (lst.val, lst))\\u000A        return dummy_head.next\\u000A        "
+}

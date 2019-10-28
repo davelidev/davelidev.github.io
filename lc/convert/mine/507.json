@@ -1,0 +1,11 @@
+{
+  "categories": [
+    "Math"
+  ],
+  "diff": "Easy",
+  "title": "507. Perfect Number",
+  "question": "<div><p>We define the Perfect Number is a <b>positive</b> integer that is equal to the sum of all its <b>positive</b> divisors except itself. \n</p>\nNow, given an <b>integer</b> n, write a function that returns true when it is a perfect number and false when it is not.\n<p></p>\n\n<p><b>Example:</b><br>\n</p><pre><b>Input:</b> 28\n<b>Output:</b> True\n<b>Explanation:</b> 28 = 1 + 2 + 4 + 7 + 14\n</pre>\n<p></p>\n\n<p><b>Note:</b>\nThe input number <b>n</b> will not exceed 100,000,000. (1e8)\n</p></div>",
+  "url": "https://leetcode.com/problems/perfect-number/",
+  "companies": {},
+  "code": "class Solution(object):\\u000A    def checkPerfectNumber(self, num):\\u000A        \\u0022\\u0022\\u0022\\u000A        :type num: int\\u000A        :rtype: bool\\u000A        \\u0022\\u0022\\u0022\\u000A        if num \\u003C\\u003D 0: return False\\u000A        sqrt \\u003D num ** 0.5\\u000A        div_sum \\u003D sum(j for i in xrange(2, int(sqrt) + 1) if num % i \\u003D\\u003D 0 for j in [i, num / i]) + 1\\u000A        if int(sqrt) \\u003D\\u003D sqrt: div_sum \\u002D\\u003D sqrt\\u000A        return div_sum \\u003D\\u003D num"
+}

@@ -1,0 +1,14 @@
+{
+  "categories": [
+    "String"
+  ],
+  "diff": "Easy",
+  "title": "557. Reverse Words in a String III",
+  "question": "<div><p>Given a string, you need to reverse the order of characters in each word within a sentence while still preserving whitespace and initial word order.</p>\n\n<p><b>Example 1:</b><br>\n</p><pre><b>Input:</b> \"Let's take LeetCode contest\"\n<b>Output:</b> \"s'teL ekat edoCteeL tsetnoc\"\n</pre>\n<p></p>\n\n<p><b>Note:</b>\nIn the string, each word is separated by single space and there will not be any extra space in the string.\n</p></div>",
+  "url": "https://leetcode.com/problems/reverse-words-in-a-string-iii/",
+  "companies": {
+    "Microsoft": 12,
+    "Yahoo": 2,
+    "Snapchat": 2
+  }
+}

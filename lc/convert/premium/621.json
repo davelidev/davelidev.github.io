@@ -1,0 +1,15 @@
+{
+  "categories": [
+    "Array",
+    "Greedy",
+    "Queue"
+  ],
+  "diff": "Medium",
+  "title": "621. Task Scheduler",
+  "question": "<div><p>Given a char array representing tasks CPU need to do. It contains capital letters A to Z where different letters represent different tasks. Tasks could be done without original order. Each task could be done in one interval. For each interval, CPU could finish one task or just be idle.</p>\n\n<p>However, there is a non-negative cooling interval <b>n</b> that means between two <b>same tasks</b>, there must be at least n intervals that CPU are doing different tasks or just be idle.</p>\n\n<p>You need to return the <b>least</b> number of intervals the CPU will take to finish all the given tasks.</p>\n\n<p>&nbsp;</p>\n\n<p><b>Example:</b></p>\n\n<pre><b>Input:</b> tasks = [\"A\",\"A\",\"A\",\"B\",\"B\",\"B\"], n = 2\n<b>Output:</b> 8\n<b>Explanation:</b> A -&gt; B -&gt; idle -&gt; A -&gt; B -&gt; idle -&gt; A -&gt; B.\n</pre>\n\n<p>&nbsp;</p>\n\n<p><b>Note:</b></p>\n\n<ol>\n\t<li>The number of tasks is in the range [1, 10000].</li>\n\t<li>The integer n is in the range [0, 100].</li>\n</ol>\n</div>",
+  "url": "https://leetcode.com/problems/task-scheduler/",
+  "companies": {
+    "Facebook": 26,
+    "Amazon": 3
+  }
+}

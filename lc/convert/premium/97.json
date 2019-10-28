@@ -1,0 +1,17 @@
+{
+  "categories": [
+    "String",
+    "Dynamic Programming"
+  ],
+  "diff": "Hard",
+  "title": "97. Interleaving String",
+  "question": "<div><p>Given <em>s1</em>, <em>s2</em>, <em>s3</em>, find whether <em>s3</em> is formed by the interleaving of <em>s1</em> and <em>s2</em>.</p>\n\n<p><strong>Example 1:</strong></p>\n\n<pre><strong>Input:</strong> s1 = \"aabcc\", s2 = \"dbbca\", <em>s3</em> = \"aadbbcbcac\"\n<strong>Output:</strong> true\n</pre>\n\n<p><strong>Example 2:</strong></p>\n\n<pre><strong>Input:</strong> s1 = \"aabcc\", s2 = \"dbbca\", <em>s3</em> = \"aadbbbaccc\"\n<strong>Output:</strong> false\n</pre>\n</div>",
+  "url": "https://leetcode.com/problems/interleaving-string/",
+  "companies": {
+    "Apple": 8,
+    "Amazon": 4,
+    "Microsoft": 3,
+    "Google": 3
+  },
+  "code": "class Solution(object):\\u000A    def isInterleave(self, s1, s2, s3):\\u000A        if len(s1) + len(s2) !\\u003D len(s3): return False\\u000A        \\u000A        m, n \\u003D len(s1), len(s2)\\u000A        DP \\u003D [[False] * (n + 1) for _ in range(m + 1)]\\u000A        \\u000A        \\u000A        for i in range(m + 1):\\u000A            for j in range(n + 1):\\u000A                if i \\u003D\\u003D j \\u003D\\u003D 0: DP[i][j] \\u003D True\\u000A                elif j \\u003D\\u003D 0:\\u000A                    DP[i][j] \\u003D DP[i \\u002D 1][0] and s1[i \\u002D 1] \\u003D\\u003D s3[i \\u002D 1]\\u000A                elif i \\u003D\\u003D 0:\\u000A                    DP[i][j] \\u003D DP[0][j \\u002D 1] and s2[j \\u002D 1] \\u003D\\u003D s3[j \\u002D 1]\\u000A                else:\\u000A                    DP[i][j] \\u003D (DP[i\\u002D1][j] and s1[i \\u002D 1] \\u003D\\u003D s3[i + j \\u002D 1]) \\u005C\\u000A                            or (DP[i][j\\u002D1] and s2[j \\u002D 1] \\u003D\\u003D s3[i + j \\u002D 1])\\u000A        return DP[\\u002D1][\\u002D1]"
+}

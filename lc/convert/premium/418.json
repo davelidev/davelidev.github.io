@@ -1,0 +1,12 @@
+{
+  "categories": [
+    "Dynamic Programming"
+  ],
+  "diff": "Medium",
+  "title": "418. Sentence Screen Fitting",
+  "question": "<div><p>Given a <code>rows x cols</code> screen and a sentence represented by a list of <b>non-empty</b> words, find <b>how many times</b> the given sentence can be fitted on the screen.\n</p>\n\n<p><b>Note:</b>\n</p><ol>\n<li>A word cannot be split into two lines.</li>\n<li>The order of words in the sentence must remain unchanged.</li>\n<li>Two consecutive words <b>in a line</b> must be separated by a single space.</li>\n<li>Total words in the sentence won't exceed 100.</li>\n<li>Length of each word is greater than 0 and won't exceed 10.</li>\n<li>1 ≤ rows, cols ≤ 20,000.</li>\n</ol>\n<p></p>\n\n<p>\n<b>Example 1:</b> \n</p><pre><b>Input:</b>\nrows = 2, cols = 8, sentence = [\"hello\", \"world\"]\n\n<b>Output:</b> \n1\n\n<b>Explanation:</b>\nhello---\nworld---\n\nThe character '-' signifies an empty space on the screen.\n</pre>\n<p></p>\n\n<p>\n<b>Example 2:</b> \n</p><pre><b>Input:</b>\nrows = 3, cols = 6, sentence = [\"a\", \"bcd\", \"e\"]\n\n<b>Output:</b> \n2\n\n<b>Explanation:</b>\na-bcd- \ne-a---\nbcd-e-\n\nThe character '-' signifies an empty space on the screen.\n</pre>\n<p></p>\n\n<p>\n<b>Example 3:</b> \n</p><pre><b>Input:</b>\nrows = 4, cols = 5, sentence = [\"I\", \"had\", \"apple\", \"pie\"]\n\n<b>Output:</b> \n1\n\n<b>Explanation:</b>\nI-had\napple\npie-I\nhad--\n\nThe character '-' signifies an empty space on the screen.\n</pre>\n<p></p></div>",
+  "url": "https://leetcode.com/problems/sentence-screen-fitting/",
+  "companies": {
+    "Robinhood": 2
+  }
+}

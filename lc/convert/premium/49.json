@@ -1,0 +1,29 @@
+{
+  "categories": [
+    "Hash Table",
+    "String"
+  ],
+  "diff": "Medium",
+  "title": "49. Group Anagrams",
+  "question": "<div><p>Given an array of strings, group anagrams together.</p>\n\n<p><strong>Example:</strong></p>\n\n<pre><strong>Input:</strong> <code>[\"eat\", \"tea\", \"tan\", \"ate\", \"nat\", \"bat\"]</code>,\n<strong>Output:</strong>\n[\n  [\"ate\",\"eat\",\"tea\"],\n  [\"nat\",\"tan\"],\n  [\"bat\"]\n]</pre>\n\n<p><strong>Note:</strong></p>\n\n<ul>\n\t<li>All inputs will be in lowercase.</li>\n\t<li>The order of your output does not&nbsp;matter.</li>\n</ul>\n</div>",
+  "url": "https://leetcode.com/problems/group-anagrams/",
+  "companies": {
+    "Amazon": 22,
+    "Goldman Sachs": 5,
+    "Uber": 4,
+    "Microsoft": 4,
+    "Apple": 4,
+    "Yandex": 4,
+    "Affirm": 4,
+    "Wish": 4,
+    "Facebook": 3,
+    "Yahoo": 2,
+    "Google": 2,
+    "Bloomberg": 2,
+    "Hulu": 2,
+    "Adobe": 2,
+    "Walmart Labs": 2,
+    "Booking.com": 2,
+    "Docusign": 2
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "categories": [
+    "Array"
+  ],
+  "diff": "Easy",
+  "title": "414. Third Maximum Number",
+  "question": "<div><p>Given a <b>non-empty</b> array of integers, return the <b>third</b> maximum number in this array. If it does not exist, return the maximum number. The time complexity must be in O(n).</p>\n\n<p><b>Example 1:</b><br>\n</p><pre><b>Input:</b> [3, 2, 1]\n\n<b>Output:</b> 1\n\n<b>Explanation:</b> The third maximum is 1.\n</pre>\n<p></p>\n\n<p><b>Example 2:</b><br>\n</p><pre><b>Input:</b> [1, 2]\n\n<b>Output:</b> 2\n\n<b>Explanation:</b> The third maximum does not exist, so the maximum (2) is returned instead.\n</pre>\n<p></p>\n\n<p><b>Example 3:</b><br>\n</p><pre><b>Input:</b> [2, 2, 3, 1]\n\n<b>Output:</b> 1\n\n<b>Explanation:</b> Note that the third maximum here means the third maximum distinct number.\nBoth numbers with value 2 are both considered as second maximum.\n</pre>\n<p></p></div>",
+  "url": "https://leetcode.com/problems/third-maximum-number/",
+  "companies": {},
+  "code": "class Solution(object):\\u000A    def thirdMax(self, nums):\\u000A        import heapq\\u000A        if not nums: return []\\u000A        else:\\u000A            nums \\u003D list(set(nums))\\u000A            if len(nums) \\u003C 3: return max(nums)\\u000A            for _ in range(2):\\u000A                nums[nums.index(max(nums))] \\u003D float(\\u0027\\u002Dinf\\u0027)\\u000A            return max(nums)\\u000A        "
+}

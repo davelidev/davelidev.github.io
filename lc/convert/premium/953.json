@@ -1,0 +1,13 @@
+{
+  "categories": [
+    "Hash Table"
+  ],
+  "diff": "Easy",
+  "title": "953. Verifying an Alien Dictionary",
+  "question": "<div><p>In an alien language, surprisingly they also use english lowercase letters, but possibly&nbsp;in a different <code>order</code>. The&nbsp;<code>order</code> of the alphabet&nbsp;is some permutation&nbsp;of lowercase letters.</p>\n\n<p>Given a sequence of <code>words</code>&nbsp;written in the alien language,&nbsp;and the <code>order</code> of the alphabet,&nbsp;return <code>true</code> if and only if the given <code>words</code>&nbsp;are sorted lexicographicaly in this alien language.</p>\n\n<p>&nbsp;</p>\n\n<div>\n<p><strong>Example 1:</strong></p>\n\n<pre><strong>Input: </strong>words = <span id=\"example-input-1-1\">[\"hello\",\"leetcode\"]</span>, order = <span id=\"example-input-1-2\">\"hlabcdefgijkmnopqrstuvwxyz\"</span>\n<strong>Output: </strong><span id=\"example-output-1\">true</span>\n<strong>Explanation: </strong><span id=\"example-output-1\">As 'h' comes before 'l' in this language, then the sequence is sorted.</span>\n</pre>\n\n<div>\n<p><strong>Example 2:</strong></p>\n\n<pre><strong>Input: </strong>words = <span id=\"example-input-2-1\">[\"word\",\"world\",\"row\"]</span>, order = <span id=\"example-input-2-2\">\"worldabcefghijkmnpqstuvxyz\"</span>\n<strong>Output: </strong><span id=\"example-output-2\">false</span>\n<strong>Explanation: </strong><span id=\"example-output-1\">As 'd' comes after 'l' in this language, then words[0] &gt; words[1], hence the sequence is unsorted.</span>\n</pre>\n\n<div>\n<p><strong>Example 3:</strong></p>\n\n<pre><strong>Input: </strong>words = <span id=\"example-input-3-1\">[\"apple\",\"app\"]</span>, order = <span id=\"example-input-3-2\">\"abcdefghijklmnopqrstuvwxyz\"</span>\n<strong>Output: </strong><span id=\"example-output-3\">false\n</span><strong>Explanation: </strong>The first three characters \"app\" match, and the second string is shorter (in size.) According to lexicographical rules \"apple\" &gt; \"app\", because 'l' &gt; '∅', where '∅' is defined as the blank character which is less than any other character (<a href=\"https://en.wikipedia.org/wiki/Lexicographical_order\" target=\"_blank\">More info</a>).\n</pre>\n\n<p>&nbsp;</p>\n\n<p><strong>Note:</strong></p>\n\n<ol>\n\t<li><code>1 &lt;= words.length &lt;= 100</code></li>\n\t<li><code>1 &lt;= words[i].length &lt;= 20</code></li>\n\t<li><code>order.length == 26</code></li>\n\t<li>All characters in <code>words[i]</code> and <code>order</code> are english lowercase letters.</li>\n</ol>\n</div>\n</div>\n</div>\n</div>",
+  "url": "https://leetcode.com/problems/verifying-an-alien-dictionary/",
+  "companies": {
+    "Facebook": 68,
+    "Microsoft": 2
+  }
+}

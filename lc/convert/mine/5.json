@@ -1,0 +1,12 @@
+{
+  "categories": [
+    "String",
+    "Dynamic Programming"
+  ],
+  "diff": "Medium",
+  "title": "5. Longest Palindromic Substring",
+  "question": "<div><p>Given a string <strong>s</strong>, find the longest palindromic substring in <strong>s</strong>. You may assume that the maximum length of <strong>s</strong> is 1000.</p>\n\n<p><strong>Example 1:</strong></p>\n\n<pre><strong>Input:</strong> \"babad\"\n<strong>Output:</strong> \"bab\"\n<strong>Note:</strong> \"aba\" is also a valid answer.\n</pre>\n\n<p><strong>Example 2:</strong></p>\n\n<pre><strong>Input:</strong> \"cbbd\"\n<strong>Output:</strong> \"bb\"\n</pre>\n</div>",
+  "url": "https://leetcode.com/problems/longest-palindromic-substring/",
+  "companies": {},
+  "code": "class Solution(object):\\u000D\\u000A    def longestPalindrome(self, s):\\u000D\\u000A        \\u0022\\u0022\\u0022\\u000D\\u000A        :type s: str\\u000D\\u000A        :rtype: str\\u000D\\u000A        \\u0022\\u0022\\u0022\\u000D\\u000A        def get_pal(i, j):\\u000D\\u000A            while 0 \\u003C i and j  \\u003C len(s) \\u002D 1 and s[i \\u002D 1] \\u003D\\u003D s[j + 1]:\\u000D\\u000A                i \\u002D\\u003D 1\\u000D\\u000A                j +\\u003D 1\\u000D\\u000A            return [i, j + 1]\\u000D\\u000A                \\u000D\\u000A        max_pal \\u003D \\u0022\\u0022\\u000D\\u000A        for idx in range(len(s)):\\u000D\\u000A            pal1 \\u003D get_pal(idx, idx)\\u000D\\u000A            pal2 \\u003D get_pal(idx + 1, idx)\\u000D\\u000A            if pal1[1]\\u002Dpal1[0] \\u003E len(max_pal):\\u000D\\u000A                max_pal \\u003D s[pal1[0]: pal1[1]]\\u000D\\u000A            if pal2[1] \\u002D pal2[0] \\u003E len(max_pal):\\u000D\\u000A                max_pal \\u003D s[pal2[0]: pal2[1]]\\u000D\\u000A        return max_pal\\u000D\\u000A            "
+}

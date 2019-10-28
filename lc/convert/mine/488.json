@@ -1,0 +1,10 @@
+{
+  "categories": [
+    "Depth-first Search"
+  ],
+  "diff": "Hard",
+  "title": "488. Zuma Game",
+  "question": "<div><p>Think about Zuma Game. You have a row of balls on the table, colored red(R), yellow(Y), blue(B), green(G), and white(W). You also have several balls in your hand.</p>\n<p>\nEach time, you may choose a ball in your hand, and insert it into the row (including the leftmost place and rightmost place). Then, if there is a group of 3 or more balls in the same color touching, remove these balls. Keep doing this until no more balls can be removed.</p>\n<p>\nFind the minimal balls you have to insert to remove all the balls on the table. If you cannot remove all the balls, output -1.\n</p>\n<pre><p><b>Examples:</b><br>\n<b>Input:</b> \"WRRBBW\", \"RB\"\n<b>Output:</b> -1\n<b>Explanation:</b> WRRBBW -&gt; WRR[R]BBW -&gt; WBBW -&gt; WBB[B]W -&gt; WW\n\n<b>Input:</b> \"WWRRBBWW\", \"WRBRW\"\n<b>Output:</b> 2\n<b>Explanation:</b> WWRRBBWW -&gt; WWRR[R]BBWW -&gt; WWBBWW -&gt; WWBB[B]WW -&gt; WWWW -&gt; empty\n\n<b>Input:</b>\"G\", \"GGGGG\"\n<b>Output:</b> 2\n<b>Explanation:</b> G -&gt; G[G] -&gt; GG[G] -&gt; empty \n\n<b>Input:</b> \"RBYYBBRRB\", \"YRBGB\"\n<b>Output:</b> 3\n<b>Explanation:</b> RBYYBBRRB -&gt; RBYY[Y]BBRRB -&gt; RBBBRRB -&gt; RRRB -&gt; B -&gt; B[B] -&gt; BB[B] -&gt; empty \n</p></pre>\n<p></p>\n\n<p><b>Note:</b><br>\n</p><ol>\n<li>You may assume that the initial row of balls on the table won’t have any 3 or more consecutive balls with the same color.</li>\n<li>The number of balls on the table won't exceed 20, and the string represents these balls is called \"board\" in the input.</li>\n<li>The number of balls in your hand won't exceed 5, and the string represents these balls is called \"hand\" in the input.</li>\n<li>Both input strings will be non-empty and only contain characters 'R','Y','B','G','W'.</li>\n</ol>\n<p></p></div>",
+  "url": "https://leetcode.com/problems/zuma-game/",
+  "companies": {}
+}

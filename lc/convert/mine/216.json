@@ -1,0 +1,12 @@
+{
+  "categories": [
+    "Array",
+    "Backtracking"
+  ],
+  "diff": "Medium",
+  "title": "216. Combination Sum III",
+  "question": "<div><div>\n<p>Find all possible combinations of <i><b>k</b></i> numbers that add up to a number <i><b>n</b></i>, given that only numbers from 1 to 9 can be used and each combination should be a unique set of numbers.</p>\n\n<p><strong>Note:</strong></p>\n\n<ul>\n\t<li>All numbers will be positive integers.</li>\n\t<li>The solution set must not contain duplicate combinations.</li>\n</ul>\n\n<p><strong>Example 1:</strong></p>\n\n<pre><strong>Input:</strong> <i><b>k</b></i> = 3, <i><b>n</b></i> = 7\n<strong>Output:</strong> [[1,2,4]]\n</pre>\n\n<p><strong>Example 2:</strong></p>\n\n<pre><strong>Input:</strong> <i><b>k</b></i> = 3, <i><b>n</b></i> = 9\n<strong>Output:</strong> [[1,2,6], [1,3,5], [2,3,4]]\n</pre>\n</div></div>",
+  "url": "https://leetcode.com/problems/combination-sum-iii/",
+  "companies": {},
+  "code": "class Solution(object):\\u000A    def combinationSum3(self, k, n):\\u000A        def _comb(idx, k, n, cur\\u003D[], res\\u003D[]):\\u000A            if n \\u003D\\u003D 0 and k \\u003D\\u003D 0:\\u000A                res.append(cur[:])\\u000A                return res\\u000A            elif idx \\u003E 9 or k \\u003D\\u003D 0 or n \\u003C 0: return res\\u000A            else:\\u000A                cur.append(idx)\\u000A                _comb(idx + 1, k \\u002D 1, n \\u002D idx)\\u000A                cur.pop()\\u000A                _comb(idx + 1, k, n)\\u000A                return res\\u000A        return _comb(1, k, n)"
+}

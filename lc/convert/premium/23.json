@@ -1,0 +1,31 @@
+{
+  "categories": [
+    "Linked List",
+    "Divide and Conquer",
+    "Heap"
+  ],
+  "diff": "Hard",
+  "title": "23. Merge k Sorted Lists",
+  "question": "<div><p>Merge <em>k</em> sorted linked lists and return it as one sorted list. Analyze and describe its complexity.</p>\n\n<p><strong>Example:</strong></p>\n\n<pre><strong>Input:</strong>\n[\n&nbsp; 1-&gt;4-&gt;5,\n&nbsp; 1-&gt;3-&gt;4,\n&nbsp; 2-&gt;6\n]\n<strong>Output:</strong> 1-&gt;1-&gt;2-&gt;3-&gt;4-&gt;4-&gt;5-&gt;6\n</pre>\n</div>",
+  "url": "https://leetcode.com/problems/merge-k-sorted-lists/",
+  "companies": {
+    "Amazon": 36,
+    "Facebook": 26,
+    "Microsoft": 7,
+    "Google": 7,
+    "Oracle": 6,
+    "Walmart Labs": 4,
+    "ByteDance": 4,
+    "Apple": 3,
+    "Bloomberg": 3,
+    "Yandex": 3,
+    "Uber": 2,
+    "LinkedIn": 2,
+    "eBay": 2,
+    "Yahoo": 2,
+    "Twitter": 2,
+    "Wish": 2,
+    "Atlassian": 2
+  },
+  "code": "# Definition for singly\\u002Dlinked list.\\u000A# class ListNode(object):\\u000A#     def __init__(self, x):\\u000A#         self.val \\u003D x\\u000A#         self.next \\u003D None\\u000A\\u000Aclass Solution(object):\\u000A    \\u000A    def mergeKLists(self, lsts):\\u000A        def merge_sort(i, j):\\u000A            if j \\u002D i \\u003C 2: return\\u000A            mid \\u003D (i + j) / 2\\u000A            merge_sort(i, mid)\\u000A            merge_sort(mid, j)\\u000A            \\u000A            # merge right into left\\u000A            l, r \\u003D lsts[i], lsts[mid]\\u000A            head \\u003D cur \\u003D ListNode(\\u0027Dummy\\u0027)\\u000A            while l or r:\\u000A                if not l or not r:\\u000A                    cur.next \\u003D l or r\\u000A                    l \\u003D r \\u003D None\\u000A                else:\\u000A                    if l.val \\u003C\\u003D r.val:  cur.next, cur, l \\u003D l, l, l.next\\u000A                    else: cur.next, cur, r \\u003D r, r, r.next\\u000A            lsts[i], lsts[mid] \\u003D head.next, None\\u000A        merge_sort(0, len(lsts))\\u000A        return lsts[0] if lsts else None\\u000A    \\u000A    def _mergeKLists(self, lists):\\u000A        import heapq\\u000A        head \\u003D cur \\u003D ListNode(\\u0027Dummy\\u0027)\\u000A        lists \\u003D [(ll.val, ll) for ll in lists if ll]\\u000A        heapq.heapify(lists)\\u000A        while lists:\\u000A            val, ll \\u003D heapq.heappop(lists)\\u000A            cur.next \\u003D ll\\u000A            cur \\u003D cur.next\\u000A            if ll.next:\\u000A                heapq.heappush(lists, (ll.next.val, ll.next))\\u000A        return head.next"
+}

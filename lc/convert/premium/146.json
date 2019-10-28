@@ -1,0 +1,31 @@
+{
+  "categories": [
+    "Design"
+  ],
+  "diff": "Medium",
+  "title": "146. LRU Cache",
+  "question": "<div><p>Design and implement a data structure for <a href=\"https://en.wikipedia.org/wiki/Cache_replacement_policies#LRU\" target=\"_blank\">Least Recently Used (LRU) cache</a>. It should support the following operations: <code>get</code> and <code>put</code>.</p>\n\n<p><code>get(key)</code> - Get the value (will always be positive) of the key if the key exists in the cache, otherwise return -1.<br>\n<code>put(key, value)</code> - Set or insert the value if the key is not already present. When the cache reached its capacity, it should invalidate the least recently used item before inserting a new item.</p>\n\n<p>The cache is initialized with a <strong>positive</strong> capacity.</p>\n\n<p><b>Follow up:</b><br>\nCould you do both operations in <b>O(1)</b> time complexity?</p>\n\n<p><b>Example:</b></p>\n\n<pre>LRUCache cache = new LRUCache( 2 /* capacity */ );\n\ncache.put(1, 1);\ncache.put(2, 2);\ncache.get(1);       // returns 1\ncache.put(3, 3);    // evicts key 2\ncache.get(2);       // returns -1 (not found)\ncache.put(4, 4);    // evicts key 1\ncache.get(1);       // returns -1 (not found)\ncache.get(3);       // returns 3\ncache.get(4);       // returns 4\n</pre>\n\n<p>&nbsp;</p>\n</div>",
+  "url": "https://leetcode.com/problems/lru-cache/",
+  "companies": {
+    "Amazon": 52,
+    "Microsoft": 22,
+    "Bloomberg": 14,
+    "Apple": 13,
+    "Twilio": 8,
+    "Oracle": 8,
+    "Facebook": 7,
+    "Google": 6,
+    "Two Sigma": 6,
+    "Yahoo": 6,
+    "Asana": 6,
+    "VMware": 5,
+    "Uber": 5,
+    "Yandex": 4,
+    "ByteDance": 4,
+    "Cruise Automation": 3,
+    "Cisco": 3,
+    "Adobe": 3,
+    "LinkedIn": 3,
+    "Salesforce": 3
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "categories": [
+    "Design"
+  ],
+  "diff": "Medium",
+  "title": "362. Design Hit Counter",
+  "question": "<div><p>Design a hit counter which counts the number of hits received in the past 5 minutes.</p>\n\n<p>Each function accepts a timestamp parameter (in seconds granularity) and you may assume that calls are being made to the system in chronological order (ie, the timestamp is monotonically increasing). You may assume that the earliest timestamp starts at 1.</p>\n\n<p>It is possible that several hits arrive roughly at the same time.</p>\n\n<p><b>Example:</b></p>\n\n<pre>HitCounter counter = new HitCounter();\n\n// hit at timestamp 1.\ncounter.hit(1);\n\n// hit at timestamp 2.\ncounter.hit(2);\n\n// hit at timestamp 3.\ncounter.hit(3);\n\n// get hits at timestamp 4, should return 3.\ncounter.getHits(4);\n\n// hit at timestamp 300.\ncounter.hit(300);\n\n// get hits at timestamp 300, should return 4.\ncounter.getHits(300);\n\n// get hits at timestamp 301, should return 3.\ncounter.getHits(301); \n</pre>\n\n<p><b>Follow up:</b><br>\nWhat if the number of hits per second could be very large? Does your design scale?</p></div>",
+  "url": "https://leetcode.com/problems/design-hit-counter/",
+  "companies": {
+    "Amazon": 4,
+    "Oracle": 3,
+    "Microsoft": 3,
+    "Quip (Salesforce)": 2,
+    "Apple": 2,
+    "Snapchat": 2,
+    "LinkedIn": 2,
+    "Booking.com": 2
+  }
+}

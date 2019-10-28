@@ -1,0 +1,17 @@
+{
+  "categories": [
+    "Tree",
+    "Depth-first Search"
+  ],
+  "diff": "Easy",
+  "title": "104. Maximum Depth of Binary Tree",
+  "question": "<div><p>Given a binary tree, find its maximum depth.</p>\n\n<p>The maximum depth is the number of nodes along the longest path from the root node down to the farthest leaf node.</p>\n\n<p><strong>Note:</strong>&nbsp;A leaf is a node with no children.</p>\n\n<p><strong>Example:</strong></p>\n\n<p>Given binary tree <code>[3,9,20,null,null,15,7]</code>,</p>\n\n<pre>    3\n   / \\\n  9  20\n    /  \\\n   15   7</pre>\n\n<p>return its depth = 3.</p>\n</div>",
+  "url": "https://leetcode.com/problems/maximum-depth-of-binary-tree/",
+  "companies": {
+    "Google": 4,
+    "LinkedIn": 3,
+    "Amazon": 2,
+    "Microsoft": 2,
+    "Facebook": 2
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "categories": [
+    "Tree"
+  ],
+  "diff": "Medium",
+  "title": "250. Count Univalue Subtrees",
+  "question": "<div><p>Given a binary tree, count the number of uni-value subtrees.</p>\n\n<p>A Uni-value subtree means all nodes of the subtree have the same value.</p>\n\n<p><b>Example :</b></p>\n\n<pre><b>Input:</b>  root = [5,1,5,5,5,null,5]\n\n              5\n             / \\\n            1   5\n           / \\   \\\n          5   5   5\n\n<b>Output:</b> 4\n</pre>\n</div>",
+  "url": "https://leetcode.com/problems/count-univalue-subtrees/",
+  "companies": {
+    "Box": 3
+  },
+  "code": "\\u000A\\u000Aclass Solution(object):\\u000A    def countUnivalSubtrees(self, root):\\u000A        self.cnt \\u003D 0\\u000A        def _cnt(node, par):\\u000A            if not node: return True\\u000A            \\u000A            l, r \\u003D _cnt(node.left, node), _cnt(node.right, node)\\u000A            \\u000A            self.cnt +\\u003D l and r\\u000A            return l and r and node.val \\u003D\\u003D par.val\\u000A        _cnt(root, root)\\u000A        return self.cnt"
+}

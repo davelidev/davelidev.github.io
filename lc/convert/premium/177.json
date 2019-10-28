@@ -1,0 +1,10 @@
+{
+  "categories": [],
+  "diff": "Medium",
+  "title": "177. Nth Highest Salary",
+  "question": "<div><p>Write a SQL query to get the <em>n</em><sup>th</sup> highest salary from the <code>Employee</code> table.</p>\n\n<pre>+----+--------+\n| Id | Salary |\n+----+--------+\n| 1  | 100    |\n| 2  | 200    |\n| 3  | 300    |\n+----+--------+\n</pre>\n\n<p>For example, given the above Employee table, the <em>n</em><sup>th</sup> highest salary where <em>n</em> = 2 is <code>200</code>. If there is no <em>n</em><sup>th</sup> highest salary, then the query should return <code>null</code>.</p>\n\n<pre>+------------------------+\n| getNthHighestSalary(2) |\n+------------------------+\n| 200                    |\n+------------------------+\n</pre>\n</div>",
+  "url": "https://leetcode.com/problems/nth-highest-salary/",
+  "companies": {
+    "Apple": 5
+  }
+}

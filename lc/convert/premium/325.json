@@ -1,0 +1,12 @@
+{
+  "categories": [
+    "Hash Table"
+  ],
+  "diff": "Medium",
+  "title": "325. Maximum Size Subarray Sum Equals k",
+  "question": "<div><p>Given an array <i>nums</i> and a target value <i>k</i>, find the maximum length of a subarray that sums to <i>k</i>. If there isn't one, return 0 instead.</p>\n\n<p><b>Note:</b><br>\nThe sum of the entire <i>nums</i> array is guaranteed to fit within the 32-bit signed integer range.</p>\n\n<p><b>Example 1:</b></p>\n\n<pre><strong>Input: </strong><i>nums</i> = <code>[1, -1, 5, -2, 3]</code>, <i>k</i> = <code>3</code>\n<strong>Output: </strong>4 \n<strong>Explanation: </strong>The subarray <code>[1, -1, 5, -2]</code> sums to 3 and is the longest.\n</pre>\n\n<p><b>Example 2:</b></p>\n\n<pre><strong>Input: </strong><i>nums</i> = <code>[-2, -1, 2, 1]</code>, <i>k</i> = <code>1</code>\n<strong>Output: </strong>2 <strong>\nExplanation: </strong>The subarray <code>[-1, 2]</code> sums to 1 and is the longest.</pre>\n\n<p><b>Follow Up:</b><br>\nCan you do it in O(<i>n</i>) time?</p>\n</div>",
+  "url": "https://leetcode.com/problems/maximum-size-subarray-sum-equals-k/",
+  "companies": {
+    "Facebook": 2
+  }
+}

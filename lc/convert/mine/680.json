@@ -1,0 +1,11 @@
+{
+  "categories": [
+    "String"
+  ],
+  "diff": "Easy",
+  "title": "680. Valid Palindrome II",
+  "question": "<div><p>\nGiven a non-empty string <code>s</code>, you may delete <b>at most</b> one character.  Judge whether you can make it a palindrome.\n</p>\n\n<p><b>Example 1:</b><br>\n</p><pre><b>Input:</b> \"aba\"\n<b>Output:</b> True\n</pre>\n<p></p>\n\n<p><b>Example 2:</b><br>\n</p><pre><b>Input:</b> \"abca\"\n<b>Output:</b> True\n<b>Explanation:</b> You could delete the character 'c'.\n</pre>\n<p></p>\n\n<p><b>Note:</b><br>\n</p><ol>\n<li>The string will only contain lowercase characters a-z.\nThe maximum length of the string is 50000.</li>\n</ol>\n<p></p></div>",
+  "url": "https://leetcode.com/problems/valid-palindrome-ii/",
+  "companies": {},
+  "code": "class Solution(object):\\u000A    def validPalindrome(self, s):\\u000A        \\u0022\\u0022\\u0022\\u000A        :type s: str\\u000A        :rtype: bool\\u000A        \\u0022\\u0022\\u0022\\u000A        for i in range(len(s) / 2):\\u000A            j \\u003D len(s) \\u002D i \\u002D 1\\u000A            if s[i] !\\u003D s[j]:\\u000A                s1 \\u003D s[:i] + s[i + 1:]\\u000A                s2 \\u003D s[:j] + s[j + 1:]\\u000A                return s1 \\u003D\\u003D s1[::\\u002D1] or s2 \\u003D\\u003D s2[::\\u002D1]\\u000A        return True"
+}

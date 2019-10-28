@@ -1,0 +1,12 @@
+{
+  "categories": [
+    "Hash Table"
+  ],
+  "diff": "Easy",
+  "title": "734. Sentence Similarity",
+  "question": "<div><p>Given two sentences <code>words1, words2</code> (each represented as an array of strings), and a list of similar word pairs <code>pairs</code>, determine if two sentences are similar.</p>\n\n<p>For example, \"great acting skills\" and \"fine drama talent\" are similar, if the similar word pairs are <code>pairs = [[\"great\", \"fine\"], [\"acting\",\"drama\"], [\"skills\",\"talent\"]]</code>.</p>\n\n<p>Note that the similarity relation is not transitive. For example, if \"great\" and \"fine\" are similar, and \"fine\" and \"good\" are similar, \"great\" and \"good\" are <b>not</b> necessarily similar.</p>\n\n<p>However, similarity is symmetric. For example, \"great\" and \"fine\" being similar is the same as \"fine\" and \"great\" being similar.</p>\n\n<p>Also, a word is always similar with itself. For example, the sentences <code>words1 = [\"great\"], words2 = [\"great\"], pairs = []</code> are similar, even though there are no specified similar word pairs.</p>\n\n<p>Finally, sentences can only be similar if they have the same number of words. So a sentence like <code>words1 = [\"great\"]</code> can never be similar to <code>words2 = [\"doubleplus\",\"good\"]</code>.</p>\n\n<p><b>Note:</b></p>\n\n<ul>\n\t<li>The length of <code>words1</code> and <code>words2</code> will not exceed <code>1000</code>.</li>\n\t<li>The length of <code>pairs</code> will not exceed <code>2000</code>.</li>\n\t<li>The length of each <code>pairs[i]</code> will be <code>2</code>.</li>\n\t<li>The length of each <code>words[i]</code> and <code>pairs[i][j]</code> will be in the range <code>[1, 20]</code>.</li>\n</ul>\n\n<p>&nbsp;</p>\n</div>",
+  "url": "https://leetcode.com/problems/sentence-similarity/",
+  "companies": {
+    "Google": 2
+  }
+}

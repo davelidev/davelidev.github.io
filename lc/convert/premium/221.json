@@ -1,0 +1,18 @@
+{
+  "categories": [
+    "Dynamic Programming"
+  ],
+  "diff": "Medium",
+  "title": "221. Maximal Square",
+  "question": "<div><p>Given a 2D binary matrix filled with 0's and 1's, find the largest square containing only 1's and return its area.</p>\n\n<p><strong>Example:</strong></p>\n\n<pre><strong>Input: \n</strong>\n1 0 1 0 0\n1 0 <font color=\"red\">1</font> <font color=\"red\">1</font> 1\n1 1 <font color=\"red\">1</font> <font color=\"red\">1</font> 1\n1 0 0 1 0\n\n<strong>Output: </strong>4\n</pre></div>",
+  "url": "https://leetcode.com/problems/maximal-square/",
+  "companies": {
+    "Google": 8,
+    "Uber": 5,
+    "Amazon": 4,
+    "VMware": 4,
+    "Huawei": 2,
+    "Oracle": 2,
+    "Citadel": 2
+  }
+}

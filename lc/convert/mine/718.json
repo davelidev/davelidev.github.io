@@ -1,0 +1,14 @@
+{
+  "categories": [
+    "Array",
+    "Hash Table",
+    "Binary Search",
+    "Dynamic Programming"
+  ],
+  "diff": "Medium",
+  "title": "718. Maximum Length of Repeated Subarray",
+  "question": "<div><p>Given two integer arrays <code>A</code> and <code>B</code>, return the maximum length of an subarray that appears in both arrays.</p>\n\n<p><b>Example 1:</b></p>\n\n<pre><b>Input:</b>\nA: [1,2,3,2,1]\nB: [3,2,1,4,7]\n<b>Output:</b> 3\n<b>Explanation:</b> \nThe repeated subarray with maximum length is [3, 2, 1].\n</pre>\n\n<p>&nbsp;</p>\n\n<p><b>Note:</b></p>\n\n<ol>\n\t<li>1 &lt;= len(A), len(B) &lt;= 1000</li>\n\t<li>0 &lt;= A[i], B[i] &lt; 100</li>\n</ol>\n\n<p>&nbsp;</p>\n</div>",
+  "url": "https://leetcode.com/problems/maximum-length-of-repeated-subarray/",
+  "companies": {},
+  "code": "class Solution(object):\\u000A    def findLength(self, A, B):\\u000A        \\u0022\\u0022\\u0022\\u000A        :type A: List[int]\\u000A        :type B: List[int]\\u000A        :rtype: int\\u000A        \\u0022\\u0022\\u0022\\u000A        if not A or not B: return 0\\u000A        dp \\u003D [[0] * (len(B) + 1) for _ in xrange((len(A)) + 1)]\\u000A        for i in range(len(A)):\\u000A            for j in range(len(B)):\\u000A                if A[i] \\u003D\\u003D B[j]: dp[i + 1][j + 1] \\u003D dp[i][j] + 1\\u000A        return max(item for row in dp for item in row)\\u000A                "
+}

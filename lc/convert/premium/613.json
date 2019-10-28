@@ -1,0 +1,8 @@
+{
+  "categories": [],
+  "diff": "Easy",
+  "title": "613. Shortest Distance in a Line",
+  "question": "<div class=\"sql-schema-wrapper__3VBi\"><a class=\"sql-schema-link__3cEg\">SQL Schema<svg viewBox=\"0 0 24 24\" width=\"1em\" height=\"1em\" class=\"icon__3Su4\"><path fill-rule=\"evenodd\" d=\"M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z\"></path></svg></a></div><div>Table <code>point</code> holds the x coordinate of some points on x-axis in a plane, which are all integers.\n<p>&nbsp;</p>\nWrite a query to find the shortest distance between two points in these points.\n\n<p>&nbsp;</p>\n\n<pre>| x   |\n|-----|\n| -1  |\n| 0   |\n| 2   |\n</pre>\n\n<p>&nbsp;</p>\nThe shortest distance is '1' obviously, which is from point '-1' to '0'. So the output is as below:\n\n<p>&nbsp;</p>\n\n<pre>| shortest|\n|---------|\n| 1       |\n</pre>\n\n<p>&nbsp;</p>\n<b>Note:</b> Every point is unique, which means there is no duplicates in table <code>point</code>.\n\n<p>&nbsp;</p>\n<b>Follow-up:</b> What if all these points have an id and are arranged from the left most to the right most of x axis?\n\n<p>&nbsp;</p>\n</div>",
+  "url": "https://leetcode.com/problems/shortest-distance-in-a-line/",
+  "companies": {}
+}

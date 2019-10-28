@@ -1,0 +1,14 @@
+{
+  "categories": [
+    "Array"
+  ],
+  "diff": "Easy",
+  "title": "243. Shortest Word Distance",
+  "question": "<div><p>Given a list of words and two words <em>word1</em> and <em>word2</em>, return the shortest distance between these two words in the list.</p>\n\n<p><strong>Example:</strong><br>\nAssume that words = <code>[\"practice\", \"makes\", \"perfect\", \"coding\", \"makes\"]</code>.</p>\n\n<pre><b>Input:</b> <em>word1</em> = <code>“coding”</code>, <em>word2</em> = <code>“practice”</code>\n<b>Output:</b> 3\n</pre>\n\n<pre><b>Input:</b> <em>word1</em> = <code>\"makes\"</code>, <em>word2</em> = <code>\"coding\"</code>\n<b>Output:</b> 1\n</pre>\n\n<p><strong>Note:</strong><br>\nYou may assume that <em>word1</em> <strong>does not equal to</strong> <em>word2</em>, and <em>word1</em> and <em>word2</em> are both in the list.</p>\n</div>",
+  "url": "https://leetcode.com/problems/shortest-word-distance/",
+  "companies": {
+    "LinkedIn": 5,
+    "Paypal": 2
+  },
+  "code": "class Solution(object):\\u000A    def shortestDistance(self, words, word1, word2):\\u000A        last_seen \\u003D {}\\u000A        min_dist \\u003D float(\\u0027inf\\u0027)\\u000A        for j, word in enumerate(words):\\u000A            if word1 in last_seen and word \\u003D\\u003D word2:\\u000A                min_dist \\u003D min(min_dist, j \\u002D last_seen[word1])\\u000A            elif word2 in last_seen and word \\u003D\\u003D word1:\\u000A                min_dist \\u003D min(min_dist, j \\u002D last_seen[word2])\\u000A            last_seen[word] \\u003D j\\u000A        return min_dist\\u000A            "
+}

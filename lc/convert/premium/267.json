@@ -1,0 +1,13 @@
+{
+  "categories": [
+    "Backtracking"
+  ],
+  "diff": "Medium",
+  "title": "267. Palindrome Permutation II",
+  "question": "<div><p>Given a string <code>s</code>, return all the palindromic permutations (without duplicates) of it. Return an empty list if no palindromic permutation could be form.</p>\n\n<p><strong>Example 1:</strong></p>\n\n<pre><strong>Input:</strong> <code>\"aabb\"</code>\n<strong>Output:</strong> <code>[\"abba\", \"baab\"]</code></pre>\n\n<p><strong>Example 2:</strong></p>\n\n<pre><strong>Input:</strong> <code>\"abc\"</code>\n<strong>Output:</strong> <code>[]</code></pre>\n</div>",
+  "url": "https://leetcode.com/problems/palindrome-permutation-ii/",
+  "companies": {
+    "Uber": 2,
+    "Amazon": 2
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "categories": [
+    "Backtracking"
+  ],
+  "diff": "Hard",
+  "title": "52. N-Queens II",
+  "question": "<div><p>The <em>n</em>-queens puzzle is the problem of placing <em>n</em> queens on an <em>n</em>×<em>n</em> chessboard such that no two queens attack each other.</p>\n\n<p><img src=\"https://assets.leetcode.com/uploads/2018/10/12/8-queens.png\" style=\"width: 258px; height: 276px;\"></p>\n\n<p>Given an integer&nbsp;<em>n</em>, return the number of&nbsp;distinct solutions to the&nbsp;<em>n</em>-queens puzzle.</p>\n\n<p><strong>Example:</strong></p>\n\n<pre><strong>Input:</strong> 4\n<strong>Output:</strong> 2\n<strong>Explanation:</strong> There are two distinct solutions to the 4-queens puzzle as shown below.\n[\n&nbsp;[\".Q..\", &nbsp;// Solution 1\n&nbsp; \"...Q\",\n&nbsp; \"Q...\",\n&nbsp; \"..Q.\"],\n\n&nbsp;[\"..Q.\", &nbsp;// Solution 2\n&nbsp; \"Q...\",\n&nbsp; \"...Q\",\n&nbsp; \".Q..\"]\n]\n</pre>\n</div>",
+  "url": "https://leetcode.com/problems/n-queens-ii/",
+  "companies": {},
+  "code": "class Solution(object):\\u000A    def totalNQueens(self, n):\\u000A        \\u0022\\u0022\\u0022\\u000A        :type n: int\\u000A        :rtype: List[List[str]]\\u000A        \\u0022\\u0022\\u0022\\u000A        vertical, diag1, diag2 \\u003D [[False] * (2 * n) for _ in range(3)]\\u000A        self.count \\u003D 0\\u000A        def _totalNQueens(y):\\u000A            if y \\u003E\\u003D n: return\\u000A            for x in range(0, n):\\u000A                diag1_i, diag2_i \\u003D (x \\u002D y) % (2 * n), x + y\\u000A                if not vertical[x] and not diag1[diag1_i] and not diag2[diag2_i]:\\u000A                    vertical[x] \\u003D diag1[diag1_i] \\u003D diag2[diag2_i] \\u003D True\\u000A                    if y \\u003D\\u003D n \\u002D 1: self.count +\\u003D 1\\u000A                    else: _totalNQueens(y + 1)\\u000A                    vertical[x] \\u003D diag1[diag1_i] \\u003D diag2[diag2_i] \\u003D False\\u000A        _totalNQueens(0)\\u000A        return self.count"
+}

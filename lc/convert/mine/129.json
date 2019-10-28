@@ -1,0 +1,12 @@
+{
+  "categories": [
+    "Tree",
+    "Depth-first Search"
+  ],
+  "diff": "Medium",
+  "title": "129. Sum Root to Leaf Numbers",
+  "question": "<div><p>Given a binary tree containing digits from <code>0-9</code> only, each root-to-leaf path could represent a number.</p>\n\n<p>An example is the root-to-leaf path <code>1-&gt;2-&gt;3</code> which represents the number <code>123</code>.</p>\n\n<p>Find the total sum of all root-to-leaf numbers.</p>\n\n<p><strong>Note:</strong>&nbsp;A leaf is a node with no children.</p>\n\n<p><strong>Example:</strong></p>\n\n<pre><strong>Input:</strong> [1,2,3]\n    1\n   / \\\n  2   3\n<strong>Output:</strong> 25\n<strong>Explanation:</strong>\nThe root-to-leaf path <code>1-&gt;2</code> represents the number <code>12</code>.\nThe root-to-leaf path <code>1-&gt;3</code> represents the number <code>13</code>.\nTherefore, sum = 12 + 13 = <code>25</code>.</pre>\n\n<p><strong>Example 2:</strong></p>\n\n<pre><strong>Input:</strong> [4,9,0,5,1]\n    4\n   / \\\n  9   0\n&nbsp;/ \\\n5   1\n<strong>Output:</strong> 1026\n<strong>Explanation:</strong>\nThe root-to-leaf path <code>4-&gt;9-&gt;5</code> represents the number 495.\nThe root-to-leaf path <code>4-&gt;9-&gt;1</code> represents the number 491.\nThe root-to-leaf path <code>4-&gt;0</code> represents the number 40.\nTherefore, sum = 495 + 491 + 40 = <code>1026</code>.</pre>\n</div>",
+  "url": "https://leetcode.com/problems/sum-root-to-leaf-numbers/",
+  "companies": {},
+  "code": "# Definition for a binary tree node.\\u000A# class TreeNode(object):\\u000A#     def __init__(self, x):\\u000A#         self.val \\u003D x\\u000A#         self.left \\u003D None\\u000A#         self.right \\u003D None\\u000A\\u000Aclass Solution(object):\\u000A    def sumNumbers(self, root):\\u000A        \\u0022\\u0022\\u0022\\u000A        :type root: TreeNode\\u000A        :rtype: int\\u000A        \\u0022\\u0022\\u0022\\u000A        def _sumNumbers(node, cur_num\\u003D[]):\\u000A            if not node:\\u000A                return 0\\u000A            cur_num.append(node.val)\\u000A            if not node.left and not node.right:\\u000A                res \\u003D int(\\u0027\\u0027.join(map(lambda x: str(x), cur_num)))\\u000A            else:\\u000A                res \\u003D  _sumNumbers(node.left, cur_num) + _sumNumbers(node.right, cur_num)\\u000A            cur_num.pop()\\u000A            return res\\u000A        return _sumNumbers(root)"
+}

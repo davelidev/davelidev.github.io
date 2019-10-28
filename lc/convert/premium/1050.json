@@ -1,0 +1,10 @@
+{
+  "categories": [],
+  "diff": "Easy",
+  "title": "1050. Actors and Directors Who Cooperated At Least Three Times",
+  "question": "<div class=\"sql-schema-wrapper__3VBi\"><a class=\"sql-schema-link__3cEg\">SQL Schema<svg viewBox=\"0 0 24 24\" width=\"1em\" height=\"1em\" class=\"icon__3Su4\"><path fill-rule=\"evenodd\" d=\"M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z\"></path></svg></a></div><div><p>Table: <code>ActorDirector</code></p>\n\n<pre>+-------------+---------+\n| Column Name | Type    |\n+-------------+---------+\n| actor_id    | int     |\n| director_id | int     |\n| timestamp   | int     |\n+-------------+---------+\ntimestamp is the primary key column for this table.\n</pre>\n\n<p>&nbsp;</p>\n\n<p>Write a SQL query for a report that provides the pairs <code>(actor_id, director_id)</code> where the actor have cooperated with the director at least 3 times.</p>\n\n<p><strong>Example:</strong></p>\n\n<pre>ActorDirector table:\n+-------------+-------------+-------------+\n| actor_id    | director_id | timestamp   |\n+-------------+-------------+-------------+\n| 1           | 1           | 0           |\n| 1           | 1           | 1           |\n| 1           | 1           | 2           |\n| 1           | 2           | 3           |\n| 1           | 2           | 4           |\n| 2           | 1           | 5           |\n| 2           | 1           | 6           |\n+-------------+-------------+-------------+\n\nResult table:\n+-------------+-------------+\n| actor_id    | director_id |\n+-------------+-------------+\n| 1           | 1           |\n+-------------+-------------+\nThe only pair is (1, 1) where they cooperated exactly 3 times.\n</pre>\n</div>",
+  "url": "https://leetcode.com/problems/actors-and-directors-who-cooperated-at-least-three-times/",
+  "companies": {
+    "Amazon": null
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "categories": [
+    "String"
+  ],
+  "diff": "Medium",
+  "title": "1062. Longest Repeating Substring",
+  "question": "<div><p>Given a string <code>S</code>, find out the length of the longest repeating substring(s). Return <code>0</code> if no repeating substring exists.</p>\n\n<p>&nbsp;</p>\n\n<p><strong>Example 1:</strong></p>\n\n<pre><strong>Input: </strong><span id=\"example-input-1-1\">\"abcd\"</span>\n<strong>Output: </strong><span id=\"example-output-1\">0</span>\n<strong>Explanation: </strong>There is no repeating substring.\n</pre>\n\n<p><strong>Example 2:</strong></p>\n\n<pre><strong>Input: </strong><span id=\"example-input-2-1\">\"abbaba\"</span>\n<strong>Output: </strong><span id=\"example-output-2\">2</span>\n<strong>Explanation: </strong>The longest repeating substrings are \"ab\" and \"ba\", each of which occurs twice.\n</pre>\n\n<p><strong>Example 3:</strong></p>\n\n<pre><strong>Input: </strong><span id=\"example-input-3-1\">\"aabcaabdaab\"</span>\n<strong>Output: </strong><span id=\"example-output-3\">3</span>\n<strong>Explanation: </strong>The longest repeating substring is \"aab\", which occurs <code>3</code> times.\n</pre>\n\n<p><strong>Example 4:</strong></p>\n\n<pre><strong>Input: </strong><span id=\"example-input-4-1\">\"aaaaa\"</span>\n<strong>Output: </strong><span id=\"example-output-4\">4</span>\n<strong>Explanation: </strong>The longest repeating substring is \"aaaa\", which occurs twice.\n</pre>\n\n<p>&nbsp;</p>\n\n<p><strong>Note:</strong></p>\n\n<ol>\n\t<li>The string <code>S</code> consists of only lowercase English letters from <code>'a'</code> - <code>'z'</code>.</li>\n\t<li><code>1 &lt;= S.length &lt;= 1500</code></li>\n</ol></div>",
+  "url": "https://leetcode.com/problems/longest-repeating-substring/",
+  "companies": {
+    "Amazon": 3
+  }
+}

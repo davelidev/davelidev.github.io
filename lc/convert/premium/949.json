@@ -1,0 +1,12 @@
+{
+  "categories": [
+    "Math"
+  ],
+  "diff": "Easy",
+  "title": "949. Largest Time for Given Digits",
+  "question": "<div><p>Given an array of 4 digits, return the largest 24 hour time that can be made.</p>\n\n<p>The smallest 24 hour time is 00:00, and the largest is 23:59.&nbsp; Starting from 00:00, a time is larger if more time has elapsed since midnight.</p>\n\n<p>Return the answer as a string of length 5.&nbsp; If no valid time can be made, return an empty string.</p>\n\n<p>&nbsp;</p>\n\n<div>\n<p><strong>Example 1:</strong></p>\n\n<pre><strong>Input: </strong><span id=\"example-input-1-1\">[1,2,3,4]</span>\n<strong>Output: </strong><span id=\"example-output-1\">\"23:41\"</span>\n</pre>\n\n<div>\n<p><strong>Example 2:</strong></p>\n\n<pre><strong>Input: </strong><span id=\"example-input-2-1\">[5,5,5,5]</span>\n<strong>Output: </strong><span id=\"example-output-2\">\"\"</span>\n</pre>\n\n<p>&nbsp;</p>\n\n<p><strong><span>Note:</span></strong></p>\n\n<ol>\n\t<li><code>A.length == 4</code></li>\n\t<li><code>0 &lt;= A[i] &lt;= 9</code></li>\n</ol>\n</div>\n</div></div>",
+  "url": "https://leetcode.com/problems/largest-time-for-given-digits/",
+  "companies": {
+    "LiveRamp": null
+  }
+}

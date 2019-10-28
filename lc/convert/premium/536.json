@@ -1,0 +1,13 @@
+{
+  "categories": [
+    "String",
+    "Tree"
+  ],
+  "diff": "Medium",
+  "title": "536. Construct Binary Tree from String",
+  "question": "<div><p>You need to construct a binary tree from a string consisting of parenthesis and integers. </p>\n\n<p>The whole input represents a binary tree. It contains an integer followed by zero, one or two pairs of parenthesis. The integer represents the root's value and a pair of parenthesis contains a child binary tree with the same structure. </p>\n\n<p>You always start to construct the <b>left</b> child node of the parent first if it exists.</p>\n\n<p><b>Example:</b><br>\n</p><pre><b>Input:</b> \"4(2(3)(1))(6(5))\"\n<b>Output:</b> return the tree root node representing the following tree:\n\n       4\n     /   \\\n    2     6\n   / \\   / \n  3   1 5   \n</pre>\n<p></p>\n\n<p><b>Note:</b><br>\n</p><ol>\n<li>There will only be <code>'('</code>,  <code>')'</code>,  <code>'-'</code> and  <code>'0'</code> ~ <code>'9'</code> in the input string.</li>\n<li>An empty tree is represented by <code>\"\"</code> instead of <code>\"()\"</code>.</li>\n</ol>\n<p></p></div>",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-string/",
+  "companies": {
+    "Facebook": 5
+  }
+}

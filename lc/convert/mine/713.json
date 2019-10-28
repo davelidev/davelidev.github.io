@@ -1,0 +1,12 @@
+{
+  "categories": [
+    "Array",
+    "Two Pointers"
+  ],
+  "diff": "Medium",
+  "title": "713. Subarray Product Less Than K",
+  "question": "<div><p>Your are given an array of positive integers <code>nums</code>.</p>\n<p>Count and print the number of (contiguous) subarrays where the product of all the elements in the subarray is less than <code>k</code>.</p>\n\n<p><b>Example 1:</b><br>\n</p><pre><b>Input:</b> nums = [10, 5, 2, 6], k = 100\n<b>Output:</b> 8\n<b>Explanation:</b> The 8 subarrays that have product less than 100 are: [10], [5], [2], [6], [10, 5], [5, 2], [2, 6], [5, 2, 6].\nNote that [10, 5, 2] is not included as the product of 100 is not strictly less than k.\n</pre>\n<p></p>\n\n<p><b>Note:</b>\n</p><li><code>0 &lt; nums.length &lt;= 50000</code>.</li>\n<li><code>0 &lt; nums[i] &lt; 1000</code>.</li>\n<li><code>0 &lt;= k &lt; 10^6</code>.</li>\n<p></p></div>",
+  "url": "https://leetcode.com/problems/subarray-product-less-than-k/",
+  "companies": {},
+  "code": "class Solution(object):\\u000A    def numSubarrayProductLessThanK(self, nums, k):\\u000A        \\u0022\\u0022\\u0022\\u000A        :type nums: List[int]\\u000A        :type k: int\\u000A        :rtype: int\\u000A        \\u0022\\u0022\\u0022\\u000A        if k \\u003D\\u003D 0 : return 0\\u000A        prod \\u003D 1\\u000A        start \\u003D count \\u003D 0\\u000A        for end, elem in enumerate(nums):\\u000A            prod *\\u003D elem\\u000A            while prod \\u003E\\u003D k and start \\u003C\\u003D end:\\u000A                prod /\\u003D nums[start]\\u000A                start +\\u003D 1\\u000A            count +\\u003D end \\u002D start + 1\\u000A        return count"
+}

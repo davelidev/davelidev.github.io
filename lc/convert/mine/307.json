@@ -1,0 +1,12 @@
+{
+  "categories": [
+    "Binary Indexed Tree",
+    "Segment Tree"
+  ],
+  "diff": "Medium",
+  "title": "307. Range Sum Query - Mutable",
+  "question": "<div><p>Given an integer array <i>nums</i>, find the sum of the elements between indices <i>i</i> and <i>j</i> (<i>i</i> ≤ <i>j</i>), inclusive.</p>\n\n<p>The <i>update(i, val)</i> function modifies <i>nums</i> by updating the element at index <i>i</i> to <i>val</i>.</p>\n\n<p><b>Example:</b></p>\n\n<pre>Given nums = [1, 3, 5]\n\nsumRange(0, 2) -&gt; 9\nupdate(1, 2)\nsumRange(0, 2) -&gt; 8\n</pre>\n\n<p><b>Note:</b></p>\n\n<ol>\n\t<li>The array is only modifiable by the <i>update</i> function.</li>\n\t<li>You may assume the number of calls to <i>update</i> and <i>sumRange</i> function is distributed evenly.</li>\n</ol>\n</div>",
+  "url": "https://leetcode.com/problems/range-sum-query-mutable/",
+  "companies": {},
+  "code": "class NumArray(object):\\u000A\\u000A    def __init__(self, nums):\\u000A        self.update \\u003D nums.__setitem__\\u000A        self.sumRange \\u003D lambda i, j: sum(nums[i:j+1])\\u000A\\u000A\\u000A# Your NumArray object will be instantiated and called as such:\\u000A# obj \\u003D NumArray(nums)\\u000A# obj.update(i,val)\\u000A# param_2 \\u003D obj.sumRange(i,j)"
+}

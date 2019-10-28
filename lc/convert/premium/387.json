@@ -1,0 +1,20 @@
+{
+  "categories": [
+    "Hash Table",
+    "String"
+  ],
+  "diff": "Easy",
+  "title": "387. First Unique Character in a String",
+  "question": "<div><p>\nGiven a string, find the first non-repeating character in it and return it's index. If it doesn't exist, return -1.\n</p>\n<p><b>Examples:</b>\n</p><pre>s = \"leetcode\"\nreturn 0.\n\ns = \"loveleetcode\",\nreturn 2.\n</pre>\n<p></p>\n\n<p>\n<b>Note:</b> You may assume the string contain only lowercase letters.\n</p></div>",
+  "url": "https://leetcode.com/problems/first-unique-character-in-a-string/",
+  "companies": {
+    "Amazon": 10,
+    "Goldman Sachs": 7,
+    "Facebook": 7,
+    "Bloomberg": 6,
+    "Zillow": 4,
+    "Google": 4,
+    "Apple": 4,
+    "Microsoft": 3
+  }
+}

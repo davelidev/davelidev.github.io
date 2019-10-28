@@ -1,0 +1,11 @@
+{
+  "categories": [
+    "String",
+    "Dynamic Programming"
+  ],
+  "diff": "Hard",
+  "title": "97. Interleaving String",
+  "question": "<div><p>Given <em>s1</em>, <em>s2</em>, <em>s3</em>, find whether <em>s3</em> is formed by the interleaving of <em>s1</em> and <em>s2</em>.</p>\n\n<p><strong>Example 1:</strong></p>\n\n<pre><strong>Input:</strong> s1 = \"aabcc\", s2 = \"dbbca\", <em>s3</em> = \"aadbbcbcac\"\n<strong>Output:</strong> true\n</pre>\n\n<p><strong>Example 2:</strong></p>\n\n<pre><strong>Input:</strong> s1 = \"aabcc\", s2 = \"dbbca\", <em>s3</em> = \"aadbbbaccc\"\n<strong>Output:</strong> false\n</pre>\n</div>",
+  "url": "https://leetcode.com/problems/interleaving-string/",
+  "companies": {}
+}

@@ -1,0 +1,12 @@
+{
+  "categories": [
+    "Trie"
+  ],
+  "diff": "Medium",
+  "title": "677. Map Sum Pairs",
+  "question": "<div><p>\nImplement a MapSum class with <code>insert</code>, and <code>sum</code> methods.\n</p>\n\n<p>\nFor the method <code>insert</code>, you'll be given a pair of (string, integer). The string represents the key and the integer represents the value. If the key already existed, then the original key-value pair will be overridden to the new one.\n</p>\n\n<p>\nFor the method <code>sum</code>, you'll be given a string representing the prefix, and you need to return the sum of all the pairs' value whose key starts with the prefix.\n</p>\n\n<p><b>Example 1:</b><br>\n</p><pre>Input: insert(\"apple\", 3), Output: Null\nInput: sum(\"ap\"), Output: 3\nInput: insert(\"app\", 2), Output: Null\nInput: sum(\"ap\"), Output: 5\n</pre>\n<p></p>\n</div>",
+  "url": "https://leetcode.com/problems/map-sum-pairs/",
+  "companies": {
+    "Akuna Capital": null
+  }
+}

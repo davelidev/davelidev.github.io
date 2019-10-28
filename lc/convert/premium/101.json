@@ -1,0 +1,23 @@
+{
+  "categories": [
+    "Tree",
+    "Depth-first Search",
+    "Breadth-first Search"
+  ],
+  "diff": "Easy",
+  "title": "101. Symmetric Tree",
+  "question": "<div><p>Given a binary tree, check whether it is a mirror of itself (ie, symmetric around its center).</p>\n\n<p>For example, this binary tree <code>[1,2,2,3,4,4,3]</code> is symmetric:</p>\n\n<pre>    1\n   / \\\n  2   2\n / \\ / \\\n3  4 4  3\n</pre>\n\n<p>&nbsp;</p>\n\n<p>But the following <code>[1,2,2,null,3,null,3]</code> is not:</p>\n\n<pre>    1\n   / \\\n  2   2\n   \\   \\\n   3    3\n</pre>\n\n<p>&nbsp;</p>\n\n<p><b>Note:</b><br>\nBonus points if you could solve it both recursively and iteratively.</p>\n</div>",
+  "url": "https://leetcode.com/problems/symmetric-tree/",
+  "companies": {
+    "Uber": 4,
+    "Amazon": 3,
+    "Google": 3,
+    "Atlassian": 3,
+    "Apple": 2,
+    "Microsoft": 2,
+    "Yandex": 2,
+    "SAP": 2,
+    "Twitter": 2
+  },
+  "code": "# Definition for a binary tree node.\\u000A# class TreeNode(object):\\u000A#     def __init__(self, x):\\u000A#         self.val \\u003D x\\u000A#         self.left \\u003D None\\u000A#         self.right \\u003D None\\u000A\\u000Aclass Solution(object):\\u000A    def isSymmetric(self, root):\\u000A        \\u000A        def is_sym(l, r):\\u000A            if not l and not r:\\u000A                return True\\u000A            elif not (l and r) or l.val !\\u003D r.val:\\u000A                return False\\u000A            return is_sym(l.left, r.right) and is_sym(l.right, r.left)\\u000A        if not root: return True\\u000A        return is_sym(root.left, root.right)"
+}

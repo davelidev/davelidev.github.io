@@ -1,0 +1,11 @@
+{
+  "categories": [
+    "Hash Table"
+  ],
+  "diff": "Easy",
+  "title": "409. Longest Palindrome",
+  "question": "<div><p>Given a string which consists of lowercase or uppercase letters, find the length of the longest palindromes that can be built with those letters.</p>\n\n<p>This is case sensitive, for example <code>\"Aa\"</code> is not considered a palindrome here.</p>\n\n<p><b>Note:</b><br>\nAssume the length of given string will not exceed 1,010.\n</p>\n\n<p><b>Example: </b>\n</p><pre>Input:\n\"abccccdd\"\n\nOutput:\n7\n\nExplanation:\nOne longest palindrome that can be built is \"dccaccd\", whose length is 7.\n</pre>\n<p></p></div>",
+  "url": "https://leetcode.com/problems/longest-palindrome/",
+  "companies": {},
+  "code": "class Solution(object):\\u000A    def longestPalindrome(self, s):\\u000A        \\u0022\\u0022\\u0022\\u000A        :type s: str\\u000A        :rtype: int\\u000A        \\u0022\\u0022\\u0022\\u000A        from collections import Counter\\u000A        odds_len \\u003D sum(count \\u0026 1 for count in Counter(s).values())\\u000A        return len(s) \\u002D odds_len + bool(odds_len)"
+}

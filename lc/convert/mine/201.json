@@ -1,0 +1,11 @@
+{
+  "categories": [
+    "Bit Manipulation"
+  ],
+  "diff": "Medium",
+  "title": "201. Bitwise AND of Numbers Range",
+  "question": "<div><p>Given a range [m, n] where 0 &lt;= m &lt;= n &lt;= 2147483647, return the bitwise AND of all numbers in this range, inclusive.</p>\n\n<p><strong>Example 1:</strong></p>\n\n<pre><strong>Input:</strong> [5,7]\n<strong>Output:</strong> 4\n</pre>\n\n<p><strong>Example 2:</strong></p>\n\n<pre><strong>Input:</strong> [0,1]\n<strong>Output:</strong> 0</pre></div>",
+  "url": "https://leetcode.com/problems/bitwise-and-of-numbers-range/",
+  "companies": {},
+  "code": "class Solution(object):\\u000A    def rangeBitwiseAnd(self, m, n):\\u000A        \\u0022\\u0022\\u0022\\u000A        :type m: int\\u000A        :type n: int\\u000A        :rtype: int\\u000A        \\u0022\\u0022\\u0022\\u000A        res \\u003D ~0\\u000A        while ((m \\u0026 res) !\\u003D (n \\u0026 res)):\\u000A            res \\u003D res \\u003C\\u003C 1\\u000A        return res \\u0026 m\\u000A            "
+}

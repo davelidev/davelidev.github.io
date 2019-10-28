@@ -1,0 +1,33 @@
+{
+  "categories": [
+    "Array",
+    "Hash Table"
+  ],
+  "diff": "Easy",
+  "title": "1. Two Sum",
+  "question": "<div><p>Given an array of integers, return <strong>indices</strong> of the two numbers such that they add up to a specific target.</p>\n\n<p>You may assume that each input would have <strong><em>exactly</em></strong> one solution, and you may not use the <em>same</em> element twice.</p>\n\n<p><strong>Example:</strong></p>\n\n<pre>Given nums = [2, 7, 11, 15], target = 9,\n\nBecause nums[<strong>0</strong>] + nums[<strong>1</strong>] = 2 + 7 = 9,\nreturn [<strong>0</strong>, <strong>1</strong>].\n</pre></div>",
+  "url": "https://leetcode.com/problems/two-sum/",
+  "companies": {
+    "Amazon": 207,
+    "Google": 101,
+    "Adobe": 71,
+    "Apple": 58,
+    "Microsoft": 39,
+    "Facebook": 29,
+    "Yahoo": 18,
+    "Bloomberg": 17,
+    "Uber": 9,
+    "Goldman Sachs": 8,
+    "LinkedIn": 6,
+    "Oracle": 5,
+    "Huawei": 4,
+    "Cisco": 4,
+    "Walmart Labs": 4,
+    "VMware": 4,
+    "Yandex": 3,
+    "Splunk": 3,
+    "SAP": 2,
+    "Airbnb": 2
+  },
+  "code": "class Solution(object):\\u000A    \\u000A    def twoSum(self, nums, target):\\u000A        visited \\u003D {}\\u000A        for i, num in enumerate(nums):\\u000A            if target \\u002D num in visited:\\u000A                return visited[target\\u002Dnum], i\\u000A            visited[num] \\u003D i\\u000A    \\u000A    def _twoSum(self, nums, target):\\u000A        sorted_indicies \\u003D sorted(list(range(len(nums))), key\\u003Dnums.__getitem__)\\u000A        i, j \\u003D 0, len(nums) \\u002D 1\\u000A        while i \\u003C j:\\u000A            if nums[sorted_indicies[i]] + nums[sorted_indicies[j]] \\u003D\\u003D target:\\u000A                return sorted_indicies[i], sorted_indicies[j]\\u000A            elif nums[sorted_indicies[i]] + nums[sorted_indicies[j]] \\u003E target:\\u000A                j \\u002D\\u003D 1\\u000A            else:\\u000A                i +\\u003D 1\\u000A    "
+}

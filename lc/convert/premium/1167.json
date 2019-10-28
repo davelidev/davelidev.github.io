@@ -1,0 +1,12 @@
+{
+  "categories": [
+    "Greedy"
+  ],
+  "diff": "Medium",
+  "title": "1167. Minimum Cost to Connect Sticks",
+  "question": "<div><p>You have some&nbsp;<code>sticks</code>&nbsp;with&nbsp;positive integer lengths.</p>\n\n<p>You can connect any two sticks of lengths <code>X</code> and <code>Y</code> into one stick&nbsp;by paying a cost of <code>X + Y</code>.&nbsp; You perform this action until there is one stick remaining.</p>\n\n<p>Return&nbsp;the minimum cost of connecting all the given <code>sticks</code> into one stick in this way.</p>\n\n<p>&nbsp;</p>\n<p><strong>Example 1:</strong></p>\n<pre><strong>Input:</strong> sticks = [2,4,3]\n<strong>Output:</strong> 14\n</pre><p><strong>Example 2:</strong></p>\n<pre><strong>Input:</strong> sticks = [1,8,3,5]\n<strong>Output:</strong> 30\n</pre>\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code><span>1 &lt;= sticks.length &lt;= 10^4</span></code></li>\n\t<li><code><span>1 &lt;= sticks[i] &lt;= 10^4</span></code></li>\n</ul>\n</div>",
+  "url": "https://leetcode.com/problems/minimum-cost-to-connect-sticks/",
+  "companies": {
+    "Amazon": 9
+  }
+}

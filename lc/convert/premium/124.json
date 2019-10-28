@@ -1,0 +1,19 @@
+{
+  "categories": [
+    "Tree",
+    "Depth-first Search"
+  ],
+  "diff": "Hard",
+  "title": "124. Binary Tree Maximum Path Sum",
+  "question": "<div><p>Given a <strong>non-empty</strong> binary tree, find the maximum path sum.</p>\n\n<p>For this problem, a path is defined as any sequence of nodes from some starting node to any node in the tree along the parent-child connections. The path must contain <strong>at least one node</strong> and does not need to go through the root.</p>\n\n<p><strong>Example 1:</strong></p>\n\n<pre><strong>Input:</strong> [1,2,3]\n\n       <strong>1</strong>\n      <strong>/ \\</strong>\n     <strong>2</strong>   <strong>3</strong>\n\n<strong>Output:</strong> 6\n</pre>\n\n<p><strong>Example 2:</strong></p>\n\n<pre><strong>Input:</strong> [-10,9,20,null,null,15,7]\n\n&nbsp;  -10\n&nbsp; &nbsp;/ \\\n&nbsp; 9 &nbsp;<strong>20</strong>\n&nbsp; &nbsp; <strong>/ &nbsp;\\</strong>\n&nbsp; &nbsp;<strong>15 &nbsp; 7</strong>\n\n<strong>Output:</strong> 42\n</pre>\n</div>",
+  "url": "https://leetcode.com/problems/binary-tree-maximum-path-sum/",
+  "companies": {
+    "Facebook": 21,
+    "Amazon": 17,
+    "Google": 6,
+    "Apple": 5,
+    "Microsoft": 2,
+    "Bloomberg": 2
+  },
+  "code": "# Definition for a binary tree node.\\u000A# class TreeNode(object):\\u000A#     def __init__(self, x):\\u000A#         self.val \\u003D x\\u000A#         self.left \\u003D None\\u000A#         self.right \\u003D None\\u000A\\u000Aclass Solution(object):\\u000A    def maxPathSum(self, root):\\u000A        self._max \\u003D float(\\u0027\\u002Dinf\\u0027)\\u000A        def get_max(node):\\u000A            if not node: return 0\\u000A            l, r \\u003D get_max(node.left), get_max(node.right)\\u000A            self._max \\u003D max(self._max, l + r + node.val)\\u000A            return max(node.val + max(l, r), 0)\\u000A        \\u000A        get_max(root)\\u000A        return self._max"
+}

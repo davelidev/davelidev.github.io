@@ -1,0 +1,13 @@
+{
+  "categories": [
+    "Array",
+    "Binary Search"
+  ],
+  "diff": "Easy",
+  "title": "1064. Fixed Point",
+  "question": "<div><p>Given an array <code>A</code> of distinct integers sorted in ascending order, return the smallest index <code>i</code> that satisfies <code>A[i] == i</code>.&nbsp; Return <code>-1</code> if no such <code>i</code> exists.</p>\n\n<p>&nbsp;</p>\n\n<p><strong>Example 1:</strong></p>\n\n<pre><strong>Input: </strong><span id=\"example-input-1-1\">[-10,-5,0,3,7]</span>\n<strong>Output: </strong><span id=\"example-output-1\">3</span>\n<strong>Explanation: </strong>\nFor the given array, <code>A[0] = -10, A[1] = -5, A[2] = 0, A[3] = 3</code>, thus the output is 3.\n</pre>\n\n<p><strong>Example 2:</strong></p>\n\n<pre><strong>Input: </strong><span id=\"example-input-2-1\">[0,2,5,8,17]</span>\n<strong>Output: </strong><span id=\"example-output-2\">0</span>\n<strong>Explanation: </strong>\n<code>A[0] = 0</code>, thus the output is 0.\n</pre>\n\n<p><strong>Example 3:</strong></p>\n\n<pre><strong>Input: </strong><span id=\"example-input-3-1\">[-10,-5,3,4,7,9]</span>\n<strong>Output: </strong><span id=\"example-output-3\">-1</span>\n<strong>Explanation: </strong>\nThere is no such <code>i</code> that <code>A[i] = i</code>, thus the output is -1.\n</pre>\n\n<p>&nbsp;</p>\n\n<p><strong>Note:</strong></p>\n\n<ol>\n\t<li><code>1 &lt;= A.length &lt; 10^4</code></li>\n\t<li><code>-10^9 &lt;= A[i] &lt;= 10^9</code></li>\n</ol>\n</div>",
+  "url": "https://leetcode.com/problems/fixed-point/",
+  "companies": {
+    "Uber": null
+  }
+}

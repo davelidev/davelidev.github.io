@@ -1,0 +1,17 @@
+{
+  "categories": [
+    "Array",
+    "Hash Table",
+    "Dynamic Programming",
+    "Stack"
+  ],
+  "diff": "Hard",
+  "title": "85. Maximal Rectangle",
+  "question": "<div><p>Given a 2D binary matrix filled with 0's and 1's, find the largest rectangle containing only 1's and return its area.</p>\n\n<p><strong>Example:</strong></p>\n\n<pre><strong>Input:</strong>\n[\n  [\"1\",\"0\",\"1\",\"0\",\"0\"],\n  [\"1\",\"0\",\"<strong>1</strong>\",\"<strong>1</strong>\",\"<strong>1</strong>\"],\n  [\"1\",\"1\",\"<strong>1</strong>\",\"<strong>1</strong>\",\"<strong>1</strong>\"],\n  [\"1\",\"0\",\"0\",\"1\",\"0\"]\n]\n<strong>Output:</strong> 6\n</pre>\n</div>",
+  "url": "https://leetcode.com/problems/maximal-rectangle/",
+  "companies": {
+    "Google": 5,
+    "Amazon": 3,
+    "Uber": 3
+  }
+}

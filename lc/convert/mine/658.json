@@ -1,0 +1,11 @@
+{
+  "categories": [
+    "Binary Search"
+  ],
+  "diff": "Medium",
+  "title": "658. Find K Closest Elements",
+  "question": "<div><p>\nGiven a sorted array, two integers <code>k</code> and <code>x</code>, find the <code>k</code> closest elements to <code>x</code> in the array.  The result should also be sorted in ascending order.\nIf there is a tie,  the smaller elements are always preferred.\n</p>\n\n<p><b>Example 1:</b><br>\n</p><pre><b>Input:</b> [1,2,3,4,5], k=4, x=3\n<b>Output:</b> [1,2,3,4]\n</pre>\n<p></p>\n\n\n<p><b>Example 2:</b><br>\n</p><pre><b>Input:</b> [1,2,3,4,5], k=4, x=-1\n<b>Output:</b> [1,2,3,4]\n</pre>\n<p></p>\n\n<p><b>Note:</b><br>\n</p><ol>\n<li>The value k is positive and will always be smaller than the length of the sorted array.</li>\n<li> Length of the given array is positive and will not exceed 10<sup>4</sup></li>\n<li> Absolute value of elements in the array and x will not exceed 10<sup>4</sup></li>\n</ol>\n<p></p>\n\n<hr>\n\n<p>\n<b><font color=\"red\">UPDATE (2017/9/19):</font></b><br>\nThe <i>arr</i> parameter had been changed to an <b>array of integers</b> (instead of a list of integers). <b><i>Please reload the code definition to get the latest changes</i></b>.\n</p></div>",
+  "url": "https://leetcode.com/problems/find-k-closest-elements/",
+  "companies": {},
+  "code": "class Solution(object):\\u000A    def findClosestElements(self, arr, k, x):\\u000A        i, j \\u003D 0, len(arr)\\u000A        while i \\u003C j:\\u000A            mid \\u003D (i + j) / 2\\u000A            if x \\u003C arr[mid]: j \\u003D mid\\u000A            elif arr[mid] \\u003C x: i \\u003D mid + 1\\u000A            else: break\\u000A        i \\u003D j \\u003D mid\\u000A        size \\u003D 1\\u000A        while size \\u003C len(arr) and size \\u003C k :\\u000A            if (j \\u003D\\u003D len(arr) \\u002D 1) or (i \\u003E 0) and (x \\u002D arr[i \\u002D 1]) \\u003C\\u003D (arr[j + 1] \\u002D x): i \\u002D\\u003D 1\\u000A            else: j +\\u003D 1\\u000A            size +\\u003D 1\\u000A        return arr[i: j + 1]\\u000A            "
+}

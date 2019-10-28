@@ -1,0 +1,21 @@
+{
+  "categories": [
+    "Dynamic Programming"
+  ],
+  "diff": "Medium",
+  "title": "322. Coin Change",
+  "question": "<div><p>You are given coins of different denominations and a total amount of money <i>amount</i>. Write a function to compute the fewest number of coins that you need to make up that amount. If that amount of money cannot be made up by any combination of the coins, return <code>-1</code>.</p>\n\n<p><b>Example 1:</b></p>\n\n<pre><strong>Input: </strong>coins = <code>[1, 2, 5]</code>, amount = <code>11</code>\n<strong>Output: </strong><code>3</code> \n<strong>Explanation:</strong> 11 = 5 + 5 + 1</pre>\n\n<p><b>Example 2:</b></p>\n\n<pre><strong>Input: </strong>coins = <code>[2]</code>, amount = <code>3</code>\n<strong>Output: </strong>-1\n</pre>\n\n<p><b>Note</b>:<br>\nYou may assume that you have an infinite number of each kind of coin.</p>\n</div>",
+  "url": "https://leetcode.com/problems/coin-change/",
+  "companies": {
+    "Amazon": 16,
+    "Capital One": 15,
+    "Microsoft": 5,
+    "Adobe": 4,
+    "Apple": 3,
+    "Airbnb": 3,
+    "Bloomberg": 2,
+    "Yahoo": 2,
+    "Affirm": 2
+  },
+  "code": "class Solution(object):\\u000A    def coinChange(self, coins, amount):\\u000A        from itertools import chain\\u000A        DP \\u003D [0] * (amount + 1)\\u000A        for i in range(1, len(DP)):\\u000A            DP[i] \\u003D min(chain((DP[i\\u002Dc] + 1 for c in coins if i\\u002Dc \\u003E\\u003D 0), (float(\\u0027inf\\u0027),)))\\u000A        print DP\\u000A        return DP[\\u002D1] if DP[\\u002D1] !\\u003D float(\\u0027inf\\u0027) else \\u002D1"
+}

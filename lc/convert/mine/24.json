@@ -1,0 +1,11 @@
+{
+  "categories": [
+    "Linked List"
+  ],
+  "diff": "Medium",
+  "title": "24. Swap Nodes in Pairs",
+  "question": "<div><p>Given a&nbsp;linked list, swap every two adjacent nodes and return its head.</p>\n\n<p>You may <strong>not</strong> modify the values in the list's nodes, only nodes itself may be changed.</p>\n\n<p>&nbsp;</p>\n\n<p><strong>Example:</strong></p>\n\n<pre>Given <code>1-&gt;2-&gt;3-&gt;4</code>, you should return the list as <code>2-&gt;1-&gt;4-&gt;3</code>.\n</pre>\n</div>",
+  "url": "https://leetcode.com/problems/swap-nodes-in-pairs/",
+  "companies": {},
+  "code": "# Definition for singly\\u002Dlinked list.\\u000A# class ListNode(object):\\u000A#     def __init__(self, x):\\u000A#         self.val \\u003D x\\u000A#         self.next \\u003D None\\u000A\\u000Aclass Solution(object):\\u000A    def swapPairs(self, head):\\u000A        \\u0022\\u0022\\u0022\\u000A        :type head: ListNode\\u000A        :rtype: ListNode\\u000A        \\u0022\\u0022\\u0022\\u000A        dummy_head \\u003D ListNode(\\u0027dummy\\u0027)\\u000A        dummy_head.next \\u003D head\\u000A        cur \\u003D dummy_head\\u000A        while cur and cur.next and cur.next.next:\\u000A            nodes \\u003D [cur, cur.next, cur.next.next, cur.next.next.next]\\u000A            nodes[0].next, nodes[1].next, nodes[2].next, cur \\u003D nodes[2], nodes[3], nodes[1], nodes[1]\\u000A        return dummy_head.next"
+}

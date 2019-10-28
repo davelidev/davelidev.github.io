@@ -1,0 +1,18 @@
+{
+  "categories": [
+    "Tree",
+    "Depth-first Search"
+  ],
+  "diff": "Medium",
+  "title": "117. Populating Next Right Pointers in Each Node II",
+  "question": "<div><p>Given a binary tree</p>\n\n<pre>struct Node {\n  int val;\n  Node *left;\n  Node *right;\n  Node *next;\n}\n</pre>\n\n<p>Populate each next pointer to point to its next right node. If there is no next right node, the next pointer should be set to <code>NULL</code>.</p>\n\n<p>Initially, all next pointers are set to <code>NULL</code>.</p>\n\n<p>&nbsp;</p>\n\n<p><strong>Example:</strong></p>\n\n<p><img alt=\"\" src=\"https://assets.leetcode.com/uploads/2019/02/15/117_sample.png\" style=\"width: 640px; height: 218px;\"></p>\n\n<pre><strong>Input: </strong><span>{\"$id\":\"1\",\"left\":{\"$id\":\"2\",\"left\":{\"$id\":\"3\",\"left\":null,\"next\":null,\"right\":null,\"val\":4},\"next\":null,\"right\":{\"$id\":\"4\",\"left\":null,\"next\":null,\"right\":null,\"val\":5},\"val\":2},\"next\":null,\"right\":{\"$id\":\"5\",\"left\":null,\"next\":null,\"right\":{\"$id\":\"6\",\"left\":null,\"next\":null,\"right\":null,\"val\":7},\"val\":3},\"val\":1}</span>\n\n<strong>Output: </strong><span>{\"$id\":\"1\",\"left\":{\"$id\":\"2\",\"left\":{\"$id\":\"3\",\"left\":null,\"next\":{\"$id\":\"4\",\"left\":null,\"next\":{\"$id\":\"5\",\"left\":null,\"next\":null,\"right\":null,\"val\":7},\"right\":null,\"val\":5},\"right\":null,\"val\":4},\"next\":{\"$id\":\"6\",\"left\":null,\"next\":null,\"right\":{\"$ref\":\"5\"},\"val\":3},\"right\":{\"$ref\":\"4\"},\"val\":2},\"next\":null,\"right\":{\"$ref\":\"6\"},\"val\":1}</span>\n\n<strong>Explanation: </strong>Given the above binary tree (Figure A), your function should populate each next pointer to point to its next right node, just like in Figure B.\n</pre>\n\n<p>&nbsp;</p>\n\n<p><strong>Note:</strong></p>\n\n<ul>\n\t<li>You may only use constant extra space.</li>\n\t<li>Recursive approach is fine, implicit stack space does not count as extra space for this problem.</li>\n</ul></div>",
+  "url": "https://leetcode.com/problems/populating-next-right-pointers-in-each-node-ii/",
+  "companies": {
+    "Bloomberg": 5,
+    "Google": 4,
+    "Amazon": 4,
+    "Microsoft": 3,
+    "Oracle": 2
+  },
+  "code": "\\u0022\\u0022\\u0022\\u000A# Definition for a Node.\\u000Aclass Node(object):\\u000A    def __init__(self, val, left, right, next):\\u000A        self.val \\u003D val\\u000A        self.left \\u003D left\\u000A        self.right \\u003D right\\u000A        self.next \\u003D next\\u000A\\u0022\\u0022\\u0022\\u000Aclass Solution(object):\\u000A    def connect(self, root):\\u000A        \\u000A        cur \\u003D root\\u000A        next_head \\u003D next_prev \\u003D None\\u000A        while cur:\\u000A            if not next_head:\\u000A                next_head \\u003D next_prev \\u003D cur.left or cur.right\\u000A                \\u000A            if cur.left and next_head !\\u003D cur.left:\\u000A                next_prev.next, next_prev \\u003D cur.left, cur.left\\u000A                \\u000A            if cur.right and next_head !\\u003D cur.right:\\u000A                next_prev.next, next_prev \\u003D cur.right, cur.right\\u000A            \\u000A            if not cur.next:\\u000A                cur \\u003D next_head\\u000A                next_head \\u003D next_prev \\u003D None\\u000A            else:\\u000A                cur \\u003D cur.next\\u000A                    \\u000A        return root"
+}

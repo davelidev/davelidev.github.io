@@ -1,0 +1,15 @@
+{
+  "categories": [
+    "Binary Search",
+    "Dynamic Programming"
+  ],
+  "diff": "Medium",
+  "title": "300. Longest Increasing Subsequence",
+  "question": "<div><p>Given an unsorted array of integers, find the length of longest increasing subsequence.</p>\n\n<p><b>Example:</b></p>\n\n<pre><b>Input:</b> <code>[10,9,2,5,3,7,101,18]\n</code><b>Output: </b>4 \n<strong>Explanation: </strong>The longest increasing subsequence is <code>[2,3,7,101]</code>, therefore the length is <code>4</code>. </pre>\n\n<p><strong>Note: </strong></p>\n\n<ul>\n\t<li>There may be more than one LIS combination, it is only necessary for you to return the length.</li>\n\t<li>Your algorithm should run in O(<i>n<sup>2</sup></i>) complexity.</li>\n</ul>\n\n<p><b>Follow up:</b> Could you improve it to O(<i>n</i> log <i>n</i>) time complexity?</p>\n</div>",
+  "url": "https://leetcode.com/problems/longest-increasing-subsequence/",
+  "companies": {
+    "Amazon": 6,
+    "Google": 4,
+    "Microsoft": 2
+  }
+}

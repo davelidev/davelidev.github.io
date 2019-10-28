@@ -1,0 +1,11 @@
+{
+  "categories": [],
+  "diff": "Hard",
+  "title": "465. Optimal Account Balancing",
+  "question": "<div><p>A group of friends went on holiday and sometimes lent each other money. For example, Alice paid for Bill's lunch for $10. Then later Chris gave Alice $5 for a taxi ride. We can model each transaction as a tuple (x, y, z) which means person x gave person y $z. Assuming Alice, Bill, and Chris are person 0, 1, and 2 respectively (0, 1, 2 are the person's ID), the transactions can be represented as <code>[[0, 1, 10], [2, 0, 5]]</code>.</p>\n\n<p>Given a list of transactions between a group of people, return the minimum number of transactions required to settle the debt.</p>\n\n<p><b>Note:</b>\n</p><ol>\n<li>A transaction will be given as a tuple (x, y, z). Note that <code>x ≠ y</code> and <code>z &gt; 0</code>.</li>\n<li>Person's IDs may not be linear, e.g. we could have the persons 0, 1, 2 or we could also have the persons 0, 2, 6.</li>\n</ol>\n<p></p>\n\n<p><b>Example 1:</b>\n</p><pre><b>Input:</b>\n[[0,1,10], [2,0,5]]\n\n<b>Output:</b>\n2\n\n<b>Explanation:</b>\nPerson #0 gave person #1 $10.\nPerson #2 gave person #0 $5.\n\nTwo transactions are needed. One way to settle the debt is person #1 pays person #0 and #2 $5 each.\n</pre>\n<p></p>\n\n<p><b>Example 2:</b>\n</p><pre><b>Input:</b>\n[[0,1,10], [1,0,1], [1,2,5], [2,0,5]]\n\n<b>Output:</b>\n1\n\n<b>Explanation:</b>\nPerson #0 gave person #1 $10.\nPerson #1 gave person #0 $1.\nPerson #1 gave person #2 $5.\nPerson #2 gave person #0 $5.\n\nTherefore, person #1 only need to give person #0 $4, and all debt is settled.\n</pre>\n<p></p></div>",
+  "url": "https://leetcode.com/problems/optimal-account-balancing/",
+  "companies": {
+    "Uber": 8,
+    "Google": 4
+  }
+}

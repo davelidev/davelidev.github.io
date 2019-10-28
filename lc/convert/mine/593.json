@@ -1,0 +1,11 @@
+{
+  "categories": [
+    "Math"
+  ],
+  "diff": "Medium",
+  "title": "593. Valid Square",
+  "question": "<div><p>Given the coordinates of four points in 2D space, return whether the four points could construct a square.</p>\n\n<p>The coordinate (x,y) of a point is represented by an integer array with two integers.</p>\n\n<p><b>Example:</b></p>\n\n<pre><b>Input:</b> p1 = [0,0], p2 = [1,1], p3 = [1,0], p4 = [0,1]\n<b>Output:</b> True\n</pre>\n\n<p>&nbsp;</p>\n\n<p>Note:</p>\n\n<ol>\n\t<li>All the input integers are in the range [-10000, 10000].</li>\n\t<li>A valid square has four equal sides with positive length and four equal angles (90-degree angles).</li>\n\t<li>Input points have no order.</li>\n</ol>\n\n<p>&nbsp;</p>\n</div>",
+  "url": "https://leetcode.com/problems/valid-square/",
+  "companies": {},
+  "code": "class Solution(object):\\u000A    def validSquare(self, p1, p2, p3, p4):\\u000A        \\u0022\\u0022\\u0022\\u000A        :type p1: List[int]\\u000A        :type p2: List[int]\\u000A        :type p3: List[int]\\u000A        :type p4: List[int]\\u000A        :rtype: bool\\u000A        \\u0022\\u0022\\u0022\\u000A        points \\u003D [p1, p2, p3, p4]\\u000A        dists \\u003D [ ((points[i][0] \\u002D points[j][0])**2 + (points[i][1] \\u002D points[j][1])**2)\\u000A                 for i in range(len(points)) for j in range(i + 1, len(points))]\\u000A        from collections import Counter\\u000A        dists \\u003D Counter(dists)\\u000A        keys \\u003D dists.keys()\\u000A        return len(keys) \\u003D\\u003D 2 and \\u005C\\u000A            (dists[keys[0]] \\u003D\\u003D 2 or dists[keys[0]] \\u003D\\u003D 4) and \\u005C\\u000A            (dists[keys[1]] \\u003D\\u003D 2 or dists[keys[1]] \\u003D\\u003D 4)"
+}

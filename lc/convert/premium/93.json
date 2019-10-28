@@ -1,0 +1,15 @@
+{
+  "categories": [
+    "String",
+    "Backtracking"
+  ],
+  "diff": "Medium",
+  "title": "93. Restore IP Addresses",
+  "question": "<div><p>Given a string containing only digits, restore it by returning all possible valid IP address combinations.</p>\n\n<p><strong>Example:</strong></p>\n\n<pre><strong>Input:</strong> \"25525511135\"\n<strong>Output:</strong> <code>[\"255.255.11.135\", \"255.255.111.35\"]\n</code></pre>\n</div>",
+  "url": "https://leetcode.com/problems/restore-ip-addresses/",
+  "companies": {
+    "Microsoft": 4,
+    "Amazon": 3,
+    "VMware": 2
+  }
+}

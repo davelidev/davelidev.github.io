@@ -1,0 +1,12 @@
+{
+  "categories": [
+    "Tree"
+  ],
+  "diff": "Medium",
+  "title": "865. Smallest Subtree with all the Deepest Nodes",
+  "question": "<div><p>Given a binary tree rooted at <code>root</code>, the <em>depth</em> of each node is the shortest distance to the root.</p>\n\n<p>A node is <em>deepest</em> if it has the largest depth possible among&nbsp;any node in the <u>entire tree</u>.</p>\n\n<p>The subtree of a node is that node, plus the set of all descendants of that node.</p>\n\n<p>Return the node with the largest depth such that it contains all the deepest nodes in its subtree.</p>\n\n<p>&nbsp;</p>\n\n<p><strong>Example 1:</strong></p>\n\n<pre><strong>Input: </strong><span id=\"example-input-1-1\">[3,5,1,6,2,0,8,null,null,7,4]</span>\n<strong>Output: </strong><span id=\"example-output-1\">[2,7,4]</span>\n<strong>Explanation:\n</strong>\n<img alt=\"\" src=\"https://s3-lc-upload.s3.amazonaws.com/uploads/2018/07/01/sketch1.png\" style=\"width: 280px; height: 238px;\">\n\nWe return the node with value 2, colored in yellow in the diagram.\nThe nodes colored in blue are the deepest nodes of the tree.\nThe input \"[3, 5, 1, 6, 2, 0, 8, null, null, 7, 4]\" is a serialization of the given tree.\nThe output \"[2, 7, 4]\" is a serialization of the subtree rooted at the node with value 2.\nBoth the input and output have TreeNode type.\n</pre>\n\n<p>&nbsp;</p>\n\n<p><strong>Note:</strong></p>\n\n<ul>\n\t<li>The number of nodes in the tree will be between 1 and 500.</li>\n\t<li>The values of each node are unique.</li>\n</ul>\n</div>",
+  "url": "https://leetcode.com/problems/smallest-subtree-with-all-the-deepest-nodes/",
+  "companies": {
+    "Facebook": 3
+  }
+}

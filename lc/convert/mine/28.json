@@ -1,0 +1,12 @@
+{
+  "categories": [
+    "Two Pointers",
+    "String"
+  ],
+  "diff": "Easy",
+  "title": "28. Implement strStr()",
+  "question": "<div><p>Implement <a href=\"http://www.cplusplus.com/reference/cstring/strstr/\" target=\"_blank\">strStr()</a>.</p>\n\n<p>Return the index of the first occurrence of needle in haystack, or <strong>-1</strong> if needle is not part of haystack.</p>\n\n<p><strong>Example 1:</strong></p>\n\n<pre><strong>Input:</strong> haystack = \"hello\", needle = \"ll\"\n<strong>Output:</strong> 2\n</pre>\n\n<p><strong>Example 2:</strong></p>\n\n<pre><strong>Input:</strong> haystack = \"aaaaa\", needle = \"bba\"\n<strong>Output:</strong> -1\n</pre>\n\n<p><strong>Clarification:</strong></p>\n\n<p>What should we return when <code>needle</code> is an empty string? This is a great question to ask during an interview.</p>\n\n<p>For the purpose of this problem, we will return 0 when <code>needle</code> is an empty string. This is consistent to C's&nbsp;<a href=\"http://www.cplusplus.com/reference/cstring/strstr/\" target=\"_blank\">strstr()</a> and Java's&nbsp;<a href=\"https://docs.oracle.com/javase/7/docs/api/java/lang/String.html#indexOf(java.lang.String)\" target=\"_blank\">indexOf()</a>.</p>\n</div>",
+  "url": "https://leetcode.com/problems/implement-strstr/",
+  "companies": {},
+  "code": "class Solution(object):\\u000A    def strStr(self, haystack, needle):\\u000A        \\u0022\\u0022\\u0022\\u000A        :type haystack: str\\u000A        :type needle: str\\u000A        :rtype: int\\u000A        \\u0022\\u0022\\u0022\\u000A        for i in range(0, len(haystack) \\u002D len(needle) + 1):\\u000A            if haystack[i: i + len(needle)] \\u003D\\u003D needle:\\u000A                return i\\u000A        return \\u002D1"
+}

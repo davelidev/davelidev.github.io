@@ -1,0 +1,12 @@
+{
+  "categories": [
+    "Array",
+    "Dynamic Programming"
+  ],
+  "diff": "Medium",
+  "title": "63. Unique Paths II",
+  "question": "<div><p>A robot is located at the top-left corner of a <em>m</em> x <em>n</em> grid (marked 'Start' in the diagram below).</p>\n\n<p>The robot can only move either down or right at any point in time. The robot is trying to reach the bottom-right corner of the grid (marked 'Finish' in the diagram below).</p>\n\n<p>Now consider if some obstacles are added to the grids. How many unique paths would there be?</p>\n\n<p><img src=\"https://assets.leetcode.com/uploads/2018/10/22/robot_maze.png\" style=\"width: 400px; height: 183px;\"></p>\n\n<p>An obstacle and empty space is marked as <code>1</code> and <code>0</code> respectively in the grid.</p>\n\n<p><strong>Note:</strong> <em>m</em> and <em>n</em> will be at most 100.</p>\n\n<p><strong>Example 1:</strong></p>\n\n<pre><strong>Input:\n</strong>[\n&nbsp; [0,0,0],\n&nbsp; [0,1,0],\n&nbsp; [0,0,0]\n]\n<strong>Output:</strong> 2\n<strong>Explanation:</strong>\nThere is one obstacle in the middle of the 3x3 grid above.\nThere are two ways to reach the bottom-right corner:\n1. Right -&gt; Right -&gt; Down -&gt; Down\n2. Down -&gt; Down -&gt; Right -&gt; Right\n</pre>\n</div>",
+  "url": "https://leetcode.com/problems/unique-paths-ii/",
+  "companies": {},
+  "code": "class Solution(object):\\u000A    def uniquePathsWithObstacles(self, obstacleGrid):\\u000A        \\u0022\\u0022\\u0022\\u000A        :type obstacleGrid: List[List[int]]\\u000A        :rtype: int\\u000A        \\u0022\\u0022\\u0022\\u000A        if not obstacleGrid or not obstacleGrid[0]: return 0\\u000A        dp \\u003D [[1 \\u002D item for item in row] for row in obstacleGrid]\\u000A        for i in range(1, len(dp)): dp[i][0] \\u003D min(dp[i \\u002D 1][0], dp[i][0])\\u000A        for j in range(1, len(dp[0])): dp[0][j] \\u003D min(dp[0][j \\u002D 1], dp[0][j])\\u000A        for i in range(1, len(dp)):\\u000A            for j in range(1, len(dp[0])):\\u000A                if dp[i][j]: dp[i][j] \\u003D dp[i \\u002D 1][j] + dp[i][j \\u002D 1]\\u000A        return dp[\\u002D1][\\u002D1]"
+}

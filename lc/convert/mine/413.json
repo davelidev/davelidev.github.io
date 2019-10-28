@@ -1,0 +1,12 @@
+{
+  "categories": [
+    "Math",
+    "Dynamic Programming"
+  ],
+  "diff": "Medium",
+  "title": "413. Arithmetic Slices",
+  "question": "<div><p>A sequence of number is called arithmetic if it consists of at least three elements and if the difference between any two consecutive elements is the same.</p>\n\n<p>For example, these are arithmetic sequence:</p>\n<pre>1, 3, 5, 7, 9\n7, 7, 7, 7\n3, -1, -5, -9</pre>\n\n<p>The following sequence is not arithmetic.</p> <pre>1, 1, 2, 5, 7</pre> \n<br>\n\n<p>A zero-indexed array A consisting of N numbers is given. A slice of that array is any pair of integers (P, Q) such that 0 &lt;= P &lt; Q &lt; N.</p>\n\n<p>A slice (P, Q) of array A is called arithmetic if the sequence:<br>\n    A[P], A[p + 1], ..., A[Q - 1], A[Q] is arithmetic. In particular, this means that P + 1 &lt; Q.</p>\n\n<p>The function should return the number of arithmetic slices in the array A. </p>\n<br>\n\n<p><b>Example:</b>\n</p><pre>A = [1, 2, 3, 4]\n\nreturn: 3, for 3 arithmetic slices in A: [1, 2, 3], [2, 3, 4] and [1, 2, 3, 4] itself.\n</pre></div>",
+  "url": "https://leetcode.com/problems/arithmetic-slices/",
+  "companies": {},
+  "code": "class Solution(object):\\u000A    def numberOfArithmeticSlices(self, A):\\u000A        \\u0022\\u0022\\u0022\\u000A        :type A: List[int]\\u000A        :rtype: int\\u000A        \\u0022\\u0022\\u0022\\u000A        diffs \\u003D []\\u000A        prev \\u003D None\\u000A        for i in xrange(1, len(A)):\\u000A            diff \\u003D A[i] \\u002D A[i \\u002D 1]\\u000A            if not diffs or prev !\\u003D diff:\\u000A                diffs.append(1)\\u000A            else: diffs[\\u002D1] +\\u003D 1\\u000A            prev \\u003D diff\\u000A        return sum((n * (n \\u002D 1) / 2) for n in diffs)\\u000A            \\u000A        "
+}

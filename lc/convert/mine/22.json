@@ -1,0 +1,12 @@
+{
+  "categories": [
+    "String",
+    "Backtracking"
+  ],
+  "diff": "Medium",
+  "title": "22. Generate Parentheses",
+  "question": "<div><p>\nGiven <i>n</i> pairs of parentheses, write a function to generate all combinations of well-formed parentheses.\n</p>\n\n<p>\nFor example, given <i>n</i> = 3, a solution set is:\n</p>\n<pre>[\n  \"((()))\",\n  \"(()())\",\n  \"(())()\",\n  \"()(())\",\n  \"()()()\"\n]\n</pre></div>",
+  "url": "https://leetcode.com/problems/generate-parentheses/",
+  "companies": {},
+  "code": "class Solution(object):\\u000A    def generateParenthesis(self, n):\\u000A        \\u0022\\u0022\\u0022\\u000A        :type n: int\\u000A        :rtype: List[str]\\u000A        \\u0022\\u0022\\u0022\\u000A        def _generateParenthesis(so_far\\u003D[], open_paren\\u003D0, close_paren\\u003D0, res\\u003D[]):\\u000A            if n \\u003D\\u003D open_paren \\u003D\\u003D close_paren:res.append(\\u0027\\u0027.join(so_far))\\u000A            elif open_paren \\u003E n or close_paren \\u003E open_paren: pass\\u000A            else:\\u000A                so_far.append(\\u0027(\\u0027)\\u000A                _generateParenthesis(so_far, open_paren + 1, close_paren, res)\\u000A                so_far.pop()\\u000A                \\u000A                so_far.append(\\u0027)\\u0027)\\u000A                _generateParenthesis(so_far, open_paren, close_paren + 1, res)\\u000A                so_far.pop()\\u000A                \\u000A            return res\\u000A        return _generateParenthesis()"
+}

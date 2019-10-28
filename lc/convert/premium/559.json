@@ -1,0 +1,14 @@
+{
+  "categories": [
+    "Tree",
+    "Depth-first Search",
+    "Breadth-first Search"
+  ],
+  "diff": "Easy",
+  "title": "559. Maximum Depth of N-ary Tree",
+  "question": "<div><p>Given a n-ary tree, find its maximum depth.</p>\n\n<p>The maximum depth is the number of nodes along the longest path from the root node down to the farthest leaf node.</p>\n\n<p>For example, given a <code>3-ary</code> tree:</p>\n&nbsp;\n\n<p><img src=\"https://assets.leetcode.com/uploads/2018/10/12/narytreeexample.png\" style=\"width: 100%; max-width: 300px;\"></p>\n\n<p>&nbsp;</p>\n\n<p>We should return its max depth, which is 3.</p>\n\n<p>&nbsp;</p>\n\n<p><b>Note:</b></p>\n\n<ol>\n\t<li>The depth of the tree is at most <code>1000</code>.</li>\n\t<li>The total number of nodes is at most <code>5000</code>.</li>\n</ol>\n</div>",
+  "url": "https://leetcode.com/problems/maximum-depth-of-n-ary-tree/",
+  "companies": {
+    "Amazon": 3
+  }
+}

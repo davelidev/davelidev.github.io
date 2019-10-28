@@ -1,0 +1,21 @@
+{
+  "categories": [
+    "Graph",
+    "Topological Sort"
+  ],
+  "diff": "Hard",
+  "title": "269. Alien Dictionary",
+  "question": "<div><p>There is a new alien language which uses the latin alphabet. However, the order among letters are unknown to you. You receive a list of <b>non-empty</b> words from the dictionary, where <b>words are sorted lexicographically by the rules of this new language</b>. Derive the order of letters in this language.</p>\n\n<p><b>Example 1:</b></p>\n\n<pre><strong>Input:</strong>\n[\n  \"wrt\",\n  \"wrf\",\n  \"er\",\n  \"ett\",\n  \"rftt\"\n]\n\n<strong>Output: </strong><code>\"wertf\"</code>\n</pre>\n\n<p><b>Example 2:</b></p>\n\n<pre><strong>Input:</strong>\n[\n  \"z\",\n  \"x\"\n]\n\n<strong>Output: </strong><code>\"zx\"</code>\n</pre>\n\n<p><b>Example 3:</b></p>\n\n<pre><strong>Input:</strong>\n[\n  \"z\",\n  \"x\",\n  \"z\"\n] \n\n<strong>Output:</strong> <code>\"\"</code>&nbsp;\n\n<strong>Explanation:</strong> The order is invalid, so return <code>\"\"</code>.\n</pre>\n\n<p><b>Note:</b></p>\n\n<ol>\n\t<li>You may assume all letters are in lowercase.</li>\n\t<li>You may assume that if a is a prefix of b, then a must appear before b in the given dictionary.</li>\n\t<li>If the order is invalid, return an empty string.</li>\n\t<li>There may be multiple valid order of letters, return any one of them is fine.</li>\n</ol>\n</div>",
+  "url": "https://leetcode.com/problems/alien-dictionary/",
+  "companies": {
+    "Facebook": 17,
+    "Amazon": 13,
+    "Airbnb": 7,
+    "Microsoft": 7,
+    "Google": 2,
+    "Pinterest": 2,
+    "Uber": 2,
+    "Bloomberg": 2
+  },
+  "code": "class Solution(object):\\u000A    def alienOrder(self, words):\\u000A        from collections import defaultdict\\u000A        G \\u003D defaultdict(set)\\u000A        deg \\u003D {char: 0 for word in words for char in word}\\u000A        \\u000A        for i in range(len(words) \\u002D 1):\\u000A            wrd1, wrd2 \\u003D words[i], words[i + 1]\\u000A            for j in range(min(len(wrd1), len(wrd2))):\\u000A                if wrd1[j] !\\u003D wrd2[j]:\\u000A                    if wrd2[j] not in G[wrd1[j]]:\\u000A                        G[wrd1[j]].add(wrd2[j])\\u000A                        deg[wrd2[j]] +\\u003D 1\\u000A                    break\\u000A        \\u000A        bfs \\u003D [n for n, cnt in deg.iteritems() if not cnt]\\u000A        res \\u003D []\\u000A        \\u000A        def to_visit(node):\\u000A            deg[node] \\u002D\\u003D 1\\u000A            return not deg[node]\\u000A        \\u000A        while bfs:\\u000A            res +\\u003D bfs\\u000A            bfs \\u003D [adj\\u000A                   for node in bfs\\u000A                   for adj in G[node]\\u000A                   if to_visit(adj)]\\u000A        \\u000A        return \\u0027\\u0027.join(res) if len(res) \\u003D\\u003D len(deg) else \\u0022\\u0022"
+}

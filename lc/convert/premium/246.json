@@ -1,0 +1,15 @@
+{
+  "categories": [
+    "Hash Table",
+    "Math"
+  ],
+  "diff": "Easy",
+  "title": "246. Strobogrammatic Number",
+  "question": "<div><p>A strobogrammatic number is a number that looks the same when rotated 180 degrees (looked at upside down).</p>\n\n<p>Write a function to determine if a number is strobogrammatic. The number is represented as a string.</p>\n\n<p><b>Example 1:</b></p>\n\n<pre><b>Input:</b>  \"69\"\n<b>Output:</b> true\n</pre>\n\n<p><b>Example 2:</b></p>\n\n<pre><b>Input:</b>  \"88\"\n<b>Output:</b> true</pre>\n\n<p><b>Example 3:</b></p>\n\n<pre><b>Input:</b>  \"962\"\n<b>Output:</b> false</pre>\n</div>",
+  "url": "https://leetcode.com/problems/strobogrammatic-number/",
+  "companies": {
+    "Facebook": 5,
+    "Google": 3
+  },
+  "code": "class Solution(object):\\u000A    def isStrobogrammatic(self, num):\\u000A        return set(\\u002716890\\u0027) \\u003E\\u003D set(num) and \\u005C\\u000A                num \\u003D\\u003D num[::\\u002D1].replace(\\u00276\\u0027,\\u0027.\\u0027).replace(\\u00279\\u0027,\\u00276\\u0027).replace(\\u0027.\\u0027,\\u00279\\u0027)\\u000A        \\u000A        "
+}

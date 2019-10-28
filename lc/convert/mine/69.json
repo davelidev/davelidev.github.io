@@ -1,0 +1,11 @@
+{
+  "categories": [
+    "Math",
+    "Binary Search"
+  ],
+  "diff": "Easy",
+  "title": "69. Sqrt(x)",
+  "question": "<div><p>Implement <code>int sqrt(int x)</code>.</p>\n\n<p>Compute and return the square root of <em>x</em>, where&nbsp;<em>x</em>&nbsp;is guaranteed to be a non-negative integer.</p>\n\n<p>Since the return type&nbsp;is an integer, the decimal digits are truncated and only the integer part of the result&nbsp;is returned.</p>\n\n<p><strong>Example 1:</strong></p>\n\n<pre><strong>Input:</strong> 4\n<strong>Output:</strong> 2\n</pre>\n\n<p><strong>Example 2:</strong></p>\n\n<pre><strong>Input:</strong> 8\n<strong>Output:</strong> 2\n<strong>Explanation:</strong> The square root of 8 is 2.82842..., and since \n&nbsp;            the decimal part is truncated, 2 is returned.\n</pre>\n</div>",
+  "url": "https://leetcode.com/problems/sqrtx/",
+  "companies": {}
+}

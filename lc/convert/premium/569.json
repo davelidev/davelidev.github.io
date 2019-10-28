@@ -1,0 +1,10 @@
+{
+  "categories": [],
+  "diff": "Hard",
+  "title": "569. Median Employee Salary",
+  "question": "<div class=\"sql-schema-wrapper__3VBi\"><a class=\"sql-schema-link__3cEg\">SQL Schema<svg viewBox=\"0 0 24 24\" width=\"1em\" height=\"1em\" class=\"icon__3Su4\"><path fill-rule=\"evenodd\" d=\"M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z\"></path></svg></a></div><div><p>The <code>Employee</code> table holds all employees. The employee table has three columns: Employee Id, Company Name, and Salary.</p>\n\n<pre>+-----+------------+--------+\n|Id   | Company    | Salary |\n+-----+------------+--------+\n|1    | A          | 2341   |\n|2    | A          | 341    |\n|3    | A          | 15     |\n|4    | A          | 15314  |\n|5    | A          | 451    |\n|6    | A          | 513    |\n|7    | B          | 15     |\n|8    | B          | 13     |\n|9    | B          | 1154   |\n|10   | B          | 1345   |\n|11   | B          | 1221   |\n|12   | B          | 234    |\n|13   | C          | 2345   |\n|14   | C          | 2645   |\n|15   | C          | 2645   |\n|16   | C          | 2652   |\n|17   | C          | 65     |\n+-----+------------+--------+\n</pre>\n\n<p>Write a SQL query to find the median salary of each company. Bonus points if you can solve it without using any built-in SQL functions.</p>\n\n<pre>+-----+------------+--------+\n|Id   | Company    | Salary |\n+-----+------------+--------+\n|5    | A          | 451    |\n|6    | A          | 513    |\n|12   | B          | 234    |\n|9    | B          | 1154   |\n|14   | C          | 2645   |\n+-----+------------+--------+\n</pre>\n</div>",
+  "url": "https://leetcode.com/problems/median-employee-salary/",
+  "companies": {
+    "Google": null
+  }
+}

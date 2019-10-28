@@ -1,0 +1,13 @@
+{
+  "categories": [
+    "Binary Search",
+    "Dynamic Programming",
+    "Greedy"
+  ],
+  "diff": "Easy",
+  "title": "392. Is Subsequence",
+  "question": "<div><p>\nGiven a string <b>s</b> and a string <b>t</b>, check if <b>s</b> is subsequence of <b>t</b>.\n</p>\n\n<p>\nYou may assume that there is only lower case English letters in both <b>s</b> and <b>t</b>. <b>t</b> is potentially a very long (length ~= 500,000) string, and <b>s</b> is a short string (&lt;=100).\n</p>\n\n<p>\nA subsequence of a string is a new string which is formed from the original string by deleting some (can be none) of the characters without disturbing the relative positions of the remaining characters. (ie, <code>\"ace\"</code> is a subsequence of <code>\"abcde\"</code> while <code>\"aec\"</code> is not).\n</p>\n\n<p><b>Example 1:</b><br>\n<b>s</b> = <code>\"abc\"</code>, <b>t</b> = <code>\"ahbgdc\"</code>\n</p>\n<p>\nReturn <code>true</code>.\n</p>\n\n<p><b>Example 2:</b><br>\n<b>s</b> = <code>\"axc\"</code>, <b>t</b> = <code>\"ahbgdc\"</code>\n</p>\n<p>\nReturn <code>false</code>.\n</p>\n\n<p><b>Follow up:</b><br>\nIf there are lots of incoming S, say S1, S2, ... , Sk where k &gt;= 1B, and you want to check one by one to see if T has its subsequence. In this scenario, how would you change your code?</p>\n\n<p><b>Credits:</b><br>Special thanks to <a href=\"https://leetcode.com/pbrother/\">@pbrother</a> for adding this problem and creating all test cases.</p></div>",
+  "url": "https://leetcode.com/problems/is-subsequence/",
+  "companies": {},
+  "code": "class Solution(object):\\u000A    def isSubsequence(self, s, t):\\u000A        \\u0022\\u0022\\u0022\\u000A        :type s: str\\u000A        :type t: str\\u000A        :rtype: bool\\u000A        \\u0022\\u0022\\u0022\\u000A        i \\u003D 0\\u000A        for char in s:\\u000A            while i \\u003C len(t) and t[i] !\\u003D char:\\u000A                i +\\u003D 1\\u000A            i +\\u003D 1\\u000A            if i \\u003E len(t):\\u000A                return False\\u000A        return True"
+}

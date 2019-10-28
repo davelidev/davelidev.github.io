@@ -1,0 +1,14 @@
+{
+  "categories": [
+    "Array"
+  ],
+  "diff": "Easy",
+  "title": "189. Rotate Array",
+  "question": "<div><p>Given an array, rotate the array to the right by <em>k</em> steps, where&nbsp;<em>k</em>&nbsp;is non-negative.</p>\n\n<p><strong>Example 1:</strong></p>\n\n<pre><strong>Input:</strong> <code>[1,2,3,4,5,6,7]</code> and <em>k</em> = 3\n<strong>Output:</strong> <code>[5,6,7,1,2,3,4]</code>\n<strong>Explanation:</strong>\nrotate 1 steps to the right: <code>[7,1,2,3,4,5,6]</code>\nrotate 2 steps to the right: <code>[6,7,1,2,3,4,5]\n</code>rotate 3 steps to the right: <code>[5,6,7,1,2,3,4]</code>\n</pre>\n\n<p><strong>Example 2:</strong></p>\n\n<pre><strong>Input:</strong> <code>[-1,-100,3,99]</code> and <em>k</em> = 2\n<strong>Output:</strong> [3,99,-1,-100]\n<strong>Explanation:</strong> \nrotate 1 steps to the right: [99,-1,-100,3]\nrotate 2 steps to the right: [3,99,-1,-100]\n</pre>\n\n<p><strong>Note:</strong></p>\n\n<ul>\n\t<li>Try to come up as many solutions as you can, there are at least 3 different ways to solve this problem.</li>\n\t<li>Could you do it in-place with O(1) extra space?</li>\n</ul></div>",
+  "url": "https://leetcode.com/problems/rotate-array/",
+  "companies": {
+    "Microsoft": 4,
+    "Facebook": 2,
+    "Goldman Sachs": 2
+  }
+}

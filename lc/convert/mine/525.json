@@ -1,0 +1,11 @@
+{
+  "categories": [
+    "Hash Table"
+  ],
+  "diff": "Medium",
+  "title": "525. Contiguous Array",
+  "question": "<div><p>Given a binary array, find the maximum length of a contiguous subarray with equal number of 0 and 1. </p>\n\n\n<p><b>Example 1:</b><br>\n</p><pre><b>Input:</b> [0,1]\n<b>Output:</b> 2\n<b>Explanation:</b> [0, 1] is the longest contiguous subarray with equal number of 0 and 1.\n</pre>\n<p></p>\n\n<p><b>Example 2:</b><br>\n</p><pre><b>Input:</b> [0,1,0]\n<b>Output:</b> 2\n<b>Explanation:</b> [0, 1] (or [1, 0]) is a longest contiguous subarray with equal number of 0 and 1.\n</pre>\n<p></p>\n\n<p><b>Note:</b>\nThe length of the given binary array will not exceed 50,000.\n</p></div>",
+  "url": "https://leetcode.com/problems/contiguous-array/",
+  "companies": {},
+  "code": "class Solution(object):\\u000A    def findMaxLength(self, nums):\\u000A        \\u0022\\u0022\\u0022\\u000A        :type nums: List[int]\\u000A        :rtype: int\\u000A        \\u0022\\u0022\\u0022\\u000A        for i in range(len(nums)): nums[i] \\u003D \\u002D1 if nums[i] \\u003D\\u003D 0 else 1\\u000A        sum_to_idx, sum_so_far, max_len \\u003D {0: \\u002D1}, 0, 0\\u000A        for i in range(len(nums)):\\u000A            sum_so_far +\\u003D nums[i]\\u000A            if sum_so_far in sum_to_idx:\\u000A                max_len \\u003D max(i \\u002D sum_to_idx[sum_so_far], max_len)\\u000A            sum_to_idx.setdefault(sum_so_far, i)\\u000A        return max_len\\u000A            \\u000A        \\u000A        "
+}

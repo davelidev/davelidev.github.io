@@ -1,0 +1,12 @@
+{
+  "categories": [],
+  "diff": "Medium",
+  "title": "192. Word Frequency",
+  "question": "<div><p>Write a bash script to calculate the frequency of each word in a text file <code>words.txt</code>.</p>\n\n<p>For simplicity sake, you may assume:</p>\n\n<ul>\n\t<li><code>words.txt</code> contains only lowercase characters and space <code>' '</code> characters.</li>\n\t<li>Each word must consist of lowercase characters only.</li>\n\t<li>Words are separated by one or more whitespace characters.</li>\n</ul>\n\n<p><strong>Example:</strong></p>\n\n<p>Assume that <code>words.txt</code> has the following content:</p>\n\n<pre>the day is sunny the the\nthe sunny is is\n</pre>\n\n<p>Your script should output the following, sorted by descending frequency:</p>\n\n<pre>the 4\nis 3\nsunny 2\nday 1\n</pre>\n\n<p><b>Note:</b></p>\n\n<ul>\n\t<li>Don't worry about handling ties, it is guaranteed that each word's frequency count is unique.</li>\n\t<li>Could you write it in one-line using <a href=\"http://tldp.org/HOWTO/Bash-Prog-Intro-HOWTO-4.html\">Unix pipes</a>?</li>\n</ul>\n</div>",
+  "url": "https://leetcode.com/problems/word-frequency/",
+  "companies": {
+    "Adobe": 3,
+    "Amazon": 3,
+    "Yelp": 2
+  }
+}

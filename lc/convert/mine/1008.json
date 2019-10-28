@@ -1,0 +1,11 @@
+{
+  "categories": [
+    "Tree"
+  ],
+  "diff": "Medium",
+  "title": "1008. Construct Binary Search Tree from Preorder Traversal",
+  "question": "<div><p>Return the root node of a binary <strong>search</strong> tree that matches the given <code>preorder</code> traversal.</p>\n\n<p><em>(Recall that a binary search tree&nbsp;is a binary tree where for every <font face=\"monospace\">node</font>, any descendant of <code>node.left</code> has a value <code>&lt;</code>&nbsp;<code>node.val</code>, and any descendant of <code>node.right</code> has a value <code>&gt;</code>&nbsp;<code>node.val</code>.&nbsp; Also recall that a preorder traversal&nbsp;displays the value of the&nbsp;<code>node</code> first, then traverses <code>node.left</code>, then traverses <code>node.right</code>.)</em></p>\n\n<p>&nbsp;</p>\n\n<p><strong>Example 1:</strong></p>\n\n<pre><strong>Input: </strong><span id=\"example-input-1-1\">[8,5,1,7,10,12]</span>\n<strong>Output: </strong><span id=\"example-output-1\">[8,5,10,1,7,null,12]\n<img alt=\"\" src=\"https://assets.leetcode.com/uploads/2019/03/06/1266.png\" style=\"height: 200px; width: 306px;\"></span>\n</pre>\n\n<p>&nbsp;</p>\n\n<p><strong>Note:</strong>&nbsp;</p>\n\n<ol>\n\t<li><code>1 &lt;= preorder.length &lt;= 100</code></li>\n\t<li>The values of <code>preorder</code> are distinct.</li>\n</ol>\n</div>",
+  "url": "https://leetcode.com/problems/construct-binary-search-tree-from-preorder-traversal/",
+  "companies": {},
+  "code": "# Definition for a binary tree node.\\u000A# class TreeNode(object):\\u000A#     def __init__(self, x):\\u000A#         self.val \\u003D x\\u000A#         self.left \\u003D None\\u000A#         self.right \\u003D None\\u000A\\u000Aclass Solution(object):\\u000A    def bstFromPreorder(self, preorder):\\u000A        def bstFromPreorder(s, e):\\u000A            if s \\u003C e:\\u000A                root \\u003D TreeNode(preorder[s])\\u000A                m \\u003D s + 1\\u000A                while m \\u003C e and preorder[m] \\u003C preorder[s]: m +\\u003D 1\\u000A                root.left \\u003D bstFromPreorder(s + 1, m)\\u000A                root.right \\u003D bstFromPreorder(m, e)\\u000A                return root\\u000A        return bstFromPreorder(0, len(preorder))\\u000A            \\u000A            "
+}

@@ -1,0 +1,11 @@
+{
+  "categories": [
+    "Linked List"
+  ],
+  "diff": "Medium",
+  "title": "445. Add Two Numbers II",
+  "question": "<div><p>You are given two <b>non-empty</b> linked lists representing two non-negative integers. The most significant digit comes first and each of their nodes contain a single digit. Add the two numbers and return it as a linked list.</p>\n\n<p>You may assume the two numbers do not contain any leading zero, except the number 0 itself.</p>\n\n<p><b>Follow up:</b><br>\nWhat if you cannot modify the input lists? In other words, reversing the lists is not allowed.\n</p>\n\n<p>\n<b>Example:</b>\n</p><pre><b>Input:</b> (7 -&gt; 2 -&gt; 4 -&gt; 3) + (5 -&gt; 6 -&gt; 4)\n<b>Output:</b> 7 -&gt; 8 -&gt; 0 -&gt; 7\n</pre>\n<p></p></div>",
+  "url": "https://leetcode.com/problems/add-two-numbers-ii/",
+  "companies": {},
+  "code": "# Definition for singly\\u002Dlinked list.\\u000A# class ListNode(object):\\u000A#     def __init__(self, x):\\u000A#         self.val \\u003D x\\u000A#         self.next \\u003D None\\u000A\\u000Aclass Solution(object):\\u000A    def addTwoNumbers(self, l1, l2):\\u000A        \\u0022\\u0022\\u0022\\u000A        :type l1: ListNode\\u000A        :type l2: ListNode\\u000A        :rtype: ListNode\\u000A        \\u0022\\u0022\\u0022\\u000A        \\u000A        def _get_stack(node):\\u000A            stack \\u003D []\\u000A            while node:\\u000A                stack.append(node.val)\\u000A                node \\u003D node.next\\u000A            return stack\\u000A        s1 \\u003D _get_stack(l1)\\u000A        s2 \\u003D _get_stack(l2)\\u000A        \\u000A        carry \\u003D 0\\u000A        dummy \\u003D ListNode(\\u0027dummy\\u0027)\\u000A        while s1 or s2 or carry:\\u000A            cur_val \\u003D carry\\u000A            if s1:\\u000A                cur_val +\\u003D s1.pop()\\u000A            if s2:\\u000A                cur_val +\\u003D s2.pop()\\u000A            carry, cur_val \\u003D cur_val/10, cur_val%10\\u000A            cur_node \\u003D ListNode(cur_val)\\u000A            cur_node.next, dummy.next \\u003D dummy.next, cur_node\\u000A        return dummy.next\\u000A        "
+}

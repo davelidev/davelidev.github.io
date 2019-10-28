@@ -1,0 +1,12 @@
+{
+  "categories": [
+    "String",
+    "Backtracking"
+  ],
+  "diff": "Medium",
+  "title": "93. Restore IP Addresses",
+  "question": "<div><p>Given a string containing only digits, restore it by returning all possible valid IP address combinations.</p>\n\n<p><strong>Example:</strong></p>\n\n<pre><strong>Input:</strong> \"25525511135\"\n<strong>Output:</strong> <code>[\"255.255.11.135\", \"255.255.111.35\"]\n</code></pre>\n</div>",
+  "url": "https://leetcode.com/problems/restore-ip-addresses/",
+  "companies": {},
+  "code": "class Solution(object):\\u000A    def restoreIpAddresses(self, s):\\u000A        \\u0022\\u0022\\u0022\\u000A        :type s: str\\u000A        :rtype: List[str]\\u000A        \\u0022\\u0022\\u0022\\u000A        n \\u003D len(s)\\u000A        if float(n) / 4 \\u003E 3: return []\\u000A        dp \\u003D [[] for _ in xrange(n + 1)]\\u000A        dp[0].append([])\\u000A        for j in range(1, n + 1):\\u000A            for i in range(max(j \\u002D 3, 0), j):\\u000A                for ip in dp[i]:\\u000A                    if ((s[i:j] \\u003D\\u003D \\u00270\\u0027) or \\u005C\\u000A                        (not s[i:j].startswith(\\u00270\\u0027) and int(s[i:j]) \\u003C 256)) \\u005C\\u000A                         and len(ip) \\u003C 4:\\u000A                        dp[j].append(ip + [s[i:j]])\\u000A\\u000A        return [\\u0027.\\u0027.join(ip) for ip in dp[n] if len(ip) \\u003D\\u003D 4]\\u000A        "
+}

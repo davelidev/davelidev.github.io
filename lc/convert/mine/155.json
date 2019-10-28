@@ -1,0 +1,12 @@
+{
+  "categories": [
+    "Stack",
+    "Design"
+  ],
+  "diff": "Easy",
+  "title": "155. Min Stack",
+  "question": "<div><p>Design a stack that supports push, pop, top, and retrieving the minimum element in constant time.</p>\n\n<ul>\n\t<li>push(x) -- Push element x onto stack.</li>\n\t<li>pop() -- Removes the element on top of the stack.</li>\n\t<li>top() -- Get the top element.</li>\n\t<li>getMin() -- Retrieve the minimum element in the stack.</li>\n</ul>\n\n<p>&nbsp;</p>\n\n<p><b>Example:</b></p>\n\n<pre>MinStack minStack = new MinStack();\nminStack.push(-2);\nminStack.push(0);\nminStack.push(-3);\nminStack.getMin();   --&gt; Returns -3.\nminStack.pop();\nminStack.top();      --&gt; Returns 0.\nminStack.getMin();   --&gt; Returns -2.\n</pre>\n\n<p>&nbsp;</p>\n</div>",
+  "url": "https://leetcode.com/problems/min-stack/",
+  "companies": {},
+  "code": "class MinStack(object):\\u000A\\u000A    def __init__(self):\\u000A        self.lst \\u003D []\\u000A    def push(self, x):\\u000A        \\u0022\\u0022\\u0022\\u000A        :type x: int\\u000A        :rtype: void\\u000A        \\u0022\\u0022\\u0022\\u000A        cur_min \\u003D self.lst[\\u002D1][0] if self.lst else float(\\u0027inf\\u0027)\\u000A        self.lst.append([min(x, cur_min), x])\\u000A\\u000A    def pop(self):\\u000A        \\u0022\\u0022\\u0022\\u000A        :rtype: void\\u000A        \\u0022\\u0022\\u0022\\u000A        self.lst.pop()\\u000A\\u000A    def top(self):\\u000A        \\u0022\\u0022\\u0022\\u000A        :rtype: int\\u000A        \\u0022\\u0022\\u0022\\u000A        return self.lst[\\u002D1][1]\\u000A\\u000A    def getMin(self):\\u000A        \\u0022\\u0022\\u0022\\u000A        :rtype: int\\u000A        \\u0022\\u0022\\u0022\\u000A        return self.lst[\\u002D1][0]\\u000A\\u000A\\u000A# Your MinStack object will be instantiated and called as such:\\u000A# obj \\u003D MinStack()\\u000A# obj.push(x)\\u000A# obj.pop()\\u000A# param_3 \\u003D obj.top()\\u000A# param_4 \\u003D obj.getMin()"
+}

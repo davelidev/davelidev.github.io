@@ -1,0 +1,9 @@
+{
+  "categories": [],
+  "diff": "Easy",
+  "title": "821. Shortest Distance to a Character",
+  "question": "<div><p>Given a string <code>S</code>&nbsp;and a character <code>C</code>, return an array of integers representing the shortest distance from the character <code>C</code> in the string.</p>\n\n<p><strong>Example 1:</strong></p>\n\n<pre><strong>Input:</strong> S = \"loveleetcode\", C = 'e'\n<strong>Output:</strong> [3, 2, 1, 0, 1, 0, 0, 1, 2, 2, 1, 0]\n</pre>\n\n<p>&nbsp;</p>\n\n<p><strong>Note:</strong></p>\n\n<ol>\n\t<li><code>S</code> string length is&nbsp;in&nbsp;<code>[1, 10000].</code></li>\n\t<li><code>C</code>&nbsp;is a single character, and guaranteed to be in string <code>S</code>.</li>\n\t<li>All letters in <code>S</code> and <code>C</code> are lowercase.</li>\n</ol>\n</div>",
+  "url": "https://leetcode.com/problems/shortest-distance-to-a-character/",
+  "companies": {},
+  "code": "class Solution(object):\\u000A    def shortestToChar(self, S, C):\\u000A        \\u0022\\u0022\\u0022\\u000A        :type S: str\\u000A        :type C: str\\u000A        :rtype: List[int]\\u000A        \\u0022\\u0022\\u0022\\u000A        res \\u003D []\\u000A        last_C \\u003D float(\\u0027\\u002Dinf\\u0027)\\u000A        for i, char in enumerate(S):\\u000A            if char \\u003D\\u003D C:\\u000A                last_C \\u003D i\\u000A            res.append(i \\u002D last_C)\\u000A        last_C \\u003D float(\\u0027inf\\u0027)\\u000A        for i in range(len(S) \\u002D1, \\u002D1, \\u002D1):\\u000A            char \\u003D S[i]\\u000A            if char \\u003D\\u003D C:\\u000A                last_C \\u003D i\\u000A            res[i] \\u003D min(res[i], last_C \\u002D i)\\u000A        return res"
+}

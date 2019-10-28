@@ -1,0 +1,11 @@
+{
+  "categories": [
+    "Array"
+  ],
+  "diff": "Medium",
+  "title": "442. Find All Duplicates in an Array",
+  "question": "<div><p>Given an array of integers, 1 ≤ a[i] ≤ <i>n</i> (<i>n</i> = size of array), some elements appear <b>twice</b> and others appear <b>once</b>.</p>\n\n<p>Find all the elements that appear <b>twice</b> in this array.</p>\n\n<p>Could you do it without extra space and in O(<i>n</i>) runtime?</p>\n<p></p>\n<p><b>Example:</b><br>\n</p><pre><b>Input:</b>\n[4,3,2,7,8,2,3,1]\n\n<b>Output:</b>\n[2,3]\n</pre></div>",
+  "url": "https://leetcode.com/problems/find-all-duplicates-in-an-array/",
+  "companies": {},
+  "code": "class Solution(object):\\u000A    def findDuplicates(self, nums):\\u000A        \\u0022\\u0022\\u0022\\u000A        :type nums: List[int]\\u000A        :rtype: List[int]\\u000A        \\u0022\\u0022\\u0022\\u000A        res \\u003D []\\u000A        for i in xrange(len(nums)):\\u000A            idx \\u003D abs(nums[i]) \\u002D 1\\u000A            if nums[idx] \\u003C 0: res.append(idx + 1)\\u000A            else: nums[idx] \\u003D \\u002Dnums[idx]\\u000A        return res\\u000A        "
+}

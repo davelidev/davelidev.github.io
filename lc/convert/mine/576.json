@@ -1,0 +1,12 @@
+{
+  "categories": [
+    "Dynamic Programming",
+    "Depth-first Search"
+  ],
+  "diff": "Medium",
+  "title": "576. Out of Boundary Paths",
+  "question": "<div><p>There is an <b>m</b> by <b>n</b> grid with a ball. Given the start coordinate <b>(i,j)</b> of the ball, you can move the ball to <b>adjacent</b> cell or cross the grid boundary in four directions (up, down, left, right). However, you can <b>at most</b> move <b>N</b> times. Find out the number of paths to move the ball out of grid boundary. The answer may be very large, return it after mod 10<sup>9</sup> + 7.</p>\n\n<p>&nbsp;</p>\n\n<p><b>Example 1:</b></p>\n\n<pre><b>Input: </b>m = 2, n = 2, N = 2, i = 0, j = 0\n<b>Output:</b> 6\n<b>Explanation:</b>\n<img src=\"https://assets.leetcode.com/uploads/2018/10/13/out_of_boundary_paths_1.png\" style=\"width: 100%; max-width: 400px\">\n</pre>\n\n<p><b>Example 2:</b></p>\n\n<pre><b>Input: </b>m = 1, n = 3, N = 3, i = 0, j = 1\n<b>Output:</b> 12\n<b>Explanation:</b>\n<img src=\"https://assets.leetcode.com/uploads/2018/10/12/out_of_boundary_paths_2.png\" style=\"width: 100%; max-width: 400px\">\n</pre>\n\n<p>&nbsp;</p>\n\n<p><b>Note:</b></p>\n\n<ol>\n\t<li>Once you move the ball out of boundary, you cannot move it back.</li>\n\t<li>The length and height of the grid is in range [1,50].</li>\n\t<li>N is in range [0,50].</li>\n</ol>\n</div>",
+  "url": "https://leetcode.com/problems/out-of-boundary-paths/",
+  "companies": {},
+  "code": "class Solution(object):\\u000A    def findPaths(self, m, n, N, i, j):\\u000A        \\u0022\\u0022\\u0022\\u000A        :type m: int\\u000A        :type n: int\\u000A        :type N: int\\u000A        :type i: int\\u000A        :type j: int\\u000A        :rtype: int\\u000A        \\u0022\\u0022\\u0022\\u000A        grid \\u003D [[0] * n for _ in range(m)]\\u000A        dif \\u003D zip([0, 1, 0, \\u002D1],\\u000A                  [1, 0, \\u002D1, 0])\\u000A        for _ in range(N):\\u000A            grid \\u003D [[\\u000A                sum(\\u000A                    grid[adj_x][adj_y] if (0 \\u003C\\u003D adj_x \\u003C m and 0 \\u003C\\u003D adj_y \\u003C n) else 1\\u000A                    for adj_x, adj_y in [(x + x_dir, y + y_dir) for x_dir, y_dir in dif])\\u000A                for y in range(n)]\\u000A                for x in range(m)\\u000A            ]\\u000A        return grid[i][j] % (10**9 + 7)"
+}

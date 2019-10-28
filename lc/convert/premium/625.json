@@ -1,0 +1,13 @@
+{
+  "categories": [
+    "Math",
+    "Recursion"
+  ],
+  "diff": "Medium",
+  "title": "625. Minimum Factorization",
+  "question": "<div><p>Given a positive integer <code>a</code>, find the smallest positive integer <code>b</code> whose multiplication of each digit equals to <code>a</code>. </p>\n\n<p>\nIf there is no answer or the answer is not fit in 32-bit signed integer, then return 0.</p>\n\n<p>\n<b>Example 1</b><br>\nInput:\n</p><pre>48 </pre>\nOutput:\n<pre>68</pre>\n<p></p>\n\n<p>\n<b>Example 2</b><br>\nInput: \n</p><pre>15</pre>\n\nOutput:\n<pre>35</pre>\n<p></p></div>",
+  "url": "https://leetcode.com/problems/minimum-factorization/",
+  "companies": {
+    "Tencent": null
+  }
+}

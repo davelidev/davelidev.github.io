@@ -1,0 +1,10 @@
+{
+  "categories": [],
+  "diff": "Easy",
+  "title": "196. Delete Duplicate Emails",
+  "question": "<div><p>Write a SQL query to <strong>delete</strong> all duplicate email entries in a table named <code>Person</code>, keeping only unique emails based on its <i>smallest</i> <b>Id</b>.</p>\n\n<pre>+----+------------------+\n| Id | Email            |\n+----+------------------+\n| 1  | john@example.com |\n| 2  | bob@example.com  |\n| 3  | john@example.com |\n+----+------------------+\nId is the primary key column for this table.\n</pre>\n\n<p>For example, after running your query, the above <code>Person</code> table should have the following rows:</p>\n\n<pre>+----+------------------+\n| Id | Email            |\n+----+------------------+\n| 1  | john@example.com |\n| 2  | bob@example.com  |\n+----+------------------+\n</pre>\n\n<p><strong>Note:</strong></p>\n\n<p>Your output is the whole <code>Person</code>&nbsp;table after executing your sql. Use <code>delete</code> statement.</p>\n</div>",
+  "url": "https://leetcode.com/problems/delete-duplicate-emails/",
+  "companies": {
+    "Amazon": 2
+  }
+}

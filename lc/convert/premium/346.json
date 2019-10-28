@@ -1,0 +1,16 @@
+{
+  "categories": [
+    "Design",
+    "Queue"
+  ],
+  "diff": "Easy",
+  "title": "346. Moving Average from Data Stream",
+  "question": "<div><p>Given a stream of integers and a window size, calculate the moving average of all integers in the sliding window.</p>\n\n<p><strong>Example:</strong></p>\n\n<pre>MovingAverage m = new MovingAverage(3);\nm.next(1) = 1\nm.next(10) = (1 + 10) / 2\nm.next(3) = (1 + 10 + 3) / 3\nm.next(5) = (10 + 3 + 5) / 3\n</pre>\n\n<p>&nbsp;</p>\n</div>",
+  "url": "https://leetcode.com/problems/moving-average-from-data-stream/",
+  "companies": {
+    "Amazon": 4,
+    "Microsoft": 3,
+    "Google": 3,
+    "Uber": 3
+  }
+}

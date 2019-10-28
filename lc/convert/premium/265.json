@@ -1,0 +1,13 @@
+{
+  "categories": [
+    "Dynamic Programming"
+  ],
+  "diff": "Hard",
+  "title": "265. Paint House II",
+  "question": "<div><p>There are a row of <i>n</i> houses, each house can be painted with one of the <i>k</i> colors. The cost of painting each house with a certain color is different. You have to paint all the houses such that no two adjacent houses have the same color.</p>\n\n<p>The cost of painting each house with a certain color is represented by a <code><i>n</i> x <i>k</i></code> cost matrix. For example, <code>costs[0][0]</code> is the cost of painting house 0 with color 0; <code>costs[1][2]</code> is the cost of painting house 1 with color 2, and so on... Find the minimum cost to paint all houses.</p>\n\n<p><b>Note:</b><br>\nAll costs are positive integers.</p>\n\n<p><strong>Example:</strong></p>\n\n<pre><strong>Input:</strong> [[1,5,3],[2,9,4]]\n<strong>Output:</strong> 5\n<strong>Explanation: </strong>Paint house 0 into color 0, paint house 1 into color 2. Minimum cost: 1 + 4 = 5; \n&nbsp;            Or paint house 0 into color 2, paint house 1 into color 0. Minimum cost: 3 + 2 = 5. \n</pre>\n\n<p><b>Follow up:</b><br>\nCould you solve it in <i>O</i>(<i>nk</i>) runtime?</p>\n</div>",
+  "url": "https://leetcode.com/problems/paint-house-ii/",
+  "companies": {
+    "LinkedIn": 2
+  },
+  "code": "class Solution(object):\\u000A    def minCostII(self, costs):\\u000A        from itertools import chain\\u000A        if not costs or not costs[0]: return 0\\u000A        m, n \\u003D len(costs), len(costs[0])\\u000A        if n \\u003D\\u003D 1: return costs[0][0]\\u000A        totals \\u003D [0] * n\\u000A        for row in costs:\\u000A            totals \\u003D [row[i] + min(totals[j] for j in range(n) if i !\\u003D j)\\u000A                      for i in range(n)]\\u000A        return min(totals)"
+}

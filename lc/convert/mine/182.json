@@ -1,0 +1,8 @@
+{
+  "categories": [],
+  "diff": "Easy",
+  "title": "182. Duplicate Emails",
+  "question": "<div class=\"sql-schema-wrapper__3VBi\"><a class=\"sql-schema-link__3cEg\">SQL Schema<svg viewBox=\"0 0 24 24\" width=\"1em\" height=\"1em\" class=\"icon__3Su4\"><path fill-rule=\"evenodd\" d=\"M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z\"></path></svg></a></div><div><p>Write a SQL query to find all duplicate emails in a table named <code>Person</code>.</p>\n\n<pre>+----+---------+\n| Id | Email   |\n+----+---------+\n| 1  | a@b.com |\n| 2  | c@d.com |\n| 3  | a@b.com |\n+----+---------+\n</pre>\n\n<p>For example, your query should return the following for the above table:</p>\n\n<pre>+---------+\n| Email   |\n+---------+\n| a@b.com |\n+---------+\n</pre>\n\n<p><strong>Note</strong>: All emails are in lowercase.</p>\n</div>",
+  "url": "https://leetcode.com/problems/duplicate-emails/",
+  "companies": {}
+}

@@ -1,0 +1,14 @@
+{
+  "categories": [
+    "Tree"
+  ],
+  "diff": "Medium",
+  "title": "333. Largest BST Subtree",
+  "question": "<div><p>Given a binary tree, find the largest subtree which is a Binary Search Tree (BST), where largest means subtree with largest number of nodes in it.</p>\n\n<p><b>Note:</b><br>\nA subtree must include all of its descendants.</p>\n\n<p><strong>Example:</strong></p>\n\n<pre><strong>Input: </strong>[10,5,15,1,8,null,7]\n\n   10 \n   / \\ \n<font color=\"red\">  5</font>  15 \n<font color=\"red\"> / \\</font>   \\ \n<font color=\"red\">1   8</font>   7\n\n<strong>Output:</strong> 3\n<strong>Explanation: </strong>The Largest BST Subtree in this case is the highlighted one.\n             The return value is the subtree's size, which is 3.\n</pre>\n\n<p><b>Follow up:</b><br>\nCan you figure out ways to solve it with O(n) time complexity?</p>\n</div>",
+  "url": "https://leetcode.com/problems/largest-bst-subtree/",
+  "companies": {
+    "Amazon": 3,
+    "Lyft": 3,
+    "Apple": 2
+  }
+}

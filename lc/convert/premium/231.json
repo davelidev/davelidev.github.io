@@ -1,0 +1,14 @@
+{
+  "categories": [
+    "Math",
+    "Bit Manipulation"
+  ],
+  "diff": "Easy",
+  "title": "231. Power of Two",
+  "question": "<div><p>Given an integer, write a function to determine if it is a power of two.</p>\n\n<p><strong>Example 1:</strong></p>\n\n<pre><strong>Input:</strong> 1\n<strong>Output:</strong> true \n<strong>Explanation: </strong>2<sup>0</sup>&nbsp;= 1\n</pre>\n\n<p><strong>Example 2:</strong></p>\n\n<pre><strong>Input:</strong> 16\n<strong>Output:</strong> true\n<strong>Explanation: </strong>2<sup>4</sup>&nbsp;= 16</pre>\n\n<p><strong>Example 3:</strong></p>\n\n<pre><strong>Input:</strong> 218\n<strong>Output:</strong> false</pre>\n</div>",
+  "url": "https://leetcode.com/problems/power-of-two/",
+  "companies": {
+    "Apple": 2,
+    "Google": 2
+  }
+}

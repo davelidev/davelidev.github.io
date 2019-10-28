@@ -1,0 +1,14 @@
+{
+  "categories": [
+    "Dynamic Programming",
+    "Sliding Window"
+  ],
+  "diff": "Hard",
+  "title": "727. Minimum Window Subsequence",
+  "question": "<div><p>Given strings <code>S</code> and <code>T</code>, find the minimum (contiguous) <b>substring</b> <code>W</code> of <code>S</code>, so that <code>T</code> is a <b>subsequence</b> of <code>W</code>.</p>\n\n<p>If there is no such window in <code>S</code> that covers all characters in <code>T</code>, return the empty string <code>\"\"</code>. If there are multiple such minimum-length windows, return the one with the left-most starting index.</p>\n\n<p><b>Example 1:</b></p>\n\n<pre><b>Input:</b> \nS = \"abcdebdde\", T = \"bde\"\n<b>Output:</b> \"bcde\"\n<b>Explanation:</b> \n\"bcde\" is the answer because it occurs before \"bdde\" which has the same length.\n\"deb\" is not a smaller window because the elements of T in the window must occur in order.\n</pre>\n\n<p>&nbsp;</p>\n\n<p><b>Note:</b></p>\n\n<ul>\n\t<li>All the strings in the input will only contain lowercase letters.</li>\n\t<li>The length of <code>S</code> will be in the range <code>[1, 20000]</code>.</li>\n\t<li>The length of <code>T</code> will be in the range <code>[1, 100]</code>.</li>\n</ul>\n\n<p>&nbsp;</p></div>",
+  "url": "https://leetcode.com/problems/minimum-window-subsequence/",
+  "companies": {
+    "Google": 6,
+    "Bloomberg": 2
+  }
+}

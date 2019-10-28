@@ -1,0 +1,13 @@
+{
+  "categories": [
+    "Binary Search"
+  ],
+  "diff": "Medium",
+  "title": "702. Search in a Sorted Array of Unknown Size",
+  "question": "<div><p>Given an&nbsp;integer array sorted in ascending order, write a function to search <code>target</code> in <code>nums</code>.&nbsp; If <code>target</code> exists, then return its index, otherwise return <code>-1</code>. <strong>However, the array size is unknown to you</strong>. You may only access the array using an <code>ArrayReader</code>&nbsp;interface, where&nbsp;<code>ArrayReader.get(k)</code> returns the element of the array at index <code>k</code>&nbsp;(0-indexed).</p>\n\n<p>You may assume all integers in the array are less than&nbsp;<code>10000</code>, and if you access the array out of bounds, <code>ArrayReader.get</code> will return <code>2147483647</code>.</p>\n\n<p>&nbsp;</p>\n\n<p><strong>Example 1:</strong></p>\n\n<pre><strong>Input:</strong> <code>array</code> = [-1,0,3,5,9,12], <code>target</code> = 9\n<strong>Output:</strong> 4\n<strong>Explanation:</strong> 9 exists in <code>nums</code> and its index is 4\n</pre>\n\n<p><strong>Example 2:</strong></p>\n\n<pre><strong>Input:</strong> <code>array</code> = [-1,0,3,5,9,12], <code>target</code> = 2\n<strong>Output:</strong> -1\n<strong>Explanation:</strong> 2 does not exist in <code>nums</code> so return -1</pre>\n\n<p>&nbsp;</p>\n\n<p><strong>Note:</strong></p>\n\n<ol>\n\t<li>You may assume that all elements in the array are unique.</li>\n\t<li>The value of each element in the array&nbsp;will be in the range <code>[-9999, 9999]</code>.</li>\n</ol>\n</div>",
+  "url": "https://leetcode.com/problems/search-in-a-sorted-array-of-unknown-size/",
+  "companies": {
+    "Google": 2,
+    "Amazon": 2
+  }
+}

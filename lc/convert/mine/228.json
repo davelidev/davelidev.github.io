@@ -1,0 +1,11 @@
+{
+  "categories": [
+    "Array"
+  ],
+  "diff": "Medium",
+  "title": "228. Summary Ranges",
+  "question": "<div><p>Given a sorted integer array without duplicates, return the summary of its ranges.</p>\n\n<p><b>Example 1:</b></p>\n\n<pre><b>Input:</b>  [0,1,2,4,5,7]\n<b>Output:</b> [\"0-&gt;2\",\"4-&gt;5\",\"7\"]\n<strong>Explanation: </strong>0,1,2 form a continuous range;&nbsp;4,5 form a continuous range.\n</pre>\n\n<p><b>Example 2:</b></p>\n\n<pre><b>Input:</b>  [0,2,3,4,6,8,9]\n<b>Output:</b> [\"0\",\"2-&gt;4\",\"6\",\"8-&gt;9\"]\n<strong>Explanation: </strong>2,3,4 form a continuous range;&nbsp;8,9 form a continuous range.\n</pre>\n</div>",
+  "url": "https://leetcode.com/problems/summary-ranges/",
+  "companies": {},
+  "code": "class Solution(object):\\u000A    def summaryRanges(self, nums):\\u000A        \\u0022\\u0022\\u0022\\u000A        :type nums: List[int]\\u000A        :rtype: List[str]\\u000A        \\u0022\\u0022\\u0022\\u000A        ranges \\u003D []\\u000A        for i in range(len(nums)):\\u000A            if not ranges or ranges[\\u002D1][1] !\\u003D nums[i] \\u002D 1:\\u000A                ranges.append([nums[i], nums[i]])\\u000A            else:\\u000A                ranges[\\u002D1][1] \\u003D nums[i]\\u000A        return [str(i) + \\u0027\\u002D\\u003E\\u0027 + str(j) if i !\\u003D j else str(i) for i, j in ranges]"
+}

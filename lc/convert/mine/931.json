@@ -1,0 +1,11 @@
+{
+  "categories": [
+    "Dynamic Programming"
+  ],
+  "diff": "Medium",
+  "title": "931. Minimum Falling Path Sum",
+  "question": "<div><p>Given a <strong>square</strong> array of integers <code>A</code>, we want the <strong>minimum</strong> sum of a <em>falling path</em> through <code>A</code>.</p>\n\n<p>A falling path starts at any element in the first row, and chooses one element from each row.&nbsp; The next row's choice must be in a column that is different from the previous row's column by at most one.</p>\n\n<p>&nbsp;</p>\n\n<p><strong>Example 1:</strong></p>\n\n<pre><strong>Input: </strong><span id=\"example-input-1-1\">[[1,2,3],[4,5,6],[7,8,9]]</span>\n<strong>Output: </strong><span id=\"example-output-1\">12</span>\n<strong>Explanation: </strong>\nThe possible falling paths are:\n</pre>\n\n<ul>\n\t<li><code>[1,4,7], [1,4,8], [1,5,7], [1,5,8], [1,5,9]</code></li>\n\t<li><code>[2,4,7], [2,4,8], [2,5,7], [2,5,8], [2,5,9], [2,6,8], [2,6,9]</code></li>\n\t<li><code>[3,5,7], [3,5,8], [3,5,9], [3,6,8], [3,6,9]</code></li>\n</ul>\n\n<p>The falling path with the smallest sum is <code>[1,4,7]</code>, so the answer is <code>12</code>.</p>\n\n<p>&nbsp;</p>\n\n<p><strong>Note:</strong></p>\n\n<ol>\n\t<li><code>1 &lt;= A.length == A[0].length &lt;= 100</code></li>\n\t<li><code>-100 &lt;= A[i][j] &lt;= 100</code></li>\n</ol></div>",
+  "url": "https://leetcode.com/problems/minimum-falling-path-sum/",
+  "companies": {},
+  "code": "class Solution(object):\\u000A    def minFallingPathSum(self, A):\\u000A        \\u0022\\u0022\\u0022\\u000A        :type A: List[List[int]]\\u000A        :rtype: int\\u000A        \\u0022\\u0022\\u0022\\u000A            \\u000A        prev \\u003D A[0][:]\\u000A        row \\u003D []\\u000A        n \\u003D len(A)\\u000A        for i in range(1, n):\\u000A            row \\u003D []\\u000A            for j in range(n):\\u000A                cur \\u003D min((prev[j \\u002D 1] if (j \\u002D 1) \\u003E\\u003D 0 else float(\\u0027inf\\u0027)),\\u000A                          (prev[j + 1]  if (j + 1) \\u003C n else float(\\u0027inf\\u0027)),\\u000A                          prev[j])\\u000A                row.append(cur + A[i][j])\\u000A            prev \\u003D row\\u000A        return min(row or prev)"
+}

@@ -1,0 +1,14 @@
+{
+  "categories": [
+    "Tree",
+    "Depth-first Search",
+    "Breadth-first Search"
+  ],
+  "diff": "Easy",
+  "title": "111. Minimum Depth of Binary Tree",
+  "question": "<div><p>Given a binary tree, find its minimum depth.</p>\n\n<p>The minimum depth is the number of nodes along the shortest path from the root node down to the nearest leaf node.</p>\n\n<p><strong>Note:</strong>&nbsp;A leaf is a node with no children.</p>\n\n<p><strong>Example:</strong></p>\n\n<p>Given binary tree <code>[3,9,20,null,null,15,7]</code>,</p>\n\n<pre>    3\n   / \\\n  9  20\n    /  \\\n   15   7</pre>\n\n<p>return its minimum&nbsp;depth = 2.</p>\n</div>",
+  "url": "https://leetcode.com/problems/minimum-depth-of-binary-tree/",
+  "companies": {
+    "Facebook": 7
+  }
+}

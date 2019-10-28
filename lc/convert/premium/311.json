@@ -1,0 +1,12 @@
+{
+  "categories": [
+    "Hash Table"
+  ],
+  "diff": "Medium",
+  "title": "311. Sparse Matrix Multiplication",
+  "question": "<div><p>Given two <a href=\"https://en.wikipedia.org/wiki/Sparse_matrix\" target=\"_blank\">sparse matrices</a> <b>A</b> and <b>B</b>, return the result of <b>AB</b>.</p>\n\n<p>You may assume that <b>A</b>'s column number is equal to <b>B</b>'s row number.</p>\n\n<p><b>Example:</b></p>\n\n<pre><b>Input:\n\n</b><strong>A</strong> = [\n  [ 1, 0, 0],\n  [-1, 0, 3]\n]\n\n<strong>B</strong> = [\n  [ 7, 0, 0 ],\n  [ 0, 0, 0 ],\n  [ 0, 0, 1 ]\n]\n\n<strong>Output:</strong>\n\n     |  1 0 0 |   | 7 0 0 |   |  7 0 0 |\n<b>AB</b> = | -1 0 3 | x | 0 0 0 | = | -7 0 3 |\n                  | 0 0 1 |\n</pre>\n</div>",
+  "url": "https://leetcode.com/problems/sparse-matrix-multiplication/",
+  "companies": {
+    "Facebook": 2
+  }
+}

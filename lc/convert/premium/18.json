@@ -1,0 +1,17 @@
+{
+  "categories": [
+    "Array",
+    "Hash Table",
+    "Two Pointers"
+  ],
+  "diff": "Medium",
+  "title": "18. 4Sum",
+  "question": "<div><p>Given an array <code>nums</code> of <em>n</em> integers and an integer <code>target</code>, are there elements <em>a</em>, <em>b</em>, <em>c</em>, and <em>d</em> in <code>nums</code> such that <em>a</em> + <em>b</em> + <em>c</em> + <em>d</em> = <code>target</code>? Find all unique quadruplets in the array which gives the sum of <code>target</code>.</p>\n\n<p><strong>Note:</strong></p>\n\n<p>The solution set must not contain duplicate quadruplets.</p>\n\n<p><strong>Example:</strong></p>\n\n<pre>Given array nums = [1, 0, -1, 0, -2, 2], and target = 0.\n\nA solution set is:\n[\n  [-1,  0, 0, 1],\n  [-2, -1, 1, 2],\n  [-2,  0, 0, 2]\n]\n</pre>\n</div>",
+  "url": "https://leetcode.com/problems/4sum/",
+  "companies": {
+    "Amazon": 5,
+    "Adobe": 2,
+    "Google": 2
+  },
+  "code": "class Solution(object):\\u000A    def fourSum(self, nums, target):\\u000A        nums.sort()\\u000A        res \\u003D list()\\u000A        n \\u003D len(nums)\\u000A        # 4sum\\u000A        for i in range(n \\u002D 3):\\u000A            a \\u003D nums[i]\\u000A            if i and a \\u003D\\u003D nums[i \\u002D 1]: continue\\u000A                \\u000A            # 3sum\\u000A            for j in range(i + 1, n \\u002D 2):\\u000A                b \\u003D nums[j]\\u000A                if j !\\u003D i + 1 and b \\u003D\\u003D nums[j \\u002D 1]: continue\\u000A                if a + b + 2 * nums[j + 1] \\u003E target: break\\u000A                \\u000A                # 2sum\\u000A                k, l \\u003D j + 1, n \\u002D 1\\u000A                while k \\u003C l:\\u000A                    c, d \\u003D nums[k], nums[l]\\u000A                    sum_elems \\u003D a + b + c + d\\u000A                    if sum_elems \\u003D\\u003D target:\\u000A                        res.append((a, b, c, d))\\u000A                        while k \\u003C l and c \\u003D\\u003D nums[k]:\\u000A                            k +\\u003D 1\\u000A                        while k \\u003C l and d \\u003D\\u003D nums[l]:\\u000A                            l \\u002D\\u003D 1\\u000A                    elif sum_elems \\u003C target:\\u000A                        k +\\u003D 1\\u000A                    else:\\u000A                        l \\u002D\\u003D 1\\u000A        return res"
+}

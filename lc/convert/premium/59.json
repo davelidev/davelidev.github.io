@@ -1,0 +1,15 @@
+{
+  "categories": [
+    "Array"
+  ],
+  "diff": "Medium",
+  "title": "59. Spiral Matrix II",
+  "question": "<div><p>Given a positive integer <em>n</em>, generate a square matrix filled with elements from 1 to <em>n</em><sup>2</sup> in spiral order.</p>\n\n<p><strong>Example:</strong></p>\n\n<pre><strong>Input:</strong> 3\n<strong>Output:</strong>\n[\n [ 1, 2, 3 ],\n [ 8, 9, 4 ],\n [ 7, 6, 5 ]\n]\n</pre>\n</div>",
+  "url": "https://leetcode.com/problems/spiral-matrix-ii/",
+  "companies": {
+    "Amazon": 5,
+    "Microsoft": 3,
+    "Adobe": 3,
+    "Yandex": 2
+  }
+}

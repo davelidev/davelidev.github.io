@@ -1,0 +1,11 @@
+{
+  "categories": [
+    "Math"
+  ],
+  "diff": "Easy",
+  "title": "326. Power of Three",
+  "question": "<div><p>Given an integer, write a function to determine if it is a power of three.</p>\n\n<p><b>Example 1:</b></p>\n\n<pre><strong>Input:</strong> 27\n<strong>Output:</strong> true\n</pre>\n\n<p><b>Example 2:</b></p>\n\n<pre><strong>Input:</strong> 0\n<strong>Output:</strong> false</pre>\n\n<p><b>Example 3:</b></p>\n\n<pre><strong>Input:</strong> 9\n<strong>Output:</strong> true</pre>\n\n<p><b>Example 4:</b></p>\n\n<pre><strong>Input:</strong> 45\n<strong>Output:</strong> false</pre>\n\n<p><b>Follow up:</b><br>\nCould you do it without using any loop / recursion?</p></div>",
+  "url": "https://leetcode.com/problems/power-of-three/",
+  "companies": {},
+  "code": "class Solution(object):\\u000A    def isPowerOfThree(self, n):\\u000A        # power \\u003D 1\\u000A        # while 3 ** (power + 1) \\u003C\\u003D (((1 \\u003C\\u003C 32) \\u002D 1)):\\u000A        #     power +\\u003D 1\\u000A        # print 3 ** power\\u000A\\u000A        return n \\u003E 0 and 4052555153018976267 % n \\u003D\\u003D 0"
+}

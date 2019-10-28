@@ -1,0 +1,11 @@
+{
+  "categories": [
+    "Dynamic Programming"
+  ],
+  "diff": "Easy",
+  "title": "70. Climbing Stairs",
+  "question": "<div><p>You are climbing a stair case. It takes <em>n</em> steps to reach to the top.</p>\n\n<p>Each time you can either climb 1 or 2 steps. In how many distinct ways can you climb to the top?</p>\n\n<p><strong>Note:</strong> Given <em>n</em> will be a positive integer.</p>\n\n<p><strong>Example 1:</strong></p>\n\n<pre><strong>Input:</strong> 2\n<strong>Output:</strong> 2\n<strong>Explanation:</strong> There are two ways to climb to the top.\n1. 1 step + 1 step\n2. 2 steps\n</pre>\n\n<p><strong>Example 2:</strong></p>\n\n<pre><strong>Input:</strong> 3\n<strong>Output:</strong> 3\n<strong>Explanation:</strong> There are three ways to climb to the top.\n1. 1 step + 1 step + 1 step\n2. 1 step + 2 steps\n3. 2 steps + 1 step\n</pre>\n</div>",
+  "url": "https://leetcode.com/problems/climbing-stairs/",
+  "companies": {},
+  "code": "class Solution(object):\\u000A    def climbStairs(self, n):\\u000A        \\u0022\\u0022\\u0022\\u000A        :type n: int\\u000A        :rtype: int\\u000A        \\u0022\\u0022\\u0022\\u000A        if n \\u003C\\u003D 2: return n\\u000A        prev_prev, prev \\u003D 1, 2\\u000A        cur \\u003D None\\u000A        for i in range(n \\u002D 2):\\u000A            cur \\u003D prev + prev_prev\\u000A            prev, prev_prev \\u003D cur, prev\\u000A        return cur"
+}

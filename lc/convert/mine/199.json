@@ -1,0 +1,13 @@
+{
+  "categories": [
+    "Tree",
+    "Depth-first Search",
+    "Breadth-first Search"
+  ],
+  "diff": "Medium",
+  "title": "199. Binary Tree Right Side View",
+  "question": "<div><p>Given a binary tree, imagine yourself standing on the <em>right</em> side of it, return the values of the nodes you can see ordered from top to bottom.</p>\n\n<p><strong>Example:</strong></p>\n\n<pre><strong>Input:</strong>&nbsp;[1,2,3,null,5,null,4]\n<strong>Output:</strong>&nbsp;[1, 3, 4]\n<strong>Explanation:\n</strong>\n   1            &lt;---\n /   \\\n2     3         &lt;---\n \\     \\\n  5     4       &lt;---\n</pre></div>",
+  "url": "https://leetcode.com/problems/binary-tree-right-side-view/",
+  "companies": {},
+  "code": "# Definition for a binary tree node.\\u000A# class TreeNode(object):\\u000A#     def __init__(self, x):\\u000A#         self.val \\u003D x\\u000A#         self.left \\u003D None\\u000A#         self.right \\u003D None\\u000A\\u000Aclass Solution(object):\\u000A    def rightSideView(self, root):\\u000A        \\u0022\\u0022\\u0022\\u000A        :type root: TreeNode\\u000A        :rtype: List[int]\\u000A        \\u0022\\u0022\\u0022\\u000A        if not root: return []\\u000A        bfs \\u003D [root]\\u000A        res \\u003D []\\u000A        while bfs:\\u000A            res.append(bfs[\\u002D1].val)\\u000A            bfs \\u003D [kid for node in bfs for kid in (node.left, node.right) if kid]\\u000A        return res"
+}

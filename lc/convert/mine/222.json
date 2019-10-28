@@ -1,0 +1,12 @@
+{
+  "categories": [
+    "Binary Search",
+    "Tree"
+  ],
+  "diff": "Medium",
+  "title": "222. Count Complete Tree Nodes",
+  "question": "<div><p>Given a <b>complete</b> binary tree, count the number of nodes.</p>\n\n<p><b>Note: </b></p>\n\n<p><b><u>Definition of a complete binary tree from <a href=\"http://en.wikipedia.org/wiki/Binary_tree#Types_of_binary_trees\" target=\"_blank\">Wikipedia</a>:</u></b><br>\nIn a complete binary tree every level, except possibly the last, is completely filled, and all nodes in the last level are as far left as possible. It can have between 1 and 2<sup>h</sup> nodes inclusive at the last level h.</p>\n\n<p><strong>Example:</strong></p>\n\n<pre><strong>Input:</strong> \n    1\n   / \\\n  2   3\n / \\  /\n4  5 6\n\n<strong>Output:</strong> 6</pre>\n</div>",
+  "url": "https://leetcode.com/problems/count-complete-tree-nodes/",
+  "companies": {},
+  "code": "# Definition for a binary tree node.\\u000A# class TreeNode(object):\\u000A#     def __init__(self, x):\\u000A#         self.val \\u003D x\\u000A#         self.left \\u003D None\\u000A#         self.right \\u003D None\\u000A\\u000Aclass Solution(object):\\u000A    def countNodes(self, root):\\u000A        \\u0022\\u0022\\u0022\\u000A        :type root: TreeNode\\u000A        :rtype: int\\u000A        \\u0022\\u0022\\u0022\\u000A        def _countNodes(node):\\u000A            left_node, left_depth \\u003D node, 0\\u000A            while left_node: left_node, left_depth \\u003D left_node.left, left_depth + 1\\u000A            right_node, right_depth \\u003D node, 0\\u000A            while right_node: right_node, right_depth \\u003D right_node.right, right_depth + 1\\u000A            if left_depth \\u003D\\u003D right_depth: return 2 ** left_depth \\u002D 1\\u000A            else: return _countNodes(node.left) + 1 + _countNodes(node.right)\\u000A        return _countNodes(root)"
+}

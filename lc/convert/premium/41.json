@@ -1,0 +1,19 @@
+{
+  "categories": [
+    "Array"
+  ],
+  "diff": "Hard",
+  "title": "41. First Missing Positive",
+  "question": "<div><p>Given an unsorted integer array, find the smallest missing&nbsp;positive integer.</p>\n\n<p><strong>Example 1:</strong></p>\n\n<pre>Input: [1,2,0]\nOutput: 3\n</pre>\n\n<p><strong>Example 2:</strong></p>\n\n<pre>Input: [3,4,-1,1]\nOutput: 2\n</pre>\n\n<p><strong>Example 3:</strong></p>\n\n<pre>Input: [7,8,9,11,12]\nOutput: 1\n</pre>\n\n<p><strong>Note:</strong></p>\n\n<p>Your algorithm should run in <em>O</em>(<em>n</em>) time and uses constant extra space.</p>\n</div>",
+  "url": "https://leetcode.com/problems/first-missing-positive/",
+  "companies": {
+    "Databricks": 6,
+    "Google": 4,
+    "Amazon": 3,
+    "Wish": 3,
+    "Microsoft": 2,
+    "Facebook": 2,
+    "Walmart Labs": 2,
+    "ByteDance": 2
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "categories": [
+    "Math"
+  ],
+  "diff": "Easy",
+  "title": "7. Reverse Integer",
+  "question": "<div><p>Given a 32-bit signed integer, reverse digits of an integer.</p>\n\n<p><strong>Example 1:</strong></p>\n\n<pre><strong>Input:</strong> 123\n<strong>Output:</strong> 321\n</pre>\n\n<p><strong>Example 2:</strong></p>\n\n<pre><strong>Input:</strong> -123\n<strong>Output:</strong> -321\n</pre>\n\n<p><strong>Example 3:</strong></p>\n\n<pre><strong>Input:</strong> 120\n<strong>Output:</strong> 21\n</pre>\n\n<p><strong>Note:</strong><br>\nAssume we are dealing with an environment which could only store integers within the 32-bit signed integer range: [−2<sup>31</sup>,&nbsp; 2<sup>31&nbsp;</sup>− 1]. For the purpose of this problem, assume that your function returns 0 when the reversed integer overflows.</p>\n</div>",
+  "url": "https://leetcode.com/problems/reverse-integer/",
+  "companies": {
+    "Amazon": 7,
+    "Microsoft": 4,
+    "Google": 3,
+    "Bloomberg": 3,
+    "Apple": 3,
+    "Adobe": 2,
+    "Facebook": 2
+  },
+  "code": "class Solution(object):\\u000A    def reverse(self, x):\\u000A        neg \\u003D \\u002D1 if x \\u003C 0 else 1\\u000A        x \\u003D abs(x)\\u000A        res \\u003D 0\\u000A        while x:\\u000A            x, dig \\u003D divmod(x, 10)\\u000A            max_int \\u003D 2 ** 31\\u000A            if res \\u003E max_int / 10 or res \\u003D\\u003D max_int / 10 and dig \\u003E max_int % 10:\\u000A                return 0\\u000A            res \\u003D res * 10 + dig\\u000A        return res * neg"
+}

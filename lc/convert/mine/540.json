@@ -1,0 +1,9 @@
+{
+  "categories": [],
+  "diff": "Medium",
+  "title": "540. Single Element in a Sorted Array",
+  "question": "<div><p>You are given a sorted array consisting of only integers where every element appears exactly twice, except for one element which appears exactly&nbsp;once. Find this single element that appears only once.</p>\n\n<p>&nbsp;</p>\n\n<p><b>Example 1:</b></p>\n\n<pre><b>Input:</b> [1,1,2,3,3,4,4,8,8]\n<b>Output:</b> 2\n</pre>\n\n<p><b>Example 2:</b></p>\n\n<pre><b>Input:</b> [3,3,7,7,10,11,11]\n<b>Output:</b> 10\n</pre>\n\n<p>&nbsp;</p>\n\n<p><b>Note:</b> Your solution should run in O(log n) time and O(1) space.</p>\n</div>",
+  "url": "https://leetcode.com/problems/single-element-in-a-sorted-array/",
+  "companies": {},
+  "code": "class Solution(object):\\u000A    def singleNonDuplicate(self, nums):\\u000A        \\u0022\\u0022\\u0022\\u000A        :type nums: List[int]\\u000A        :rtype: int\\u000A        \\u0022\\u0022\\u0022\\u000A        res \\u003D 0\\u000A        for num in nums: res ^\\u003D num\\u000A        return res"
+}

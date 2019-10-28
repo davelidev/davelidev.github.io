@@ -1,0 +1,13 @@
+{
+  "categories": [
+    "Math"
+  ],
+  "diff": "Easy",
+  "title": "868. Binary Gap",
+  "question": "<div><p>Given a positive&nbsp;integer <code>N</code>, find and return the longest distance between two consecutive 1's in the binary representation of <code>N</code>.</p>\n\n<p>If there aren't two consecutive 1's, return <font face=\"monospace\">0</font>.</p>\n\n<p>&nbsp;</p>\n\n<div>\n<div>\n<div>\n<ul>\n</ul>\n</div>\n</div>\n</div>\n\n<div>\n<p><strong>Example 1:</strong></p>\n\n<pre><strong>Input: </strong><span id=\"example-input-1-1\">22</span>\n<strong>Output: </strong>2\n<strong>Explanation: </strong>\n22 in binary is 0b10110.\nIn the binary representation of 22, there are three ones, and two consecutive pairs of 1's.\nThe first consecutive pair of 1's have distance 2.\nThe second consecutive pair of 1's have distance 1.\nThe answer is the largest of these two distances, which is 2.\n</pre>\n\n<div>\n<p><strong>Example 2:</strong></p>\n\n<pre><strong>Input: </strong><span id=\"example-input-2-1\">5</span>\n<strong>Output: </strong><span id=\"example-output-2\">2</span>\n<strong>Explanation: </strong>\n5 in binary is 0b101.\n</pre>\n\n<div>\n<p><strong>Example 3:</strong></p>\n\n<pre><strong>Input: </strong><span id=\"example-input-3-1\">6</span>\n<strong>Output: </strong><span id=\"example-output-3\">1</span>\n<strong>Explanation: </strong>\n6 in binary is 0b110.\n</pre>\n\n<div>\n<p><strong>Example 4:</strong></p>\n\n<pre><strong>Input: </strong><span id=\"example-input-4-1\">8</span>\n<strong>Output: </strong><span id=\"example-output-4\">0</span>\n<strong>Explanation: </strong>\n8 in binary is 0b1000.\nThere aren't any consecutive pairs of 1's in the binary representation of 8, so we return 0.\n</pre>\n\n<p>&nbsp;</p>\n\n<div>\n<div>\n<div>\n<p><strong>Note:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= N &lt;= 10^9</code></li>\n</ul>\n</div>\n</div>\n</div>\n</div>\n</div>\n</div>\n</div>\n</div>",
+  "url": "https://leetcode.com/problems/binary-gap/",
+  "companies": {
+    "Twitter": null,
+    "eBay": null
+  }
+}

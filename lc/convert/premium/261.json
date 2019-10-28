@@ -1,0 +1,17 @@
+{
+  "categories": [
+    "Depth-first Search",
+    "Breadth-first Search",
+    "Union Find",
+    "Graph"
+  ],
+  "diff": "Medium",
+  "title": "261. Graph Valid Tree",
+  "question": "<div><p>Given <code>n</code> nodes labeled from <code>0</code> to <code>n-1</code> and a list of undirected edges (each edge is a pair of nodes), write a function to check whether these edges make up a valid tree.</p>\n\n<p><strong>Example 1:</strong></p>\n\n<pre><strong>Input:</strong> <code>n = 5</code>, and <code>edges = [[0,1], [0,2], [0,3], [1,4]]</code>\n<strong>Output:</strong> true</pre>\n\n<p><strong>Example 2:</strong></p>\n\n<pre><strong>Input:</strong> <code>n = 5, </code>and <code>edges = [[0,1], [1,2], [2,3], [1,3], [1,4]]</code>\n<strong>Output:</strong> false</pre>\n\n<p><b>Note</b>: you can assume that no duplicate edges will appear in <code>edges</code>. Since all edges are undirected, <code>[0,1]</code> is the same as <code>[1,0]</code> and thus will not appear together in <code>edges</code>.</p>\n</div>",
+  "url": "https://leetcode.com/problems/graph-valid-tree/",
+  "companies": {
+    "LinkedIn": 3,
+    "Amazon": 2
+  },
+  "code": "class Solution(object):\\u000A    def validTree(self, n, edges):\\u000A        uf \\u003D list(range(n))\\u000A        \\u000A        def find_par(node):\\u000A            \\u000A            path \\u003D [node]\\u000A            while uf[node] !\\u003D node:\\u000A                node \\u003D uf[node]\\u000A                path.append(node)\\u000A                \\u000A            for i in range(len(path) \\u002D 1): \\u000A                uf[path[i]] \\u003D path[\\u002D1]\\u000A\\u000A            return path[\\u002D1]\\u000A            \\u000A        for u, v in edges:\\u000A            u, v \\u003D find_par(u), find_par(v)\\u000A            if u \\u003D\\u003D v: return False\\u000A            uf[u] \\u003D v\\u000A\\u000A        return sum(node \\u003D\\u003D i for i, node in enumerate(uf)) \\u003D\\u003D 1"
+}

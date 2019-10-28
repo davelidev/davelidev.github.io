@@ -1,0 +1,12 @@
+{
+  "categories": [
+    "Tree",
+    "Recursion"
+  ],
+  "diff": "Medium",
+  "title": "894. All Possible Full Binary Trees",
+  "question": "<div><p>A <em>full binary tree</em>&nbsp;is a binary tree where each node has exactly 0 or 2&nbsp;children.</p>\n\n<p>Return a list of all possible full binary trees with <code>N</code> nodes.&nbsp; Each element of the answer is the root node of one possible tree.</p>\n\n<p>Each <code>node</code> of each&nbsp;tree in the answer <strong>must</strong> have <code>node.val = 0</code>.</p>\n\n<p>You may return the final list of trees in any order.</p>\n\n<p>&nbsp;</p>\n\n<p><strong>Example 1:</strong></p>\n\n<pre><strong>Input: </strong><span id=\"example-input-1-1\">7</span>\n<strong>Output: </strong><span id=\"example-output-1\">[[0,0,0,null,null,0,0,null,null,0,0],[0,0,0,null,null,0,0,0,0],[0,0,0,0,0,0,0],[0,0,0,0,0,null,null,null,null,0,0],[0,0,0,0,0,null,null,0,0]]</span>\n<strong>Explanation:</strong>\n<img alt=\"\" src=\"https://s3-lc-upload.s3.amazonaws.com/uploads/2018/08/22/fivetrees.png\" style=\"width: 700px; height: 400px;\">\n</pre>\n\n<p>&nbsp;</p>\n\n<p><strong>Note:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= N &lt;= 20</code></li>\n</ul>\n</div>",
+  "url": "https://leetcode.com/problems/all-possible-full-binary-trees/",
+  "companies": {},
+  "code": "# Definition for a binary tree node.\\u000A# class TreeNode(object):\\u000A#     def __init__(self, x):\\u000A#         self.val \\u003D x\\u000A#         self.left \\u003D None\\u000A#         self.right \\u003D None\\u000A\\u000Aclass Solution(object):\\u000A    def allPossibleFBT(self, N):\\u000A        \\u0022\\u0022\\u0022\\u000A        :type N: int\\u000A        :rtype: List[TreeNode]\\u000A        \\u0022\\u0022\\u0022\\u000A\\u000A        def construct(n):\\u000A            if n \\u003D\\u003D 1: return [TreeNode(0)]\\u000A            trees \\u003D []\\u000A            for k in range(1, n, 2):\\u000A                left, right \\u003D construct(k), construct(n \\u002D k \\u002D 1)\\u000A                for l in left:\\u000A                    for r in right:\\u000A                        node \\u003D TreeNode(0)\\u000A                        node.left, node.right \\u003D l, r\\u000A                        trees.append(node)\\u000A            return trees\\u000A        return construct(N)\\u000A    "
+}

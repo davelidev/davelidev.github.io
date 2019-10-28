@@ -1,0 +1,12 @@
+{
+  "categories": [
+    "Hash Table",
+    "Math"
+  ],
+  "diff": "Easy",
+  "title": "204. Count Primes",
+  "question": "<div><p>Count the number of prime numbers less than a non-negative number, <b><i>n</i></b>.</p>\n\n<p><strong>Example:</strong></p>\n\n<pre><strong>Input:</strong> 10\n<strong>Output:</strong> 4\n<strong>Explanation:</strong> There are 4 prime numbers less than 10, they are 2, 3, 5, 7.\n</pre>\n</div>",
+  "url": "https://leetcode.com/problems/count-primes/",
+  "companies": {},
+  "code": "class Solution(object):\\u000A    def countPrimes(self, n):\\u000A        \\u0022\\u0022\\u0022\\u000A        :type n: int\\u000A        :rtype: int\\u000A        \\u0022\\u0022\\u0022\\u000A        if n \\u003C\\u003D 2: return 0\\u000A        primes \\u003D [True] * (n)\\u000A        primes[0] \\u003D primes[1] \\u003D False\\u000A        for i in xrange(2, n):\\u000A            if primes[i]:\\u000A                for j in xrange(i, n, i):\\u000A                    if j !\\u003D i: primes[j] \\u003D False\\u000A        return primes.count(True)"
+}

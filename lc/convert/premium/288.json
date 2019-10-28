@@ -1,0 +1,13 @@
+{
+  "categories": [
+    "Hash Table",
+    "Design"
+  ],
+  "diff": "Medium",
+  "title": "288. Unique Word Abbreviation",
+  "question": "<div><p>An abbreviation of a word follows the form &lt;first letter&gt;&lt;number&gt;&lt;last letter&gt;. Below are some examples of word abbreviations:</p>\n\n<pre>a) it                      --&gt; it    (no abbreviation)\n\n     1\n     ↓\nb) d|o|g                   --&gt; d1g\n\n              1    1  1\n     1---5----0----5--8\n     ↓   ↓    ↓    ↓  ↓    \nc) i|nternationalizatio|n  --&gt; i18n\n\n              1\n     1---5----0\n&nbsp;    ↓   ↓    ↓\nd) l|ocalizatio|n          --&gt; l10n\n</pre>\n\n<p>Assume you have a dictionary and given a word, find whether its abbreviation is unique in the dictionary. A word's abbreviation is unique if no <i>other</i> word from the dictionary has the same abbreviation.</p>\n\n<p><strong>Example:</strong></p>\n\n<pre>Given dictionary = [ \"deer\", \"door\", \"cake\", \"card\" ]\n\nisUnique(\"dear\") -&gt; <code>false</code>\nisUnique(\"cart\") -&gt; <code>true</code>\nisUnique(\"cane\") -&gt; <code>false</code>\nisUnique(\"make\") -&gt; <code>true</code>\n</pre>\n</div>",
+  "url": "https://leetcode.com/problems/unique-word-abbreviation/",
+  "companies": {
+    "Google": 2
+  }
+}

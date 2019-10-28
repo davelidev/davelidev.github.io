@@ -1,0 +1,11 @@
+{
+  "categories": [
+    "String"
+  ],
+  "diff": "Medium",
+  "title": "556. Next Greater Element III",
+  "question": "<div><p>Given a positive <strong>32-bit</strong> integer <strong>n</strong>, you need to find the smallest <strong>32-bit</strong> integer which has exactly the same digits existing in the integer <strong>n</strong> and is greater in value than n. If no such positive <strong>32-bit</strong> integer exists, you need to return -1.</p>\n\n<p><strong>Example 1:</strong></p>\n\n<pre><strong>Input:</strong> 12\n<strong>Output:</strong> 21\n</pre>\n\n<p>&nbsp;</p>\n\n<p><strong>Example 2:</strong></p>\n\n<pre><strong>Input:</strong> 21\n<strong>Output:</strong> -1\n</pre>\n\n<p>&nbsp;</p>\n</div>",
+  "url": "https://leetcode.com/problems/next-greater-element-iii/",
+  "companies": {},
+  "code": "class Solution(object):\\u000A    def nextGreaterElement(self, n):\\u000A        \\u0022\\u0022\\u0022\\u000A        :type n: int\\u000A        :rtype: int\\u000A        \\u0022\\u0022\\u0022\\u000A        num \\u003D list(str(n))\\u000A        n \\u003D len(num)\\u000A        for i in xrange(n \\u002D 2, \\u002D1, \\u002D1):\\u000A            if num[i] \\u003C num[i + 1]:\\u000A                next_largest \\u003D i + 1\\u000A                for j in xrange(i + 2, n):\\u000A                    if num[i] \\u003C num[j] \\u003C\\u003D num[next_largest]:\\u000A                        next_largest \\u003D j\\u000A                num[i], num[next_largest] \\u003D num[next_largest], num[i]\\u000A                next_greater \\u003D int(\\u0027\\u0027.join(num[:i + 1] + num[i + 1:][::\\u002D1]))\\u000A                return next_greater if next_greater \\u003C (1\\u003C\\u003C31) else \\u002D1\\u000A        return \\u002D1"
+}

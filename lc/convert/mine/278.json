@@ -1,0 +1,11 @@
+{
+  "categories": [
+    "Binary Search"
+  ],
+  "diff": "Easy",
+  "title": "278. First Bad Version",
+  "question": "<div><p>You are a product manager and currently leading a team to develop a new product. Unfortunately, the latest version of your product fails the quality check. Since each version is developed based on the previous version, all the versions after a bad version are also bad.</p>\n\n<p>Suppose you have <code>n</code> versions <code>[1, 2, ..., n]</code> and you want to find out the first bad one, which causes all the following ones to be bad.</p>\n\n<p>You are given an API <code>bool isBadVersion(version)</code> which will return whether <code>version</code> is bad. Implement a function to find the first bad version. You should minimize the number of calls to the API.</p>\n\n<p><b>Example:</b></p>\n\n<pre>Given n = 5, and version = 4 is the first bad version.\n\n<code>call isBadVersion(3) -&gt; false\ncall isBadVersion(5)&nbsp;-&gt; true\ncall isBadVersion(4)&nbsp;-&gt; true\n\nThen 4 is the first bad version.&nbsp;</code>\n</pre>\n</div>",
+  "url": "https://leetcode.com/problems/first-bad-version/",
+  "companies": {},
+  "code": "# The isBadVersion API is already defined for you.\\u000A# @param version, an integer\\u000A# @return a bool\\u000A# def isBadVersion(version):\\u000A\\u000Aclass Solution(object):\\u000A    def firstBadVersion(self, n):\\u000A        \\u0022\\u0022\\u0022\\u000A        :type n: int\\u000A        :rtype: int\\u000A        \\u0022\\u0022\\u0022\\u000A        low, high \\u003D 1, n\\u000A        \\u000A        while low \\u003C\\u003D high:\\u000A            mid \\u003D (low + high) / 2\\u000A            print low, high, mid\\u000A            if isBadVersion(mid):\\u000A                if (mid \\u002D 1) \\u003C low or not isBadVersion(mid \\u002D 1): return mid\\u000A                high \\u003D mid \\u002D 1\\u000A            else:\\u000A                low \\u003D mid + 1\\u000A"
+}

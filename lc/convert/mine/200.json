@@ -1,0 +1,13 @@
+{
+  "categories": [
+    "Depth-first Search",
+    "Breadth-first Search",
+    "Union Find"
+  ],
+  "diff": "Medium",
+  "title": "200. Number of Islands",
+  "question": "<div><p>Given a 2d grid map of <code>'1'</code>s (land) and <code>'0'</code>s (water), count the number of islands. An island is surrounded by water and is formed by connecting adjacent lands horizontally or vertically. You may assume all four edges of the grid are all surrounded by water.</p>\n\n<p><b>Example 1:</b></p>\n\n<pre><strong>Input:</strong>\n11110\n11010\n11000\n00000\n\n<strong>Output:</strong>&nbsp;1\n</pre>\n\n<p><b>Example 2:</b></p>\n\n<pre><strong>Input:</strong>\n11000\n11000\n00100\n00011\n\n<strong>Output: </strong>3\n</pre></div>",
+  "url": "https://leetcode.com/problems/number-of-islands/",
+  "companies": {},
+  "code": "class Solution(object):\\u000A    def numIslands(self, grid):\\u000A        \\u0022\\u0022\\u0022\\u000A        :type grid: List[List[str]]\\u000A        :rtype: int\\u000A        \\u0022\\u0022\\u0022\\u000A        if not grid or not grid[0]: return 0\\u000A        def convert(from_sym, to_sym, i, j):\\u000A            def get_adj(i, j):\\u000A                return [(x, y) for x, y in [(i \\u002D 1, j), (i + 1, j), (i, j \\u002D 1), (i, j + 1)]\\u000A                        if 0 \\u003C\\u003D x \\u003C len(grid) and 0 \\u003C\\u003D y \\u003C len(grid[0])]\\u000A            if grid[i][j] \\u003D\\u003D from_sym:\\u000A                grid[i][j] \\u003D to_sym\\u000A                for adj in get_adj(i, j): convert(from_sym, to_sym, adj[0], adj[1])\\u000A        res \\u003D 0\\u000A        for i in range(len(grid)):\\u000A            for j in range(len(grid[0])):\\u000A                if grid[i][j] \\u003D\\u003D \\u00271\\u0027:\\u000A                    res +\\u003D 1\\u000A                    convert(\\u00271\\u0027, None, i, j)\\u000A        return res\\u000A        "
+}

@@ -1,0 +1,8 @@
+{
+  "categories": [],
+  "diff": "Medium",
+  "title": "574. Winning Candidate",
+  "question": "<div class=\"sql-schema-wrapper__3VBi\"><a class=\"sql-schema-link__3cEg\">SQL Schema<svg viewBox=\"0 0 24 24\" width=\"1em\" height=\"1em\" class=\"icon__3Su4\"><path fill-rule=\"evenodd\" d=\"M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z\"></path></svg></a></div><div><p>Table: <code>Candidate</code></p>\n\n<pre>+-----+---------+\n| id  | Name    |\n+-----+---------+\n| 1   | A       |\n| 2   | B       |\n| 3   | C       |\n| 4   | D       |\n| 5   | E       |\n+-----+---------+  \n</pre>\n\n<p>Table: <code>Vote</code></p>\n\n<pre>+-----+--------------+\n| id  | CandidateId  |\n+-----+--------------+\n| 1   |     2        |\n| 2   |     4        |\n| 3   |     3        |\n| 4   |     2        |\n| 5   |     5        |\n+-----+--------------+\nid is the auto-increment primary key,\nCandidateId is the id appeared in Candidate table.\n</pre>\n\n<p>Write a sql to find the name of the winning candidate, the above example will return the winner <code>B</code>.</p>\n\n<pre>+------+\n| Name |\n+------+\n| B    |\n+------+\n</pre>\n\n<p><b>Notes:</b></p>\n\n<ol>\n\t<li>You may assume <b>there is no tie</b>, in other words there will be <b>at most one</b> winning candidate.</li>\n</ol>\n\n<p>&nbsp;</p>\n</div>",
+  "url": "https://leetcode.com/problems/winning-candidate/",
+  "companies": {}
+}

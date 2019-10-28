@@ -1,0 +1,14 @@
+{
+  "categories": [
+    "Hash Table",
+    "Design"
+  ],
+  "diff": "Easy",
+  "title": "359. Logger Rate Limiter",
+  "question": "<div><p>Design a logger system that receive stream of messages along with its timestamps, each message should be printed if and only if it is <b>not printed in the last 10 seconds</b>.</p>\n\n<p>Given a message and a timestamp (in seconds granularity), return true if the message should be printed in the given timestamp, otherwise returns false.</p>\n\n<p>It is possible that several messages arrive roughly at the same time.</p>\n\n<p><b>Example:</b></p>\n\n<pre>Logger logger = new Logger();\n\n// logging string \"foo\" at timestamp 1\nlogger.shouldPrintMessage(1, \"foo\"); returns true; \n\n// logging string \"bar\" at timestamp 2\nlogger.shouldPrintMessage(2,\"bar\"); returns true;\n\n// logging string \"foo\" at timestamp 3\nlogger.shouldPrintMessage(3,\"foo\"); returns false;\n\n// logging string \"bar\" at timestamp 8\nlogger.shouldPrintMessage(8,\"bar\"); returns false;\n\n// logging string \"foo\" at timestamp 10\nlogger.shouldPrintMessage(10,\"foo\"); returns false;\n\n// logging string \"foo\" at timestamp 11\nlogger.shouldPrintMessage(11,\"foo\"); returns true;\n</pre></div>",
+  "url": "https://leetcode.com/problems/logger-rate-limiter/",
+  "companies": {
+    "Google": 11,
+    "Uber": 2
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "categories": [
+    "Math"
+  ],
+  "diff": "Easy",
+  "title": "171. Excel Sheet Column Number",
+  "question": "<div><p>Given a column title as appear in an Excel sheet, return its corresponding column number.</p>\n\n<p>For example:</p>\n\n<pre>    A -&gt; 1\n    B -&gt; 2\n    C -&gt; 3\n    ...\n    Z -&gt; 26\n    AA -&gt; 27\n    AB -&gt; 28 \n    ...\n</pre>\n\n<p><strong>Example 1:</strong></p>\n\n<pre><strong>Input:</strong> \"A\"\n<strong>Output:</strong> 1\n</pre>\n\n<p><strong>Example 2:</strong></p>\n\n<pre><strong>Input: </strong>\"AB\"\n<strong>Output:</strong> 28\n</pre>\n\n<p><strong>Example 3:</strong></p>\n\n<pre><strong>Input: </strong>\"ZY\"\n<strong>Output:</strong> 701\n</pre></div>",
+  "url": "https://leetcode.com/problems/excel-sheet-column-number/",
+  "companies": {},
+  "code": "class Solution(object):\\u000A    def titleToNumber(self, s):\\u000A        \\u0022\\u0022\\u0022\\u000A        :type s: str\\u000A        :rtype: int\\u000A        \\u0022\\u0022\\u0022\\u000A        return reduce(lambda x, y: (ord(y) \\u002D ord(\\u0027a\\u0027) + 1) + (x * 26), s.lower(), 0)"
+}

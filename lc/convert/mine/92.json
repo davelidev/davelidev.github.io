@@ -1,0 +1,11 @@
+{
+  "categories": [
+    "Linked List"
+  ],
+  "diff": "Medium",
+  "title": "92. Reverse Linked List II",
+  "question": "<div><p>Reverse a linked list from position <em>m</em> to <em>n</em>. Do it in one-pass.</p>\n\n<p><strong>Note:&nbsp;</strong>1 ≤ <em>m</em> ≤ <em>n</em> ≤ length of list.</p>\n\n<p><strong>Example:</strong></p>\n\n<pre><strong>Input:</strong> 1-&gt;2-&gt;3-&gt;4-&gt;5-&gt;NULL, <em>m</em> = 2, <em>n</em> = 4\n<strong>Output:</strong> 1-&gt;4-&gt;3-&gt;2-&gt;5-&gt;NULL\n</pre>\n</div>",
+  "url": "https://leetcode.com/problems/reverse-linked-list-ii/",
+  "companies": {},
+  "code": "# Definition for singly\\u002Dlinked list.\\u000A# class ListNode(object):\\u000A#     def __init__(self, x):\\u000A#         self.val \\u003D x\\u000A#         self.next \\u003D None\\u000Aclass Solution(object):\\u000A    def reverseBetween(self, head, m, n):\\u000A        \\u0022\\u0022\\u0022\\u000A        :type head: ListNode\\u000A        :type m: int\\u000A        :type n: int\\u000A        :rtype: ListNode\\u000A        \\u0022\\u0022\\u0022\\u000A        dummy \\u003D cur \\u003D ListNode(0)\\u000A        cur.next \\u003D head\\u000A        for i in range(m): prev, cur \\u003D cur, cur.next\\u000A        tail1, tail2 \\u003D prev, cur\\u000A        prev \\u003D None\\u000A        for i in range(n \\u002D m + 1):\\u000A            cur.next, prev, cur \\u003D prev, cur, cur.next\\u000A            # tmp \\u003D cur.next\\u000A            # cur.next \\u003D prev\\u000A            # prev, cur \\u003D cur, tmp\\u000A        tail1.next, tail2.next \\u003D prev, cur\\u000A        return dummy.next\\u000A            \\u000A        \\u000A        "
+}

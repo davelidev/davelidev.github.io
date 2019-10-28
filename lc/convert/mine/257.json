@@ -1,0 +1,12 @@
+{
+  "categories": [
+    "Tree",
+    "Depth-first Search"
+  ],
+  "diff": "Easy",
+  "title": "257. Binary Tree Paths",
+  "question": "<div><p>Given a binary tree, return all root-to-leaf paths.</p>\n\n<p><strong>Note:</strong>&nbsp;A leaf is a node with no children.</p>\n\n<p><strong>Example:</strong></p>\n\n<pre><strong>Input:</strong>\n\n   1\n /   \\\n2     3\n \\\n  5\n\n<strong>Output:</strong> [\"1-&gt;2-&gt;5\", \"1-&gt;3\"]\n\n<strong>Explanation:</strong> All root-to-leaf paths are: 1-&gt;2-&gt;5, 1-&gt;3\n</pre></div>",
+  "url": "https://leetcode.com/problems/binary-tree-paths/",
+  "companies": {},
+  "code": "# Definition for a binary tree node.\\u000A# class TreeNode(object):\\u000A#     def __init__(self, x):\\u000A#         self.val \\u003D x\\u000A#         self.left \\u003D None\\u000A#         self.right \\u003D None\\u000A\\u000Aclass Solution(object):\\u000A    def binaryTreePaths(self, root):\\u000A        \\u0022\\u0022\\u0022\\u000A        :type root: TreeNode\\u000A        :rtype: List[str]\\u000A        \\u0022\\u0022\\u0022\\u000A        if not root: return []\\u000A        bfs \\u003D [(root, str(root.val))]\\u000A        paths \\u003D []\\u000A        while bfs:\\u000A            paths.extend([path for node, path in bfs if not node.left and not node.right])\\u000A            bfs \\u003D [(kid, \\u0022%s\\u002D\\u003E%s\\u0022 %(path, str(kid.val))) for node, path in bfs for kid in [node.left, node.right] if kid]\\u000A        return paths"
+}

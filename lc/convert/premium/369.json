@@ -1,0 +1,12 @@
+{
+  "categories": [
+    "Linked List"
+  ],
+  "diff": "Medium",
+  "title": "369. Plus One Linked List",
+  "question": "<div><p>Given a non-negative integer represented as <b>non-empty</b> a singly linked list of digits, plus one to the integer.</p>\n\n<p>You may assume the integer do not contain any leading zero, except the number 0 itself.</p>\n\n<p>The digits are stored such that the most significant digit is at the head of the list.</p>\n\n<div>\n<p><strong>Example :</strong></p>\n\n<pre><strong>Input: </strong><span id=\"example-input-1-1\">[1,2,3]</span>\n<strong>Output: </strong><span id=\"example-output-1\">[1,2,4]</span>\n</pre>\n</div>\n</div>",
+  "url": "https://leetcode.com/problems/plus-one-linked-list/",
+  "companies": {
+    "Google": 2
+  }
+}

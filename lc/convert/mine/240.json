@@ -1,0 +1,12 @@
+{
+  "categories": [
+    "Binary Search",
+    "Divide and Conquer"
+  ],
+  "diff": "Medium",
+  "title": "240. Search a 2D Matrix II",
+  "question": "<div><p>Write an efficient algorithm that searches for a value in an <i>m</i> x <i>n</i> matrix. This matrix has the following properties:</p>\n\n<ul>\n\t<li>Integers in each row are sorted in ascending from left to right.</li>\n\t<li>Integers in each column are sorted in ascending from top to bottom.</li>\n</ul>\n\n<p><strong>Example:</strong></p>\n\n<p>Consider the following matrix:</p>\n\n<pre>[\n  [1,   4,  7, 11, 15],\n  [2,   5,  8, 12, 19],\n  [3,   6,  9, 16, 22],\n  [10, 13, 14, 17, 24],\n  [18, 21, 23, 26, 30]\n]\n</pre>\n\n<p>Given&nbsp;target&nbsp;=&nbsp;<code>5</code>, return&nbsp;<code>true</code>.</p>\n\n<p>Given&nbsp;target&nbsp;=&nbsp;<code>20</code>, return&nbsp;<code>false</code>.</p>\n</div>",
+  "url": "https://leetcode.com/problems/search-a-2d-matrix-ii/",
+  "companies": {},
+  "code": "class Solution(object):\\u000A    def searchMatrix(self, matrix, target):\\u000A        \\u0022\\u0022\\u0022\\u000A        :type matrix: List[List[int]]\\u000A        :type target: int\\u000A        :rtype: bool\\u000A        \\u0022\\u0022\\u0022\\u000A        if not matrix or not any(matrix):\\u000A            return False\\u000A        col_i \\u003D len(matrix[0]) \\u002D 1\\u000A        for row in matrix:\\u000A            while row[col_i] \\u003E target and col_i \\u003E 0:\\u000A                col_i \\u002D\\u003D 1\\u000A            if row[col_i] \\u003D\\u003D target:\\u000A                return True\\u000A        return False"
+}

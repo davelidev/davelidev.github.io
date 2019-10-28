@@ -1,0 +1,12 @@
+{
+  "categories": [
+    "Tree"
+  ],
+  "diff": "Easy",
+  "title": "538. Convert BST to Greater Tree",
+  "question": "<div><p>Given a Binary Search Tree (BST), convert it to a Greater Tree such that every key of the original BST is changed to the original key plus sum of all keys greater than the original key in BST.</p>\n\n<p>\n<b>Example:</b>\n</p><pre><b>Input:</b> The root of a Binary Search Tree like this:\n              5\n            /   \\\n           2     13\n\n<b>Output:</b> The root of a Greater Tree like this:\n             18\n            /   \\\n          20     13\n</pre>\n<p></p></div>",
+  "url": "https://leetcode.com/problems/convert-bst-to-greater-tree/",
+  "companies": {
+    "Amazon": 4
+  }
+}

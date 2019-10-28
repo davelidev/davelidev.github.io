@@ -1,0 +1,17 @@
+{
+  "categories": [
+    "Math",
+    "Dynamic Programming",
+    "Breadth-first Search"
+  ],
+  "diff": "Medium",
+  "title": "279. Perfect Squares",
+  "question": "<div><p>Given a positive integer <i>n</i>, find the least number of perfect square numbers (for example, <code>1, 4, 9, 16, ...</code>) which sum to <i>n</i>.</p>\n\n<p><b>Example 1:</b></p>\n\n<pre><b>Input:</b> <i>n</i> = <code>12</code>\n<b>Output:</b> 3 \n<strong>Explanation: </strong><code>12 = 4 + 4 + 4.</code></pre>\n\n<p><b>Example 2:</b></p>\n\n<pre><b>Input:</b> <i>n</i> = <code>13</code>\n<b>Output:</b> 2\n<strong>Explanation: </strong><code>13 = 4 + 9.</code></pre></div>",
+  "url": "https://leetcode.com/problems/perfect-squares/",
+  "companies": {
+    "Google": 4,
+    "Apple": 3,
+    "Amazon": 2,
+    "Cisco": 2
+  }
+}

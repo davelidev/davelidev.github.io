@@ -1,0 +1,13 @@
+{
+  "categories": [
+    "Tree",
+    "Depth-first Search",
+    "Breadth-first Search"
+  ],
+  "diff": "Easy",
+  "title": "111. Minimum Depth of Binary Tree",
+  "question": "<div><p>Given a binary tree, find its minimum depth.</p>\n\n<p>The minimum depth is the number of nodes along the shortest path from the root node down to the nearest leaf node.</p>\n\n<p><strong>Note:</strong>&nbsp;A leaf is a node with no children.</p>\n\n<p><strong>Example:</strong></p>\n\n<p>Given binary tree <code>[3,9,20,null,null,15,7]</code>,</p>\n\n<pre>    3\n   / \\\n  9  20\n    /  \\\n   15   7</pre>\n\n<p>return its minimum&nbsp;depth = 2.</p>\n</div>",
+  "url": "https://leetcode.com/problems/minimum-depth-of-binary-tree/",
+  "companies": {},
+  "code": "# Definition for a binary tree node.\\u000A# class TreeNode(object):\\u000A#     def __init__(self, x):\\u000A#         self.val \\u003D x\\u000A#         self.left \\u003D None\\u000A#         self.right \\u003D None\\u000A\\u000Aclass Solution(object):\\u000A    def minDepth(self, root):\\u000A        \\u0022\\u0022\\u0022\\u000A        :type root: TreeNode\\u000A        :rtype: int\\u000A        \\u0022\\u0022\\u0022\\u000A        if not root: return 0\\u000A        depth, bfs \\u003D 0, [root]\\u000A        while bfs:\\u000A            depth +\\u003D 1\\u000A            if next((True for node in bfs if not node.left and not node.right), False): return depth\\u000A            bfs \\u003D [kid for node in bfs for kid in [node.left, node.right] if kid]"
+}

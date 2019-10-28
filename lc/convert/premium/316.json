@@ -1,0 +1,14 @@
+{
+  "categories": [
+    "Stack",
+    "Greedy"
+  ],
+  "diff": "Hard",
+  "title": "316. Remove Duplicate Letters",
+  "question": "<div><p>Given a string which contains only lowercase letters, remove duplicate letters so that every letter appears once and only once. You must make sure your result is the smallest in lexicographical order among all possible results.</p>\n\n<p><b>Example 1:</b></p>\n\n<pre><b>Input:</b> <code>\"bcabc\"</code>\n<b>Output:</b> <code>\"abc\"</code>\n</pre>\n\n<p><b>Example 2:</b></p>\n\n<pre><b>Input:</b> <code>\"cbacdcbc\"</code>\n<b>Output:</b> <code>\"acdb\"</code>\n</pre>\n</div>",
+  "url": "https://leetcode.com/problems/remove-duplicate-letters/",
+  "companies": {
+    "Google": 2,
+    "Amazon": 2
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "categories": [
+    "Hash Table",
+    "Math"
+  ],
+  "diff": "Medium",
+  "title": "535. Encode and Decode TinyURL",
+  "question": "<div><blockquote>Note: This is a companion problem to the <a href=\"https://leetcode.com/discuss/interview-question/system-design/\" target=\"_blank\">System Design</a> problem: <a href=\"https://leetcode.com/discuss/interview-question/124658/Design-a-URL-Shortener-(-TinyURL-)-System/\" target=\"_blank\">Design TinyURL</a>.</blockquote>\n\n<p>TinyURL is a URL shortening service where you enter a URL such as <code>https://leetcode.com/problems/design-tinyurl</code> and it returns a short URL such as <code>http://tinyurl.com/4e9iAk</code>.</p>\n\n<p>Design the <code>encode</code> and <code>decode</code> methods for the TinyURL service. There is no restriction on how your encode/decode algorithm should work. You just need to ensure that a URL can be encoded to a tiny URL and the tiny URL can be decoded to the original URL.</p>\n</div>",
+  "url": "https://leetcode.com/problems/encode-and-decode-tinyurl/",
+  "companies": {},
+  "code": "class Codec:\\u000A    \\u000A    def __init__(self):\\u000A        self.num_to_url \\u003D []\\u000A    \\u000A    def encode(self, longUrl):\\u000A        \\u0022\\u0022\\u0022Encodes a URL to a shortened URL.\\u000A        \\u000A        :type longUrl: str\\u000A        :rtype: str\\u000A        \\u0022\\u0022\\u0022\\u000A        self.num_to_url.append(longUrl)\\u000A        return \\u0022http://tinyurl.com/\\u0022 + str(len(self.num_to_url))\\u000A\\u000A    def decode(self, shortUrl):\\u000A        \\u0022\\u0022\\u0022Decodes a shortened URL to its original URL.\\u000A        \\u000A        :type shortUrl: str\\u000A        :rtype: str\\u000A        \\u0022\\u0022\\u0022\\u000A        print shortUrl[int(shortUrl.rfind(\\u0027/\\u0027)) + 1:]\\u000A        return self.num_to_url[int(shortUrl[int(shortUrl.rfind(\\u0027/\\u0027)) + 1:]) \\u002D 1]\\u000A\\u000A# Your Codec object will be instantiated and called as such:\\u000A# codec \\u003D Codec()\\u000A# codec.decode(codec.encode(url))"
+}

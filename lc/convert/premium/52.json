@@ -1,0 +1,13 @@
+{
+  "categories": [
+    "Backtracking"
+  ],
+  "diff": "Hard",
+  "title": "52. N-Queens II",
+  "question": "<div><p>The <em>n</em>-queens puzzle is the problem of placing <em>n</em> queens on an <em>n</em>×<em>n</em> chessboard such that no two queens attack each other.</p>\n\n<p><img src=\"https://assets.leetcode.com/uploads/2018/10/12/8-queens.png\" style=\"width: 258px; height: 276px;\"></p>\n\n<p>Given an integer&nbsp;<em>n</em>, return the number of&nbsp;distinct solutions to the&nbsp;<em>n</em>-queens puzzle.</p>\n\n<p><strong>Example:</strong></p>\n\n<pre><strong>Input:</strong> 4\n<strong>Output:</strong> 2\n<strong>Explanation:</strong> There are two distinct solutions to the 4-queens puzzle as shown below.\n[\n&nbsp;[\".Q..\", &nbsp;// Solution 1\n&nbsp; \"...Q\",\n&nbsp; \"Q...\",\n&nbsp; \"..Q.\"],\n\n&nbsp;[\"..Q.\", &nbsp;// Solution 2\n&nbsp; \"Q...\",\n&nbsp; \"...Q\",\n&nbsp; \".Q..\"]\n]\n</pre>\n</div>",
+  "url": "https://leetcode.com/problems/n-queens-ii/",
+  "companies": {
+    "Zenefits": null
+  },
+  "code": "class Solution(object):\\u000A    def totalNQueens(self, n):\\u000A        \\u000A        get_hash \\u003D lambda x, y: {(1, y), (2, x + y), (3, x \\u002D y)}\\u000A        self.res \\u003D 0\\u000A        \\u000A        def perm(x\\u003D0, cur\\u003D[[\\u0027.\\u0027] * n for _ in range(n)], visited\\u003Dset()):\\u000A            if x \\u003D\\u003D n:\\u000A                self.res +\\u003D 1\\u000A            else:\\u000A                for y in range(n):\\u000A                    if cur[x][y] \\u003D\\u003D \\u0027.\\u0027 and not (get_hash(x, y) \\u0026 visited):\\u000A                        cur[x][y] \\u003D \\u0022Q\\u0022\\u000A                        visited |\\u003D get_hash(x, y)\\u000A                        perm(x + 1)\\u000A                        visited \\u002D\\u003D get_hash(x, y)\\u000A                        cur[x][y] \\u003D \\u0022.\\u0022\\u000A            return self.res\\u000A        return perm()\\u000A                    "
+}

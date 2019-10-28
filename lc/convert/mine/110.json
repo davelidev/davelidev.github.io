@@ -1,0 +1,12 @@
+{
+  "categories": [
+    "Tree",
+    "Depth-first Search"
+  ],
+  "diff": "Easy",
+  "title": "110. Balanced Binary Tree",
+  "question": "<div><p>Given a binary tree, determine if it is height-balanced.</p>\n\n<p>For this problem, a height-balanced binary tree is defined as:</p>\n\n<blockquote>\n<p>a binary tree in which the left and right subtrees of <em>every</em> node differ in height by no more than 1.</p>\n</blockquote>\n\n<p>&nbsp;</p>\n\n<p><strong>Example 1:</strong></p>\n\n<p>Given the following tree <code>[3,9,20,null,null,15,7]</code>:</p>\n\n<pre>    3\n   / \\\n  9  20\n    /  \\\n   15   7</pre>\n\n<p>Return true.<br>\n<br>\n<strong>Example 2:</strong></p>\n\n<p>Given the following tree <code>[1,2,2,3,3,null,null,4,4]</code>:</p>\n\n<pre>       1\n      / \\\n     2   2\n    / \\\n   3   3\n  / \\\n 4   4\n</pre>\n\n<p>Return false.</p>\n</div>",
+  "url": "https://leetcode.com/problems/balanced-binary-tree/",
+  "companies": {},
+  "code": "# Definition for a binary tree node.\\u000A# class TreeNode(object):\\u000A#     def __init__(self, x):\\u000A#         self.val \\u003D x\\u000A#         self.left \\u003D None\\u000A#         self.right \\u003D None\\u000A\\u000Aclass Solution(object):\\u000A    def isBalanced(self, root):\\u000A        \\u0022\\u0022\\u0022\\u000A        :type root: TreeNode\\u000A        :rtype: bool\\u000A        \\u0022\\u0022\\u0022\\u000A        def _isBalanced(node):\\u000A            if not node: return 1\\u000A            left \\u003D _isBalanced(node.left)\\u000A            if left \\u003D\\u003D \\u002D1: return \\u002D1\\u000A            right \\u003D _isBalanced(node.right)\\u000A            return \\u002D1 if (abs(left \\u002D right) \\u003E 1 or right \\u003D\\u003D \\u002D1) else max(left, right) + 1\\u000A        return _isBalanced(root) !\\u003D \\u002D1"
+}

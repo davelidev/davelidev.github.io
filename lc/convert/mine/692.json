@@ -1,0 +1,13 @@
+{
+  "categories": [
+    "Hash Table",
+    "Heap",
+    "Trie"
+  ],
+  "diff": "Medium",
+  "title": "692. Top K Frequent Words",
+  "question": "<div><p>Given a non-empty list of words, return the <i>k</i> most frequent elements.</p>\n<p>Your answer should be sorted by frequency from highest to lowest. If two words have the same frequency, then the word with the lower alphabetical order comes first.</p>\n\n<p><b>Example 1:</b><br>\n</p><pre><b>Input:</b> [\"i\", \"love\", \"leetcode\", \"i\", \"love\", \"coding\"], k = 2\n<b>Output:</b> [\"i\", \"love\"]\n<b>Explanation:</b> \"i\" and \"love\" are the two most frequent words.\n    Note that \"i\" comes before \"love\" due to a lower alphabetical order.\n</pre>\n<p></p>\n\n<p><b>Example 2:</b><br>\n</p><pre><b>Input:</b> [\"the\", \"day\", \"is\", \"sunny\", \"the\", \"the\", \"the\", \"sunny\", \"is\", \"is\"], k = 4\n<b>Output:</b> [\"the\", \"is\", \"sunny\", \"day\"]\n<b>Explanation:</b> \"the\", \"is\", \"sunny\" and \"day\" are the four most frequent words,\n    with the number of occurrence being 4, 3, 2 and 1 respectively.\n</pre>\n<p></p>\n\n<p><b>Note:</b><br>\n</p><ol>\n<li>You may assume <i>k</i> is always valid, 1 ≤ <i>k</i> ≤ number of unique elements.</li>\n<li>Input words contain only lowercase letters.</li>\n</ol>\n<p></p>\n\n<p><b>Follow up:</b><br>\n</p><ol>\n<li>Try to solve it in <i>O</i>(<i>n</i> log <i>k</i>) time and <i>O</i>(<i>n</i>) extra space.</li>\n</ol>\n<p></p></div>",
+  "url": "https://leetcode.com/problems/top-k-frequent-words/",
+  "companies": {},
+  "code": "class Solution(object):\\u000A    def topKFrequent(self, words, k):\\u000A        from collections import Counter\\u000A        import heapq\\u000A        freq_word \\u003D [(\\u002Dcnt, word) for word, cnt in Counter(words).items()]\\u000A        heapq.heapify(freq_word)\\u000A        most_freq \\u003D float(\\u0027inf\\u0027)\\u000A        res \\u003D []\\u000A        while freq_word and (len(res) \\u003C k or \\u002Dfreq_word[0][0] \\u003D\\u003D most_freq):\\u000A            most_freq, word \\u003D heapq.heappop(freq_word)\\u000A            most_freq *\\u003D 1\\u000A            res.append(word)\\u000A        return res\\u000A            "
+}

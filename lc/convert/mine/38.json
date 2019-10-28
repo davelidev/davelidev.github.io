@@ -1,0 +1,11 @@
+{
+  "categories": [
+    "String"
+  ],
+  "diff": "Easy",
+  "title": "38. Count and Say",
+  "question": "<div><p>The count-and-say sequence is the sequence of integers with the first five terms as following:</p>\n\n<pre>1.     1\n2.     11\n3.     21\n4.     1211\n5.     111221\n</pre>\n\n<p><code>1</code> is read off as <code>\"one 1\"</code> or <code>11</code>.<br>\n<code>11</code> is read off as <code>\"two 1s\"</code> or <code>21</code>.<br>\n<code>21</code> is read off as <code>\"one 2</code>, then <code>one 1\"</code> or <code>1211</code>.</p>\n\n<p>Given an integer <i>n</i>&nbsp;where 1 ≤ <em>n</em> ≤ 30, generate the <i>n</i><sup>th</sup> term of the count-and-say sequence.</p>\n\n<p>Note: Each term of the sequence of integers will be represented as a string.</p>\n\n<p>&nbsp;</p>\n\n<p><b>Example 1:</b></p>\n\n<pre><b>Input:</b> 1\n<b>Output:</b> \"1\"\n</pre>\n\n<p><b>Example 2:</b></p>\n\n<pre><b>Input:</b> 4\n<b>Output:</b> \"1211\"</pre>\n</div>",
+  "url": "https://leetcode.com/problems/count-and-say/",
+  "companies": {},
+  "code": "class Solution(object):\\u000A    def countAndSay(self, n):\\u000A        \\u0022\\u0022\\u0022\\u000A        :type n: int\\u000A        :rtype: str\\u000A        \\u0022\\u0022\\u0022\\u000A        cur \\u003D [\\u00271\\u0027]\\u000A        for i in range(n \\u002D 1):\\u000A            stack \\u003D []\\u000A            for elem in cur:\\u000A                if not stack or stack[\\u002D1][1] !\\u003D elem: stack.append([1, elem])\\u000A                else: stack[\\u002D1][0] +\\u003D 1\\u000A            cur \\u003D [str(i) for pair in stack for i in pair]\\u000A        return \\u0027\\u0027.join(cur)"
+}

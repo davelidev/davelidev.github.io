@@ -1,0 +1,12 @@
+{
+  "categories": [
+    "String"
+  ],
+  "diff": "Medium",
+  "title": "556. Next Greater Element III",
+  "question": "<div><p>Given a positive <strong>32-bit</strong> integer <strong>n</strong>, you need to find the smallest <strong>32-bit</strong> integer which has exactly the same digits existing in the integer <strong>n</strong> and is greater in value than n. If no such positive <strong>32-bit</strong> integer exists, you need to return -1.</p>\n\n<p><strong>Example 1:</strong></p>\n\n<pre><strong>Input:</strong> 12\n<strong>Output:</strong> 21\n</pre>\n\n<p>&nbsp;</p>\n\n<p><strong>Example 2:</strong></p>\n\n<pre><strong>Input:</strong> 21\n<strong>Output:</strong> -1\n</pre>\n\n<p>&nbsp;</p>\n</div>",
+  "url": "https://leetcode.com/problems/next-greater-element-iii/",
+  "companies": {
+    "Amazon": 3
+  }
+}

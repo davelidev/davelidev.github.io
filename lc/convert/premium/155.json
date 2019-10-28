@@ -1,0 +1,22 @@
+{
+  "categories": [
+    "Stack",
+    "Design"
+  ],
+  "diff": "Easy",
+  "title": "155. Min Stack",
+  "question": "<div><p>Design a stack that supports push, pop, top, and retrieving the minimum element in constant time.</p>\n\n<ul>\n\t<li>push(x) -- Push element x onto stack.</li>\n\t<li>pop() -- Removes the element on top of the stack.</li>\n\t<li>top() -- Get the top element.</li>\n\t<li>getMin() -- Retrieve the minimum element in the stack.</li>\n</ul>\n\n<p>&nbsp;</p>\n\n<p><b>Example:</b></p>\n\n<pre>MinStack minStack = new MinStack();\nminStack.push(-2);\nminStack.push(0);\nminStack.push(-3);\nminStack.getMin();   --&gt; Returns -3.\nminStack.pop();\nminStack.top();      --&gt; Returns 0.\nminStack.getMin();   --&gt; Returns -2.\n</pre>\n\n<p>&nbsp;</p>\n</div>",
+  "url": "https://leetcode.com/problems/min-stack/",
+  "companies": {
+    "Amazon": 13,
+    "Microsoft": 8,
+    "Google": 6,
+    "Bloomberg": 4,
+    "Apple": 3,
+    "Goldman Sachs": 3,
+    "Adobe": 2,
+    "Wish": 2,
+    "Flipkart": 2
+  },
+  "code": "class MinStack(object):\\u000A\\u000A    def __init__(self):\\u000A        self.stack \\u003D[]\\u000A        \\u000A    def push(self, x):\\u000A        self.stack.append((x, min(x, self.stack[\\u002D1][1] if self.stack else float(\\u0027inf\\u0027))))\\u000A        \\u000A    def pop(self):\\u000A        return self.stack.pop()[0]\\u000A        \\u000A    def top(self):\\u000A        return self.stack[\\u002D1][0]\\u000A        \\u000A    def getMin(self):\\u000A        return self.stack[\\u002D1][1]\\u000A        "
+}

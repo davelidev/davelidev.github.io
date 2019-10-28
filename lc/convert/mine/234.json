@@ -1,0 +1,12 @@
+{
+  "categories": [
+    "Linked List",
+    "Two Pointers"
+  ],
+  "diff": "Easy",
+  "title": "234. Palindrome Linked List",
+  "question": "<div><p>Given a singly linked list, determine if it is a palindrome.</p>\n\n<p><strong>Example 1:</strong></p>\n\n<pre><strong>Input:</strong> 1-&gt;2\n<strong>Output:</strong> false</pre>\n\n<p><strong>Example 2:</strong></p>\n\n<pre><strong>Input:</strong> 1-&gt;2-&gt;2-&gt;1\n<strong>Output:</strong> true</pre>\n\n<p><b>Follow up:</b><br>\nCould you do it in O(n) time and O(1) space?</p>\n</div>",
+  "url": "https://leetcode.com/problems/palindrome-linked-list/",
+  "companies": {},
+  "code": "# Definition for singly\\u002Dlinked list.\\u000A# class ListNode(object):\\u000A#     def __init__(self, x):\\u000A#         self.val \\u003D x\\u000A#         self.next \\u003D None\\u000A\\u000Aclass Solution(object):\\u000A    def isPalindrome(self, head):\\u000A        \\u0022\\u0022\\u0022\\u000A        :type head: ListNode\\u000A        :rtype: bool\\u000A        \\u0022\\u0022\\u0022\\u000A        if not head or not head.next: return True\\u000A\\u000A        num_elem \\u003D 0\\u000A        cur \\u003D head\\u000A        while cur:\\u000A            num_elem +\\u003D 1\\u000A            cur \\u003D cur.next\\u000A        cur \\u003D head\\u000A        prev \\u003D None\\u000A        mid \\u003D num_elem / 2\\u000A        for _ in range(mid):\\u000A            next_node \\u003D cur.next\\u000A            cur.next \\u003D prev\\u000A            prev, cur \\u003D cur, next_node\\u000A        if num_elem \\u0026 1: cur \\u003D cur.next\\u000A        left, right \\u003D prev, cur\\u000A        while left or right:\\u000A            if left.val !\\u003D right.val: return False\\u000A            left, right \\u003D left.next, right.next\\u000A        return True\\u000A        \\u000A            \\u000A            "
+}

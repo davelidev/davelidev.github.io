@@ -1,0 +1,13 @@
+{
+  "categories": [
+    "Hash Table",
+    "Trie"
+  ],
+  "diff": "Medium",
+  "title": "676. Implement Magic Dictionary",
+  "question": "<div><p>\nImplement a magic directory with <code>buildDict</code>, and <code>search</code> methods.\n</p>\n\n<p>\nFor the method <code>buildDict</code>, you'll be given a list of non-repetitive words to build a dictionary.\n</p>\n\n<p>\nFor the method <code>search</code>, you'll be given a word, and judge whether if you modify <b>exactly</b> one character into <b>another</b> character in this word, the modified word is in the dictionary you just built.\n</p>\n\n<p><b>Example 1:</b><br>\n</p><pre>Input: buildDict([\"hello\", \"leetcode\"]), Output: Null\nInput: search(\"hello\"), Output: False\nInput: search(\"hhllo\"), Output: True\nInput: search(\"hell\"), Output: False\nInput: search(\"leetcoded\"), Output: False\n</pre>\n<p></p>\n\n<p><b>Note:</b><br>\n</p><ol>\n<li>You may assume that all the inputs are consist of lowercase letters <code>a-z</code>.</li>\n<li>For contest purpose, the test data is rather small by now. You could think about highly efficient algorithm after the contest.</li>\n<li>Please remember to <b>RESET</b> your class variables declared in class MagicDictionary, as static/class variables are <b>persisted across multiple test cases</b>. Please see <a href=\"https://leetcode.com/faq/#different-output\">here</a> for more details.</li>\n</ol>\n<p></p></div>",
+  "url": "https://leetcode.com/problems/implement-magic-dictionary/",
+  "companies": {
+    "Microsoft": 2
+  }
+}

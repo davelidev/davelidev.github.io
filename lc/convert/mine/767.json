@@ -1,0 +1,14 @@
+{
+  "categories": [
+    "String",
+    "Heap",
+    "Greedy",
+    "Sort"
+  ],
+  "diff": "Medium",
+  "title": "767. Reorganize String",
+  "question": "<div><p>Given a string <code>S</code>, check if the letters can be rearranged so that two characters that are adjacent to each other are not the same.</p>\n\n<p>If possible, output any possible result.&nbsp; If not possible, return the empty string.</p>\n\n<p><strong>Example 1:</strong></p>\n\n<pre><strong>Input:</strong> S = \"aab\"\n<strong>Output:</strong> \"aba\"\n</pre>\n\n<p><strong>Example 2:</strong></p>\n\n<pre><strong>Input:</strong> S = \"aaab\"\n<strong>Output:</strong> \"\"\n</pre>\n\n<p><strong>Note:</strong></p>\n\n<ul>\n\t<li><code>S</code> will consist of lowercase letters and have length in range <code>[1, 500]</code>.</li>\n</ul>\n\n<p>&nbsp;</p>\n</div>",
+  "url": "https://leetcode.com/problems/reorganize-string/",
+  "companies": {},
+  "code": "class Solution(object):\\u000A    def reorganizeString(self, S):\\u000A        \\u0022\\u0022\\u0022\\u000A        :type S: str\\u000A        :rtype: str\\u000A        \\u0022\\u0022\\u0022\\u000A        from collections import Counter\\u000A        counts \\u003D [(count, char) for char, count in Counter(S).iteritems()]\\u000A        max_freq, max_freq_char \\u003D max(counts)\\u000A        if max_freq \\u003E ((len(S) + 1)/ 2): return \\u0022\\u0022\\u000A        \\u000A        res \\u003D [[max_freq_char] for _ in range(max_freq)]\\u000A        i \\u003D 0\\u000A        while counts:\\u000A            count, char \\u003D counts.pop()\\u000A            if char !\\u003D max_freq_char:\\u000A                for j in range(i, i + count):\\u000A                    res[j % max_freq].append(char)\\u000A                i +\\u003D count\\u000A        return \\u0027\\u0027.join([\\u0027\\u0027.join(x) for x in res])"
+}

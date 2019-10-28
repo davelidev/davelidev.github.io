@@ -1,0 +1,15 @@
+{
+  "categories": [
+    "Hash Table",
+    "Two Pointers",
+    "String"
+  ],
+  "diff": "Hard",
+  "title": "632. Smallest Range Covering Elements from K Lists",
+  "question": "<div><p>You have <code>k</code> lists of sorted integers in ascending order. Find the <b>smallest</b> range that includes at least one number from each of the <code>k</code> lists.</p>\n\n<p>We define the range [a,b] is smaller than range [c,d] if <code>b-a &lt; d-c</code> or <code>a &lt; c</code> if <code>b-a == d-c</code>.</p>\n\n<p>&nbsp;</p>\n\n<p><b>Example 1:</b></p>\n\n<pre><b>Input: </b>[[4,10,15,24,26], [0,9,12,20], [5,18,22,30]]\n<b>Output:</b> [20,24]\n<b>Explanation:</b> \nList 1: [4, 10, 15, 24,26], 24 is in range [20,24].\nList 2: [0, 9, 12, 20], 20 is in range [20,24].\nList 3: [5, 18, 22, 30], 22 is in range [20,24].\n</pre>\n\n<p>&nbsp;</p>\n\n<p><b>Note:</b></p>\n\n<ol>\n\t<li>The given list may contain duplicates, so ascending order means &gt;= here.</li>\n\t<li>1 &lt;= <code>k</code> &lt;= 3500</li>\n\t<li>-10<sup>5</sup> &lt;= <code>value of elements</code> &lt;= 10<sup>5</sup>.</li>\n</ol>\n</div>",
+  "url": "https://leetcode.com/problems/smallest-range-covering-elements-from-k-lists/",
+  "companies": {
+    "Amazon": 2,
+    "Google": 2
+  }
+}

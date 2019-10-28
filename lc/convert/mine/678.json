@@ -1,0 +1,11 @@
+{
+  "categories": [
+    "String"
+  ],
+  "diff": "Medium",
+  "title": "678. Valid Parenthesis String",
+  "question": "<div><p>\nGiven a string containing only three types of characters: '(', ')' and '*', write a function to check whether this string is valid. We define the validity of a string by these rules:\n</p><ol>\n<li>Any left parenthesis <code>'('</code> must have a corresponding right parenthesis <code>')'</code>.</li>\n<li>Any right parenthesis <code>')'</code> must have a corresponding left parenthesis <code>'('</code>.</li>\n<li>Left parenthesis <code>'('</code> must go before the corresponding right parenthesis <code>')'</code>.</li>\n<li><code>'*'</code> could be treated as a single right parenthesis <code>')'</code> or a single left parenthesis <code>'('</code> or an empty string.</li>\n<li>An empty string is also valid.</li>\n</ol>\n<p></p>\n\n<p><b>Example 1:</b><br>\n</p><pre><b>Input:</b> \"()\"\n<b>Output:</b> True\n</pre>\n<p></p>\n\n<p><b>Example 2:</b><br>\n</p><pre><b>Input:</b> \"(*)\"\n<b>Output:</b> True\n</pre>\n<p></p>\n\n<p><b>Example 3:</b><br>\n</p><pre><b>Input:</b> \"(*))\"\n<b>Output:</b> True\n</pre>\n<p></p>\n\n<p><b>Note:</b><br>\n</p><ol>\n<li>The string size will be in the range [1, 100].</li>\n</ol>\n<p></p></div>",
+  "url": "https://leetcode.com/problems/valid-parenthesis-string/",
+  "companies": {},
+  "code": "class Solution(object):\\u000A    def checkValidString(self, s):\\u000A        \\u0022\\u0022\\u0022\\u000A        :type s: str\\u000A        :rtype: bool\\u000A        \\u0022\\u0022\\u0022\\u000A        high \\u003D low \\u003D 0\\u000A        for i, char in enumerate(s):\\u000A            high +\\u003D \\u002D1 if char \\u003D\\u003D \\u0027)\\u0027 else 1\\u000A            low \\u003D low + 1 if char \\u003D\\u003D \\u0027(\\u0027 else max(low \\u002D 1, 0)\\u000A            if high \\u003C 0:\\u000A                return False\\u000A        return low \\u003D\\u003D 0"
+}

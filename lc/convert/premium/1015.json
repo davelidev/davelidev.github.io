@@ -1,0 +1,12 @@
+{
+  "categories": [
+    "Math"
+  ],
+  "diff": "Medium",
+  "title": "1015. Smallest Integer Divisible by K",
+  "question": "<div><p>Given a positive integer <code>K</code>, you need find the <strong>smallest</strong>&nbsp;positive integer <code>N</code> such that <code>N</code> is divisible by <code>K</code>, and <code>N</code> only contains the digit <strong>1</strong>.</p>\n\n<p>Return the&nbsp;length of <code>N</code>.&nbsp; If there is no such <code>N</code>,&nbsp;return -1.</p>\n\n<p>&nbsp;</p>\n\n<p><strong>Example 1:</strong></p>\n\n<pre><strong>Input:</strong> 1\n<strong>Output:</strong> 1\n<strong>Explanation:</strong> The smallest answer is N = 1, which has length 1.</pre>\n\n<p><strong>Example 2:</strong></p>\n\n<pre><strong>Input:</strong> 2\n<strong>Output:</strong> -1\n<strong>Explanation:</strong> There is no such positive integer N divisible by 2.</pre>\n\n<p><strong>Example 3:</strong></p>\n\n<pre><strong>Input:</strong> 3\n<strong>Output:</strong> 3\n<strong>Explanation:</strong> The smallest answer is N = 111, which has length 3.</pre>\n\n<p>&nbsp;</p>\n\n<p><strong>Note:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= K &lt;= 10^5</code></li>\n</ul></div>",
+  "url": "https://leetcode.com/problems/smallest-integer-divisible-by-k/",
+  "companies": {
+    "Google": null
+  }
+}

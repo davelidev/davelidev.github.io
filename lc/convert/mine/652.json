@@ -1,0 +1,11 @@
+{
+  "categories": [
+    "Tree"
+  ],
+  "diff": "Medium",
+  "title": "652. Find Duplicate Subtrees",
+  "question": "<div><p>Given a binary tree, return all duplicate subtrees. For each kind of duplicate subtrees, you only need to return the root node of any <b>one</b> of them.</p>\n\n<p>Two trees are duplicate if they have the same structure with same node values.</p>\n\n<p><b>Example 1: </b></p>\n\n<pre>        1\n       / \\\n      2   3\n     /   / \\\n    4   2   4\n       /\n      4\n</pre>\n\n<p>The following are two duplicate subtrees:</p>\n\n<pre>      2\n     /\n    4\n</pre>\n\n<p>and</p>\n\n<pre>    4\n</pre>\nTherefore, you need to return above trees' root in the form of a list.</div>",
+  "url": "https://leetcode.com/problems/find-duplicate-subtrees/",
+  "companies": {},
+  "code": "# Definition for a binary tree node.\\u000A# class TreeNode(object):\\u000A#     def __init__(self, x):\\u000A#         self.val \\u003D x\\u000A#         self.left \\u003D None\\u000A#         self.right \\u003D None\\u000A\\u000Aclass Solution(object):\\u000A    def findDuplicateSubtrees(self, root):\\u000A        \\u0022\\u0022\\u0022\\u000A        :type root: TreeNode\\u000A        :rtype: List[TreeNode]\\u000A        \\u0022\\u0022\\u0022\\u000A        def _findDuplicateSubtrees(node, hash_to_count_node):\\u000A            if not node: return\\u000A            l_res \\u003D _findDuplicateSubtrees(node.left, hash_to_count_node)\\u000A            r_res \\u003D _findDuplicateSubtrees(node.right, hash_to_count_node)\\u000A            serial \\u003D (node.val, l_res, r_res)\\u000A            hash_val \\u003D hash(str(serial))\\u000A            hash_to_count_node.setdefault(hash_val, [0, node])\\u000A            hash_to_count_node[hash_val][0] +\\u003D 1\\u000A            return serial\\u000A\\u000A        hash_to_count_node \\u003D {}\\u000A        _findDuplicateSubtrees(root, hash_to_count_node)\\u000A        return [node for i, node in hash_to_count_node.values() if i \\u003E\\u003D 2]\\u000A"
+}

@@ -1,0 +1,26 @@
+{
+  "categories": [
+    "Linked List",
+    "Math"
+  ],
+  "diff": "Medium",
+  "title": "2. Add Two Numbers",
+  "question": "<div><p>You are given two <b>non-empty</b> linked lists representing two non-negative integers. The digits are stored in <b>reverse order</b> and each of their nodes contain a single digit. Add the two numbers and return it as a linked list.</p>\n\n<p>You may assume the two numbers do not contain any leading zero, except the number 0 itself.</p>\n\n<p><b>Example:</b></p>\n\n<pre><b>Input:</b> (2 -&gt; 4 -&gt; 3) + (5 -&gt; 6 -&gt; 4)\n<b>Output:</b> 7 -&gt; 0 -&gt; 8\n<b>Explanation:</b> 342 + 465 = 807.\n</pre>\n</div>",
+  "url": "https://leetcode.com/problems/add-two-numbers/",
+  "companies": {
+    "Amazon": 48,
+    "Microsoft": 15,
+    "Google": 14,
+    "Apple": 14,
+    "Bloomberg": 13,
+    "Adobe": 13,
+    "Facebook": 5,
+    "Yandex": 5,
+    "Cisco": 4,
+    "Uber": 4,
+    "ByteDance": 3,
+    "Oracle": 2,
+    "Yahoo": 2
+  },
+  "code": "# Definition for singly\\u002Dlinked list.\\u000A# class ListNode(object):\\u000A#     def __init__(self, x):\\u000A#         self.val \\u003D x\\u000A#         self.next \\u003D None\\u000A\\u000Aclass Solution(object):\\u000A    def addTwoNumbers(self, l1, l2):\\u000A        res \\u003D cur \\u003D ListNode(\\u0022Dummy\\u0022)\\u000A        carry \\u003D 0\\u000A        while l1 or l2 or carry:\\u000A            carry, remainder \\u003D divmod((l1.val if l1 else 0) + (l2.val if l2 else 0) + carry, 10)\\u000A            if l1: l1 \\u003D l1.next\\u000A            if l2: l2 \\u003D l2.next\\u000A            cur.next \\u003D ListNode(remainder)\\u000A            cur \\u003D cur.next\\u000A        return res.next"
+}

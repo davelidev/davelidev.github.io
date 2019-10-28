@@ -1,0 +1,14 @@
+{
+  "categories": [
+    "Graph",
+    "Topological Sort"
+  ],
+  "diff": "Medium",
+  "title": "444. Sequence Reconstruction",
+  "question": "<div><p>Check whether the original sequence <code>org</code> can be uniquely reconstructed from the sequences in <code>seqs</code>. The <code>org</code> sequence is a permutation of the integers from 1 to n, with 1 ≤ n ≤ 10<sup>4</sup>. Reconstruction means building a shortest common supersequence of the sequences in <code>seqs</code> (i.e., a shortest sequence so that all sequences in <code>seqs</code> are subsequences of it). Determine whether there is only one sequence that can be reconstructed from <code>seqs</code> and it is the <code>org</code> sequence.</p>\n\n<p><b>Example 1:</b>\n</p><pre><b>Input:</b>\norg: [1,2,3], seqs: [[1,2],[1,3]]\n\n<b>Output:</b>\nfalse\n\n<b>Explanation:</b>\n[1,2,3] is not the only one sequence that can be reconstructed, because [1,3,2] is also a valid sequence that can be reconstructed.\n</pre>\n<p></p>\n\n<p><b>Example 2:</b>\n</p><pre><b>Input:</b>\norg: [1,2,3], seqs: [[1,2]]\n\n<b>Output:</b>\nfalse\n\n<b>Explanation:</b>\nThe reconstructed sequence can only be [1,2].\n</pre>\n<p></p>\n\n<p><b>Example 3:</b>\n</p><pre><b>Input:</b>\norg: [1,2,3], seqs: [[1,2],[1,3],[2,3]]\n\n<b>Output:</b>\ntrue\n\n<b>Explanation:</b>\nThe sequences [1,2], [1,3], and [2,3] can uniquely reconstruct the original sequence [1,2,3].\n</pre>\n<p></p>\n\n<p><b>Example 4:</b>\n</p><pre><b>Input:</b>\norg: [4,1,5,2,6,3], seqs: [[5,2,6,3],[4,1,5,2]]\n\n<b>Output:</b>\ntrue\n</pre>\n<p></p>\n\n<p>\n<b><font color=\"red\">UPDATE (2017/1/8):</font></b><br>\nThe <i>seqs</i> parameter had been changed to a list of list of strings (instead of a 2d array of strings). Please reload the code definition to get the latest changes.\n</p></div>",
+  "url": "https://leetcode.com/problems/sequence-reconstruction/",
+  "companies": {
+    "Google": 2
+  },
+  "code": "class Solution(object):\\u000A    def sequenceReconstruction(self, org, seqs):\\u000A        \\u000A        from collections import defaultdict\\u000A        G \\u003D defaultdict(set)\\u000A        for seq in seqs:\\u000A            if len(seq): G[seq[0]]\\u000A            for i in range(1, len(seq)):\\u000A                G[seq[i \\u002D 1]].add(seq[i])\\u000A                \\u000A        def dfs(node, res \\u003D [], visited \\u003D set()):\\u000A            while G[node]:\\u000A                adj \\u003D G[node].pop()\\u000A                if adj not in visited:\\u000A                    dfs(adj, res)\\u000A                    visited.add(adj)\\u000A            res.append(node)\\u000A            return res\\u000A\\u000A        return org[0] in G and dfs(org[0])[::\\u002D1] \\u003D\\u003D org and len(set(G.keys()))\\u003D\\u003Dlen(org)"
+}

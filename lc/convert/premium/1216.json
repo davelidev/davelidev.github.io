@@ -1,0 +1,13 @@
+{
+  "categories": [
+    "String",
+    "Dynamic Programming"
+  ],
+  "diff": "Hard",
+  "title": "1216. Valid Palindrome III",
+  "question": "<div><p>Given a string <code>s</code>&nbsp;and an integer&nbsp;<code>k</code>, find out if the given string is&nbsp;a&nbsp;<em>K-Palindrome</em> or not.</p>\n\n<p>A string is K-Palindrome if it can be&nbsp;transformed&nbsp;into a palindrome by removing at most <code>k</code> characters from it.</p>\n\n<p>&nbsp;</p>\n<p><strong>Example 1:</strong></p>\n\n<pre><strong>Input:</strong> s = \"abcdeca\", k = 2\n<strong>Output:</strong> true\n<strong>Explanation: </strong>Remove 'b' and 'e' characters.\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= s.length &lt;= 1000</code></li>\n\t<li><code>s</code>&nbsp;has only lowercase English letters.</li>\n\t<li><code>1 &lt;= k&nbsp;&lt;= s.length</code></li>\n</ul>\n</div>",
+  "url": "https://leetcode.com/problems/valid-palindrome-iii/",
+  "companies": {
+    "Facebook": 3
+  }
+}

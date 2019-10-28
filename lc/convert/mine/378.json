@@ -1,0 +1,12 @@
+{
+  "categories": [
+    "Binary Search",
+    "Heap"
+  ],
+  "diff": "Medium",
+  "title": "378. Kth Smallest Element in a Sorted Matrix",
+  "question": "<div><p>Given a <i>n</i> x <i>n</i> matrix where each of the rows and columns are sorted in ascending order, find the kth smallest element in the matrix.</p>\n\n<p>\nNote that it is the kth smallest element in the sorted order, not the kth distinct element.\n</p>\n\n<p><b>Example:</b>\n</p><pre>matrix = [\n   [ 1,  5,  9],\n   [10, 11, 13],\n   [12, 13, 15]\n],\nk = 8,\n\nreturn 13.\n</pre>\n<p></p>\n\n<p><b>Note: </b><br>\nYou may assume k is always valid, 1 ≤ k ≤ n<sup>2</sup>.</p></div>",
+  "url": "https://leetcode.com/problems/kth-smallest-element-in-a-sorted-matrix/",
+  "companies": {},
+  "code": "class Solution(object):\\u000A    def kthSmallest(self, matrix, k):\\u000A        \\u0022\\u0022\\u0022\\u000A        :type matrix: List[List[int]]\\u000A        :type k: int\\u000A        :rtype: int\\u000A        \\u0022\\u0022\\u0022\\u000A        return sorted(i for row in matrix for i in row)[k\\u002D1]"
+}

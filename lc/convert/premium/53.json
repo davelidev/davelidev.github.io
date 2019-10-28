@@ -1,0 +1,28 @@
+{
+  "categories": [
+    "Array",
+    "Divide and Conquer",
+    "Dynamic Programming"
+  ],
+  "diff": "Easy",
+  "title": "53. Maximum Subarray",
+  "question": "<div><p>Given an integer array <code>nums</code>, find the contiguous subarray&nbsp;(containing at least one number) which has the largest sum and return its sum.</p>\n\n<p><strong>Example:</strong></p>\n\n<pre><strong>Input:</strong> [-2,1,-3,4,-1,2,1,-5,4],\n<strong>Output:</strong> 6\n<strong>Explanation:</strong>&nbsp;[4,-1,2,1] has the largest sum = 6.\n</pre>\n\n<p><strong>Follow up:</strong></p>\n\n<p>If you have figured out the O(<em>n</em>) solution, try coding another solution using the divide and conquer approach, which is more subtle.</p>\n</div>",
+  "url": "https://leetcode.com/problems/maximum-subarray/",
+  "companies": {
+    "Amazon": 27,
+    "LinkedIn": 16,
+    "Microsoft": 16,
+    "Google": 10,
+    "Facebook": 9,
+    "Apple": 8,
+    "Bloomberg": 3,
+    "Adobe": 3,
+    "Alibaba": 2,
+    "eBay": 2,
+    "Oracle": 2,
+    "Paypal": 2,
+    "Atlassian": 2,
+    "ByteDance": 2,
+    "Walmart Labs": 2
+  }
+}

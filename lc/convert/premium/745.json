@@ -1,0 +1,12 @@
+{
+  "categories": [
+    "Trie"
+  ],
+  "diff": "Hard",
+  "title": "745. Prefix and Suffix Search",
+  "question": "<div><p>Given many <code>words</code>, <code>words[i]</code> has weight <code>i</code>.</p>\n\n<p>Design a class <code>WordFilter</code> that supports one function, <code>WordFilter.f(String prefix, String suffix)</code>. It will return the word with given <code>prefix</code> and <code>suffix</code> with maximum weight. If no word exists, return -1.</p>\n\n<p><b>Examples:</b></p>\n\n<pre><b>Input:</b>\nWordFilter([\"apple\"])\nWordFilter.f(\"a\", \"e\") // returns 0\nWordFilter.f(\"b\", \"\") // returns -1\n</pre>\n\n<p>&nbsp;</p>\n\n<p><b>Note:</b></p>\n\n<ol>\n\t<li><code>words</code> has length in range <code>[1, 15000]</code>.</li>\n\t<li>For each test case, up to <code>words.length</code> queries <code>WordFilter.f</code> may be made.</li>\n\t<li><code>words[i]</code> has length in range <code>[1, 10]</code>.</li>\n\t<li><code>prefix, suffix</code> have lengths in range <code>[0, 10]</code>.</li>\n\t<li><code>words[i]</code> and <code>prefix, suffix</code> queries consist of lowercase letters only.</li>\n</ol>\n\n<p>&nbsp;</p>\n</div>",
+  "url": "https://leetcode.com/problems/prefix-and-suffix-search/",
+  "companies": {
+    "Google": 2
+  }
+}

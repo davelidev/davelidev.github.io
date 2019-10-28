@@ -1,0 +1,16 @@
+{
+  "categories": [
+    "Array",
+    "Stack"
+  ],
+  "diff": "Hard",
+  "title": "84. Largest Rectangle in Histogram",
+  "question": "<div><p>Given <em>n</em> non-negative integers representing the histogram's bar height where the width of each bar is 1, find the area of largest rectangle in the histogram.</p>\n\n<p>&nbsp;</p>\n\n<p><img src=\"https://assets.leetcode.com/uploads/2018/10/12/histogram.png\" style=\"width: 188px; height: 204px;\"><br>\n<small>Above is a histogram where width of each bar is 1, given height = <code>[2,1,5,6,2,3]</code>.</small></p>\n\n<p>&nbsp;</p>\n\n<p><img src=\"https://assets.leetcode.com/uploads/2018/10/12/histogram_area.png\" style=\"width: 188px; height: 204px;\"><br>\n<small>The largest rectangle is shown in the shaded area, which has area = <code>10</code> unit.</small></p>\n\n<p>&nbsp;</p>\n\n<p><strong>Example:</strong></p>\n\n<pre><strong>Input:</strong> [2,1,5,6,2,3]\n<strong>Output:</strong> 10\n</pre>\n</div>",
+  "url": "https://leetcode.com/problems/largest-rectangle-in-histogram/",
+  "companies": {
+    "Microsoft": 2,
+    "Bloomberg": 2,
+    "Flipkart": 2
+  },
+  "code": "class Solution(object):\\u000A    def largestRectangleArea(self, heights):\\u000A        stack \\u003D []\\u000A        res \\u003D 0\\u000A        heights.append(0)\\u000A        for j, h2 in enumerate(heights):\\u000A            i \\u003D j\\u000A            while stack and stack[\\u002D1][1] \\u003E h2:\\u000A                i, h1 \\u003D stack.pop()\\u000A                res \\u003D max(res, h1 * (j \\u002D i))\\u000A            stack.append((i, h2))\\u000A        return res"
+}

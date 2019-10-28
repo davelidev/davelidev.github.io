@@ -1,0 +1,11 @@
+{
+  "categories": [
+    "String"
+  ],
+  "diff": "Easy",
+  "title": "551. Student Attendance Record I",
+  "question": "<div>You are given a string representing an attendance record for a student. The record only contains the following three characters:\n\n<p>\n</p><ol>\n<li><b>'A'</b> : Absent. </li>\n<li><b>'L'</b> : Late.</li>\n<li> <b>'P'</b> : Present. </li>\n</ol>\n<p></p>\n\n<p>\nA student could be rewarded if his attendance record doesn't contain <b>more than one 'A' (absent)</b> or <b>more than two continuous 'L' (late)</b>.    </p>\n\n<p>You need to return whether the student could be rewarded according to his attendance record.</p>\n\n<p><b>Example 1:</b><br>\n</p><pre><b>Input:</b> \"PPALLP\"\n<b>Output:</b> True\n</pre>\n<p></p>\n\n<p><b>Example 2:</b><br>\n</p><pre><b>Input:</b> \"PPALLL\"\n<b>Output:</b> False\n</pre>\n<p></p>\n\n\n</div>",
+  "url": "https://leetcode.com/problems/student-attendance-record-i/",
+  "companies": {},
+  "code": "class Solution(object):\\u000A    def checkRecord(self, s):\\u000A        \\u0022\\u0022\\u0022\\u000A        :type s: str\\u000A        :rtype: bool\\u000A        \\u0022\\u0022\\u0022\\u000A        return (s.count(\\u0027A\\u0027) \\u003C\\u003D 1) and (\\u0027LLL\\u0027 not in s)"
+}

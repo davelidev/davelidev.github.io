@@ -1,0 +1,10 @@
+{
+  "categories": [],
+  "diff": "Easy",
+  "title": "1148. Article Views I",
+  "question": "<div class=\"sql-schema-wrapper__3VBi\"><a class=\"sql-schema-link__3cEg\">SQL Schema<svg viewBox=\"0 0 24 24\" width=\"1em\" height=\"1em\" class=\"icon__3Su4\"><path fill-rule=\"evenodd\" d=\"M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z\"></path></svg></a></div><div><p>Table: <code>Views</code></p>\n\n<pre>+---------------+---------+\n| Column Name   | Type    |\n+---------------+---------+\n| article_id    | int     |\n| author_id     | int     |\n| viewer_id     | int     |\n| view_date     | date    |\n+---------------+---------+\nThere is no primary key for this table, it may have duplicate rows.\nEach row of this table indicates that some viewer viewed an article (written by some author) on some date. \nNote that equal author_id and viewer_id indicate the same person.</pre>\n\n<p>&nbsp;</p>\n\n<p>Write an SQL query to find all the authors that viewed at least one of their own articles, sorted in ascending order by their id.</p>\n\n<p>The query result format is in the following example:</p>\n\n<pre>Views table:\n+------------+-----------+-----------+------------+\n| article_id | author_id | viewer_id | view_date  |\n+------------+-----------+-----------+------------+\n| 1          | 3         | 5         | 2019-08-01 |\n| 1          | 3         | 6         | 2019-08-02 |\n| 2          | 7         | 7         | 2019-08-01 |\n| 2          | 7         | 6         | 2019-08-02 |\n| 4          | 7         | 1         | 2019-07-22 |\n| 3          | 4         | 4         | 2019-07-21 |\n| 3          | 4         | 4         | 2019-07-21 |\n+------------+-----------+-----------+------------+\n\nResult table:\n+------+\n| id   |\n+------+\n| 4    |\n| 7    |\n+------+\n</pre>\n</div>",
+  "url": "https://leetcode.com/problems/article-views-i/",
+  "companies": {
+    "LinkedIn": 2
+  }
+}

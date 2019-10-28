@@ -1,0 +1,12 @@
+{
+  "categories": [
+    "Dynamic Programming"
+  ],
+  "diff": "Medium",
+  "title": "673. Number of Longest Increasing Subsequence",
+  "question": "<div><p>\nGiven an unsorted array of integers, find the number of longest increasing subsequence.\n</p>\n\n<p><b>Example 1:</b><br>\n</p><pre><b>Input:</b> [1,3,5,4,7]\n<b>Output:</b> 2\n<b>Explanation:</b> The two longest increasing subsequence are [1, 3, 4, 7] and [1, 3, 5, 7].\n</pre>\n<p></p>\n\n<p><b>Example 2:</b><br>\n</p><pre><b>Input:</b> [2,2,2,2,2]\n<b>Output:</b> 5\n<b>Explanation:</b> The length of longest continuous increasing subsequence is 1, and there are 5 subsequences' length is 1, so output 5.\n</pre>\n<p></p>\n\n<p><b>Note:</b>\nLength of the given array will be not exceed 2000 and the answer is guaranteed to be fit in 32-bit signed int.\n</p></div>",
+  "url": "https://leetcode.com/problems/number-of-longest-increasing-subsequence/",
+  "companies": {
+    "Facebook": 3
+  }
+}

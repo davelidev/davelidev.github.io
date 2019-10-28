@@ -1,0 +1,11 @@
+{
+  "categories": [
+    "Depth-first Search"
+  ],
+  "diff": "Medium",
+  "title": "491. Increasing Subsequences",
+  "question": "<div><p>Given an integer array, your task is to find all the different possible increasing subsequences of the given array, and the length of an increasing subsequence should be at least 2.</p>\n\n<p>&nbsp;</p>\n\n<p><b>Example:</b></p>\n\n<pre><b>Input:</b> [4, 6, 7, 7]\n<b>Output:</b> [[4, 6], [4, 7], [4, 6, 7], [4, 6, 7, 7], [6, 7], [6, 7, 7], [7,7], [4,7,7]]\n</pre>\n\n<p>&nbsp;</p>\n\n<p><b>Note:</b></p>\n\n<ol>\n\t<li>The length of the given array will not exceed 15.</li>\n\t<li>The range of integer in the given array is [-100,100].</li>\n\t<li>The given array may contain duplicates, and two equal integers should also be considered as a special case of increasing sequence.</li>\n</ol>\n</div>",
+  "url": "https://leetcode.com/problems/increasing-subsequences/",
+  "companies": {},
+  "code": "class Solution(object):\\u000A    def findSubsequences(self, nums):\\u000A        \\u0022\\u0022\\u0022\\u000A        :type nums: List[int]\\u000A        :rtype: List[List[int]]\\u000A        \\u0022\\u0022\\u0022\\u000A        res \\u003D {()}\\u000A        for num in nums:\\u000A            res |\\u003D { ary + (num, ) for ary in res if not ary or ary[\\u002D1] \\u003C\\u003D num }\\u000A        return [x for x in res if len(x) \\u003E\\u003D 2]\\u000A                \\u000A            "
+}
