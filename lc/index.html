@@ -71,6 +71,8 @@
     <select ng-model="cat_sel" ng-change="clickApplyFilter()" class="form-control cutSel">
       <option ng-repeat="(cat, val) in cat_to_questions" ng-bind="cat"></option>
     </select>
+    
+    <h6> Total of {{ show_leetcode.length }} questions. </h6>
     <hr>
     <div class="page-break"></div>
     <div class="grid">
