@@ -115,15 +115,18 @@ angular.module('myApp', ['ngSanitize'])
             var patt = new RegExp($scope.cat_to_questions[$scope.cat_sel]);
 
             $scope.leetcode.forEach(function (question, id) {
+                console.log(question.companies)
                 if ($scope.search_has_code && ! question.code)
                     question.do_show = false;
                 else
+                {
                     question.do_show = 
                                (!$scope.search_category || question.categories.join().toLowerCase().includes(($scope.search_category).toLowerCase()))
                            &&  (!$scope.search_difficulty || question.diff.toLowerCase().includes(($scope.search_difficulty).toLowerCase()))
                            &&  (!$scope.search_company || question.companies.join().toLowerCase().includes(($scope.search_company).toLowerCase()));
                     question.do_show = question.do_show && (!$scope.search_title || question.title.toLowerCase().search($scope.search_title.toLowerCase()) != -1);
-                question.do_show = question.do_show && (!$scope.cat_to_questions[$scope.cat_sel] || patt.test(question.title));
+                    question.do_show = question.do_show && (!$scope.cat_to_questions[$scope.cat_sel] || patt.test(question.title));
+                }
                 question.show_by_page = false;
                 question.show_code = $scope.search_show_code;
             });

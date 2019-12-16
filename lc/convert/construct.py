@@ -10,15 +10,17 @@ w = open('leetcode_json.js', 'w')
 
 w.write("var leetcode = {\n")
 for num, question in premium:
+    if question == "243.json":
+        print
     data = json.load(open(os.path.join(premium_dir, question)))
     if question in mine:
         data2 = json.load(open(os.path.join(mine_dir, question)))
         if 'code' in data2 and 'code' not in data:
             data['code'] = data2['code']
-        if 'companies' in data:
-            data['companies'] = data['companies'].keys()
         if str(num) in articles:
             data.update(articles[str(num)])
+    if 'companies' in data:
+        data['companies'] = data['companies'].keys()            
     w.write(str(num) + ': ' + json.dumps(data, indent=4) + ',\n')
 w.write("}")
 w.close()
