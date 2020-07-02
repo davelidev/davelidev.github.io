@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+</head>
+<body>
+<div>
+    <div class="container">
+    <div id="imgs" >
+        <img style='display:none;max-width: 100%' src='https://leetcode.com/articles/Figures/74/74_slide_2.png' onclick='nextImage()'/><img style='display:none;max-width: 100%' src='https://leetcode.com/articles/Figures/74/74_slide_3.png' onclick='nextImage()'/><img style='display:none;max-width: 100%' src='https://leetcode.com/articles/Figures/74/74_slide_4.png' onclick='nextImage()'/><img style='display:none;max-width: 100%' src='https://leetcode.com/articles/Figures/74/74_slide_5.png' onclick='nextImage()'/><img style='display:none;max-width: 100%' src='https://leetcode.com/articles/Figures/74/74_slide_6.png' onclick='nextImage()'/><img style='display:none;max-width: 100%' src='https://leetcode.com/articles/Figures/74/74_slide_7.png' onclick='nextImage()'/><img style='display:none;max-width: 100%' src='https://leetcode.com/articles/Figures/74/74_slide_8.png' onclick='nextImage()'/>
+    </div>
+        <div class="container">
+            <div class="btn btn-info" role="alert" id="pgNum"></div>
+            <div style='margin-left: 10px;' class='btn btn-info' onclick="resetImage()">reset</div>
+            <div style='margin-left: 10px;' class='btn btn-info' onclick="prevImage()">prev</div>
+            <div style='margin-left: 10px;' class='btn btn-info' onclick="nextImage()">next</div>
+
+        </div>
+    <script>
+        function setPgNum() {
+            var images = document.getElementById("imgs").children;
+            for(var i = 0; i < images.length; i++) {
+                if (images[i].style.display!="none"){
+                    document.getElementById("pgNum").textContent = (i + 1) + " / " + images.length;
+                    return;
+                }
+            }
+        }
+
+        function resetImage() {
+            var images = document.getElementById("imgs").children;
+            for(var i = 0; i < images.length; i++) {
+                if (i == 0)
+                    images[i].style.display="inline-block";
+                else
+                    images[i].style.display="none";
+
+            }
+            setPgNum()
+        }
+        function nextImage() {
+            var images = document.getElementById("imgs").children;
+            for(var i = 0; i < images.length; i++) {
+                if (images[i].style.display != "none" || i == (images.length - 1)){
+                    images[i].style.display="none";
+                    images[(i + 1) % images.length].style.display="inline-block";
+                    setPgNum()
+                    break
+                }
+            }
+        }
+        nextImage();
+        function prevImage() {
+            // node.style.display="none"
+            var images = document.getElementById("imgs").children;
+            for(var i = 0; i < images.length; i++) {
+                if (images[i].style.display != "none"){
+                    images[i].style.display="none";
+                    images[(i - 1 + images.length) % images.length].style.display="inline-block";
+                    setPgNum()
+                    break
+                }
+            }
+        }
+    </script>
+</div>
+</div>
+</body>
+</html>
