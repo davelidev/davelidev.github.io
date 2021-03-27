@@ -7,17 +7,37 @@
 <body>
 <script>
  urlParams = new URLSearchParams(window.location.search);
- ticker_to_url = JSON.parse(urlParams.get('data'));
- first=true;
+ tickers = urlParams.get('tickers').split(',');
  document.write('<br><br>')
- for (var ticker in ticker_to_url){
+
+ ticker_to_urls = {}
+
+ for (let i in tickers) {
+     let ticker = tickers[i].toUpperCase()
+
+     ticker_to_urls[ticker] = []
+     if (ticker.length === 6){
+         if (!"BTCUSD EURGBP USDCAD NZDUSD USDJPY GBPUSD EURUSD GBPJPY AUDUSD".split(' ').includes(ticker))
+             continue
+         'm15,h1,d1'.split(',').forEach(function (period) {
+            ticker_to_urls[ticker].push(`fx_image.ashx?${ticker}_${period}_l.png`)
+         })
+     } else {
+         'w,d'.split(',').forEach(function (period) {
+            ticker_to_urls[ticker].push(`chart.ashx?ty=c&ta=0&p=${period}&t=${ticker}`)
+         })
+     }
+ }
+
+ let first = true;
+ for (let ticker in ticker_to_urls){
     // document.write(`<h2 style="color:#86b7fe">${ticker}</h2>`);
      if (!first)
         document.write('<hr><br>')
      first=false
-    for (var img in ticker_to_url[ticker]){
-        document.write(`<img style="margin:10px;max-width: 100%; max-height: 100vh; height: auto;" src="https://finviz.com/${ticker_to_url[ticker][img]}"><br><br>`);
-    }
+     for (let img in ticker_to_urls[ticker]){
+         document.write(`<img style="margin:10px;max-width: 100%; max-height: 100vh; height: auto;" src="https://finviz.com/${ticker_to_urls[ticker][img]}"><br><br>`);
+     }
  }
 
  document.write('<br><br><br><br>')
