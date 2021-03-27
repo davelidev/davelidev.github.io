@@ -19,7 +19,7 @@
      if (ticker.length === 6){
          if (!"BTCUSD EURGBP USDCAD NZDUSD USDJPY GBPUSD EURUSD GBPJPY AUDUSD".split(' ').includes(ticker))
              continue
-         'm15,h1,d1'.split(',').forEach(function (period) {
+         'm15,h1,d1,w1'.split(',').forEach(function (period) {
             ticker_to_urls[ticker].push(`fx_image.ashx?${ticker}_${period}_l.png`)
          })
      } else {
