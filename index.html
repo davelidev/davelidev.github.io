@@ -11,46 +11,60 @@
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap-theme.min.css" integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ" crossorigin="anonymous">
 		<!-- Latest compiled and minified JavaScript -->
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
-
 	</head>
 	<body>
 		<div class="container-fluid">
+
+
 <div class="row">
 	<br><br><br>
+	<div class="row">
 	<div class='col-lg-4'>
-		<iframe src="https://www.fxblue.com/fxbluechart.aspx?c=ch_accountinfo&id=daveli" frameborder="0" width="300"></iframe>
+		<iframe src="https://www.fxblue.com/fxbluechart.aspx?c=ch_accountinfo&id=daveli" frameborder="0" width="300" style="margin: 15px;"></iframe>
 	</div>
-	<div class='col-lg-6'>
+	<div class="col-lg-8 trade-status">
+		<img style="margin: 10px" src="https://www.fxblue.com/banner.aspx?id=daveli&t=1"/>
+	</div>
+	</div>
+	<div class="col-xs-12">
 		<br>
-		<iframe src="https://www.fxblue.com/fxbluechart.aspx?c=ch_monthlyreturntable&id=daveli" frameborder="0" width="700"  height="60"></iframe>
+		<iframe src="https://www.fxblue.com/fxbluechart.aspx?c=ch_monthlyreturntable&id=daveli" frameborder="0" width="800"  height="60" style="max-width: 100%;"></iframe>
 	</div>
 </div>
-
 <div class="profile">
-	<div class="row">
 		<br><hr><br>
-	<div class='col-md-8'><h3 style="margin: 0 25px;">daveli</h3></div>
-	<div class='col-md-4'><a href="https://www.fxblue.com/users/fx-charger-dave/stats"><img src="https://www.fxblue.com/banner.aspx?id=daveli&t=10" width="250" /></a></div>
-	</div>
+<!-- 	<div class="row">
+		<div class='col-md-8'><h3 style="margin: 0 25px;">daveli</h3></div>
+		<div class='col-md-4'></div>
+	</div> -->
 	<br>
 	<div class="row">
-	<iframe class='col-md-4' src="https://www.fxblue.com/fxbluechart.aspx?c=ch_cumulativereturn&id=daveli" style="" width="600" height="300" frameborder="0"></iframe>
-	<iframe class='col-md-4' src="https://www.fxblue.com/fxbluechart.aspx?c=ch_floatingpl&id=daveli" style="" width="600" height="300"frameborder="0"></iframe>
-	<iframe class='col-md-4' src="https://www.fxblue.com/fxbluechart.aspx?c=ch_accountstats&id=daveli" frameborder="0" width="600" height="300"></iframe>
+		<div class="col-md-4">
+			<div class='col-xl-4'><h3>daveli</h3></div>
+			<!-- <img src="https://www.fxblue.com/banner.aspx?id=daveli&t=10" width="250" /> -->
+<br><br>
+		<iframe src="https://www.fxblue.com/fxbluechart.aspx?c=ch_accountstats&id=daveli" frameborder="0" width="600" style="max-width: 100%;"></iframe>
+		</div>
+
+		<iframe class='col-md-4' src="https://www.fxblue.com/fxbluechart.aspx?c=ch_cumulativereturn&id=daveli" style="max-width: 100%;" width="600" height="300" frameborder="0"></iframe>
+		<iframe class='col-md-4' src="https://www.fxblue.com/fxbluechart.aspx?c=ch_floatingpl&id=daveli" style="max-width: 100%;" width="600" height="300"frameborder="0"></iframe>
 	</div>
 </div>
 
-</div>
-<script>
-	profile = $('.profile');
-	html = profile.html();
-	'king-robot-dave,fx-charger-dave,fx-jetbot-quake-dave,fx-stabilizer-dave,fx-truck-dave,in-ctrl-fighter-dave,twp-dave,valery-trading-dave'.split(',').forEach(
-	(name) => profile.append(html.replace(/daveli/g, name)))
-	profile.append('<br><br><br><br><br>')
 
-</script>
-
-
+		</div>
+		<script>
+			profile = $('.profile');
+			tradeStatus = $('.trade-status');
+			html = profile.html();
+			tradeStatusHtml = tradeStatus.html();
+			'king-robot-dave,fx-charger-dave,fx-jetbot-quake-dave,fx-stabilizer-dave,fx-truck-dave,in-ctrl-fighter-dave,twp-dave,valery-trading-dave'.split(',').forEach(
+			(name) => {
+				profile.append(html.replace(/daveli/g, name));
+				tradeStatus.append(tradeStatusHtml.replace(/daveli/g, name))
+			})
+			profile.append('<br><br><br><br><br>')
+		</script>
 	</body>
 </html>
 <!-- https://www.fxblue.com/users/fx-charger-dave,fx-jetbot-quake-dave,fx-stabilizer-dave,fx-truck-dave,in-ctrl-fighter-dave,twp-dave,valery-trading-dave,king-robot-dave -->
