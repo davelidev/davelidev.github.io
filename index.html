@@ -51,7 +51,7 @@
 			tradeStatus = $('.trade-status');
 			html = profile.html();
 			tradeStatusHtml = tradeStatus.html();
-			'king-robot-dave,fx-charger-dave,fx-jetbot-quake-dave,fx-stabilizer-dave,fx-truck-dave,in-ctrl-fighter-dave'.split(',').forEach(
+			'daveli forex-truck-dave il-boss-del-dave inctrl-stabl-dave jet-bot-fighter-dave king-robot-dave'.split(' ').forEach(
 			(name) => {
 				profile.append(html.replace(/daveli/g, name));
 				tradeStatus.append(tradeStatusHtml.replace(/daveli/g, name))
